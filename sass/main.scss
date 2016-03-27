@@ -39,7 +39,7 @@ body {
 
 .thing {
 
-	padding: 4px 0px;
+	padding: 10px 0px;
 
 	&.stickied.link a.title {
 		color: $green_title;
@@ -49,15 +49,59 @@ body {
 		}
 	}
 
-	a.title {
-		color: $title;
+	.entry{
+		margin-top: 10px;
+		padding-left: 15px;
+	}
 
-		&:visited {
-			color: darken($title, 30%);
+	// pushes the vote arrows and rank down to align with the thumbnail
+	.midcol{
+		margin-top:15px;
+	}
+	.rank{
+		padding-top:15px;
+	}
+
+
+	a {
+		&.thumbnail {
+			width: 48px;
+			height: 48px;
+			margin-left: 20px;
+			margin-right: 20px;
+
+			overflow: visible !important;
+
+			img {
+				width: 48px !important;
+				height: 48px !important;
+				position: relative;
+				top: 18px;
+				left: 9px;
+			}
+		}
+		&.thumbnail::after {
+			content: url("../minipanel.fw.png");
+			z-index: 2;
+			position: absolute;
+			//top: 10px;
+			left: 85px;
+			margin-top: 0;
+		}
+
+
+		&.title {
+			color: $title;
+
+			&:visited {
+				color: darken($title, 30%);
+			}
 		}
 	}
 
+
 }
+
 
 .linkflairlabel {
 	color: $text;

@@ -18,11 +18,36 @@ body {
   color: #b4b4b4; }
 
 .thing {
-  padding: 4px 0px; }
+  padding: 10px 0px; }
   .thing.stickied.link a.title {
     color: #13ff29; }
     .thing.stickied.link a.title:hover {
       color: white; }
+  .thing .entry {
+    margin-top: 10px;
+    padding-left: 15px; }
+  .thing .midcol {
+    margin-top: 15px; }
+  .thing .rank {
+    padding-top: 15px; }
+  .thing a.thumbnail {
+    width: 48px;
+    height: 48px;
+    margin-left: 20px;
+    margin-right: 20px;
+    overflow: visible !important; }
+    .thing a.thumbnail img {
+      width: 48px !important;
+      height: 48px !important;
+      position: relative;
+      top: 18px;
+      left: 9px; }
+  .thing a.thumbnail::after {
+    content: url("../minipanel.fw.png");
+    z-index: 2;
+    position: absolute;
+    left: 85px;
+    margin-top: 0; }
   .thing a.title {
     color: #e8e361; }
     .thing a.title:visited {
