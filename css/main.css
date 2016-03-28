@@ -20,7 +20,8 @@ body {
 .thing {
   padding: 10px 0px; }
   .thing.stickied.link a.title {
-    color: #13ff29; }
+    color: #13ff29;
+    transition: color 0.2s; }
     .thing.stickied.link a.title:hover {
       color: white; }
   .thing .entry {
@@ -50,8 +51,12 @@ body {
     margin-top: 0; }
   .thing a.title {
     color: #e8e361; }
+    .thing a.title:hover {
+      color: #c6c01d; }
     .thing a.title:visited {
       color: #9a9516; }
+      .thing a.title:visited:hover {
+        color: #6d6a10; }
 
 .linkflairlabel {
   color: #f7fae5;

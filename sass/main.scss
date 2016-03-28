@@ -44,6 +44,8 @@ body {
 	&.stickied.link a.title {
 		color: $green_title;
 
+		transition: color 0.2s;
+
 		&:hover {
 			color: white;
 		}
@@ -64,6 +66,8 @@ body {
 
 
 	a {
+
+
 		&.thumbnail {
 			width: 48px;
 			height: 48px;
@@ -93,9 +97,19 @@ body {
 		&.title {
 			color: $title;
 
+
+			&:hover{
+				color: darken($title, 20%);
+			}
+
 			&:visited {
 				color: darken($title, 30%);
+				&:hover{
+					color: darken($title, 40%);
+				}
+
 			}
+
 		}
 	}
 
