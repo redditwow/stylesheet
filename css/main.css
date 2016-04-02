@@ -66,6 +66,7 @@ body {
 .side {
   background: url(../side-divide.fw.png) left repeat-y, url(../repeat-bg.jpg) center;
   padding-left: 25px;
+  width: 326px;
   color: #f7fae5; }
 
 .titlebox form.toggle, .leavemoderator {
@@ -73,6 +74,21 @@ body {
   color: #f7fae5; }
   .titlebox form.toggle a, .leavemoderator a {
     color: #e8e361; }
+
+.morelink {
+  background: url(../sillybutton.fw.png);
+  border: none;
+  height: 110px; }
+  .morelink a {
+    text-transform: uppercase;
+    color: #000;
+    text-shadow: 0 0 10px #e6ff42, 0 0 10px #e6ff42;
+    padding-top: 37px;
+    text-align: center; }
+  .morelink:hover {
+    background: url(../sillybutton.fw.png); }
+  .morelink .nub {
+    display: none; }
 
 .linkflairlabel {
   color: #f7fae5;
