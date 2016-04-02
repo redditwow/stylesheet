@@ -4,7 +4,7 @@ $text: rgb(247, 250, 229);
 $grey: rgb(180, 180, 180);
 
 body {
-	background: url(../repeat-bg.jpg) center;
+	background: url(../repeat-bg-media.jpg) center;
 	color: $text;
 }
 
@@ -116,6 +116,35 @@ body {
 
 }
 
+.md{
+	color: $text;
+	a{
+		color: $title;
+	}
+}
+
+.side{
+	background: url(../side-divide.fw.png) left repeat-y, url(../repeat-bg.jpg) center;;
+	//background: url(../media-tab-bottom.png) left repeat-y, url(../repeat-bg.jpg) center;
+	padding-left: 25px;
+	//background: #444;
+	color: $text;
+
+}
+
+
+.titlebox form.toggle, .leavemoderator{
+	background: none;
+	color: $text;
+	a{
+		color: $title;
+	}
+}
+
+//.side:before{
+//	background: url(../section-divider.png) left repeat-y;
+//	display: inline-block;
+//}
 
 .linkflairlabel {
 	color: $text;
