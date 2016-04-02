@@ -1,5 +1,5 @@
 body {
-  background: url(../repeat-bg-media.jpg) left;
+  background: url(../repeat-bg.jpg) left;
   color: #f7fae5; }
 
 .side {
@@ -88,6 +88,78 @@ body {
     background: url(../skinnysillybutton.fw.png) no-repeat; }
   .morelink .nub {
     display: none; }
+
+#header {
+  height: 140px;
+  background: url("../header-illidan-still.jpg");
+  background-position: center -166px; }
+  #header .redditname a {
+    display: block;
+    background: url(../logos/logo_resized.fw.png) no-repeat center top;
+    margin: 0 auto;
+    font-size: 0px;
+    padding: 50px 0 0 0;
+    color: #364657;
+    left: 108px;
+    position: absolute;
+    top: 27px;
+    width: 224px;
+    height: 103px;
+    z-index: 100; }
+    #header .redditname a:hover {
+      background: url(../logos/logo_resized_glow.fw.png) no-repeat center top; }
+  #header:after {
+    content: '';
+    background: url(../header-divide.fw.png) repeat-x;
+    height: 23px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 130px; }
+
+.tabmenu {
+  position: relative;
+  left: 220px; }
+  .tabmenu li.selected a {
+    text-shadow: 0 0 10px #e6ff42, 0 0 10px #e6ff42;
+    color: #13ff29;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    z-index: 100; }
+  .tabmenu li a {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5); }
+
+#header-img-a {
+  margin-top: 2px;
+  margin-left: 30px;
+  height: 103px;
+  width: 60px;
+  display: inline-block; }
+
+#sr-more-link {
+  display: none; }
+
+#sr-header-area,
+#header-bottom-right {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px 0px 5px 5px;
+  color: #EEEEEE;
+  white-space: nowrap;
+  border-bottom: 1px solid #1d1d1d;
+  border-top-left-radius: 0; }
+  #sr-header-area a,
+  #header-bottom-right a {
+    color: #eee; }
+
+.user, .separator {
+  color: #EEEEEE; }
+
+.sr-bar a {
+  color: #eee; }
+
+.dropdown.srdrop .selected {
+  color: #fff; }
 
 .linkflairlabel {
   color: #f7fae5;

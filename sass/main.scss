@@ -4,7 +4,7 @@ $text: rgb(247, 250, 229);
 $grey: rgb(180, 180, 180);
 
 body {
-	background: url(../repeat-bg-media.jpg) left;
+	background: url(../repeat-bg.jpg) left;
 	color: $text;
 }
 
@@ -163,6 +163,7 @@ body {
 	}
 }
 
+@import "header.scss";
 
 .linkflairlabel {
 	color: $text;
