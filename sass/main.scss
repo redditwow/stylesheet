@@ -4,7 +4,7 @@ $text: rgb(247, 250, 229);
 $grey: rgb(180, 180, 180);
 
 body {
-	background: url(../repeat-bg-media.jpg) center;
+	background: url(../repeat-bg-media.jpg) left;
 	color: $text;
 }
 
@@ -127,7 +127,7 @@ body {
 	background: url(../side-divide.fw.png) left repeat-y, url(../repeat-bg.jpg) center;;
 	//background: url(../media-tab-bottom.png) left repeat-y, url(../repeat-bg.jpg) center;
 	padding-left: 25px;
-	width: 326px;
+	//width: 326px;
 	//background: #444;
 	color: $text;
 
@@ -143,29 +143,26 @@ body {
 }
 
 .morelink{
-	background: url(../sillybutton.fw.png);
+	background: url(../skinnysillybutton.fw.png) no-repeat;
 	border: none;
-	height: 110px;
+	height: 55px;
 
 	a{
 		text-transform: uppercase;
 		color: #000;
 		text-shadow: 0 0 10px #e6ff42, 0 0 10px #e6ff42;
-		padding-top: 37px;
+		padding-top: 12px;
 		text-align: center;
 	}
 
 	&:hover{
-		background: url(../sillybutton.fw.png);
+		background: url(../skinnysillybutton.fw.png) no-repeat;
 	}
 	.nub{
 		display: none;
 	}
 }
-//.side:before{
-//	background: url(../section-divider.png) left repeat-y;
-//	display: inline-block;
-//}
+
 
 .linkflairlabel {
 	color: $text;
