@@ -161,6 +161,25 @@ body {
 .dropdown.srdrop .selected {
   color: #fff; }
 
+.arrow {
+  height: 20px;
+  width: 24px;
+  background-image: url(../arrows/arrows.png) !important; }
+  .arrow.upmod {
+    background-position: -0px -0px; }
+  .arrow.up {
+    background-position: -0px -20px; }
+  .arrow.down {
+    background-position: -0px -40px; }
+  .arrow.downmod {
+    background-position: -0px -60px; }
+
+.thing .midcol {
+  margin-top: 9px; }
+
+.midcol {
+  width: 36px !important; }
+
 .linkflairlabel {
   color: #f7fae5;
   border: #333333 1px solid;

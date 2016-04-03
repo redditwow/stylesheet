@@ -1,0 +1,31 @@
+.arrow {
+
+	height: 20px;
+	width: 24px;
+	background-image: url(../arrows/arrows.png) !important;
+
+	&.upmod {
+		background-position: -0px -0px;
+	}
+	&.up {
+		background-position: -0px -20px;
+	}
+	&.down {
+		background-position: -0px -40px;
+	}
+	&.downmod {
+		background-position: -0px -60px;
+	}
+}
+
+.thing .midcol {
+	margin-top: 9px;
+}
+.midcol {
+	width: 36px !important;
+	//padding: 10px 0px;
+}
+
+.entry {
+	//padding: 5px 0 0;
+}
