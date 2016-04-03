@@ -1,0 +1,12 @@
+.md{
+	color: $text;
+	a{
+		color: $title;
+	}
+}
+
+.linkflairlabel {
+	color: $text;
+	border: lighten(black, 20%) 1px solid;
+	background: black;
+}

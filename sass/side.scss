@@ -1,0 +1,42 @@
+// side bar
+.side {
+	background: url(../side-divide.fw.png) left repeat-y, url(../repeat-bg.jpg) center;;
+	//background: url(../media-tab-bottom.png) left repeat-y, url(../repeat-bg.jpg) center;
+	padding-left: 25px;
+	//width: 326px;
+	//background: #444;
+	color: $text;
+
+}
+
+// show my flair...
+// yer a moderator, harry
+.titlebox form.toggle, .leavemoderator {
+	background: none;
+	color: $text;
+	a {
+		color: $title;
+	}
+}
+
+// submit buttons
+.morelink {
+	background: url(../skinnysillybutton.fw.png) no-repeat;
+	border: none;
+	height: 55px;
+
+	a {
+		text-transform: uppercase;
+		color: #000;
+		text-shadow: 0 0 10px #e6ff42, 0 0 10px #e6ff42;
+		padding-top: 12px;
+		text-align: center;
+	}
+
+	&:hover {
+		background: url(../skinnysillybutton.fw.png) no-repeat;
+	}
+	.nub {
+		display: none;
+	}
+}
