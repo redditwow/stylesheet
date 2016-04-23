@@ -7,6 +7,38 @@
 	//background: #444;
 	color: $text;
 
+	.md {
+		a[href*="#game"] {
+			content: "";
+			display: inline-block;
+			height: 50px;
+			width: 50px;
+			background: url(../game-icons-50.png) no-repeat;
+			margin-right: 5px;
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+		a[href*="#warcraft"] {
+			background-position: 0 0;
+		}
+		a[href*="#diablo"] {
+			background-position: -50px 0;
+		}
+		a[href*="#starcraft"] {
+			background-position: -100px 0;
+		}
+		a[href*="#hearthstone"] {
+			background-position: -150px 0;
+		}
+		a[href*="#heroes"] {
+			background-position: -200px 0;
+		}
+		a[href*="#overwatch"] {
+			background-position: -250px 0;
+		}
+	}
+
 }
 
 // show my flair...
