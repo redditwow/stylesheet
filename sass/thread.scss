@@ -1,0 +1,54 @@
+
+.thing .entry {
+	margin-top: 10px;
+	//padding-left: 25px;
+}
+
+.link .usertext-body .md {
+	background-color: lighten(#090909, 5%);
+	border: 1px solid lighten(#090909, 25%);
+	border-radius: 7px;
+}
+
+//.comment {
+//	background: #233847;
+//	border-radius: 3px;
+//	border: 1px solid #2c5c7e !important;
+//	position: relative;
+//	outline: none;
+//	color: #badcf1 !important;
+//	padding-top: 0px !important;
+//	margin: 10px;
+//}
+//
+//.thing.comment * {
+//	z-index: 1;
+//}
+//
+//.thing.comment .entry {
+//	padding-top: 10px;
+//}
+//
+//.thing.comment .entry .md {
+//	padding-top: 5px;
+//}
+//
+//.thing.comment p.parent {
+//	position: absolute;
+//	top: -1px;
+//	left: 10px;
+//	width: 100%;
+//	height: 100%;
+//	z-index: -1;
+//	margin-left: -11px;
+//	border-radius: 3px;
+//	border: 1px solid #2c5c7e;
+//}
+//
+//.comment .comment {
+//	background-color: #112533 !important;
+//}
+//
+//.comment .comment .comment {
+//	background-color: #233847 !important;
+//}

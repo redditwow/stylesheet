@@ -1,204 +1,78 @@
-body {
-  background: url(../repeat-bg.jpg) left;
-  color: #f7fae5; }
-
-.tagline, .search-result-meta {
-  color: #f7fae5; }
-
-.tagline a {
-  color: #f7fae5; }
-
-.entry .buttons li a {
-  color: #f7fae5; }
-
-.domain a {
-  color: #b4b4b4; }
-
-.thing {
-  padding: 10px 0px; }
-  .thing.stickied.link a.title {
-    color: #13ff29;
-    transition: color 0.2s; }
-    .thing.stickied.link a.title:hover {
-      color: white; }
-  .thing .entry {
-    margin-top: 10px;
-    padding-left: 15px; }
-  .thing .midcol {
-    margin-top: 15px; }
-  .thing .rank {
-    padding-top: 15px; }
-  .thing a.thumbnail {
-    width: 48px;
-    height: 48px;
-    margin-left: 20px;
-    margin-right: 20px;
-    overflow: visible !important; }
-    .thing a.thumbnail img {
-      width: 48px !important;
-      height: 48px !important;
-      position: relative;
-      top: 18px;
-      left: 9px; }
-  .thing a.thumbnail::after {
-    content: url("../minipanel.fw.png");
-    z-index: 2;
-    position: absolute;
-    left: 85px;
-    margin-top: 0; }
-  .thing a.title {
-    color: #e8e361; }
-    .thing a.title:hover {
-      color: #c6c01d; }
-    .thing a.title:visited {
-      color: #9a9516; }
-      .thing a.title:visited:hover {
-        color: #6d6a10; }
-
-#header {
-  height: 140px;
-  background: url("../header-illidan-still.jpg");
-  background-position: center -166px; }
-  #header .redditname a {
-    display: block;
-    background: url(../logos/logo_resized.fw.png) no-repeat center top;
-    margin: 0 auto;
-    font-size: 0px;
-    padding: 50px 0 0 0;
-    color: #364657;
-    left: 108px;
-    position: absolute;
-    top: 27px;
-    width: 224px;
-    height: 103px;
-    z-index: 100; }
-    #header .redditname a:hover {
-      background: url(../logos/logo_resized_glow.fw.png) no-repeat center top; }
-  #header:after {
-    content: '';
-    background: url(../header-divide.fw.png) repeat-x;
-    height: 23px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 130px; }
-
-.tabmenu {
-  position: relative;
-  left: 220px; }
-  .tabmenu li.selected a {
-    text-shadow: 0 0 10px #e6ff42, 0 0 10px #e6ff42;
-    color: #13ff29;
-    background: rgba(0, 0, 0, 0.5);
-    border: none;
-    z-index: 100; }
-  .tabmenu li a {
-    color: #fff;
-    background: rgba(0, 0, 0, 0.5); }
-
-#header-img-a {
-  margin-top: 2px;
-  margin-left: 30px;
-  height: 103px;
-  width: 60px;
-  display: inline-block; }
-
-#sr-more-link {
-  display: none; }
-
-#sr-header-area,
-#header-bottom-right {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 5px 0px 5px 5px;
-  color: #EEEEEE;
-  white-space: nowrap;
-  border-bottom: 1px solid #1d1d1d;
-  border-top-left-radius: 0; }
-  #sr-header-area a,
-  #header-bottom-right a {
-    color: #eee; }
-
-.user, .separator {
-  color: #EEEEEE; }
-
-.sr-bar a {
-  color: #eee; }
-
-.dropdown.srdrop .selected {
-  color: #fff; }
-
-.arrow {
-  height: 20px;
-  width: 24px;
-  background-image: url(../arrows/arrows.png) !important; }
-  .arrow.upmod {
-    background-position: -0px -0px; }
-  .arrow.up {
-    background-position: -0px -20px; }
-  .arrow.down {
-    background-position: -0px -40px; }
-  .arrow.downmod {
-    background-position: -0px -60px; }
-
-.thing .midcol {
-  margin-top: 9px; }
-
-.midcol {
-  width: 36px !important; }
-
-.side {
-  background: url(../side-divide.fw.png) left repeat-y, url(../repeat-bg.jpg) center;
-  padding-left: 25px;
-  color: #f7fae5; }
-  .side .md a[href*="#game"] {
-    content: "";
-    display: inline-block;
-    height: 50px;
-    width: 50px;
-    background: url(../game-icons-50.png) no-repeat;
-    margin-right: 5px; }
-    .side .md a[href*="#game"]:hover {
-      opacity: 0.8; }
-  .side .md a[href*="#warcraft"] {
-    background-position: 0 0; }
-  .side .md a[href*="#diablo"] {
-    background-position: -50px 0; }
-  .side .md a[href*="#starcraft"] {
-    background-position: -100px 0; }
-  .side .md a[href*="#hearthstone"] {
-    background-position: -150px 0; }
-  .side .md a[href*="#heroes"] {
-    background-position: -200px 0; }
-  .side .md a[href*="#overwatch"] {
-    background-position: -250px 0; }
-
-.titlebox form.toggle, .leavemoderator {
-  background: none;
-  color: #f7fae5; }
-  .titlebox form.toggle a, .leavemoderator a {
-    color: #e8e361; }
-
-.morelink {
-  background: url(../skinnysillybutton.fw.png) no-repeat;
-  border: none;
-  height: 55px; }
-  .morelink a {
-    text-transform: uppercase;
-    color: #000;
-    text-shadow: 0 0 10px #e6ff42, 0 0 10px #e6ff42;
-    padding-top: 12px;
-    text-align: center; }
-  .morelink:hover {
-    background: url(../skinnysillybutton.fw.png) no-repeat; }
-  .morelink .nub {
-    display: none; }
-
-.md {
-  color: #f7fae5; }
-  .md a {
-    color: #e8e361; }
-
-.linkflairlabel {
-  color: #f7fae5;
-  border: #333333 1px solid;
-  background: black; }
+body{background:url(../repeat-bg.jpg) left;color:#f7fae5}.tagline,.search-result-meta{color:#f7fae5}
+.tagline a{color:#f7fae5}.entry .buttons li a{color:#f7fae5}.domain a{color:#b4b4b4}
+.thing{padding:10px 0}.thing.stickied.link a.title{color:#13ff29;transition:color .2s}
+.thing.stickied.link a.title:hover{color:white}.thing .entry{margin-top:10px;padding-left:15px}
+.thing .midcol{margin-top:15px}.thing .rank{padding-top:15px}.thing a.thumbnail{width:48px;height:48px;margin-left:20px;margin-right:20px;overflow:visible !important}
+.thing a.thumbnail img{width:48px !important;height:48px !important;position:relative;top:18px;left:9px}
+.thing a.thumbnail::after{content:url("../minipanel.fw.png");z-index:2;position:absolute;left:85px;margin-top:0}
+.thing a.title{color:#e8e361}.thing a.title:hover{color:#c6c01d}.thing a.title:visited{color:#9a9516}
+.thing a.title:visited:hover{color:#6d6a10}#header{height:140px;background:url("../header-illidan-still.jpg");background-position:center -166px}
+#header .redditname a{display:block;background:url(../logos/logo_resized.fw.png) no-repeat center top;margin:0 auto;font-size:0;padding:50px 0 0 0;color:#364657;left:108px;position:absolute;top:27px;width:224px;height:103px;z-index:100}
+#header .redditname a:hover{background:url(../logos/logo_resized_glow.fw.png) no-repeat center top}
+#header:after{content:'';background:url(../header-divide.fw.png) repeat-x;height:23px;position:absolute;left:0;right:0;top:130px}
+.tabmenu{position:relative;left:220px}.tabmenu li.selected a{text-shadow:0 0 10px #e6ff42,0 0 10px #e6ff42;color:#13ff29;background:rgba(0,0,0,0.5);border:0;z-index:100}
+.tabmenu li a{color:#fff;background:rgba(0,0,0,0.5)}#header-img-a{margin-top:2px;margin-left:30px;height:103px;width:60px;display:inline-block}
+#sr-more-link{display:none}#sr-header-area,#header-bottom-right{background:rgba(0,0,0,0.5);padding:5px 0 5px 5px;color:#eee;white-space:nowrap;border-bottom:1px solid #1d1d1d;border-top-left-radius:0}
+#sr-header-area a,#header-bottom-right a{color:#eee}.user,.separator{color:#eee}.sr-bar a{color:#eee}
+.dropdown.srdrop .selected{color:#fff}.arrow{height:20px;width:24px;background-image:url(../arrows/arrows.png) !important}
+.arrow.upmod{background-position:-0 -0}.arrow.up{background-position:-0 -20px}.arrow.down{background-position:-0 -40px}
+.arrow.downmod{background-position:-0 -60px}.thing .midcol{margin-top:9px}.midcol{width:36px !important}
+.side{background:url(../side-divide.fw.png) left repeat-y,url(../repeat-bg.jpg) center;padding-left:25px;color:#f7fae5}
+.side .md a[href*="#game"]{content:"";display:inline-block;height:50px;width:50px;background:url(../game-icons-50.png) no-repeat;margin-right:5px}
+.side .md a[href*="#game"]:hover{opacity:.8}.side .md a[href*="#warcraft"]{background-position:0 0}
+.side .md a[href*="#diablo"]{background-position:-50px 0}.side .md a[href*="#starcraft"]{background-position:-100px 0}
+.side .md a[href*="#hearthstone"]{background-position:-150px 0}.side .md a[href*="#heroes"]{background-position:-200px 0}
+.side .md a[href*="#overwatch"]{background-position:-250px 0}.titlebox form.toggle,.leavemoderator{background:0;color:#f7fae5}
+.titlebox form.toggle a,.leavemoderator a{color:#e8e361}.morelink{background:url(../skinnysillybutton.fw.png) no-repeat;border:0;height:55px}
+.morelink a{text-transform:uppercase;color:#000;text-shadow:0 0 10px #e6ff42,0 0 10px #e6ff42;padding-top:12px;text-align:center}
+.morelink:hover{background:url(../skinnysillybutton.fw.png) no-repeat}.morelink .nub{display:none}
+.md{color:#f7fae5}.md a{color:#e8e361}.linkflairlabel{color:#f7fae5;border:#333 1px solid;background:black}
+.thing .entry{margin-top:10px}.link .usertext-body .md{background-color:#161616;border:1px solid #494949;border-radius:7px}
+.flair{background-color:transparent;background-image:url("../sprites/sprites.png");padding:0;margin-right:.2em;border:0;border-radius:0;color:#f7fae5}
+.flair-alliance+.author,.flair-alliance+.author:visited{background-color:transparent;text-shadow:0 0 1px #247faa;color:#f7fae5}
+.flair-horde+.author,.flair-horde+.author:visited{background-color:transparent;text-shadow:0 0 1px #b30000;color:#f7fae5}
+.flair-shaman+.author,.flair-alliance-shaman+.author,.flair-horde-shaman+.author,.flair-shaman+.author:visited,.flair-alliance-shaman+.author:visited,.flair-horde-shaman+.author:visited{background-color:transparent;color:#0070de}
+.flair-deathknight+.author,.flair-alliance-deathknight+.author,.flair-horde-deathknight+.author,.flair-deathknight+.author:visited,.flair-alliance-deathknight+.author:visited,.flair-horde-deathknight+.author:visited{background-color:transparent;color:#c41f3b}
+.flair-demonhunter+.author,.flair-alliance-demonhunter+.author,.flair-horde-demonhunter+.author,.flair-demonhunter+.author:visited,.flair-alliance-demonhunter+.author:visited,.flair-horde-demonhunter+.author:visited{background-color:transparent;color:#4dd827}
+.flair-druid+.author,.flair-alliance-druid+.author,.flair-horde-druid+.author,.flair-druid+.author:visited,.flair-alliance-druid+.author:visited,.flair-horde-druid+.author:visited{background-color:transparent;color:#ff7d0a}
+.flair-hunter+.author,.flair-alliance-hunter+.author,.flair-horde-hunter+.author,.flair-hunter+.author:visited,.flair-alliance-hunter+.author:visited,.flair-horde-hunter+.author:visited{background-color:transparent;color:#abd473}
+.flair-mage+.author,.flair-alliance-mage+.author,.flair-horde-mage+.author,.flair-mage+.author:visited,.flair-alliance-mage+.author:visited,.flair-horde-mage+.author:visited{background-color:transparent;color:#69ccf0}
+.flair-monk+.author,.flair-alliance-monk+.author,.flair-horde-monk+.author,.flair-monk+.author:visited,.flair-alliance-monk+.author:visited,.flair-horde-monk+.author:visited{background-color:transparent;color:#00ff96}
+.flair-paladin+.author,.flair-alliance-paladin+.author,.flair-horde-paladin+.author,.flair-paladin+.author:visited,.flair-alliance-paladin+.author:visited,.flair-horde-paladin+.author:visited{background-color:transparent;color:#f58cba}
+.flair-priest+.author,.flair-alliance-priest+.author,.flair-horde-priest+.author,.flair-priest+.author:visited,.flair-alliance-priest+.author:visited,.flair-horde-priest+.author:visited{background-color:transparent;color:#fff}
+.flair-rogue+.author,.flair-alliance-rogue+.author,.flair-horde-rogue+.author,.flair-rogue+.author:visited,.flair-alliance-rogue+.author:visited,.flair-horde-rogue+.author:visited{background-color:transparent;color:#fff569}
+.flair-shaman+.author,.flair-alliance-shaman+.author,.flair-horde-shaman+.author,.flair-shaman+.author:visited,.flair-alliance-shaman+.author:visited,.flair-horde-shaman+.author:visited{background-color:transparent;color:#0070de}
+.flair-warlock+.author,.flair-alliance-warlock+.author,.flair-horde-warlock+.author,.flair-warlock+.author:visited,.flair-alliance-warlock+.author:visited,.flair-horde-warlock+.author:visited{background-color:transparent;color:#9482c9}
+.flair-warrior+.author,.flair-alliance-warrior+.author,.flair-horde-warrior+.author,.flair-warrior+.author:visited,.flair-alliance-warrior+.author:visited,.flair-horde-warrior+.author:visited{background-color:transparent;color:#c79c6e}
+.flair-alliance-deathknight{background-position:0 -18px;width:36px;height:18px}.flair-alliance-demonhunter{background-position:-108px -36px;width:36px;height:18px}
+.flair-alliance-druid{background-position:-36px 0;width:36px;height:18px}.flair-alliance-hunter{background-position:-36px -18px;width:36px;height:18px}
+.flair-alliance-mage{background-position:0 -36px;width:36px;height:18px}.flair-alliance-monk{background-position:-36px -36px;width:36px;height:18px}
+.flair-alliance-paladin{background-position:0 -54px;width:36px;height:18px}.flair-alliance-priest{background-position:-36px -54px;width:36px;height:18px}
+.flair-alliance-rogue{background-position:-72px 0;width:36px;height:18px}.flair-alliance-shaman{background-position:-72px -18px;width:36px;height:18px}
+.flair-alliance-warlock{background-position:-72px -36px;width:36px;height:18px}.flair-alliance-warrior{background-position:-72px -54px;width:36px;height:18px}
+.flair-alliance{background-position:-144px -90px;width:18px;height:18px}.flair-alliancehorde{background-position:-54px -143px;width:18px;height:18px}
+.flair-aphoenix{background-position:-144px -54px;width:18px;height:18px}.flair-aptbot{background-position:-104px -143px;width:16px;height:16px}
+.flair-arthur{background-position:-144px -36px;width:18px;height:18px}.flair-bewmkin{background-position:-144px -18px;width:18px;height:18px}
+.flair-blizzard{background-position:-27px -129px;width:20px;height:13px}.flair-deathknight{background-position:-162px 0;width:16px;height:16px}
+.flair-demonhunter{background-position:-18px -143px;width:18px;height:18px}.flair-doctor{background-position:-72px -143px;width:16px;height:16px}
+.flair-druid{background-position:-144px -126px;width:16px;height:16px}.flair-fansite-icyveisn{background-position:-144px -72px;width:18px;height:18px}
+.flair-fansite-mmochampion{background-position:0 -129px;width:27px;height:14px}.flair-fansite-openraid{background-position:0 -108px;width:21px;height:21px}
+.flair-fansite-wowhead{background-position:-21px -108px;width:28px;height:15px}.flair-herpdeeps{background-position:-136px -143px;width:16px;height:16px}
+.flair-horde-deathknight{background-position:-108px -90px;width:36px;height:18px}
+.flair-horde-demonhunter{background-position:-108px -72px;width:36px;height:18px}
+.flair-horde-druid{background-position:-108px -54px;width:36px;height:18px}.flair-horde-hunter{background-position:0 0;width:36px;height:18px}
+.flair-horde-mage{background-position:-108px -18px;width:36px;height:18px}.flair-horde-monk{background-position:-108px 0;width:36px;height:18px}
+.flair-horde-paladin{background-position:-72px -90px;width:36px;height:18px}.flair-horde-priest{background-position:-36px -90px;width:36px;height:18px}
+.flair-horde-rogue{background-position:0 -90px;width:36px;height:18px}.flair-horde-shaman{background-position:-72px -72px;width:36px;height:18px}
+.flair-horde-warlock{background-position:-36px -72px;width:36px;height:18px}.flair-horde-warrior{background-position:0 -72px;width:36px;height:18px}
+.flair-horde{background-position:-144px -108px;width:18px;height:18px}.flair-hordealliance{background-position:0 -143px;width:18px;height:18px}
+.flair-hunter{background-position:-88px -143px;width:16px;height:16px}.flair-lasse{background-position:-80px -161px;width:16px;height:16px}
+.flair-mage{background-position:-120px -143px;width:16px;height:16px}.flair-method{background-position:-36px -143px;width:18px;height:18px}
+.flair-midwinter{background-position:-49px -108px;width:34px;height:12px}.flair-monk{background-position:-162px -16px;width:16px;height:16px}
+.flair-paladin{background-position:-162px -32px;width:16px;height:16px}.flair-phedre{background-position:-162px -48px;width:16px;height:16px}
+.flair-priest{background-position:-162px -64px;width:16px;height:16px}.flair-raptor{background-position:-162px -80px;width:16px;height:16px}
+.flair-roboticide{background-position:-162px -96px;width:16px;height:16px}.flair-rogue{background-position:-162px -112px;width:16px;height:16px}
+.flair-shaman{background-position:-162px -128px;width:16px;height:16px}.flair-unknown{background-position:-162px -144px;width:16px;height:16px}
+.flair-vertical{background-position:0 -161px;width:16px;height:16px}.flair-vusys{background-position:-144px 0;width:18px;height:18px}
+.flair-waahht{background-position:-32px -161px;width:16px;height:16px}.flair-warlock{background-position:-48px -161px;width:16px;height:16px}
+.flair-warrior{background-position:-64px -161px;width:16px;height:16px}.flair-zvitiate{background-position:-16px -161px;width:16px;height:16px}
