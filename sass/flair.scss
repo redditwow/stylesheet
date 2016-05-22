@@ -1,7 +1,7 @@
 @mixin wow-sprites($sprites) {
 	@each $sprite in $sprites {
 		$sprite-name: nth($sprite, 10);
-		.#{$sprite-name} {
+		.#{$sprite-name}:after {
 			@include sprite-position($sprite);
 			@include sprite-width($sprite);
 			@include sprite-height($sprite);
@@ -10,54 +10,58 @@
 }
 
 .flair {
-	//display: inline-block;
-
-	//padding: 0 5px;
-	background-color: transparent;
-	background-image: url($spritesheet-image);
-	padding: 0px;
-	margin-right: .2em;
+	padding: 1px 3px;
+	margin: 0px;
 	border: 0;
 	border-radius: 0;
 	color: $text;
+	background: transparent;
+	&:after {
+		background: url($spritesheet-image) no-repeat scroll 16px 16px transparent;
+		display: inline-block;
+		margin-left: 3px;
+		vertical-align: middle;
+		height: 18px;
+		content: '';
+	}
+
 }
 
-.flair-alliance + .author,
-.flair-alliance + .author:visited {
-	background-color: transparent;
-	text-shadow: 0 0 1px #247FAA;
-	color: $text;
+@mixin flair-faction-colour($faction, $colour){
+	.flair-#{$faction} + .author,
+	.flair-#{$faction} + .author:visited {
+		//background-color: transparent;
+		//text-shadow: 0 0 1px $colour;
+		//color: $text;
+		color: $colour;
+	}
 }
 
-.flair-horde + .author,
-.flair-horde + .author:visited {
-	background-color: transparent;
-	text-shadow: 0 0 1px #B30000;
-	color: $text;
-}
-
-@mixin flair-colour($class, $colour) {
+@mixin flair-class-colour($class, $colour) {
 	.flair-#{$class} + .author, .flair-alliance-#{$class} + .author, .flair-horde-#{$class} + .author,
 	.flair-#{$class} + .author:visited, .flair-alliance-#{$class} + .author:visited, .flair-horde-#{$class} + .author:visited {
-		background-color: transparent;
+		//background-color: transparent;
 		//text-shadow: 0px 0px 2px $colour;
 		//color: $text;
 		color: $colour;
 	}
 }
 
-@include flair-colour('shaman', #0070DE);
-@include flair-colour('deathknight', #C41F3B);
-@include flair-colour('demonhunter', #4dd827);
-@include flair-colour('druid', #FF7D0A);
-@include flair-colour('hunter', #ABD473);
-@include flair-colour('mage', #69CCF0);
-@include flair-colour('monk', #00FF96);
-@include flair-colour('paladin', #F58CBA);
-@include flair-colour('priest', #FFFFFF);
-@include flair-colour('rogue', #FFF569);
-@include flair-colour('shaman', #0070DE);
-@include flair-colour('warlock', #9482C9);
-@include flair-colour('warrior', #C79C6E);
+@include flair-faction-colour('alliance', #247FAA);
+@include flair-faction-colour('horde', #B30000);
+
+@include flair-class-colour('shaman', #0070DE);
+@include flair-class-colour('deathknight', #C41F3B);
+@include flair-class-colour('demonhunter', #4dd827);
+@include flair-class-colour('druid', #FF7D0A);
+@include flair-class-colour('hunter', #ABD473);
+@include flair-class-colour('mage', #69CCF0);
+@include flair-class-colour('monk', #00FF96);
+@include flair-class-colour('paladin', #F58CBA);
+@include flair-class-colour('priest', #FFFFFF);
+@include flair-class-colour('rogue', #FFF569);
+@include flair-class-colour('shaman', #0070DE);
+@include flair-class-colour('warlock', #9482C9);
+@include flair-class-colour('warrior', #C79C6E);
 
 @include wow-sprites($spritesheet-sprites);

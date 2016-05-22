@@ -72,3 +72,17 @@
 		display: none;
 	}
 }
+
+// moderator box
+
+// The Moderator box has looked awful so lets adjust that and right the
+// moderators names. Yay for chaining selectors.
+// a[href="/message/compose?to=%2Fr%2Fwow"] + .title + .content {
+// 	text-align: right;
+// }
+
+// .sidecontentbox is only used for the moderator and wiki panels.
+// might as well just use that instead of the above CSS
+.sidecontentbox {
+	text-align: right;
+}
