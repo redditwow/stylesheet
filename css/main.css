@@ -179,19 +179,21 @@ body {
     color: #e8e361; }
 
 .morelink {
-  background: url(../skinnysillybutton.fw.png) no-repeat;
-  border: none;
-  height: 55px; }
-  .morelink a {
-    text-transform: uppercase;
-    color: #000;
-    text-shadow: 0 0 10px #e6ff42, 0 0 10px #e6ff42;
-    padding-top: 12px;
-    text-align: center; }
+  background: #185f18;
+  border: 1px solid #279c27;
+  transition: all 0.5s; }
   .morelink:hover {
-    background: url(../skinnysillybutton.fw.png) no-repeat; }
+    transition: all 0.5s;
+    background: #0e360e;
+    border: 1px solid #279c27; }
   .morelink .nub {
     display: none; }
+  .morelink a {
+    color: #fff;
+    font-weight: normal;
+    text-shadow: 0px 1px 0px #000;
+    font-size: 14px;
+    float: left; }
 
 .sidecontentbox {
   text-align: right; }
