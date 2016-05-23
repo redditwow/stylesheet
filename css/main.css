@@ -216,6 +216,22 @@ body {
   border: 1px solid #494949;
   border-radius: 7px; }
 
+.footer-parent {
+  background: url(../section-divider.png) center top no-repeat;
+  padding-top: 110px; }
+  .footer-parent .footer {
+    color: #ddea8f;
+    border: none;
+    text-transform: capitalize; }
+    .footer-parent .footer a {
+      color: rgba(255, 255, 255, 0.6); }
+    .footer-parent .footer .flat-vert.title {
+      color: rgba(255, 255, 255, 0.8); }
+    .footer-parent .footer .col {
+      border: none; }
+  .footer-parent .bottommenu {
+    color: rgba(255, 255, 255, 0.2); }
+
 /*
 SCSS variables are information about icon's compiled state, stored under its original file name
 

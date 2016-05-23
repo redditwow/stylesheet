@@ -1,0 +1,30 @@
+.footer-parent {
+	background: url(../section-divider.png) center top no-repeat;
+	padding-top: 110px;
+
+	.footer {
+		color: darken($text, 20%);
+		border: none;
+		text-transform: capitalize;
+
+		a {
+			color: rgba(255, 255, 255, 0.6);
+		}
+
+		.flat-vert.title {
+			color: rgba(255, 255, 255, 0.8);
+		}
+
+		.col {
+			border: none;
+		}
+
+	}
+
+	.bottommenu {
+		color: rgba(255, 255, 255, 0.2);
+
+	}
+}
+
+//
