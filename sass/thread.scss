@@ -1,25 +1,67 @@
 
 .thing .entry {
 	margin-top: 10px;
-	//padding-left: 25px;
 }
 
 .link .usertext-body .md {
-	background-color: lighten(#090909, 5%);
-	border: 1px solid lighten(#090909, 25%);
+	background-color: $grey_background;
+	border: 1px solid $grey_border;
 	border-radius: 7px;
 }
 
-//.comment {
-//	background: #233847;
-//	border-radius: 3px;
-//	border: 1px solid #2c5c7e !important;
-//	position: relative;
-//	outline: none;
-//	color: #badcf1 !important;
-//	padding-top: 0px !important;
-//	margin: 10px;
-//}
+//contest
+.contest-mode,
+.infobar.mellow {
+	background-color: $wow_btn_background;
+	border: 1px solid $wow_btn_border;
+	color: #fff;
+	font-weight: normal;
+	text-shadow: 0px 1px 0px #000;
+}
+
+textarea {
+	color: #fff;
+	background-color: $grey_background;
+	border: 1px solid $grey_border;
+}
+
+.comment {
+	background-color: $grey_background;
+	border-radius: 3px;
+	border: 1px solid $grey_border !important;
+	position: relative;
+	outline: none;
+	color: #fff !important;
+	padding-top: 0px !important;
+	margin: 10px;
+
+	.child, .showreplies {
+		border-left: none;
+	}
+
+	.comment {
+		background-color: $grey_background_2 !important;
+		.comment {
+			background-color: $grey_background !important;
+			.comment {
+				background-color: $grey_background_2 !important;
+				.comment {
+					background-color: $grey_background !important;
+					.comment {
+						background-color: $grey_background_2 !important;
+						.comment {
+							background-color: $grey_background !important;
+							.comment {
+								background-color: $grey_background_2 !important;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 //
 //.thing.comment * {
 //	z-index: 1;
@@ -44,11 +86,4 @@
 //	border-radius: 3px;
 //	border: 1px solid #2c5c7e;
 //}
-//
-//.comment .comment {
-//	background-color: #112533 !important;
-//}
-//
-//.comment .comment .comment {
-//	background-color: #233847 !important;
-//}
+

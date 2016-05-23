@@ -77,18 +77,16 @@
 //$wowBtnHover: #9F1600;
 //$wowBtnBorder: #EA3012;
 
-$wowBtnBackground: darken(#228822, 10%);
-$wowBtnHover: darken($wowBtnBackground, 10%);
-$wowBtnBorder: lighten($wowBtnBackground, 15%);
-
-.morelink {
-	background: $wowBtnBackground;
-	border: 1px solid $wowBtnBorder;
+.morelink,
+button {
+	background: $wow_btn_background;
+	border: 1px solid $wow_btn_border;
 	transition: all 0.5s;
+	color: #fff;
 	&:hover {
 		transition: all 0.5s;
-		background: $wowBtnHover;
-		border: 1px solid $wowBtnBorder;
+		background: $wow_btn_hover;
+		border: 1px solid $wow_btn_border;
 	}
 	.nub {
 		display: none;

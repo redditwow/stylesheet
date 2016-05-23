@@ -1,6 +1,6 @@
-.md{
+.md {
 	color: $text;
-	a{
+	a {
 		color: $title;
 	}
 }
@@ -10,3 +10,18 @@
 	border: lighten(black, 20%) 1px solid;
 	background: black;
 }
+
+// Dropdowns, both the subreddit menu and comment orderer, maybe others too
+
+.drop-choices {
+	//display: block !important;
+	color: $text;
+	background: $grey_background_2;
+	a, a.choice {
+		color: $text;
+		&:hover {
+			background: $grey_background;
+		}
+	}
+}
+

@@ -1,3 +1,7 @@
+body > .content {
+	margin-right: 340px;
+}
+
 .tagline, .search-result-meta {
 	color: $text;
 }
@@ -28,22 +32,20 @@
 		}
 	}
 
-	.entry{
+	.entry {
 		margin-top: 10px;
 		padding-left: 15px;
 	}
 
 	// pushes the vote arrows and rank down to align with the thumbnail
-	.midcol{
-		margin-top:15px;
+	.midcol {
+		margin-top: 15px;
 	}
-	.rank{
-		padding-top:15px;
+	.rank {
+		padding-top: 15px;
 	}
-
 
 	a {
-
 
 		&.thumbnail {
 			width: 48px;
@@ -70,18 +72,16 @@
 			margin-top: 0;
 		}
 
-
 		&.title {
 			color: $title;
 
-
-			&:hover{
+			&:hover {
 				color: darken($title, 20%);
 			}
 
 			&:visited {
 				color: darken($title, 30%);
-				&:hover{
+				&:hover {
 					color: darken($title, 40%);
 				}
 
@@ -89,6 +89,5 @@
 
 		}
 	}
-
 
 }
