@@ -240,6 +240,32 @@ button {
   font-weight: normal;
   text-shadow: 0px 1px 0px #000; }
 
+.linkinfo {
+  background: #161616;
+  border: 1px solid #494949;
+  border-radius: 0px;
+  padding-bottom: 0px;
+  border-bottom: none; }
+  .linkinfo .date {
+    border-bottom: 2px solid #0c1619;
+    padding: 5px 0; }
+    .linkinfo .date:before {
+      content: "Submitted "; }
+    .linkinfo .date span {
+      display: none; }
+  .linkinfo .shortlink {
+    font-size: 0; }
+    .linkinfo .shortlink input {
+      margin-top: 10px;
+      margin-left: -6px;
+      background: #232323;
+      border: 1px solid #494949;
+      color: #ddd;
+      width: 298px;
+      padding: 10px 0px;
+      text-align: center;
+      font-size: 14px; }
+
 textarea {
   color: #fff;
   background-color: #161616;

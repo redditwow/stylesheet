@@ -19,6 +19,38 @@
 	text-shadow: 0px 1px 0px #000;
 }
 
+.linkinfo {
+	background: $grey_background;
+	border: 1px solid $grey_border;
+	border-radius: 0px;
+	padding-bottom: 0px;
+	border-bottom: none;
+	.date {
+		border-bottom: 2px solid #0c1619;
+		padding: 5px 0;
+		&:before {
+			content: "Submitted ";
+		}
+		span {
+			display: none;
+		}
+	}
+	.shortlink {
+		font-size: 0;
+		input {
+			margin-top: 10px;
+			margin-left: -6px;
+			background: $grey_background_2;
+			border: 1px solid $grey_border;
+			color: #ddd;
+			width: 298px;
+			padding: 10px 0px;
+			text-align: center;
+			font-size: 14px;
+		}
+	}
+}
+
 textarea {
 	color: #fff;
 	background-color: $grey_background;
