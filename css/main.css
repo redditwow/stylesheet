@@ -297,6 +297,10 @@ textarea {
               .comment .comment .comment .comment .comment .comment .comment .comment {
                 background-color: #232323 !important; }
 
+.single-page .link .rank {
+  display: block;
+  width: 2.2ex !important; }
+
 .footer-parent {
   background: url(../section-divider.png) center top no-repeat;
   padding-top: 110px; }
