@@ -1,5 +1,5 @@
 body {
-  background: url(../repeat-bg.jpg) left;
+  background: url(../images/repeat-bg.jpg) left;
   color: #f7fae5; }
 
 body > .content {
@@ -35,12 +35,12 @@ body > .content {
     margin-top: 9px;
     margin-left: 20px; }
     .thing a.thumbnail::after {
-      content: url(../minipanel.fw.png);
+      content: url(../images/minipanel.fw.png);
       z-index: 2;
       position: absolute;
       left: 81px;
       margin-top: -11px; }
-    .thing a.thumbnailimg {
+    .thing a.thumbnail img {
       position: relative;
       top: 6px;
       left: 4px;
@@ -57,11 +57,11 @@ body > .content {
 
 #header {
   height: 140px;
-  background: url("../header-illidan-still.jpg");
+  background: url("../images/header-illidan-still.jpg");
   background-position: center -166px; }
   #header .redditname a {
     display: block;
-    background: url(../logos/logo_resized.fw.png) no-repeat center top;
+    background: url(../images/logo_resized.fw.png) no-repeat center top;
     margin: 0 auto;
     font-size: 0px;
     padding: 50px 0 0 0;
@@ -73,10 +73,10 @@ body > .content {
     height: 103px;
     z-index: 100; }
     #header .redditname a:hover {
-      background: url(../logos/logo_resized_glow.fw.png) no-repeat center top; }
+      background: url(../images/logo_resized_glow.fw.png) no-repeat center top; }
   #header:after {
     content: '';
-    background: url(../header-divide.fw.png) repeat-x;
+    background: url(../images/header-divide.fw.png) repeat-x;
     height: 23px;
     position: absolute;
     left: 0;
@@ -130,7 +130,7 @@ body > .content {
 .arrow {
   height: 20px;
   width: 24px;
-  background-image: url(../arrows/arrows.png) !important; }
+  background-image: url(../images/arrows.png) !important; }
   .arrow.upmod {
     background-position: -0px -0px; }
   .arrow.up {
@@ -147,7 +147,7 @@ body > .content {
   width: 36px !important; }
 
 .side {
-  background: url(../side-divide.fw.png) left repeat-y, url(../repeat-bg.jpg) center;
+  background: url(../images/side-divide.fw.png) left repeat-y, url(../images/repeat-bg.jpg) center;
   padding-left: 25px;
   color: #f7fae5; }
   .side .md a[href*="#game"] {
@@ -155,7 +155,7 @@ body > .content {
     display: inline-block;
     height: 50px;
     width: 50px;
-    background: url(../game-icons-50.png) no-repeat;
+    background: url(../images/game-icons-50.png) no-repeat;
     margin-right: 5px; }
     .side .md a[href*="#game"]:hover {
       opacity: 0.8; }
@@ -299,7 +299,7 @@ textarea {
   width: 2.2ex !important; }
 
 .footer-parent {
-  background: url(../section-divider.png) center top no-repeat;
+  background: url(../images/section-divider.png) center top no-repeat;
   padding-top: 110px; }
   .footer-parent .footer {
     color: #ddea8f;
@@ -788,22 +788,6 @@ The `sprites` mixin generates identical output to the CSS template
   background-position: -16px -161px;
   width: 16px;
   height: 16px; }
-
-.thing a.thumbnail::after {
-  content: url(../minipanel.fw.png);
-  z-index: 2;
-  position: absolute;
-  left: 81px;
-  margin-top: -11px; }
-
-.thing a.thumbnail img {
-  width: 54px !important;
-  height: 54px !important;
-  position: relative;
-  top: 6px;
-  left: 4px;
-  width: 56px !important;
-  height: 56px !important; }
 
 a.thumbnail.default,
 a.thumbnail.self,

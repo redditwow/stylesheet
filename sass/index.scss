@@ -52,7 +52,7 @@ body > .content {
 			margin-left: 20px;
 			&::after {
 				//positions the minipanel border over the top of the thumbnail
-				content: url(../minipanel.fw.png);
+				content: url(../images/minipanel.fw.png);
 				z-index: 2;
 				position: absolute;
 				left: 81px;

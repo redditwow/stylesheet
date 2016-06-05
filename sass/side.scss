@@ -1,6 +1,6 @@
 // side bar
 .side {
-	background: url(../side-divide.fw.png) left repeat-y, url(../repeat-bg.jpg) center;;
+	background: url(../images/side-divide.fw.png) left repeat-y, url(../images/repeat-bg.jpg) center;;
 	//background: url(../media-tab-bottom.png) left repeat-y, url(../repeat-bg.jpg) center;
 	padding-left: 25px;
 	//width: 326px;
@@ -13,7 +13,7 @@
 			display: inline-block;
 			height: 50px;
 			width: 50px;
-			background: url(../game-icons-50.png) no-repeat;
+			background: url(../images/game-icons-50.png) no-repeat;
 			margin-right: 5px;
 			&:hover {
 				opacity: 0.8;

@@ -2,12 +2,12 @@
 #header {
 
 	height: 140px;
-	background: url("../header-illidan-still.jpg");
+	background: url("../images/header-illidan-still.jpg");
 	background-position: center -166px;
 
 	.redditname a {
 		display: block;
-		background: url(../logos/logo_resized.fw.png) no-repeat center top;
+		background: url(../images/logo_resized.fw.png) no-repeat center top;
 		margin: 0 auto;
 		font-size: 0px;
 		padding: 50px 0 0 0;
@@ -20,14 +20,14 @@
 		z-index: 100;
 
 		&:hover {
-			background: url(../logos/logo_resized_glow.fw.png) no-repeat center top;
+			background: url(../images/logo_resized_glow.fw.png) no-repeat center top;
 
 		}
 	}
 
 	&:after {
 		content: '';
-		background: url(../header-divide.fw.png) repeat-x;
+		background: url(../images/header-divide.fw.png) repeat-x;
 		height: 23px;
 		position: absolute;
 		left: 0;
