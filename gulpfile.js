@@ -4,6 +4,7 @@ var replace     = require('gulp-replace');
 var spritesmith = require('gulp.spritesmith');
 var uglifycss   = require('gulp-uglifycss');
 var size        = require('gulp-size');
+var rename      = require('gulp-rename');
 
 gulp.task('styles', ['flair-link', 'flair-user'], function () {
 	gulp.src('sass/**/main.scss')
@@ -14,6 +15,30 @@ gulp.task('styles', ['flair-link', 'flair-user'], function () {
 		//	maxLineLen: 80,
 		//	uglyComments: true
 		//}))
+		.pipe(size({
+			showFiles: true
+		}))
+		.pipe(gulp.dest('./css/'));
+
+	gulp.src('sass/**/main.scss')
+		.pipe(sass().on('error', sass.logError))
+		.pipe(rename('reddit.css'))
+		.pipe(replace('../images/mini-panel.fw.png', '%%mini-panel%%'))
+		.pipe(replace('../images/repeat-bg.jpg', '%%repeat-bg%%'))
+		.pipe(replace('../images/logo-resized.fw.png', '%%logo-resized%%'))
+		.pipe(replace('../images/logo-resized-glow.fw.png', '%%logo-resized-glow%%'))
+		.pipe(replace('../images/header-divide.fw.png', '%%header-divide%%'))
+		.pipe(replace('../images/game-icons-50.png', '%%game-icons-50%%'))
+		.pipe(replace('../images/section-divider.png', '%%section-divider%%'))
+		.pipe(replace('../sprites/flair-link.png', '%%flair-link%%'))
+		.pipe(replace('../sprites/flair-user.png', '%%flair-user%%'))
+		.pipe(replace('../images/header-illidan-still.jpg', '%%header-illidan-still%%'))
+		.pipe(replace('../images/side-divide.fw.png', '%%side-divide%%'))
+		.pipe(replace('../images/arrows.png', '%%arrows%%'))
+		.pipe(uglifycss({
+			maxLineLen: 80,
+			uglyComments: true
+		}))
 		.pipe(size({
 			showFiles: true
 		}))
@@ -36,7 +61,7 @@ gulp.task('flair-user', function () {
 
 gulp.task('flair-link', function () {
 	var spriteData = gulp.src('./flair_link/*.png').pipe(spritesmith({
-		imgName: 'sprites/flair_link.png',
+		imgName: 'sprites/flair-link.png',
 		cssName: 'sass/flair-link.scss',
 		cssSpritesheetName: 'flair-link',
 		algorithm: 'binary-tree',

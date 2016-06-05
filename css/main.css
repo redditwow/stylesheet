@@ -35,7 +35,7 @@ body > .content {
     margin-top: 9px;
     margin-left: 20px; }
     .thing a.thumbnail::after {
-      content: url(../images/minipanel.fw.png);
+      content: url(../images/mini-panel.fw.png);
       z-index: 2;
       position: absolute;
       left: 81px;
@@ -61,7 +61,7 @@ body > .content {
   background-position: center -166px; }
   #header .redditname a {
     display: block;
-    background: url(../images/logo_resized.fw.png) no-repeat center top;
+    background: url(../images/logo-resized.fw.png) no-repeat center top;
     margin: 0 auto;
     font-size: 0px;
     padding: 50px 0 0 0;
@@ -73,7 +73,7 @@ body > .content {
     height: 103px;
     z-index: 100; }
     #header .redditname a:hover {
-      background: url(../images/logo_resized_glow.fw.png) no-repeat center top; }
+      background: url(../images/logo-resized-glow.fw.png) no-repeat center top; }
   #header:after {
     content: '';
     background: url(../images/header-divide.fw.png) repeat-x;
@@ -792,7 +792,7 @@ The `sprites` mixin generates identical output to the CSS template
 a.thumbnail.default,
 a.thumbnail.self,
 .thing.over18 a.thumbnail {
-  background-image: url("../sprites/flair_link.png") !important; }
+  background-image: url("../sprites/flair-link.png") !important; }
 
 a.thumbnail.default,
 a.thumbnail.self {

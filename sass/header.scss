@@ -7,7 +7,7 @@
 
 	.redditname a {
 		display: block;
-		background: url(../images/logo_resized.fw.png) no-repeat center top;
+		background: url(../images/logo-resized.fw.png) no-repeat center top;
 		margin: 0 auto;
 		font-size: 0px;
 		padding: 50px 0 0 0;
@@ -20,7 +20,7 @@
 		z-index: 100;
 
 		&:hover {
-			background: url(../images/logo_resized_glow.fw.png) no-repeat center top;
+			background: url(../images/logo-resized-glow.fw.png) no-repeat center top;
 
 		}
 	}
