@@ -220,6 +220,10 @@ button {
     .drop-choices a:hover, .drop-choices a.choice:hover {
       background: #161616; }
 
+body > .content .link .rank,
+.rank-spacer {
+  width: 2.2ex !important; }
+
 .thing .entry {
   margin-top: 10px; }
 

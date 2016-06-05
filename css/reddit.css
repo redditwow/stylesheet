@@ -28,8 +28,8 @@ body{background:url(%%repeat-bg%%) left;color:#f7fae5}body>.content{margin-right
 .morelink .nub,button .nub{display:none}.morelink a,button a{color:#fff;font-weight:normal;text-shadow:0 1px 0 #000;font-size:14px;float:left}
 .sidecontentbox{text-align:right}.md{color:#f7fae5}.md a{color:#e8e361}.linkflairlabel{color:#f7fae5;border:#333 1px solid;background:black}
 .drop-choices{color:#f7fae5;background:#232323}.drop-choices a,.drop-choices a.choice{color:#f7fae5}
-.drop-choices a:hover,.drop-choices a.choice:hover{background:#161616}.thing .entry{margin-top:10px}
-.link .usertext-body .md{background-color:#161616;border:1px solid #494949;border-radius:7px}
+.drop-choices a:hover,.drop-choices a.choice:hover{background:#161616}body>.content .link .rank,.rank-spacer{width:2.2ex !important}
+.thing .entry{margin-top:10px}.link .usertext-body .md{background-color:#161616;border:1px solid #494949;border-radius:7px}
 .contest-mode,.infobar.mellow{background-color:#185f18;border:1px solid #279c27;color:#fff;font-weight:normal;text-shadow:0 1px 0 #000}
 .linkinfo{background:#161616;border:1px solid #494949;border-radius:0;padding-bottom:0;border-bottom:0}
 .linkinfo .date{border-bottom:2px solid #0c1619;padding:5px 0}.linkinfo .date:before{content:"Submitted "}
