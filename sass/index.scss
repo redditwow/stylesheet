@@ -20,7 +20,7 @@ body > .content {
 
 .thing {
 
-	padding: 10px 0px;
+	padding: 5px 0px;
 
 	&.stickied.link a.title {
 		color: $green_title;
@@ -47,30 +47,29 @@ body > .content {
 
 	a {
 
-		&.thumbnail {
-			width: 48px;
-			height: 48px;
+		&.thumbnail{
+			margin-top: 9px;
 			margin-left: 20px;
-			margin-right: 20px;
-
-			overflow: visible !important;
-
-			img {
-				width: 48px !important;
-				height: 48px !important;
-				position: relative;
-				top: 18px;
-				left: 9px;
+			&::after {
+				//positions the minipanel border over the top of the thumbnail
+				content: url(../minipanel.fw.png);
+				z-index: 2;
+				position: absolute;
+				left: 81px;
+				margin-top: -11px;
 			}
+			img {
+				// aligns the thumbnail and clamps size
+				position: relative;
+				top: 6px;
+				left: 4px;
+				width: 56px !important;
+				height: 56px !important;
+			}
+
 		}
-		&.thumbnail::after {
-			content: url("../minipanel.fw.png");
-			z-index: 2;
-			position: absolute;
-			//top: 10px;
-			left: 85px;
-			margin-top: 0;
-		}
+
+
 
 		&.title {
 			color: $title;

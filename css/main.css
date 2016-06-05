@@ -18,7 +18,7 @@ body > .content {
   color: #b4b4b4; }
 
 .thing {
-  padding: 10px 0px; }
+  padding: 5px 0px; }
   .thing.stickied.link a.title {
     color: #13ff29;
     transition: color 0.2s; }
@@ -32,23 +32,20 @@ body > .content {
   .thing .rank {
     padding-top: 15px; }
   .thing a.thumbnail {
-    width: 48px;
-    height: 48px;
-    margin-left: 20px;
-    margin-right: 20px;
-    overflow: visible !important; }
-    .thing a.thumbnail img {
-      width: 48px !important;
-      height: 48px !important;
+    margin-top: 9px;
+    margin-left: 20px; }
+    .thing a.thumbnail::after {
+      content: url(../minipanel.fw.png);
+      z-index: 2;
+      position: absolute;
+      left: 81px;
+      margin-top: -11px; }
+    .thing a.thumbnailimg {
       position: relative;
-      top: 18px;
-      left: 9px; }
-  .thing a.thumbnail::after {
-    content: url("../minipanel.fw.png");
-    z-index: 2;
-    position: absolute;
-    left: 85px;
-    margin-top: 0; }
+      top: 6px;
+      left: 4px;
+      width: 56px !important;
+      height: 56px !important; }
   .thing a.title {
     color: #e8e361; }
     .thing a.title:hover {
@@ -362,6 +359,51 @@ The `sprites` mixin generates identical output to the CSS template
 
 @include sprites($spritesheet-sprites);
 */
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
 .flair {
   padding: 1px 3px;
   margin: 0px;
@@ -370,7 +412,7 @@ The `sprites` mixin generates identical output to the CSS template
   color: #f7fae5;
   background: transparent; }
   .flair:after {
-    background: url("../sprites/sprites.png") no-repeat scroll 16px 16px transparent;
+    background: url("../sprites/flair-user.png") no-repeat scroll 16px 16px transparent;
     display: inline-block;
     margin-left: 3px;
     vertical-align: middle;
@@ -746,3 +788,134 @@ The `sprites` mixin generates identical output to the CSS template
   background-position: -16px -161px;
   width: 16px;
   height: 16px; }
+
+.thing a.thumbnail::after {
+  content: url(../minipanel.fw.png);
+  z-index: 2;
+  position: absolute;
+  left: 81px;
+  margin-top: -11px; }
+
+.thing a.thumbnail img {
+  width: 54px !important;
+  height: 54px !important;
+  position: relative;
+  top: 6px;
+  left: 4px;
+  width: 56px !important;
+  height: 56px !important; }
+
+a.thumbnail.default,
+a.thumbnail.self,
+.thing.over18 a.thumbnail {
+  background-image: url("../sprites/flair_link.png") !important; }
+
+a.thumbnail.default,
+a.thumbnail.self {
+  margin-right: 20px;
+  background-position: 0px -56px;
+  width: 56px;
+  height: 56px; }
+
+.thing.over18 a.thumbnail {
+  margin-right: 20px;
+  background-position: -168px -56px;
+  width: 56px;
+  height: 56px; }
+  .thing.over18 a.thumbnail img {
+    display: none; }
+
+.linkflair-bluepost a.thumbnail {
+  background-position: -56px 0px;
+  width: 56px;
+  height: 56px; }
+
+.linkflair-deathknight a.thumbnail {
+  background-position: -168px 0px;
+  width: 56px;
+  height: 56px; }
+
+.linkflair-default a.thumbnail {
+  background-position: 0px -56px;
+  width: 56px;
+  height: 56px; }
+
+.linkflair-druid a.thumbnail {
+  background-position: -56px -56px;
+  width: 56px;
+  height: 56px; }
+
+.linkflair-heal a.thumbnail {
+  background-position: -112px 0px;
+  width: 56px;
+  height: 56px; }
+
+.linkflair-hunter a.thumbnail {
+  background-position: -112px -56px;
+  width: 56px;
+  height: 56px; }
+
+.linkflair-lore a.thumbnail {
+  background-position: -224px -112px;
+  width: 54px;
+  height: 54px; }
+
+.linkflair-mage a.thumbnail {
+  background-position: -56px -112px;
+  width: 56px;
+  height: 56px; }
+
+.linkflair-modpost a.thumbnail {
+  background-position: -112px -112px;
+  width: 56px;
+  height: 56px; }
+
+.linkflair-monk a.thumbnail {
+  background-position: 0px 0px;
+  width: 56px;
+  height: 56px; }
+
+.linkflair-over18 a.thumbnail {
+  background-position: -168px -56px;
+  width: 56px;
+  height: 56px; }
+
+.linkflair-paladin a.thumbnail {
+  background-position: -168px -112px;
+  width: 56px;
+  height: 56px; }
+
+.linkflair-priest a.thumbnail {
+  background-position: 0px -168px;
+  width: 56px;
+  height: 56px; }
+
+.linkflair-pvp a.thumbnail {
+  background-position: -56px -168px;
+  width: 56px;
+  height: 56px; }
+
+.linkflair-rogue a.thumbnail {
+  background-position: -112px -168px;
+  width: 56px;
+  height: 56px; }
+
+.linkflair-shaman a.thumbnail {
+  background-position: -168px -168px;
+  width: 56px;
+  height: 56px; }
+
+.linkflair-tank a.thumbnail {
+  background-position: -224px 0px;
+  width: 56px;
+  height: 56px; }
+
+.linkflair-warlock a.thumbnail {
+  background-position: 0px -112px;
+  width: 56px;
+  height: 56px; }
+
+.linkflair-warrior a.thumbnail {
+  background-position: -224px -56px;
+  width: 56px;
+  height: 56px; }

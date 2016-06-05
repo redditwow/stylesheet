@@ -1,0 +1,294 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$linkflair-bluepost-name: 'linkflair-bluepost';
+$linkflair-bluepost-x: 56px;
+$linkflair-bluepost-y: 0px;
+$linkflair-bluepost-offset-x: -56px;
+$linkflair-bluepost-offset-y: 0px;
+$linkflair-bluepost-width: 56px;
+$linkflair-bluepost-height: 56px;
+$linkflair-bluepost-total-width: 280px;
+$linkflair-bluepost-total-height: 224px;
+$linkflair-bluepost-image: '../sprites/flair_link.png';
+$linkflair-bluepost: (56px, 0px, -56px, 0px, 56px, 56px, 280px, 224px, '../sprites/flair_link.png', 'linkflair-bluepost', );
+$linkflair-deathknight-name: 'linkflair-deathknight';
+$linkflair-deathknight-x: 168px;
+$linkflair-deathknight-y: 0px;
+$linkflair-deathknight-offset-x: -168px;
+$linkflair-deathknight-offset-y: 0px;
+$linkflair-deathknight-width: 56px;
+$linkflair-deathknight-height: 56px;
+$linkflair-deathknight-total-width: 280px;
+$linkflair-deathknight-total-height: 224px;
+$linkflair-deathknight-image: '../sprites/flair_link.png';
+$linkflair-deathknight: (168px, 0px, -168px, 0px, 56px, 56px, 280px, 224px, '../sprites/flair_link.png', 'linkflair-deathknight', );
+$linkflair-default-name: 'linkflair-default';
+$linkflair-default-x: 0px;
+$linkflair-default-y: 56px;
+$linkflair-default-offset-x: 0px;
+$linkflair-default-offset-y: -56px;
+$linkflair-default-width: 56px;
+$linkflair-default-height: 56px;
+$linkflair-default-total-width: 280px;
+$linkflair-default-total-height: 224px;
+$linkflair-default-image: '../sprites/flair_link.png';
+$linkflair-default: (0px, 56px, 0px, -56px, 56px, 56px, 280px, 224px, '../sprites/flair_link.png', 'linkflair-default', );
+$linkflair-druid-name: 'linkflair-druid';
+$linkflair-druid-x: 56px;
+$linkflair-druid-y: 56px;
+$linkflair-druid-offset-x: -56px;
+$linkflair-druid-offset-y: -56px;
+$linkflair-druid-width: 56px;
+$linkflair-druid-height: 56px;
+$linkflair-druid-total-width: 280px;
+$linkflair-druid-total-height: 224px;
+$linkflair-druid-image: '../sprites/flair_link.png';
+$linkflair-druid: (56px, 56px, -56px, -56px, 56px, 56px, 280px, 224px, '../sprites/flair_link.png', 'linkflair-druid', );
+$linkflair-heal-name: 'linkflair-heal';
+$linkflair-heal-x: 112px;
+$linkflair-heal-y: 0px;
+$linkflair-heal-offset-x: -112px;
+$linkflair-heal-offset-y: 0px;
+$linkflair-heal-width: 56px;
+$linkflair-heal-height: 56px;
+$linkflair-heal-total-width: 280px;
+$linkflair-heal-total-height: 224px;
+$linkflair-heal-image: '../sprites/flair_link.png';
+$linkflair-heal: (112px, 0px, -112px, 0px, 56px, 56px, 280px, 224px, '../sprites/flair_link.png', 'linkflair-heal', );
+$linkflair-hunter-name: 'linkflair-hunter';
+$linkflair-hunter-x: 112px;
+$linkflair-hunter-y: 56px;
+$linkflair-hunter-offset-x: -112px;
+$linkflair-hunter-offset-y: -56px;
+$linkflair-hunter-width: 56px;
+$linkflair-hunter-height: 56px;
+$linkflair-hunter-total-width: 280px;
+$linkflair-hunter-total-height: 224px;
+$linkflair-hunter-image: '../sprites/flair_link.png';
+$linkflair-hunter: (112px, 56px, -112px, -56px, 56px, 56px, 280px, 224px, '../sprites/flair_link.png', 'linkflair-hunter', );
+$linkflair-lore-name: 'linkflair-lore';
+$linkflair-lore-x: 224px;
+$linkflair-lore-y: 112px;
+$linkflair-lore-offset-x: -224px;
+$linkflair-lore-offset-y: -112px;
+$linkflair-lore-width: 54px;
+$linkflair-lore-height: 54px;
+$linkflair-lore-total-width: 280px;
+$linkflair-lore-total-height: 224px;
+$linkflair-lore-image: '../sprites/flair_link.png';
+$linkflair-lore: (224px, 112px, -224px, -112px, 54px, 54px, 280px, 224px, '../sprites/flair_link.png', 'linkflair-lore', );
+$linkflair-mage-name: 'linkflair-mage';
+$linkflair-mage-x: 56px;
+$linkflair-mage-y: 112px;
+$linkflair-mage-offset-x: -56px;
+$linkflair-mage-offset-y: -112px;
+$linkflair-mage-width: 56px;
+$linkflair-mage-height: 56px;
+$linkflair-mage-total-width: 280px;
+$linkflair-mage-total-height: 224px;
+$linkflair-mage-image: '../sprites/flair_link.png';
+$linkflair-mage: (56px, 112px, -56px, -112px, 56px, 56px, 280px, 224px, '../sprites/flair_link.png', 'linkflair-mage', );
+$linkflair-modpost-name: 'linkflair-modpost';
+$linkflair-modpost-x: 112px;
+$linkflair-modpost-y: 112px;
+$linkflair-modpost-offset-x: -112px;
+$linkflair-modpost-offset-y: -112px;
+$linkflair-modpost-width: 56px;
+$linkflair-modpost-height: 56px;
+$linkflair-modpost-total-width: 280px;
+$linkflair-modpost-total-height: 224px;
+$linkflair-modpost-image: '../sprites/flair_link.png';
+$linkflair-modpost: (112px, 112px, -112px, -112px, 56px, 56px, 280px, 224px, '../sprites/flair_link.png', 'linkflair-modpost', );
+$linkflair-monk-name: 'linkflair-monk';
+$linkflair-monk-x: 0px;
+$linkflair-monk-y: 0px;
+$linkflair-monk-offset-x: 0px;
+$linkflair-monk-offset-y: 0px;
+$linkflair-monk-width: 56px;
+$linkflair-monk-height: 56px;
+$linkflair-monk-total-width: 280px;
+$linkflair-monk-total-height: 224px;
+$linkflair-monk-image: '../sprites/flair_link.png';
+$linkflair-monk: (0px, 0px, 0px, 0px, 56px, 56px, 280px, 224px, '../sprites/flair_link.png', 'linkflair-monk', );
+$linkflair-over18-name: 'linkflair-over18';
+$linkflair-over18-x: 168px;
+$linkflair-over18-y: 56px;
+$linkflair-over18-offset-x: -168px;
+$linkflair-over18-offset-y: -56px;
+$linkflair-over18-width: 56px;
+$linkflair-over18-height: 56px;
+$linkflair-over18-total-width: 280px;
+$linkflair-over18-total-height: 224px;
+$linkflair-over18-image: '../sprites/flair_link.png';
+$linkflair-over18: (168px, 56px, -168px, -56px, 56px, 56px, 280px, 224px, '../sprites/flair_link.png', 'linkflair-over18', );
+$linkflair-paladin-name: 'linkflair-paladin';
+$linkflair-paladin-x: 168px;
+$linkflair-paladin-y: 112px;
+$linkflair-paladin-offset-x: -168px;
+$linkflair-paladin-offset-y: -112px;
+$linkflair-paladin-width: 56px;
+$linkflair-paladin-height: 56px;
+$linkflair-paladin-total-width: 280px;
+$linkflair-paladin-total-height: 224px;
+$linkflair-paladin-image: '../sprites/flair_link.png';
+$linkflair-paladin: (168px, 112px, -168px, -112px, 56px, 56px, 280px, 224px, '../sprites/flair_link.png', 'linkflair-paladin', );
+$linkflair-priest-name: 'linkflair-priest';
+$linkflair-priest-x: 0px;
+$linkflair-priest-y: 168px;
+$linkflair-priest-offset-x: 0px;
+$linkflair-priest-offset-y: -168px;
+$linkflair-priest-width: 56px;
+$linkflair-priest-height: 56px;
+$linkflair-priest-total-width: 280px;
+$linkflair-priest-total-height: 224px;
+$linkflair-priest-image: '../sprites/flair_link.png';
+$linkflair-priest: (0px, 168px, 0px, -168px, 56px, 56px, 280px, 224px, '../sprites/flair_link.png', 'linkflair-priest', );
+$linkflair-pvp-name: 'linkflair-pvp';
+$linkflair-pvp-x: 56px;
+$linkflair-pvp-y: 168px;
+$linkflair-pvp-offset-x: -56px;
+$linkflair-pvp-offset-y: -168px;
+$linkflair-pvp-width: 56px;
+$linkflair-pvp-height: 56px;
+$linkflair-pvp-total-width: 280px;
+$linkflair-pvp-total-height: 224px;
+$linkflair-pvp-image: '../sprites/flair_link.png';
+$linkflair-pvp: (56px, 168px, -56px, -168px, 56px, 56px, 280px, 224px, '../sprites/flair_link.png', 'linkflair-pvp', );
+$linkflair-rogue-name: 'linkflair-rogue';
+$linkflair-rogue-x: 112px;
+$linkflair-rogue-y: 168px;
+$linkflair-rogue-offset-x: -112px;
+$linkflair-rogue-offset-y: -168px;
+$linkflair-rogue-width: 56px;
+$linkflair-rogue-height: 56px;
+$linkflair-rogue-total-width: 280px;
+$linkflair-rogue-total-height: 224px;
+$linkflair-rogue-image: '../sprites/flair_link.png';
+$linkflair-rogue: (112px, 168px, -112px, -168px, 56px, 56px, 280px, 224px, '../sprites/flair_link.png', 'linkflair-rogue', );
+$linkflair-shaman-name: 'linkflair-shaman';
+$linkflair-shaman-x: 168px;
+$linkflair-shaman-y: 168px;
+$linkflair-shaman-offset-x: -168px;
+$linkflair-shaman-offset-y: -168px;
+$linkflair-shaman-width: 56px;
+$linkflair-shaman-height: 56px;
+$linkflair-shaman-total-width: 280px;
+$linkflair-shaman-total-height: 224px;
+$linkflair-shaman-image: '../sprites/flair_link.png';
+$linkflair-shaman: (168px, 168px, -168px, -168px, 56px, 56px, 280px, 224px, '../sprites/flair_link.png', 'linkflair-shaman', );
+$linkflair-tank-name: 'linkflair-tank';
+$linkflair-tank-x: 224px;
+$linkflair-tank-y: 0px;
+$linkflair-tank-offset-x: -224px;
+$linkflair-tank-offset-y: 0px;
+$linkflair-tank-width: 56px;
+$linkflair-tank-height: 56px;
+$linkflair-tank-total-width: 280px;
+$linkflair-tank-total-height: 224px;
+$linkflair-tank-image: '../sprites/flair_link.png';
+$linkflair-tank: (224px, 0px, -224px, 0px, 56px, 56px, 280px, 224px, '../sprites/flair_link.png', 'linkflair-tank', );
+$linkflair-warlock-name: 'linkflair-warlock';
+$linkflair-warlock-x: 0px;
+$linkflair-warlock-y: 112px;
+$linkflair-warlock-offset-x: 0px;
+$linkflair-warlock-offset-y: -112px;
+$linkflair-warlock-width: 56px;
+$linkflair-warlock-height: 56px;
+$linkflair-warlock-total-width: 280px;
+$linkflair-warlock-total-height: 224px;
+$linkflair-warlock-image: '../sprites/flair_link.png';
+$linkflair-warlock: (0px, 112px, 0px, -112px, 56px, 56px, 280px, 224px, '../sprites/flair_link.png', 'linkflair-warlock', );
+$linkflair-warrior-name: 'linkflair-warrior';
+$linkflair-warrior-x: 224px;
+$linkflair-warrior-y: 56px;
+$linkflair-warrior-offset-x: -224px;
+$linkflair-warrior-offset-y: -56px;
+$linkflair-warrior-width: 56px;
+$linkflair-warrior-height: 56px;
+$linkflair-warrior-total-width: 280px;
+$linkflair-warrior-total-height: 224px;
+$linkflair-warrior-image: '../sprites/flair_link.png';
+$linkflair-warrior: (224px, 56px, -224px, -56px, 56px, 56px, 280px, 224px, '../sprites/flair_link.png', 'linkflair-warrior', );
+$flair-link-width: 280px;
+$flair-link-height: 224px;
+$flair-link-image: '../sprites/flair_link.png';
+$flair-link-sprites: ($linkflair-bluepost, $linkflair-deathknight, $linkflair-default, $linkflair-druid, $linkflair-heal, $linkflair-hunter, $linkflair-lore, $linkflair-mage, $linkflair-modpost, $linkflair-monk, $linkflair-over18, $linkflair-paladin, $linkflair-priest, $linkflair-pvp, $linkflair-rogue, $linkflair-shaman, $linkflair-tank, $linkflair-warlock, $linkflair-warrior, );
+$flair-link: (280px, 224px, '../sprites/flair_link.png', $flair-link-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

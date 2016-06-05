@@ -9,25 +9,7 @@
 	}
 }
 
-.flair {
-	padding: 1px 3px;
-	margin: 0px;
-	border: 0;
-	border-radius: 0;
-	color: $text;
-	background: transparent;
-	&:after {
-		background: url($spritesheet-image) no-repeat scroll 16px 16px transparent;
-		display: inline-block;
-		margin-left: 3px;
-		vertical-align: middle;
-		height: 18px;
-		content: '';
-	}
-
-}
-
-@mixin flair-faction-colour($faction, $colour){
+@mixin flair-faction-colour($faction, $colour) {
 	.flair-#{$faction} + .author,
 	.flair-#{$faction} + .author:visited {
 		//background-color: transparent;
@@ -47,9 +29,28 @@
 	}
 }
 
+.flair {
+	padding: 1px 3px;
+	margin: 0px;
+	border: 0;
+	border-radius: 0;
+	color: $text;
+	background: transparent;
+	&:after {
+		background: url($flair-user-image) no-repeat scroll 16px 16px transparent;
+		display: inline-block;
+		margin-left: 3px;
+		vertical-align: middle;
+		height: 18px;
+		content: '';
+	}
+}
+
+// colour only faction flairs
 @include flair-faction-colour('alliance', #247FAA);
 @include flair-faction-colour('horde', #B30000);
 
+// colour only class flairs
 @include flair-class-colour('shaman', #0070DE);
 @include flair-class-colour('deathknight', #C41F3B);
 @include flair-class-colour('demonhunter', #4dd827);
@@ -64,4 +65,59 @@
 @include flair-class-colour('warlock', #9482C9);
 @include flair-class-colour('warrior', #C79C6E);
 
-@include wow-sprites($spritesheet-sprites);
+@include wow-sprites($flair-user-sprites);
+
+//.linkflairlabel {
+//	border:none;
+//	padding:4px;
+//	font-size:10px;
+//	position:relative;
+//	top:3px;
+//	background:rgba(255,255,244,0.5);
+//}
+
+@mixin link-flairs($sprites) {
+	@each $sprite in $sprites {
+		$sprite-name: nth($sprite, 10);
+		//.#{$sprite-name}:after {
+		.#{$sprite-name} a.thumbnail {
+			@include sprite-position($sprite);
+			@include sprite-width($sprite);
+			@include sprite-height($sprite);
+			//background-position: -0px -909px !important;
+		}
+	}
+}
+
+//.linkflair a.thumbnail,
+a.thumbnail.default,
+a.thumbnail.self,
+.thing.over18 a.thumbnail {
+	background-image: url($flair-link-image) !important;
+}
+
+// special cases
+
+// default, self
+a.thumbnail.default,
+a.thumbnail.self{
+	margin-right: 20px;
+	@include sprite-position($linkflair-default);
+	@include sprite-width($linkflair-default);
+	@include sprite-height($linkflair-default);
+}
+
+// nsfw (over18)
+.thing.over18 a.thumbnail {
+	margin-right: 20px;
+	@include sprite-position($linkflair-over18);
+	@include sprite-width($linkflair-over18);
+	@include sprite-height($linkflair-over18);
+	img {
+		// hide the thumbnail image to reveal the NSFW icon underneath
+		display: none;
+	}
+}
+
+// all the other link flairs
+@include link-flairs($flair-link-sprites);
