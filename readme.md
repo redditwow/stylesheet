@@ -16,3 +16,7 @@
     <img id='header-img' src="../placeholder_snoo.fw.png" width='60' height='103' alt="wow"/>
 </a>
 ```
+
+## Notes
+
+`reguser_index_res_side_only.html` is a frankenstein mix of regular reddit and RES's sidebar tweaks! Beware!

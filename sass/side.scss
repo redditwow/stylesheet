@@ -51,51 +51,116 @@
 	}
 }
 
-// submit buttons
-//.morelink {
-//	background: url(../skinnysillybutton.fw.png) no-repeat;
-//	border: none;
-//	height: 55px;
-//
-//	a {
-//		text-transform: uppercase;
-//		color: #000;
-//		text-shadow: 0 0 10px #e6ff42, 0 0 10px #e6ff42;
-//		padding-top: 12px;
-//		text-align: center;
-//	}
-//
-//	&:hover {
-//		background: url(../skinnysillybutton.fw.png) no-repeat;
-//	}
-//	.nub {
-//		display: none;
-//	}
-//}
-
-//$wowBtnBackground: #5F0D00;
-//$wowBtnHover: #9F1600;
-//$wowBtnBorder: #EA3012;
-
-.morelink,
-button {
+@mixin wow-btn-active() {
 	background: $wow_btn_background;
 	border: 1px solid $wow_btn_border;
 	transition: all 0.5s;
 	color: #fff;
+	border-radius: 0;
+}
+
+@mixin wow-btn-active-hover() {
+	transition: all 0.5s;
+	background: $wow_btn_hover;
+	border: 1px solid $wow_btn_border;
+}
+
+@mixin wow-btn-remove() {
+	background: $wow_btn_remove_background;
+	border: 1px solid $wow_btn_remove_border;
+	transition: all 0.5s;
+	color: #fff;
+	border-radius: 0;
+}
+
+@mixin wow-btn-remove-hover() {
+	transition: all 0.5s;
+	background: $wow_btn_remove_hover;
+	border: 1px solid $wow_btn_remove_border;
+}
+
+@mixin wow-btn-text() {
+	color: #fff;
+	font-weight: normal;
+	text-shadow: 0px 1px 0px #000;
+	font-size: 14px;
+}
+
+.side {
+	// RES extra fancy buttons (Dashboard, Subscribe)
+	.res-fancy-toggle-button {
+		@include wow-btn-active;
+		@include wow-btn-text;
+
+		text-transform: capitalize;
+		display: inline-block;
+		text-align: center;
+		height: 29px;
+		line-height: 29px;
+
+		// @TODO 50/50 split of the Dashboard and Subscribe buttons
+		// this seems to work in Firefox, but not in Webkit.
+
+		//margin: -7px 0px 12px 0px !important;
+		//padding: 0px !important;
+		//width: 48.5% !important;
+
+		width: auto;
+		margin: -7px 5px 12px 0px !important;
+
+		&:hover {
+			@include wow-btn-active-hover;
+		}
+
+		&.remove {
+			@include wow-btn-remove;
+			&:hover {
+				@include wow-btn-remove-hover;
+			}
+		}
+
+	}
+	// reddit stock subscribe button
+	.fancy-toggle-button {
+		display: block;
+		@include wow-btn-text;
+		margin: 7px 0 12px 0;
+		.active {
+			@include wow-btn-text;
+			display: block;
+			text-transform: capitalize;
+			height: 29px;
+			line-height: 29px;
+			text-align: center;
+			border-radius: 0px;
+		}
+		&.remove, .remove {
+			@include wow-btn-remove;
+			&:hover {
+				@include wow-btn-remove-hover;
+			}
+		}
+		.add {
+			@include wow-btn-active;
+			&:hover {
+				@include wow-btn-active-hover;
+			}
+		}
+	}
+}
+
+// Submit buttons
+.morelink,
+button {
+	@include wow-btn-active;
 	&:hover {
-		transition: all 0.5s;
-		background: $wow_btn_hover;
-		border: 1px solid $wow_btn_border;
+		@include wow-btn-active-hover;
 	}
 	.nub {
 		display: none;
 	}
 	a {
-		color: #fff;
-		font-weight: normal;
-		text-shadow: 0px 1px 0px #000;
-		font-size: 14px;
+		@include wow-btn-text;
 		float: left;
 	}
 }

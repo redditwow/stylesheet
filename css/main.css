@@ -177,12 +177,84 @@ body > .content {
   .titlebox form.toggle a, .leavemoderator a {
     color: #e8e361; }
 
+.side .res-fancy-toggle-button {
+  background: #185f18;
+  border: 1px solid #279c27;
+  transition: all 0.5s;
+  color: #fff;
+  border-radius: 0;
+  color: #fff;
+  font-weight: normal;
+  text-shadow: 0px 1px 0px #000;
+  font-size: 14px;
+  text-transform: capitalize;
+  display: inline-block;
+  text-align: center;
+  height: 29px;
+  line-height: 29px;
+  width: auto;
+  margin: -7px 5px 12px 0px !important; }
+  .side .res-fancy-toggle-button:hover {
+    transition: all 0.5s;
+    background: #0e360e;
+    border: 1px solid #279c27; }
+  .side .res-fancy-toggle-button.remove {
+    background: #a70603;
+    border: 1px solid #f20805;
+    transition: all 0.5s;
+    color: #fff;
+    border-radius: 0; }
+    .side .res-fancy-toggle-button.remove:hover {
+      transition: all 0.5s;
+      background: #750402;
+      border: 1px solid #f20805; }
+
+.side .fancy-toggle-button {
+  display: block;
+  color: #fff;
+  font-weight: normal;
+  text-shadow: 0px 1px 0px #000;
+  font-size: 14px;
+  margin: 7px 0 12px 0; }
+  .side .fancy-toggle-button .active {
+    color: #fff;
+    font-weight: normal;
+    text-shadow: 0px 1px 0px #000;
+    font-size: 14px;
+    display: block;
+    text-transform: capitalize;
+    height: 29px;
+    line-height: 29px;
+    text-align: center;
+    border-radius: 0px; }
+  .side .fancy-toggle-button.remove, .side .fancy-toggle-button .remove {
+    background: #a70603;
+    border: 1px solid #f20805;
+    transition: all 0.5s;
+    color: #fff;
+    border-radius: 0; }
+    .side .fancy-toggle-button.remove:hover, .side .fancy-toggle-button .remove:hover {
+      transition: all 0.5s;
+      background: #750402;
+      border: 1px solid #f20805; }
+  .side .fancy-toggle-button .add {
+    background: #185f18;
+    border: 1px solid #279c27;
+    transition: all 0.5s;
+    color: #fff;
+    border-radius: 0; }
+    .side .fancy-toggle-button .add:hover {
+      transition: all 0.5s;
+      background: #0e360e;
+      border: 1px solid #279c27; }
+
 .morelink,
 button {
   background: #185f18;
   border: 1px solid #279c27;
   transition: all 0.5s;
-  color: #fff; }
+  color: #fff;
+  border-radius: 0; }
   .morelink:hover,
   button:hover {
     transition: all 0.5s;

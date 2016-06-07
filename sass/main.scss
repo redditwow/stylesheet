@@ -7,6 +7,10 @@ $wow_btn_background: darken(#228822, 10%);
 $wow_btn_hover: darken($wow_btn_background, 10%);
 $wow_btn_border: lighten($wow_btn_background, 15%);
 
+$wow_btn_remove_background: darken(#CF0704, 8%);
+$wow_btn_remove_hover: darken($wow_btn_remove_background, 10%);
+$wow_btn_remove_border: lighten($wow_btn_remove_background, 15%);
+
 $grey_background: lighten(#090909, 5%);
 $grey_background_2: lighten(#090909, 10%);
 $grey_border: lighten(#090909, 25%);
