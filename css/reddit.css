@@ -18,7 +18,7 @@ body{background:url(%%repeat-bg%%) left;color:#f7fae5}body>.content{margin-right
 .arrow.upmod{background-position:-0 -0}.arrow.up{background-position:-0 -20px}.arrow.down{background-position:-0 -40px}
 .arrow.downmod{background-position:-0 -60px}.thing .midcol{margin-top:9px}.midcol{width:36px !important}
 .side{background:url(%%side-divide%%) left repeat-y,url(%%repeat-bg%%) center;padding-left:25px;color:#f7fae5}
-.side .md a[href*="#game"]{content:"";display:inline-block;height:50px;width:50px;background:url(%%game-icons-50%%) no-repeat;margin-right:5px}
+.side .titlebox h1{display:none}.side .md a[href*="#game"]{content:"";display:inline-block;height:50px;width:50px;background:url(%%game-icons-50%%) no-repeat;margin-right:5px}
 .side .md a[href*="#game"]:hover{opacity:.8}.side .md a[href*="#warcraft"]{background-position:0 0}
 .side .md a[href*="#diablo"]{background-position:-50px 0}.side .md a[href*="#starcraft"]{background-position:-100px 0}
 .side .md a[href*="#hearthstone"]{background-position:-150px 0}.side .md a[href*="#heroes"]{background-position:-200px 0}

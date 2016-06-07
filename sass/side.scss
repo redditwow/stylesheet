@@ -1,5 +1,11 @@
 // side bar
 .side {
+
+	// removes wow title from the sidebar
+	.titlebox h1 {
+		display: none;
+	}
+
 	background: url(../images/side-divide.fw.png) left repeat-y, url(../images/repeat-bg.jpg) center;;
 	//background: url(../media-tab-bottom.png) left repeat-y, url(../repeat-bg.jpg) center;
 	padding-left: 25px;

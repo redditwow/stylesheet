@@ -149,6 +149,8 @@ body > .content {
   background: url(../images/side-divide.fw.png) left repeat-y, url(../images/repeat-bg.jpg) center;
   padding-left: 25px;
   color: #f7fae5; }
+  .side .titlebox h1 {
+    display: none; }
   .side .md a[href*="#game"] {
     content: "";
     display: inline-block;
