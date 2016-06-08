@@ -315,6 +315,27 @@ body > .content .link .rank,
 .rank-spacer {
   width: 2.2ex !important; }
 
+.cookie-infobar {
+  background-color: rgba(24, 95, 24, 0.9);
+  border-color: #279c27; }
+  .cookie-infobar.with-icon:before {
+    background-color: rgba(24, 95, 24, 0.9); }
+  .cookie-infobar .c-btn-primary {
+    background-color: #000;
+    border: 1px solid #000;
+    color: #ffffff;
+    border-radius: 0; }
+    .cookie-infobar .c-btn-primary:hover {
+      background-color: #111;
+      border: 1px solid #000; }
+
+.reddit-infobar .md {
+  color: #fff;
+  color: #fff;
+  font-weight: normal;
+  text-shadow: 0px 1px 0px #000;
+  font-size: 14px; }
+
 .thing .entry {
   margin-top: 10px; }
 

@@ -43,8 +43,11 @@ body{background:url(%%repeat-bg%%) left;color:#f7fae5}body>.content{margin-right
 .hover-bubble.multi-selector:after{border-left-color:#494949}.md{color:#f7fae5}.md a{color:#e8e361}
 .linkflairlabel{color:#f7fae5;border:#333 1px solid;background:black}.drop-choices{color:#f7fae5;background:#232323}
 .drop-choices a,.drop-choices a.choice{color:#f7fae5}.drop-choices a:hover,.drop-choices a.choice:hover{background:#161616}
-body>.content .link .rank,.rank-spacer{width:2.2ex !important}.thing .entry{margin-top:10px}
-.link .usertext-body .md{background-color:#161616;border:1px solid #494949;border-radius:7px}
+body>.content .link .rank,.rank-spacer{width:2.2ex !important}.cookie-infobar{background-color:rgba(24,95,24,0.9);border-color:#279c27}
+.cookie-infobar.with-icon:before{background-color:rgba(24,95,24,0.9)}.cookie-infobar .c-btn-primary{background-color:#000;border:1px solid #000;color:#fff;border-radius:0}
+.cookie-infobar .c-btn-primary:hover{background-color:#111;border:1px solid #000}
+.reddit-infobar .md{color:#fff;color:#fff;font-weight:normal;text-shadow:0 1px 0 #000;font-size:14px}
+.thing .entry{margin-top:10px}.link .usertext-body .md{background-color:#161616;border:1px solid #494949;border-radius:7px}
 .contest-mode,.infobar.mellow{background-color:#185f18;border:1px solid #279c27;color:#fff;font-weight:normal;text-shadow:0 1px 0 #000}
 .linkinfo{background:#161616;border:1px solid #494949;border-radius:0;padding-bottom:0;border-bottom:0}
 .linkinfo .date{border-bottom:2px solid #0c1619;padding:5px 0}.linkinfo .date:before{content:"Submitted "}

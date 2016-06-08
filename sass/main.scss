@@ -11,6 +11,10 @@ $wow_btn_remove_background: darken(#CF0704, 8%);
 $wow_btn_remove_hover: darken($wow_btn_remove_background, 10%);
 $wow_btn_remove_border: lighten($wow_btn_remove_background, 15%);
 
+$yellow_background: darken(#FCF8E3, 0%);
+$yellow_hover: darken($yellow_background, 10%);
+$yellow_border: #F2BF27;
+
 $grey_background: lighten(#090909, 5%);
 $grey_background_2: lighten(#090909, 10%);
 $grey_border: lighten(#090909, 25%);
@@ -22,6 +26,8 @@ body {
 	color: $text;
 }
 
+
+@import "mixins.scss";
 
 @import "index.scss";
 @import "header.scss";
