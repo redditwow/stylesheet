@@ -184,3 +184,41 @@ button {
 .sidecontentbox {
 	text-align: right;
 }
+
+// multi reddit bubble when hovering over subscribe
+.hover-bubble {
+	&.multi-selector {
+		background: $grey_background;
+		border-color: $grey_border;
+
+		// categorise title
+		strong {
+			color: #fff;
+		}
+
+		// /r/wow link
+		a.sr {
+			color: $title;
+		}
+
+		// remove background from the textbox
+		.multi-list,
+		label:hover {
+			background: none;
+		}
+
+		// dark input box
+		.create-multi {
+			input[type=text] {
+				background: $grey_background_2;
+				border: 1px solid $grey_border;
+				color: #ddd;
+			}
+		}
+
+		//nub
+		&:after {
+			border-left-color: $grey_border;
+		}
+	}
+}
