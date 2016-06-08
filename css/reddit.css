@@ -7,8 +7,8 @@ body{background:url(%%repeat-bg%%) left;color:#f7fae5}body>.content{margin-right
 .thing a.thumbnail img{position:relative;top:6px;left:4px;width:56px !important;height:56px !important}
 .thing a.title{color:#e8e361}.thing a.title:hover{color:#c6c01d}.thing a.title:visited{color:#9a9516}
 .thing a.title:visited:hover{color:#6d6a10}#header{height:140px;background:url("%%header-illidan-still%%");background-position:center -166px}
-#header .redditname a{display:block;background:url(%%logo-resized%%) no-repeat center top;margin:0 auto;font-size:0;color:#364657;left:108px;position:absolute;top:27px;width:224px;height:103px;z-index:100}
-#header .redditname a:hover{background:url(%%logo-resized-glow%%) no-repeat center top}
+#header .redditname a{background-image:url(%%spritesheet%%);background-position:0 -103px;width:224px;height:103px;display:block;margin:0 auto;font-size:0;color:#364657;left:108px;position:absolute;top:27px;z-index:100}
+#header .redditname a:hover{background-image:url(%%spritesheet%%);background-position:0 0;width:224px;height:103px}
 #header:after{content:'';background:url(%%header-divide%%) repeat-x;height:23px;position:absolute;left:0;right:0;top:130px}
 .tabmenu{position:relative;left:220px}.tabmenu li.selected a{text-shadow:0 0 10px #e6ff42,0 0 10px #e6ff42;color:#13ff29;background:rgba(0,0,0,0.5);border:0;z-index:100}
 .tabmenu li a{color:#fff;background:rgba(0,0,0,0.5)}#header-img-a{margin-top:2px;margin-left:30px;height:103px;width:60px;display:inline-block}

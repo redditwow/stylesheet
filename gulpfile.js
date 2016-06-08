@@ -6,7 +6,7 @@ var uglifycss   = require('gulp-uglifycss');
 var size        = require('gulp-size');
 var rename      = require('gulp-rename');
 
-gulp.task('styles', ['flair-link', 'flair-user'], function () {
+gulp.task('styles', ['sprites', 'flair-link', 'flair-user'], function () {
 	gulp.src('sass/**/main.scss')
 		.pipe(sass().on('error', sass.logError))
 		// .pipe( replace('http://b.thumbs.redditmedia.com/JMItoXfQe274DPPZxd_MKmLdjT3vRp-7w8wqcN8mV1Y.png', '%%repeat-bg-media%%') )
@@ -25,8 +25,7 @@ gulp.task('styles', ['flair-link', 'flair-user'], function () {
 		.pipe(rename('reddit.css'))
 		.pipe(replace('../images/mini-panel.fw.png', '%%mini-panel%%'))
 		.pipe(replace('../images/repeat-bg.jpg', '%%repeat-bg%%'))
-		.pipe(replace('../images/logo-resized.fw.png', '%%logo-resized%%'))
-		.pipe(replace('../images/logo-resized-glow.fw.png', '%%logo-resized-glow%%'))
+		.pipe(replace('../sprites/spritesheet.png', '%%spritesheet%%'))
 		.pipe(replace('../images/header-divide.fw.png', '%%header-divide%%'))
 		.pipe(replace('../images/game-icons-50.png', '%%game-icons-50%%'))
 		.pipe(replace('../images/section-divider.png', '%%section-divider%%'))
@@ -68,6 +67,17 @@ gulp.task('flair-link', function () {
 		cssVarMap: function (sprite) {
 			sprite.name = 'linkflair-' + sprite.name
 		}
+	}));
+	return spriteData.pipe(gulp.dest('.'));
+});
+
+
+gulp.task('sprites', function () {
+	var spriteData = gulp.src('./spritesheet_images/*.png').pipe(spritesmith({
+		imgName: 'sprites/spritesheet.png',
+		cssName: 'sass/spritesheet.scss',
+		cssSpritesheetName: 'spritesheet',
+		algorithm: 'binary-tree'
 	}));
 	return spriteData.pipe(gulp.dest('.'));
 });

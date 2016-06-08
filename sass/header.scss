@@ -6,21 +6,18 @@
 	background-position: center -166px;
 
 	.redditname a {
+		@include sprite($logo-resized-fw);
 		display: block;
-		background: url(../images/logo-resized.fw.png) no-repeat center top;
 		margin: 0 auto;
 		font-size: 0px;
 		color: #364657;
 		left: 108px;
 		position: absolute;
 		top: 27px;
-		width: 224px;
-		height: 103px;
 		z-index: 100;
 
 		&:hover {
-			background: url(../images/logo-resized-glow.fw.png) no-repeat center top;
-
+			@include sprite($logo-resized-glow-fw);
 		}
 	}
 
@@ -70,10 +67,9 @@
 	display: none;
 }
 
-
 // header subreddit list
 #sr-header-area,
-// bottom right user panel
+	// bottom right user panel
 #header-bottom-right {
 	background: rgba(0, 0, 0, 0.5);
 	padding: 5px 0px 5px 5px;
