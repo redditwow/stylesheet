@@ -478,6 +478,24 @@ textarea {
   .footer-parent .bottommenu {
     color: rgba(255, 255, 255, 0.2); }
 
+.res .RES-keyNav-activeElement,
+.res .commentarea .RES-keyNav-activeElement .md,
+.res .commentarea .res .RES-keyNav-activeElement.entry .noncollapsed {
+  background-color: rgba(35, 35, 35, 0.5) !important; }
+
+.neverEndingReddit {
+  background: rgba(35, 35, 35, 0.5) !important;
+  border: #494949 1px solid !important;
+  border-radius: 0px !important;
+  color: #f7fae5;
+  margin: 40px auto 0px;
+  width: 50%; }
+  .neverEndingReddit h2, .neverEndingReddit a {
+    color: #e8e361; }
+
+.redditSingleClick {
+  color: #f7fae5 !important; }
+
 /*
 SCSS variables are information about icon's compiled state, stored under its original file name
 

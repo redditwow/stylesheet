@@ -1,0 +1,25 @@
+// keyboard highlights
+// https://www.reddit.com/r/Enhancement/comments/2gd92i/how_do_i_override_backgroundcolor_of/
+.res .RES-keyNav-activeElement,
+.res .commentarea .RES-keyNav-activeElement .md,
+.res .commentarea .res .RES-keyNav-activeElement.entry .noncollapsed {
+	background-color: rgba($grey_background_2, 0.5) !important;
+}
+
+
+.neverEndingReddit {
+	background: rgba($grey_background_2, 0.5) !important;
+	border: $grey_border 1px solid !important;
+	border-radius: 0px !important;
+	color: $text;
+	margin: 40px auto 0px;
+	width: 50%;
+	h2, a {
+		color: $title;
+	}
+}
+
+//[l=c]
+.redditSingleClick {
+	color: $text !important;
+}

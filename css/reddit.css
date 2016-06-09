@@ -62,7 +62,10 @@ textarea{color:#fff;background-color:#161616;border:1px solid #494949}.comment{b
 .single-page .link .rank{display:block;width:2.2ex !important}.footer-parent{background:url(%%section-divider%%) center top no-repeat;padding-top:110px}
 .footer-parent .footer{color:#ddea8f;border:0;text-transform:capitalize}.footer-parent .footer a{color:rgba(255,255,255,0.6)}
 .footer-parent .footer .flat-vert.title{color:rgba(255,255,255,0.8)}.footer-parent .footer .col{border:0}
-.footer-parent .bottommenu{color:rgba(255,255,255,0.2)}.flair{padding:1px 3px;margin:0;border:0;border-radius:0;color:#f7fae5;background:transparent}
+.footer-parent .bottommenu{color:rgba(255,255,255,0.2)}.res .RES-keyNav-activeElement,.res .commentarea .RES-keyNav-activeElement .md,.res .commentarea .res .RES-keyNav-activeElement.entry .noncollapsed{background-color:rgba(35,35,35,0.5) !important}
+.neverEndingReddit{background:rgba(35,35,35,0.5) !important;border:#494949 1px solid !important;border-radius:0 !important;color:#f7fae5;margin:40px auto 0;width:50%}
+.neverEndingReddit h2,.neverEndingReddit a{color:#e8e361}.redditSingleClick{color:#f7fae5 !important}
+.flair{padding:1px 3px;margin:0;border:0;border-radius:0;color:#f7fae5;background:transparent}
 .flair:after{background:url("%%flair-user%%") no-repeat scroll 16px 16px transparent;display:inline-block;margin-left:3px;vertical-align:middle;height:18px;content:''}
 .flair-alliance+.author,.flair-alliance+.author:visited{color:#247faa}.flair-horde+.author,.flair-horde+.author:visited{color:#b30000}
 .flair-shaman+.author,.flair-alliance-shaman+.author,.flair-horde-shaman+.author,.flair-shaman+.author:visited,.flair-alliance-shaman+.author:visited,.flair-horde-shaman+.author:visited{color:#0070de}
