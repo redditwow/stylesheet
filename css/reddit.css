@@ -40,9 +40,10 @@ body{background:url(%%repeat-bg%%) left;color:#f7fae5}body>.content{margin-right
 .sidecontentbox .author{color:#e8e361}.sidecontentbox .author:hover{text-decoration:underline}
 .sidecontentbox a.helplink{padding-bottom:29px;display:block;color:#e8e361;margin-left:4px;font-size:18px;float:none;text-transform:capitalize}
 .sidecontentbox a.helplink:before{content:'';display:block;border:#333 solid 1px;border-radius:3px;margin-bottom:-40px;background-image:url(%%spritesheet%%);background-position:-224px 0;width:56px;height:56px}
-#moderation_tools .title{color:#f7fae5}#moderation_tools .icon-menu a{background:0;color:#f7fae5}
-.hover-bubble.multi-selector{background:#161616;border-color:#494949}.hover-bubble.multi-selector strong{color:#fff}
-.hover-bubble.multi-selector a.sr{color:#e8e361}.hover-bubble.multi-selector .multi-list,.hover-bubble.multi-selector label:hover{background:0}
+.sidecontentbox a.helplink:hover{color:#c6c01d}#moderation_tools .title{color:#f7fae5}
+#moderation_tools .icon-menu a{background:0;color:#f7fae5}.hover-bubble.multi-selector{background:#161616;border-color:#494949}
+.hover-bubble.multi-selector strong{color:#fff}.hover-bubble.multi-selector a.sr{color:#e8e361}
+.hover-bubble.multi-selector .multi-list,.hover-bubble.multi-selector label:hover{background:0}
 .hover-bubble.multi-selector .create-multi input[type=text]{background:#232323;border:1px solid #494949;color:#ddd}
 .hover-bubble.multi-selector:after{border-left-color:#494949}.sidebox .spacer{background:0}
 .sidebox .subtitle{color:#f7fae5}.gadget a{color:#e8e361}.gadget small{color:#f7fae5 !important}

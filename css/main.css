@@ -349,6 +349,8 @@ button {
       background-position: -224px 0px;
       width: 56px;
       height: 56px; }
+    .sidecontentbox a.helplink:hover {
+      color: #c6c01d; }
 
 #moderation_tools .title {
   color: #f7fae5; }

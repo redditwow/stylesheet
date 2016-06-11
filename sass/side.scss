@@ -158,6 +158,7 @@ button {
 			text-decoration: underline;
 		}
 	}
+	// message the moderators
 	a.helplink {
 		&:before {
 			content: '';
@@ -174,6 +175,9 @@ button {
 		font-size: 18px;
 		float: none;
 		text-transform: capitalize;
+		&:hover {
+			color: darken($title, 20%);
+		}
 	}
 }
 
