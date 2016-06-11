@@ -1,0 +1,15 @@
+body.front-page.res-hide-tagline-frontpage .tagline { display: none; }
+
+.res-nightmode:not(.res-nightMode-coloredLinks) .thing .title {
+  color: hsl(0,0%,87%);
+}
+.res-nightmode:not(.res-nightMode-coloredLinks) .thing:not(.stickied) .title:visited, 
+.res-nightmode:not(.res-nightMode-coloredLinks) .thing.visited:not(.stickied) .title, 
+.res-nightmode:not(.res-nightMode-coloredLinks).combined-search-page .search-result a:visited, 
+.res-nightmode:not(.res-nightMode-coloredLinks).combined-search-page .search-result a:visited > mark {
+  color: hsl(0,0%,65%);
+}
+
+.new-comment .usertext-body { margin: 0; }
+
+.res-neverEndingReddit-hideFloatingPauseButton #NREPause { display: none; }
