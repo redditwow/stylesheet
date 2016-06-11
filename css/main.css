@@ -374,6 +374,18 @@ button {
   .hover-bubble.multi-selector:after {
     border-left-color: #494949; }
 
+.sidebox .spacer {
+  background: none; }
+
+.sidebox .subtitle {
+  color: #f7fae5; }
+
+.gadget a {
+  color: #e8e361; }
+
+.gadget small {
+  color: #f7fae5 !important; }
+
 .account-activity-box a {
   color: #f7fae5; }
 

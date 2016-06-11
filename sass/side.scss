@@ -226,9 +226,29 @@ button {
 	}
 }
 
-// account activity
+//create your own subreddit
+.sidebox {
+	.spacer {
+		background: none;
+	}
+	.subtitle {
+		color: $text
+	}
+}
 
+//recently viewed links
+.gadget {
+
+	a {
+		color: $title;
+	}
+	small {
+		color: $text !important;
+	}
+}
+
+
+// account activity
 .account-activity-box a {
 	color: $text;
 }
-
