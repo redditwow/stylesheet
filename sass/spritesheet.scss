@@ -11,6 +11,17 @@ $icon-home: x y offset_x offset_y width height total_width total_height image_pa
 At the bottom of this section, we provide information about the spritesheet itself
 $spritesheet: width height image $spritesheet-sprites;
 */
+$inv-letter-05-name: 'inv_letter_05';
+$inv-letter-05-x: 224px;
+$inv-letter-05-y: 0px;
+$inv-letter-05-offset-x: -224px;
+$inv-letter-05-offset-y: 0px;
+$inv-letter-05-width: 56px;
+$inv-letter-05-height: 56px;
+$inv-letter-05-total-width: 280px;
+$inv-letter-05-total-height: 206px;
+$inv-letter-05-image: '../sprites/spritesheet.png';
+$inv-letter-05: (224px, 0px, -224px, 0px, 56px, 56px, 280px, 206px, '../sprites/spritesheet.png', 'inv_letter_05', );
 $logo-resized-glow-fw-name: 'logo-resized-glow.fw';
 $logo-resized-glow-fw-x: 0px;
 $logo-resized-glow-fw-y: 0px;
@@ -18,10 +29,10 @@ $logo-resized-glow-fw-offset-x: 0px;
 $logo-resized-glow-fw-offset-y: 0px;
 $logo-resized-glow-fw-width: 224px;
 $logo-resized-glow-fw-height: 103px;
-$logo-resized-glow-fw-total-width: 224px;
+$logo-resized-glow-fw-total-width: 280px;
 $logo-resized-glow-fw-total-height: 206px;
 $logo-resized-glow-fw-image: '../sprites/spritesheet.png';
-$logo-resized-glow-fw: (0px, 0px, 0px, 0px, 224px, 103px, 224px, 206px, '../sprites/spritesheet.png', 'logo-resized-glow.fw', );
+$logo-resized-glow-fw: (0px, 0px, 0px, 0px, 224px, 103px, 280px, 206px, '../sprites/spritesheet.png', 'logo-resized-glow.fw', );
 $logo-resized-fw-name: 'logo-resized.fw';
 $logo-resized-fw-x: 0px;
 $logo-resized-fw-y: 103px;
@@ -29,15 +40,15 @@ $logo-resized-fw-offset-x: 0px;
 $logo-resized-fw-offset-y: -103px;
 $logo-resized-fw-width: 224px;
 $logo-resized-fw-height: 103px;
-$logo-resized-fw-total-width: 224px;
+$logo-resized-fw-total-width: 280px;
 $logo-resized-fw-total-height: 206px;
 $logo-resized-fw-image: '../sprites/spritesheet.png';
-$logo-resized-fw: (0px, 103px, 0px, -103px, 224px, 103px, 224px, 206px, '../sprites/spritesheet.png', 'logo-resized.fw', );
-$spritesheet-width: 224px;
+$logo-resized-fw: (0px, 103px, 0px, -103px, 224px, 103px, 280px, 206px, '../sprites/spritesheet.png', 'logo-resized.fw', );
+$spritesheet-width: 280px;
 $spritesheet-height: 206px;
 $spritesheet-image: '../sprites/spritesheet.png';
-$spritesheet-sprites: ($logo-resized-glow-fw, $logo-resized-fw, );
-$spritesheet: (224px, 206px, '../sprites/spritesheet.png', $spritesheet-sprites, );
+$spritesheet-sprites: ($inv-letter-05, $logo-resized-glow-fw, $logo-resized-fw, );
+$spritesheet: (280px, 206px, '../sprites/spritesheet.png', $spritesheet-sprites, );
 
 /*
 The provided mixins are intended to be used with the array-like variables

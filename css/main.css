@@ -324,6 +324,38 @@ button {
 
 .sidecontentbox {
   text-align: right; }
+  .sidecontentbox .title h1,
+  .sidecontentbox .more a {
+    color: #f7fae5; }
+  .sidecontentbox .author {
+    color: #e8e361; }
+    .sidecontentbox .author:hover {
+      text-decoration: underline; }
+  .sidecontentbox a.helplink {
+    padding-bottom: 29px;
+    display: block;
+    color: #e8e361;
+    margin-left: 4px;
+    font-size: 18px;
+    float: none;
+    text-transform: capitalize; }
+    .sidecontentbox a.helplink:before {
+      content: '';
+      display: block;
+      border: #333 solid 1px;
+      border-radius: 3px;
+      margin-bottom: -40px;
+      background-image: url(../sprites/spritesheet.png);
+      background-position: -224px 0px;
+      width: 56px;
+      height: 56px; }
+
+#moderation_tools .title {
+  color: #f7fae5; }
+
+#moderation_tools .icon-menu a {
+  background: none;
+  color: #f7fae5; }
 
 .hover-bubble.multi-selector {
   background: #161616;
@@ -341,6 +373,9 @@ button {
     color: #ddd; }
   .hover-bubble.multi-selector:after {
     border-left-color: #494949; }
+
+.account-activity-box a {
+  color: #f7fae5; }
 
 .md {
   color: #f7fae5; }

@@ -73,7 +73,7 @@ gulp.task('flair-link', function () {
 
 
 gulp.task('sprites', function () {
-	var spriteData = gulp.src('./spritesheet_images/*.png').pipe(spritesmith({
+	var spriteData = gulp.src('./spritesheet_images/*').pipe(spritesmith({
 		imgName: 'sprites/spritesheet.png',
 		cssName: 'sass/spritesheet.scss',
 		cssSpritesheetName: 'spritesheet',

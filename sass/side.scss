@@ -148,6 +148,44 @@ button {
 // might as well just use that instead of the above CSS
 .sidecontentbox {
 	text-align: right;
+	.title h1,
+	.more a {
+		color: $text;
+	}
+	.author {
+		color: $title;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	a.helplink {
+		&:before {
+			content: '';
+			display: block;
+			border: #333 solid 1px;
+			border-radius: 3px;
+			margin-bottom: -40px;
+			@include sprite($inv-letter-05);
+		}
+		padding-bottom: 29px;
+		display: block;
+		color: $title;
+		margin-left: 4px;
+		font-size: 18px;
+		float: none;
+		text-transform: capitalize;
+	}
+}
+
+//mod tools
+#moderation_tools {
+	.title {
+		color: $text;
+	}
+	.icon-menu a {
+		background: none;
+		color: $text;
+	}
 }
 
 // multi reddit bubble when hovering over subscribe
@@ -187,3 +225,10 @@ button {
 		}
 	}
 }
+
+// account activity
+
+.account-activity-box a {
+	color: $text;
+}
+
