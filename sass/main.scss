@@ -19,13 +19,23 @@ $grey_background: lighten(#090909, 5%);
 $grey_background_2: lighten(#090909, 10%);
 $grey_border: lighten(#090909, 25%);
 
-
 //aa
 body {
 	background: url(../images/repeat-bg.jpg) left;
 	color: $text;
 }
 
+.md {
+	a {
+		color: $title;
+		&:hover {
+			color: darken($title, 20%);
+		}
+	}
+	del {
+		color: darken($text, 20%);
+	}
+}
 
 @import "mixins.scss";
 @import "spritesheet.scss";

@@ -2,6 +2,14 @@ body {
   background: url(../images/repeat-bg.jpg) left;
   color: #f7fae5; }
 
+.md a {
+  color: #e8e361; }
+  .md a:hover {
+    color: #c6c01d; }
+
+.md del {
+  color: #ddea8f; }
+
 /*
 SCSS variables are information about icon's compiled state, stored under its original file name
 
@@ -511,6 +519,23 @@ textarea {
   display: block;
   width: 2.2ex !important; }
 
+span.score {
+  color: #f7fae5 !important; }
+
+.new-comment .usertext-body {
+  background-color: transparent !important;
+  border: none; }
+
+.new-comment .entry:before {
+  content: '';
+  display: inline-block;
+  float: right;
+  margin-right: 10px;
+  background-image: url(../sprites/spritesheet.png);
+  background-position: -224px -56px;
+  width: 8px;
+  height: 30px; }
+
 .footer-parent {
   background: url(../images/section-divider.png) center top no-repeat;
   padding-top: 110px; }
@@ -532,6 +557,10 @@ textarea {
 .res .commentarea .res .RES-keyNav-activeElement.entry .noncollapsed {
   background-color: rgba(35, 35, 35, 0.5) !important; }
 
+.RES-keyNav-activeElement,
+.RES-keyNav-activeElement div.md-container.usertext-body {
+  background-color: transparent !important; }
+
 .neverEndingReddit {
   background: rgba(35, 35, 35, 0.5) !important;
   border: #494949 1px solid !important;
@@ -544,6 +573,55 @@ textarea {
 
 .redditSingleClick {
   color: #f7fae5 !important; }
+
+.RESDialogSmall {
+  background-color: #161616 !important;
+  border: #494949 solid 1px !important;
+  border-radius: 0px !important; }
+  .RESDialogSmall > h3 {
+    color: #e8e361 !important;
+    background-color: #161616 !important;
+    border-bottom: none !important; }
+
+/*
+.res-commentBoxes div.commentarea div.comment,
+	//.res-commentBoxes div.commentarea div.comment div.comment,
+.res-commentBoxes div.commentarea div.comment div.comment div.comment,
+	//.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment,
+.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment,
+	//.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment,
+.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment,
+	//.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment,
+.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment
+	//.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment
+{
+	background-color: rgba($grey_background_2, 0.5) !important;
+}
+
+//.res-commentBoxes div.commentarea div.comment,
+.res-commentBoxes div.commentarea div.comment div.comment,
+	//.res-commentBoxes div.commentarea div.comment div.comment div.comment,
+.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment,
+	//.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment,
+.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment,
+	//.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment,
+.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment,
+	//.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment,
+.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment {
+	background-color: rgba($grey_background, 0.5) !important;
+}
+*/
+.res-commentBoxes div.commentarea div.comment,
+.res-commentBoxes div.commentarea div.comment div.comment,
+.res-commentBoxes div.commentarea div.comment div.comment div.comment,
+.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment,
+.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment,
+.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment,
+.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment,
+.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment,
+.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment,
+.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment {
+  background-color: transparent !important; }
 
 /*
 SCSS variables are information about icon's compiled state, stored under its original file name

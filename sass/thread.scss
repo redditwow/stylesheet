@@ -99,28 +99,24 @@ textarea {
 	width: 2.2ex !important;
 }
 
-//
-//.thing.comment * {
-//	z-index: 1;
-//}
-//
-//.thing.comment .entry {
-//	padding-top: 10px;
-//}
-//
-//.thing.comment .entry .md {
-//	padding-top: 5px;
-//}
-//
-//.thing.comment p.parent {
-//	position: absolute;
-//	top: -1px;
-//	left: 10px;
-//	width: 100%;
-//	height: 100%;
-//	z-index: -1;
-//	margin-left: -11px;
-//	border-radius: 3px;
-//	border: 1px solid #2c5c7e;
-//}
+// maybe RES
+span.score {
+	color: $text !important;
+}
 
+//new comments, obviously.
+.new-comment {
+	// remove reddit's highlighting
+	.usertext-body {
+		background-color: transparent !important;
+		border: none;
+	}
+	// add our own
+	.entry:before {
+		content: '';
+		display: inline-block;
+		float: right;
+		margin-right: 10px;
+		@include sprite($exclamation-fw);
+	}
+}

@@ -6,6 +6,13 @@
 	background-color: rgba($grey_background_2, 0.5) !important;
 }
 
+// comment highlights
+.RES-keyNav-activeElement,
+.RES-keyNav-activeElement div.md-container.usertext-body {
+	background-color: transparent !important;
+}
+
+//background-color: rgba($grey_background_2, 0.5) !important;
 
 .neverEndingReddit {
 	background: rgba($grey_background_2, 0.5) !important;
@@ -22,4 +29,60 @@
 //[l=c]
 .redditSingleClick {
 	color: $text !important;
+}
+
+// live preview
+
+.RESDialogSmall {
+	background-color: $grey_background !important;
+	border: $grey_border solid 1px !important;
+	border-radius: 0px !important;
+	> h3 {
+		color: $title !important;
+		background-color: $grey_background !important;
+		border-bottom: none !important;
+	}
+}
+
+/*
+.res-commentBoxes div.commentarea div.comment,
+	//.res-commentBoxes div.commentarea div.comment div.comment,
+.res-commentBoxes div.commentarea div.comment div.comment div.comment,
+	//.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment,
+.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment,
+	//.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment,
+.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment,
+	//.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment,
+.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment
+	//.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment
+{
+	background-color: rgba($grey_background_2, 0.5) !important;
+}
+
+//.res-commentBoxes div.commentarea div.comment,
+.res-commentBoxes div.commentarea div.comment div.comment,
+	//.res-commentBoxes div.commentarea div.comment div.comment div.comment,
+.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment,
+	//.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment,
+.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment,
+	//.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment,
+.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment,
+	//.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment,
+.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment {
+	background-color: rgba($grey_background, 0.5) !important;
+}
+*/
+
+//disabled alternating colours for now
+.res-commentBoxes div.commentarea div.comment,
+.res-commentBoxes div.commentarea div.comment div.comment,
+.res-commentBoxes div.commentarea div.comment div.comment div.comment,
+.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment,
+.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment,
+.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment,
+.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment,
+.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment,
+.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment,
+.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment {
+	background-color: transparent !important;
 }

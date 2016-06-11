@@ -1,6 +1,7 @@
-body{background:url(%%repeat-bg%%) left;color:#f7fae5}body>.content{margin-right:340px}
-.tagline,.search-result-meta{color:#f7fae5}.tagline a{color:#f7fae5}.entry .buttons li a{color:#f7fae5}
-.domain a{color:#b4b4b4}.thing{padding:5px 0}.thing.stickied.link a.title{color:#13ff29;transition:color .2s}
+body{background:url(%%repeat-bg%%) left;color:#f7fae5}.md a{color:#e8e361}.md a:hover{color:#c6c01d}
+.md del{color:#ddea8f}body>.content{margin-right:340px}.tagline,.search-result-meta{color:#f7fae5}
+.tagline a{color:#f7fae5}.entry .buttons li a{color:#f7fae5}.domain a{color:#b4b4b4}
+.thing{padding:5px 0}.thing.stickied.link a.title{color:#13ff29;transition:color .2s}
 .thing.stickied.link a.title:hover{color:white}.thing .entry{margin-top:10px;padding-left:15px}
 .thing .midcol{margin-top:15px}.thing .rank{padding-top:15px}.thing a.thumbnail{margin-top:9px;margin-left:20px}
 .thing a.thumbnail::after{content:url(%%mini-panel%%);z-index:2;position:absolute;left:81px;margin-top:-11px}
@@ -66,12 +67,18 @@ textarea{color:#fff;background-color:#161616;border:1px solid #494949}.comment{b
 .comment .comment .comment .comment .comment .comment{background-color:#232323 !important}
 .comment .comment .comment .comment .comment .comment .comment{background-color:#161616 !important}
 .comment .comment .comment .comment .comment .comment .comment .comment{background-color:#232323 !important}
-.single-page .link .rank{display:block;width:2.2ex !important}.footer-parent{background:url(%%section-divider%%) center top no-repeat;padding-top:110px}
+.single-page .link .rank{display:block;width:2.2ex !important}span.score{color:#f7fae5 !important}
+.new-comment .usertext-body{background-color:transparent !important;border:0}.new-comment .entry:before{content:'';display:inline-block;float:right;margin-right:10px;background-image:url(%%spritesheet%%);background-position:-224px -56px;width:8px;height:30px}
+.footer-parent{background:url(%%section-divider%%) center top no-repeat;padding-top:110px}
 .footer-parent .footer{color:#ddea8f;border:0;text-transform:capitalize}.footer-parent .footer a{color:rgba(255,255,255,0.6)}
 .footer-parent .footer .flat-vert.title{color:rgba(255,255,255,0.8)}.footer-parent .footer .col{border:0}
 .footer-parent .bottommenu{color:rgba(255,255,255,0.2)}.res .RES-keyNav-activeElement,.res .commentarea .RES-keyNav-activeElement .md,.res .commentarea .res .RES-keyNav-activeElement.entry .noncollapsed{background-color:rgba(35,35,35,0.5) !important}
+.RES-keyNav-activeElement,.RES-keyNav-activeElement div.md-container.usertext-body{background-color:transparent !important}
 .neverEndingReddit{background:rgba(35,35,35,0.5) !important;border:#494949 1px solid !important;border-radius:0 !important;color:#f7fae5;margin:40px auto 0;width:50%}
 .neverEndingReddit h2,.neverEndingReddit a{color:#e8e361}.redditSingleClick{color:#f7fae5 !important}
+.RESDialogSmall{background-color:#161616 !important;border:#494949 solid 1px !important;border-radius:0 !important}
+.RESDialogSmall>h3{color:#e8e361 !important;background-color:#161616 !important;border-bottom:none !important}
+.res-commentBoxes div.commentarea div.comment,.res-commentBoxes div.commentarea div.comment div.comment,.res-commentBoxes div.commentarea div.comment div.comment div.comment,.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment,.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment,.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment,.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment,.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment,.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment,.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment{background-color:transparent !important}
 .flair{padding:1px 3px;margin:0;border:0;border-radius:0;color:#f7fae5;background:transparent}
 .flair:after{background:url("%%flair-user%%") no-repeat scroll 16px 16px transparent;display:inline-block;margin-left:3px;vertical-align:middle;height:18px;content:''}
 .flair-alliance+.author,.flair-alliance+.author:visited{color:#247faa}.flair-horde+.author,.flair-horde+.author:visited{color:#b30000}

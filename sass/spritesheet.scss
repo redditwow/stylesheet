@@ -11,6 +11,17 @@ $icon-home: x y offset_x offset_y width height total_width total_height image_pa
 At the bottom of this section, we provide information about the spritesheet itself
 $spritesheet: width height image $spritesheet-sprites;
 */
+$exclamation-fw-name: 'exclamation.fw';
+$exclamation-fw-x: 224px;
+$exclamation-fw-y: 56px;
+$exclamation-fw-offset-x: -224px;
+$exclamation-fw-offset-y: -56px;
+$exclamation-fw-width: 8px;
+$exclamation-fw-height: 30px;
+$exclamation-fw-total-width: 280px;
+$exclamation-fw-total-height: 206px;
+$exclamation-fw-image: '../sprites/spritesheet.png';
+$exclamation-fw: (224px, 56px, -224px, -56px, 8px, 30px, 280px, 206px, '../sprites/spritesheet.png', 'exclamation.fw', );
 $inv-letter-05-name: 'inv_letter_05';
 $inv-letter-05-x: 224px;
 $inv-letter-05-y: 0px;
@@ -47,7 +58,7 @@ $logo-resized-fw: (0px, 103px, 0px, -103px, 224px, 103px, 280px, 206px, '../spri
 $spritesheet-width: 280px;
 $spritesheet-height: 206px;
 $spritesheet-image: '../sprites/spritesheet.png';
-$spritesheet-sprites: ($inv-letter-05, $logo-resized-glow-fw, $logo-resized-fw, );
+$spritesheet-sprites: ($exclamation-fw, $inv-letter-05, $logo-resized-glow-fw, $logo-resized-fw, );
 $spritesheet: (280px, 206px, '../sprites/spritesheet.png', $spritesheet-sprites, );
 
 /*
