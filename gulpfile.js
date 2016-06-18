@@ -6,6 +6,7 @@ var uglifycss   = require('gulp-uglifycss');
 var size        = require('gulp-size');
 var rename      = require('gulp-rename');
 var fs          = require('fs');
+var notify      = require("gulp-notify");
 
 gulp.task('styles', ['sprites', 'flair-link', 'flair-user'], function () {
 
@@ -37,7 +38,13 @@ gulp.task('styles', ['sprites', 'flair-link', 'flair-user'], function () {
 		.pipe(size({
 			showFiles: true
 		}))
-		.pipe(gulp.dest('./css/'));
+		.pipe(gulp.dest('./css/'))
+		.pipe(notify({
+			'title': '/r/wow CSS',
+			'message': 'Recompile complete'
+		}));
+
+
 });
 
 gulp.task('flair-user', function () {
