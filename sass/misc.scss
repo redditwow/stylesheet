@@ -59,3 +59,9 @@ body > .content .link .rank,
 	color: #fff;
 	@include wow-btn-text;
 }
+
+// reddit newsletter
+section.infobar.newsletterbar {
+	width: 100%;
+}
+}

@@ -994,6 +994,61 @@
 </div>
 <a name="content"></a>
 <div class="content" role="main">
+	<section style="display: block;" class="infobar newsletterbar newsletter-container" hidden="">
+		<header>
+
+			<h1 class="subscribe-callout">
+				<a href="/newsletter">
+					<img src="http://www.redditstatic.com/subscribe-header.svg" alt="subscribe to our newsletter">
+				</a>
+			</h1>
+
+			<div class="subscribe-thanks">
+				<img src="http://www.redditstatic.com/subscribe-header-thanks.svg" alt="_('thanks for subscribing')">
+			</div>
+
+			<h2 class="result-message">get the best of reddit, delivered once a week</h2>
+		</header>
+
+		<form style="display: none ! important;" class="newsletter-signup form-v2 c-form-inline" method="post"
+		      action="https://www.reddit.com/api/newsletter.json">
+			<input name="uh" value="" type="hidden">
+			<input name="source" value="newsletterbar" type="hidden">
+
+			<div class="c-form-group ">
+				<label for="email" class="screenreader-only">email: </label>
+
+				<input value="" name="email" class="c-form-control" placeholder="enter your email"
+				       data-validate-url="/api/check_email.json" data-validate-on="change blur" type="email">
+
+				<div class="c-form-control-feedback-wrapper inside-input">
+					<span class="c-form-control-feedback c-form-control-feedback-throbber"></span>
+					<span class="c-form-control-feedback c-form-control-feedback-error" title=""></span>
+					<span class="c-form-control-feedback c-form-control-feedback-success"></span>
+				</div>
+
+			</div>
+
+			<button type="submit" class="c-btn c-btn-highlight">subscribe</button>
+
+			<br>
+
+			<div class="c-form-group ">
+				<div class="g-recaptcha" data-sitekey="6LeTnxkTAAAAAN9QEuDZRpn90WwKk_R1TRW_g-JC"></div>
+
+				<div class="c-form-control-feedback-wrapper inside-input">
+					<span class="c-form-control-feedback c-form-control-feedback-throbber"></span>
+					<span class="c-form-control-feedback c-form-control-feedback-error" title=""></span>
+					<span class="c-form-control-feedback c-form-control-feedback-success"></span>
+				</div>
+
+			</div>
+
+		</form>
+
+		<a href="#" class="newsletter-close" title="close">×</a>
+	</section>
+
 	<div class="spacer">
 		<div id="siteTable_organic" class="organic-listing loading">
 			<div class="help help-hoverable">what's this?
