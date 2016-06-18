@@ -206,7 +206,7 @@ body > .content {
   background: url(../images/side-divide.fw.png) left repeat-y, url(../images/repeat-bg.jpg) center;
   padding-left: 25px;
   color: #f7fae5; }
-  .side .titlebox h1 {
+  .side .titlebox.redditname {
     display: none; }
   .side .md a[href*="#game"] {
     content: "";
@@ -399,6 +399,107 @@ button {
 .account-activity-box a {
   color: #f7fae5; }
 
+.side a[href$="monday"], .side a[href$="tuesday"], .side a[href$="wednesday"], .side a[href$="thursday"], .side a[href$="friday"], .side a[href$="saturday"], .side a[href$="sunday"] {
+  height: 36px;
+  margin-bottom: 14px;
+  margin-left: 66px;
+  display: block;
+  color: #13ff29;
+  font-size: 14px; }
+  .side a[href$="monday"]:hover, .side a[href$="tuesday"]:hover, .side a[href$="wednesday"]:hover, .side a[href$="thursday"]:hover, .side a[href$="friday"]:hover, .side a[href$="saturday"]:hover, .side a[href$="sunday"]:hover {
+    color: #fff; }
+  .side a[href$="monday"]:before, .side a[href$="tuesday"]:before, .side a[href$="wednesday"]:before, .side a[href$="thursday"]:before, .side a[href$="friday"]:before, .side a[href$="saturday"]:before, .side a[href$="sunday"]:before {
+    content: '';
+    display: block;
+    border: #333 solid 1px;
+    border-radius: 3px;
+    margin-bottom: -40px;
+    margin-left: -66px; }
+
+.side a[href$="monday"]:before {
+  background-image: url(../sprites/spritesheet.png);
+  background-position: -112px -262px;
+  width: 56px;
+  height: 56px; }
+
+.side a[href$="monday"]:hover:before {
+  background-image: url(../sprites/spritesheet.png);
+  background-position: -56px -262px;
+  width: 56px;
+  height: 56px; }
+
+.side a[href$="tuesday"]:before {
+  background-image: url(../sprites/spritesheet.png);
+  background-position: 0px -206px;
+  width: 56px;
+  height: 56px; }
+
+.side a[href$="tuesday"]:hover:before {
+  background-image: url(../sprites/spritesheet.png);
+  background-position: -224px -112px;
+  width: 56px;
+  height: 56px; }
+
+.side a[href$="wednesday"]:before {
+  background-image: url(../sprites/spritesheet.png);
+  background-position: -280px -262px;
+  width: 56px;
+  height: 56px; }
+
+.side a[href$="wednesday"]:hover:before {
+  background-image: url(../sprites/spritesheet.png);
+  background-position: -56px -206px;
+  width: 56px;
+  height: 56px; }
+
+.side a[href$="thursday"]:before {
+  background-image: url(../sprites/spritesheet.png);
+  background-position: -280px -112px;
+  width: 56px;
+  height: 56px; }
+
+.side a[href$="thursday"]:hover:before {
+  background-image: url(../sprites/spritesheet.png);
+  background-position: -280px -56px;
+  width: 56px;
+  height: 56px; }
+
+.side a[href$="friday"]:before {
+  background-image: url(../sprites/spritesheet.png);
+  background-position: 0px -206px;
+  width: 56px;
+  height: 56px; }
+
+.side a[href$="friday"]:hover:before {
+  background-image: url(../sprites/spritesheet.png);
+  background-position: -224px -112px;
+  width: 56px;
+  height: 56px; }
+
+.side a[href$="saturday"]:before {
+  background-image: url(../sprites/spritesheet.png);
+  background-position: -224px -56px;
+  width: 56px;
+  height: 56px; }
+
+.side a[href$="saturday"]:hover:before {
+  background-image: url(../sprites/spritesheet.png);
+  background-position: -224px -262px;
+  width: 56px;
+  height: 56px; }
+
+.side a[href$="sunday"]:before {
+  background-image: url(../sprites/spritesheet.png);
+  background-position: -280px 0px;
+  width: 56px;
+  height: 56px; }
+
+.side a[href$="sunday"]:hover:before {
+  background-image: url(../sprites/spritesheet.png);
+  background-position: -168px -262px;
+  width: 56px;
+  height: 56px; }
+
 .md {
   color: #f7fae5; }
   .md a {
@@ -532,7 +633,7 @@ span.score {
   float: right;
   margin-right: 10px;
   background-image: url(../sprites/spritesheet.png);
-  background-position: -224px -56px;
+  background-position: -280px -224px;
   width: 8px;
   height: 30px; }
 

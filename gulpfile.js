@@ -7,14 +7,9 @@ var size        = require('gulp-size');
 var rename      = require('gulp-rename');
 
 gulp.task('styles', ['sprites', 'flair-link', 'flair-user'], function () {
+
 	gulp.src('sass/**/main.scss')
 		.pipe(sass().on('error', sass.logError))
-		// .pipe( replace('http://b.thumbs.redditmedia.com/JMItoXfQe274DPPZxd_MKmLdjT3vRp-7w8wqcN8mV1Y.png', '%%repeat-bg-media%%') )
-		// .pipe( replace('http://b.thumbs.redditmedia.com/kBensLEvjkHoegR5JoeIZ5K3PC5X4jS_AZ9zx_4QBkg.png', '%%repeat-bg%%') )
-		//.pipe(uglifycss({
-		//	maxLineLen: 80,
-		//	uglyComments: true
-		//}))
 		.pipe(size({
 			showFiles: true
 		}))

@@ -2,7 +2,7 @@
 .side {
 
 	// removes wow title from the sidebar
-	.titlebox h1 {
+	.titlebox.redditname {
 		display: none;
 	}
 
@@ -251,8 +251,88 @@ button {
 	}
 }
 
-
 // account activity
 .account-activity-box a {
 	color: $text;
+}
+
+$side-icon-margin: 66px;
+
+.side {
+	a {
+		&[href$="monday"],
+		&[href$="tuesday"],
+		&[href$="wednesday"],
+		&[href$="thursday"],
+		&[href$="friday"],
+		&[href$="saturday"],
+		&[href$="sunday"] {
+			height: 36px;
+			margin-bottom: 14px;
+			margin-left: $side-icon-margin;
+			display: block;
+			color: $green_title;
+			font-size: 14px;
+			&:hover {
+				color: #fff;
+			}
+			&:before {
+				content: '';
+				display: block;
+				border: #333 solid 1px;
+				border-radius: 3px;
+				margin-bottom: -40px;
+				margin-left: -$side-icon-margin;
+			}
+		}
+
+		&[href$="monday"]:before {
+			@include sprite($inv_pet-babymurlocs-blue);
+		}
+		&[href$="monday"]:hover:before {
+			@include sprite($inv_pet-babymurlocs-blue-glow-fw);
+		}
+
+		&[href$="tuesday"]:before {
+			@include sprite($achievement-bg-topdps);
+		}
+		&[href$="tuesday"]:hover:before {
+			@include sprite($achievement-bg-topdps-glow-fw);
+		}
+
+		&[href$="wednesday"]:before {
+			@include sprite($spell-holy-prayerofmendingtga);
+		}
+		&[href$="wednesday"]:hover:before {
+			@include sprite($spell-holy-prayerofmendingtga-glow-fw);
+		}
+
+		&[href$="thursday"]:before {
+			@include sprite($inv-misc-bag-32);
+		}
+		&[href$="thursday"]:hover:before {
+			@include sprite($inv-misc-bag-32-glow-fw);
+		}
+
+		&[href$="friday"]:before {
+			@include sprite($achievement-bg-topdps);
+		}
+		&[href$="friday"]:hover:before {
+			@include sprite($achievement-bg-topdps-glow-fw);
+		}
+
+		&[href$="saturday"]:before {
+			@include sprite($achievement-bg-returnxflags-def-wsg);
+		}
+		&[href$="saturday"]:hover:before {
+			@include sprite($achievement-bg-returnxflags-def-wsg-glow-fw);
+		}
+
+		&[href$="sunday"]:before {
+			@include sprite($ability-creature-cursed-05);
+		}
+		&[href$="sunday"]:hover:before {
+			@include sprite($ability-creature-cursed-05-glow-fw);
+		}
+	}
 }
