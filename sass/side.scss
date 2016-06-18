@@ -168,6 +168,9 @@ button {
 			margin-bottom: -40px;
 			@include sprite($inv-letter-05);
 		}
+		&:hover:before {
+			@include sprite($inv-letter-05-glow-fw);
+		}
 		padding-bottom: 29px;
 		display: block;
 		color: $title;
