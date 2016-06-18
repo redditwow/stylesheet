@@ -5,6 +5,7 @@ var spritesmith = require('gulp.spritesmith');
 var uglifycss   = require('gulp-uglifycss');
 var size        = require('gulp-size');
 var rename      = require('gulp-rename');
+var fs          = require('fs');
 
 gulp.task('styles', ['sprites', 'flair-link', 'flair-user'], function () {
 
@@ -75,6 +76,18 @@ gulp.task('sprites', function () {
 		algorithm: 'binary-tree'
 	}));
 	return spriteData.pipe(gulp.dest('.'));
+});
+
+gulp.task('demo', function () {
+
+	var sidebar = fs.readFileSync('demo/content/sidebar.html', 'utf8');
+
+	gulp.src('demo/pages/*')
+		.pipe(replace('<!--%%sidebar%%-->', sidebar))
+		.pipe(size({
+			showFiles: true
+		}))
+		.pipe(gulp.dest('./demo/'));
 });
 
 
