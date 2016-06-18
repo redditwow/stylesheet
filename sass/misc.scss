@@ -70,4 +70,14 @@ section.infobar.newsletterbar {
 	color: #222;
 }
 
+// about/edit settings
+.linefield, .linefield.mobile {
+	background: transparent;
+	border: none;
+	.title{
+		color: $green_title;
+	}
+	a{
+		color: $title;
+	}
 }
