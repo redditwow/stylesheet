@@ -27,13 +27,16 @@ body {
 
 .md {
 	a {
-		color: $title;
+		color: $title !important;
 		&:hover {
-			color: darken($title, 20%);
+			color: darken($title, 20%) !important;
+		}
+		&:active, &:visited {
+			color: darken($title, 30%) !important;
 		}
 	}
 	del {
-		color: darken($text, 20%);
+		color: darken($text, 20%) !important;
 	}
 }
 

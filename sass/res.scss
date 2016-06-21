@@ -44,45 +44,23 @@
 	}
 }
 
-/*
-.res-commentBoxes div.commentarea div.comment,
-	//.res-commentBoxes div.commentarea div.comment div.comment,
-.res-commentBoxes div.commentarea div.comment div.comment div.comment,
-	//.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment,
-.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment,
-	//.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment,
-.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment,
-	//.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment,
-.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment
-	//.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment
+
+.res-commentBoxes div.commentarea div.comment, // 1
+.res-commentBoxes div.commentarea div.comment div.comment div.comment, // 3
+.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment, // 5
+.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment, // 7
+.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment // 9
 {
-	background-color: rgba($grey_background_2, 0.5) !important;
+	background-color: $grey_background !important;
+	border: 1px solid $grey_border !important;
 }
 
-//.res-commentBoxes div.commentarea div.comment,
-.res-commentBoxes div.commentarea div.comment div.comment,
-	//.res-commentBoxes div.commentarea div.comment div.comment div.comment,
-.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment,
-	//.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment,
-.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment,
-	//.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment,
-.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment,
-	//.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment,
-.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment {
-	background-color: rgba($grey_background, 0.5) !important;
-}
-*/
-
-//disabled alternating colours for now
-.res-commentBoxes div.commentarea div.comment,
-.res-commentBoxes div.commentarea div.comment div.comment,
-.res-commentBoxes div.commentarea div.comment div.comment div.comment,
-.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment,
-.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment,
-.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment,
-.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment,
-.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment,
-.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment,
-.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment {
-	background-color: transparent !important;
+.res-commentBoxes div.commentarea div.comment div.comment, // 2
+.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment, // 4
+.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment, // 6
+.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment, // 8
+.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment  // 10
+{
+	background-color: $grey_background_2 !important;
+	border: 1px solid $grey_border !important;
 }
