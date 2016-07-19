@@ -26,9 +26,39 @@
 	border: 1px solid $wow_btn_remove_border;
 }
 
+$wow_btn_warning_background: #96752E;
+$wow_btn_warning_hover: #ddd;
+$wow_btn_warning_border: darken(#F2BF27, 10%);
+
+@mixin wow-btn-warning() {
+	background: $wow_btn_warning_background;
+	border: 1px solid $wow_btn_warning_border;
+	transition: all 0.5s;
+	color: #fff;
+	border-radius: 0;
+}
+
+@mixin wow-btn-warning-hover() {
+	transition: all 0.5s;
+	background: $wow_btn_warning_hover;
+	border: 1px solid $wow_btn_warning_border;
+}
+
 @mixin wow-btn-text() {
 	color: #fff;
 	font-weight: normal;
 	text-shadow: 0px 1px 0px #000;
 	font-size: 14px;
+}
+
+@mixin wow-link() {
+	a {
+		color: $title !important;
+		&:hover {
+			color: darken($title, 20%) !important;
+		}
+		&:active, &:visited {
+			color: darken($title, 30%) !important;
+		}
+	}
 }

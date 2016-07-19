@@ -954,8 +954,16 @@
 				</div>
 			</div>
 		</form>
+		<div style="max-width: 650px;" class="rounded gold-accent comment-visits-box">
+			<div class="title">Highlight comments posted since previous visit: <select id="comment-visits">
+				<option value="2016-06-21T19:19:45.654000+00:00" selected="selected">15 minutes ago</option>
+				<option value="2016-06-21T19:04:15.787000+00:00">31 minutes ago</option>
+				<option value="">no highlighting</option>
+			</select>&nbsp;&nbsp;<a href="javascript:;" class="tb-hide-old tb-general-button">hide old</a></div>
+		</div>
 		<div id="siteTable_t3_4nlwyu" class="sitetable nestedlisting">
-			<div class=" thing id-t1_d44yu22 noncollapsed   comment new-comment " id="thing_t1_d44yu22" onclick="click_thing(this)"
+			<div class=" thing id-t1_d44yu22 noncollapsed   comment new-comment " id="thing_t1_d44yu22"
+			     onclick="click_thing(this)"
 			     data-fullname="t1_d44yu22" data-type="comment" data-subreddit="wow" data-subreddit-fullname="t5_2qio8"
 			     data-author="Qyune" data-author-fullname="t2_bs3hx"><p class="parent"><a name="d44yu22"></a></p>
 				<div class="midcol unvoted">
@@ -2081,107 +2089,113 @@
 		})();</script>
 		<script id="subreddit-rules-report-template" type="text/template">
 			<form
-			id="report-action-form" class="subreddit-report-form rounded"><input type="hidden" name="thing_id"
-			                                                                     value="<%- fullname %>"><a
+					id="report-action-form" class="subreddit-report-form rounded"><input type="hidden" name="thing_id"
+			                                                                             value="<%- fullname %>"><a
 					href="/r/<%- sr_name %>/about/rules" class="action-icon action-icon-info c-hide-text may-blank"
 					title="View the community rules">View the community rules</a>
-			<div class="reason-prompt report-header">What rule does this break?</div>
-			<ol class="report-reason-list">
-				<li class="report-reason-item report-reason-reddit"
-				<label><input type="radio" class="site-reason-radio" name="reason" value="site_reason_selected">
-					<div class="report-reason-display"><select name="site_reason">
-						<option value="Spam">Reddit rule: Spam</option>
-						<option value="Personal and confidential information">Reddit rule: Personal and confidential
-							information
-						</option>
-						<option value="Threatening, harassing, or inciting violence">Reddit rule: Threatening,
-							harassing, or inciting violence
-						</option>
-					</select></div>
-				</label></li>
-				<li class="report-reason-item report-reason-other"><label><input type="radio" name="reason"
-				                                                                 value="other">
-					<div class="report-reason-display">
-						<div>Other (max 100 characters):</div>
-						<input type="text" class="c-form-control" name="other_reason" value="" maxlength="100" disabled><span
-							class="error TOO_LONG field-other_reason" style="display:none"></span></div>
-				</label></li>
-				<div class="report-header">Reports go to community moderators anonymously</div>
-			</ol>
-			<div class="c-submit-group">
-				<button type="button" class="btn c-btn c-btn-secondary report-cancel">cancel</button>
-				&#32;
-				<button type="submit" class="btn c-btn c-btn-primary submit-action-thing" disabled>report</button>
-			</div><span class="status" style="display: none"></span></form></script>
+				<div class="reason-prompt report-header">What rule does this break?</div>
+				<ol class="report-reason-list">
+					<li class="report-reason-item report-reason-reddit"
+					<label><input type="radio" class="site-reason-radio" name="reason" value="site_reason_selected">
+						<div class="report-reason-display"><select name="site_reason">
+							<option value="Spam">Reddit rule: Spam</option>
+							<option value="Personal and confidential information">Reddit rule: Personal and confidential
+								information
+							</option>
+							<option value="Threatening, harassing, or inciting violence">Reddit rule: Threatening,
+								harassing, or inciting violence
+							</option>
+						</select></div>
+					</label></li>
+					<li class="report-reason-item report-reason-other"><label><input type="radio" name="reason"
+					                                                                 value="other">
+						<div class="report-reason-display">
+							<div>Other (max 100 characters):</div>
+							<input type="text" class="c-form-control" name="other_reason" value="" maxlength="100"
+							       disabled><span
+								class="error TOO_LONG field-other_reason" style="display:none"></span></div>
+					</label></li>
+					<div class="report-header">Reports go to community moderators anonymously</div>
+				</ol>
+				<div class="c-submit-group">
+					<button type="button" class="btn c-btn c-btn-secondary report-cancel">cancel</button>
+					&#32;
+					<button type="submit" class="btn c-btn c-btn-primary submit-action-thing" disabled>report</button>
+				</div>
+				<span class="status" style="display: none"></span></form></script>
 		<script id="subreddit-default-report-template" type="text/template">
 			<form
-			id="report-action-form" class="subreddit-report-form rounded"><input type="hidden" name="thing_id"
-			                                                                     value="<%- fullname %>"><a
+					id="report-action-form" class="subreddit-report-form rounded"><input type="hidden" name="thing_id"
+			                                                                             value="<%- fullname %>"><a
 					href="/help/contentpolicy" class="action-icon action-icon-info c-hide-text may-blank"
 					title="View the community rules">View the community rules</a>
-			<div class="reason-prompt report-header">What rule does this break?</div>
-			<ol class="report-reason-list">
-				<li class="report-reason-item"><label><input type="radio" name="reason" value="Spam">
-					<div class="report-reason-display">Spam</div>
-				</label></li>
-				<li class="report-reason-item"><label><input type="radio" name="reason"
-				                                             value="Personal and confidential information">
-					<div class="report-reason-display">Personal and confidential information</div>
-				</label></li>
-				<li class="report-reason-item"><label><input type="radio" name="reason"
-				                                             value="Threatening, harassing, or inciting violence">
-					<div class="report-reason-display">Threatening, harassing, or inciting violence</div>
-				</label></li>
-				<li class="report-reason-item report-reason-other"><label><input type="radio" name="reason"
-				                                                                 value="other">
-					<div class="report-reason-display">
-						<div>Other (max 100 characters):</div>
-						<input type="text" class="c-form-control" name="other_reason" value="" maxlength="100" disabled><span
-							class="error TOO_LONG field-other_reason" style="display:none"></span></div>
-				</label></li>
-			</ol>
-			<div class="report-header">Reports go to community moderators anonymously</div>
-			<div class="c-submit-group">
-				<button type="button" class="btn c-btn c-btn-secondary report-cancel">cancel</button>
-				&#32;
-				<button type="submit" class="btn c-btn c-btn-primary submit-action-thing" disabled>report</button>
-			</div><span class="status" style="display: none"></span></form></script>
+				<div class="reason-prompt report-header">What rule does this break?</div>
+				<ol class="report-reason-list">
+					<li class="report-reason-item"><label><input type="radio" name="reason" value="Spam">
+						<div class="report-reason-display">Spam</div>
+					</label></li>
+					<li class="report-reason-item"><label><input type="radio" name="reason"
+					                                             value="Personal and confidential information">
+						<div class="report-reason-display">Personal and confidential information</div>
+					</label></li>
+					<li class="report-reason-item"><label><input type="radio" name="reason"
+					                                             value="Threatening, harassing, or inciting violence">
+						<div class="report-reason-display">Threatening, harassing, or inciting violence</div>
+					</label></li>
+					<li class="report-reason-item report-reason-other"><label><input type="radio" name="reason"
+					                                                                 value="other">
+						<div class="report-reason-display">
+							<div>Other (max 100 characters):</div>
+							<input type="text" class="c-form-control" name="other_reason" value="" maxlength="100"
+							       disabled><span
+								class="error TOO_LONG field-other_reason" style="display:none"></span></div>
+					</label></li>
+				</ol>
+				<div class="report-header">Reports go to community moderators anonymously</div>
+				<div class="c-submit-group">
+					<button type="button" class="btn c-btn c-btn-secondary report-cancel">cancel</button>
+					&#32;
+					<button type="submit" class="btn c-btn c-btn-primary submit-action-thing" disabled>report</button>
+				</div>
+				<span class="status" style="display: none"></span></form></script>
 		<script id="reddit-report-template" type="text/template">
 			<form
-			id="report-action-form" class="subreddit-report-form rounded"><input type="hidden" name="thing_id"
-			                                                                     value="<%- fullname %>"><a
+					id="report-action-form" class="subreddit-report-form rounded"><input type="hidden" name="thing_id"
+			                                                                             value="<%- fullname %>"><a
 					href="/help/contentpolicy" class="action-icon action-icon-info c-hide-text may-blank"
 					title="View the community rules">View the community rules</a>
-			<div class="reason-prompt report-header">What rule does this break?</div>
-			<ol class="report-reason-list">
-				<li class="report-reason-item"><label><input type="radio" name="reason" value="Spam">
-					<div class="report-reason-display">Spam</div>
-				</label></li>
-				<li class="report-reason-item"><label><input type="radio" name="reason"
-				                                             value="Personal and confidential information">
-					<div class="report-reason-display">Personal and confidential information</div>
-				</label></li>
-				<li class="report-reason-item"><label><input type="radio" name="reason"
-				                                             value="Threatening, harassing, or inciting violence">
-					<div class="report-reason-display">Threatening, harassing, or inciting violence</div>
-				</label></li>
-				<li class="report-reason-item report-reason-other"><label><input type="radio" name="reason"
-				                                                                 value="other">
-					<div class="report-reason-display">
-						<div>Other (max 100 characters):</div>
-						<input type="text" class="c-form-control" name="other_reason" value="" maxlength="100" disabled><span
-							class="error TOO_LONG field-other_reason" style="display:none"></span></div>
-				</label></li>
-			</ol>
-			<div class="report-header">Reports go to Reddit admins</div>
-			<div class="c-submit-group">
-				<button type="button" class="btn c-btn c-btn-secondary report-cancel">cancel</button>
-				&#32;
-				<button type="submit" class="btn c-btn c-btn-primary submit-action-thing" disabled>report</button>
-			</div><span class="status" style="display: none"></span></form></script>
+				<div class="reason-prompt report-header">What rule does this break?</div>
+				<ol class="report-reason-list">
+					<li class="report-reason-item"><label><input type="radio" name="reason" value="Spam">
+						<div class="report-reason-display">Spam</div>
+					</label></li>
+					<li class="report-reason-item"><label><input type="radio" name="reason"
+					                                             value="Personal and confidential information">
+						<div class="report-reason-display">Personal and confidential information</div>
+					</label></li>
+					<li class="report-reason-item"><label><input type="radio" name="reason"
+					                                             value="Threatening, harassing, or inciting violence">
+						<div class="report-reason-display">Threatening, harassing, or inciting violence</div>
+					</label></li>
+					<li class="report-reason-item report-reason-other"><label><input type="radio" name="reason"
+					                                                                 value="other">
+						<div class="report-reason-display">
+							<div>Other (max 100 characters):</div>
+							<input type="text" class="c-form-control" name="other_reason" value="" maxlength="100"
+							       disabled><span
+								class="error TOO_LONG field-other_reason" style="display:none"></span></div>
+					</label></li>
+				</ol>
+				<div class="report-header">Reports go to Reddit admins</div>
+				<div class="c-submit-group">
+					<button type="button" class="btn c-btn c-btn-secondary report-cancel">cancel</button>
+					&#32;
+					<button type="submit" class="btn c-btn c-btn-primary submit-action-thing" disabled>report</button>
+				</div>
+				<span class="status" style="display: none"></span></form></script>
 		<script id="report-reason-template" type="text/template">
 			<li
-			class="report-reason-item"><label><input type="radio" name="reason" value="<%- short_name %>">
+					class="report-reason-item"><label><input type="radio" name="reason" value="<%- short_name %>">
 				<div class="report-reason-display"><%- short_name %></div>
 			</label></li></script>
 		<div class="gold-wrap cloneable-comment"><h1 class="gold-banner"><a href="https://www.reddit.com/gold">reddit
@@ -2430,25 +2444,28 @@
 		</div>
 		<script id="archived-popup" type="text/template">
 			<div
-			class="interstitial"><img class="interstitial-image"
-			                          src="//www.redditstatic.com/interstitial-image-archived.png" alt="archived"
-			                          height="150" width="150">
+					class="interstitial"><img class="interstitial-image"
+			                                  src="//www.redditstatic.com/interstitial-image-archived.png"
+			                                  alt="archived"
+			                                  height="150" width="150">
+				<div class="interstitial-message md-container">
+					<div class="md"><h3>This is an archived post. You won't be able to vote or comment.</h3>
+						<p>Posts&#32;are&#32;automatically&#32;archived&#32;after&#32;6&#32;months.</p></div>
+				</div>
+				<div class="buttons"><a href="/" class="c-btn c-btn-primary">Got It</a></div>
+			</div></script>
+	</div>
+	<script id="archived-popup" type="text/template">
+		<div
+				class="interstitial"><img class="interstitial-image"
+		                                  src="//www.redditstatic.com/interstitial-image-archived.png" alt="archived"
+		                                  height="150" width="150">
 			<div class="interstitial-message md-container">
 				<div class="md"><h3>This is an archived post. You won't be able to vote or comment.</h3>
 					<p>Posts&#32;are&#32;automatically&#32;archived&#32;after&#32;6&#32;months.</p></div>
 			</div>
-			<div class="buttons"><a href="/" class="c-btn c-btn-primary">Got It</a></div></div></script>
-	</div>
-	<script id="archived-popup" type="text/template">
-		<div
-		class="interstitial"><img class="interstitial-image"
-		                          src="//www.redditstatic.com/interstitial-image-archived.png" alt="archived"
-		                          height="150" width="150">
-		<div class="interstitial-message md-container">
-			<div class="md"><h3>This is an archived post. You won't be able to vote or comment.</h3>
-				<p>Posts&#32;are&#32;automatically&#32;archived&#32;after&#32;6&#32;months.</p></div>
-		</div>
-		<div class="buttons"><a href="/" class="c-btn c-btn-primary">Got It</a></div></div></script>
+			<div class="buttons"><a href="/" class="c-btn c-btn-primary">Got It</a></div>
+		</div></script>
 </div>
 <div class="footer-parent">
 	<div by-zero="" class="footer rounded">

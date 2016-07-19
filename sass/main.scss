@@ -19,6 +19,10 @@ $grey_background: lighten(#090909, 5%);
 $grey_background_2: lighten(#090909, 10%);
 $grey_border: lighten(#090909, 25%);
 
+@import "mixins.scss";
+@import "spritesheet.scss";
+
+
 //aa
 body {
 	background: url(../images/repeat-bg.jpg) left;
@@ -26,22 +30,12 @@ body {
 }
 
 .md {
-	a {
-		color: $title !important;
-		&:hover {
-			color: darken($title, 20%) !important;
-		}
-		&:active, &:visited {
-			color: darken($title, 30%) !important;
-		}
-	}
+	@include wow-link();
 	del {
 		color: darken($text, 20%) !important;
 	}
 }
 
-@import "mixins.scss";
-@import "spritesheet.scss";
 
 @import "index.scss";
 @import "header.scss";
