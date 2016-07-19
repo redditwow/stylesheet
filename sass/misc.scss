@@ -66,7 +66,7 @@ section.infobar.newsletterbar {
 }
 
 // archived post
-.interstitial-message.md-container .md{
+.interstitial-message.md-container .md {
 	color: #222;
 }
 
@@ -74,10 +74,39 @@ section.infobar.newsletterbar {
 .linefield, .linefield.mobile {
 	background: transparent;
 	border: none;
-	.title{
+	.title {
 		color: $green_title;
 	}
-	a{
+	a {
 		color: $title;
 	}
 }
+
+// expandos
+
+.expando-button {
+	background-color: transparent;
+	&.selftext {
+		&.collapsed {
+			@include sprite($expando-aa-fw);
+		}
+		&.collapsed:hover,
+		&.expanded,
+		&.expanded:hover {
+			@include sprite($expando-aa-dark-fw);
+		}
+	}
+
+	&.video {
+		&.collapsed {
+			@include sprite($expando-plus-fw);
+		}
+		&.collapsed:hover,
+		&.expanded,
+		&.expanded:hover {
+			@include sprite($expando-plus-dark-fw);
+		}
+	}
+
+}
+
