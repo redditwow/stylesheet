@@ -108,5 +108,45 @@ section.infobar.newsletterbar {
 		}
 	}
 
+	// image and gallery are additional expandos added by RES
+	// beware: many !important hacks...
+	&.image {
+
+		// these should probably be take from $expando-image... but whatever
+		max-width: 25px !important;
+		max-height: 25px !important;
+
+		&.collapsed {
+			@include sprite($expando-image-fw);
+			// Hack for RES
+			background-position: $expando-image-fw-offset-x $expando-image-fw-offset-y !important;
+		}
+
+		&.collapsed:hover,
+		&.expanded,
+		&.expanded:hover {
+			@include sprite($expando-image-dark-fw);
+			// Hack for RES
+			background-position: $expando-image-dark-fw-offset-x $expando-image-dark-fw-offset-y !important;
+		}
+	}
+
+	&.gallery {
+
+		max-width: 25px !important;
+		max-height: 25px !important;
+
+		&.collapsed {
+			@include sprite($expando-gallery-fw);
+			background-position: $expando-gallery-fw-offset-x $expando-gallery-fw-offset-y !important;
+		}
+		&.collapsed:hover,
+		&.expanded,
+		&.expanded:hover {
+			@include sprite($expando-gallery-dark-fw);
+			background-position: $expando-gallery-dark-fw-offset-x $expando-gallery-dark-fw-offset-y !important;
+		}
+	}
+
 }
 
