@@ -1,9 +1,9 @@
 // header background
 #header {
 
-	height: 140px;
+	height: 158px;
 	background: url("../images/header-illidan-still.jpg");
-	background-position: center -166px;
+	background-position: center -157px;
 
 	.redditname a {
 		@include sprite($logo-resized-fw);
@@ -13,7 +13,7 @@
 		color: #364657;
 		left: 108px;
 		position: absolute;
-		top: 27px;
+		top: 35px;
 		z-index: 100;
 
 		&:hover {
@@ -28,7 +28,7 @@
 		position: absolute;
 		left: 0;
 		right: 0;
-		top: 130px;
+		top: 142px;
 	}
 
 }
@@ -57,8 +57,8 @@
 #header-img-a {
 	margin-top: 2px;
 	margin-left: 30px;
-	height: 103px;
-	width: 60px;
+	height: 112px;
+	width: 70px;
 	display: inline-block;
 }
 
@@ -80,6 +80,9 @@
 		color: #eee;
 	}
 	border-top-left-radius: 0;
+
+	right: 10px;
+	bottom: 6px;
 }
 
 .user, .separator {
