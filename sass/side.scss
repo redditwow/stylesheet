@@ -13,38 +13,6 @@
 	//background: #444;
 	color: $text;
 
-	.md {
-		a[href*="#game"] {
-			content: "";
-			display: inline-block;
-			height: 50px;
-			width: 50px;
-			background: url(../images/game-icons-50.png) no-repeat;
-			margin-right: 5px;
-			&:hover {
-				opacity: 0.8;
-			}
-		}
-		a[href*="#warcraft"] {
-			background-position: 0 0;
-		}
-		a[href*="#diablo"] {
-			background-position: -50px 0;
-		}
-		a[href*="#starcraft"] {
-			background-position: -100px 0;
-		}
-		a[href*="#hearthstone"] {
-			background-position: -150px 0;
-		}
-		a[href*="#heroes"] {
-			background-position: -200px 0;
-		}
-		a[href*="#overwatch"] {
-			background-position: -250px 0;
-		}
-	}
-
 }
 
 // show my flair...
@@ -341,6 +309,51 @@ $side-icon-margin: 35px;
 		}
 		&[href$="sunday"]:hover:before {
 			@include sprite($ability-creature-cursed-05-glow-fw);
+		}
+	}
+
+	a[href*="#game"] {
+		content: "";
+		display: inline-block;
+		@include sprite-width($game-wow-fw);
+		@include sprite-height($game-wow-fw);
+		@include sprite-image($game-wow-fw);
+		margin-right: 5px;
+	}
+	a[href*="#warcraft"] {
+		@include sprite-position($game-wow-fw);
+		&:hover {
+			@include sprite-position($game-wow-hover-fw);
+		}
+	}
+	a[href*="#diablo"] {
+		@include sprite-position($game-diablo-fw);
+		&:hover {
+			@include sprite-position($game-diablo-hover-fw);
+		}
+	}
+	a[href*="#starcraft"] {
+		@include sprite-position($game-starcraft-fw);
+		&:hover {
+			@include sprite-position($game-starcraft-hover-fw);
+		}
+	}
+	a[href*="#hearthstone"] {
+		@include sprite-position($game-hearthstone-fw);
+		&:hover {
+			@include sprite-position($game-hearthstone-hover-fw);
+		}
+	}
+	a[href*="#heroesofthestorm"] {
+		@include sprite-position($game-heroesofthestorm-fw);
+		&:hover {
+			@include sprite-position($game-heroesofthestorm-hover-fw);
+		}
+	}
+	a[href*="#overwatch"] {
+		@include sprite-position($game-teamfortressthree-fw);
+		&:hover {
+			@include sprite-position($game-teamfortressthree-hover-fw);
 		}
 	}
 }
