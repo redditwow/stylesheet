@@ -1,0 +1,76 @@
+.roundfield,
+.roundfield-content,
+.content.submit .info-notice{
+	background: $grey_background !important;
+	border: $grey_border solid 1px;
+	border-radius: 0;
+	.title {
+		color: $green_title;
+	}
+	a {
+		color: $title;
+	}
+}
+
+.content.submit .info-notice{
+	margin-top: 10px;
+}
+
+.tabmenu {
+	&.formtab {
+		a {
+			background-color: transparent;
+			border: none;
+		}
+		.selected a {
+			background-color: $grey_background !important;
+			border: 1px solid $grey_border;
+			text-shadow: none;
+		}
+	}
+}
+
+.formtabs-content {
+	border-top: $grey_border 1px solid;
+}
+
+.submit-page {
+
+	// moves the tabmenu back
+	// we move it left on other pages as it doubles as the hot, new, rising, etc menu
+	.tabmenu {
+		left: 0px;
+	}
+
+	// .infobar changes limited to submit page only
+	// not sure how many other places this class is used
+	.infobar {
+		background-color: $wow_btn_background;
+		border: 1px solid $wow_btn_border;
+		color: #fff;
+		font-weight: normal;
+		text-shadow: 0px 1px 0px #000;
+	}
+
+	// fixes weird alignment issue
+	.content h1 {
+		margin-left: 5px;
+
+	}
+
+	input[type=text], input[type=url] {
+		background: $grey_background_2;
+		border: 1px solid $grey_border;
+		color: #ddd;
+	}
+
+	.c-btn-primary {
+		background-color: $wow_btn_background;
+		border: 1px solid $wow_btn_border;
+		color: #fff;
+		font-weight: normal;
+		text-shadow: 0px 1px 0px #000;
+		border-radius: 0px;
+	}
+
+}
