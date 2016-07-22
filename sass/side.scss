@@ -227,10 +227,11 @@ button {
 	color: $text;
 }
 
-$side-icon-margin: 35px;
-
 .side {
+	// Weekly thread links
 	a {
+		$side-icon-margin: 35px;
+
 		&[href$="monday"],
 		&[href$="tuesday"],
 		&[href$="wednesday"],
@@ -312,9 +313,12 @@ $side-icon-margin: 35px;
 		}
 	}
 
+	// Other Blizzard Subreddits
 	a[href*="#game"] {
 		content: "";
 		display: inline-block;
+		// All these icons have the same size and use the same sprite image
+		// This saves a little space by not having to spread the size and image rules for every game.
 		@include sprite-width($game-wow-fw);
 		@include sprite-height($game-wow-fw);
 		@include sprite-image($game-wow-fw);
