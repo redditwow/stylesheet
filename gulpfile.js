@@ -88,9 +88,11 @@ gulp.task('sprites', function () {
 gulp.task('demo', function () {
 
 	var sidebar = fs.readFileSync('demo/content/sidebar.html', 'utf8');
+	var snoo = fs.readFileSync('demo/content/header_snoo.html', 'utf8');
 
 	gulp.src('demo/pages/*')
 		.pipe(replace('<!--%%sidebar%%-->', sidebar))
+		.pipe(replace('<!--%%snoo%%-->', snoo))
 		.pipe(size({
 			showFiles: true
 		}))
