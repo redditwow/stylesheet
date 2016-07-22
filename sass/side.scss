@@ -227,6 +227,20 @@ button {
 	color: $text;
 }
 
+// search doodad
+#searchexpando {
+	background-color: $grey_background;
+	border: 1px solid $grey_border;
+	color: #fff;
+	border-radius: 0;
+	a {
+		color: #fff;
+	}
+	#moresearchinfo {
+		border-top: 1px solid $grey_border;
+	}
+}
+
 .side {
 	// Weekly thread links
 	a {
