@@ -1,0 +1,43 @@
+.flairselector {
+	position: fixed;
+	top: 20% !important;
+	left: 50% !important;
+	margin-left: -225px;
+	width: 500px !important;
+	box-shadow: 0 0 24px rgba(0, 0, 0, .9) !important;
+	background: $grey_background;
+	border: $grey_border 1px solid;
+
+	&.drop-choices.active {
+		border: $grey_border 1px solid;
+	}
+
+	h2 {
+		background: none;
+		font-size: 16px;
+		text-transform: capitalize;
+		color: $green_title;
+	}
+
+	li {
+		background-color: transparent;
+		border: none !important;
+		&:hover {
+			background-color: $grey_background_2;
+			border: 1px solid $grey_border;
+		}
+		a{
+			color: $text !important;
+		}
+	}
+
+	button {
+		text-transform: capitalize;
+	}
+
+	input[type=text], input[type=url] {
+		background: $grey_background_2;
+		border: 1px solid $grey_border;
+		color: #ddd;
+	}
+}

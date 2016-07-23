@@ -100,7 +100,7 @@ a.thumbnail.self,
 
 // default, self
 a.thumbnail.default,
-a.thumbnail.self{
+a.thumbnail.self {
 	margin-right: 20px;
 	@include sprite-position($linkflair-default);
 	@include sprite-width($linkflair-default);
