@@ -285,10 +285,10 @@ button {
 		}
 
 		&[href$="tuesday"]:before {
-			@include sprite($achievement-bg-topdps);
+			@include sprite($inv-inscription-trinket-tank);
 		}
 		&[href$="tuesday"]:hover:before {
-			@include sprite($achievement-bg-topdps-glow-fw);
+			@include sprite($inv-inscription-trinket-tank-glow-fw);
 		}
 
 		&[href$="wednesday"]:before {
