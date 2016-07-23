@@ -22,10 +22,8 @@ $grey_border: lighten(#090909, 25%);
 @import "mixins.scss";
 @import "spritesheet.scss";
 
-
-//aa
 body {
-	background: url(../images/repeat-bg.jpg) left;
+	background: url(../images/repeat-bg.jpg) left #111;
 	color: $text;
 }
 
