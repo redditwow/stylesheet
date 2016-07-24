@@ -6,13 +6,27 @@
 		display: none;
 	}
 
-	background: url(../images/side-divide.fw.png) left repeat-y, url(../images/repeat-bg.jpg) center;;
+	background: url(../images/side-divide.fw.png) left repeat-y, url(../images/repeat-bg.jpg) center;
 	//background: url(../media-tab-bottom.png) left repeat-y, url(../repeat-bg.jpg) center;
 	padding-left: 25px;
 	//width: 326px;
 	//background: #444;
 	color: $text;
 
+	// super hacky sidebar bottom border...
+	//&:after {
+	//	display: inline-block;
+	//	content: '';
+	//	height: 23px;
+	//	width: calc(100% + 22px);
+	//	//width: 100%;
+	//	background: url(../images/header-divide.fw.png) bottom repeat-x;
+	//	overflow: hidden;
+	//	position: relative;
+	//	left: -22px;
+	//	top: 10px;
+	//	margin-right: -22px;
+	//}
 }
 
 // show my flair...
