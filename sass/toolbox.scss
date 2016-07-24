@@ -1,0 +1,16 @@
+//toolbox buttons
+body.mod-toolbox {
+	.tb-general-button,
+	li a.tb-general-button,
+	.tb-bracket-button {
+		background-color: rgba($wow_btn_background, 0.9) !important;
+		border: 1px solid $wow_btn_border !important;
+		color: #fff !important;
+		text-shadow: 0px 1px 0px #000;
+	}
+}
+
+// reset popup box colour back to default ish
+.tb-popup-content{
+	color: #111;
+}
