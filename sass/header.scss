@@ -43,12 +43,14 @@
 	li.selected a {
 		text-shadow: 0 0 10px #e6ff42, 0 0 10px #e6ff42;
 		color: $green_title;
+		background: rgb(0, 0, 0);
 		background: rgba(0, 0, 0, 0.5);
 		border: none;
 		z-index: 100;
 	}
 	li a {
 		color: #fff;
+		background: rgb(0, 0, 0);
 		background: rgba(0, 0, 0, 0.5);
 	}
 }
@@ -71,6 +73,7 @@
 #sr-header-area,
 	// bottom right user panel
 #header-bottom-right {
+	background: rgb(0, 0, 0);
 	background: rgba(0, 0, 0, 0.5);
 	padding: 5px 0px 5px 5px;
 	color: #EEEEEE;
