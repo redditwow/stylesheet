@@ -242,7 +242,7 @@ button {
 	color: $text;
 }
 
-#search{
+#search {
 	input[type=text] {
 		background: $grey_background_2;
 		border: 1px solid $grey_border;
@@ -265,6 +265,44 @@ button {
 }
 
 .side {
+
+	// Notice panel
+	h5 + blockquote,
+	h6 + blockquote {
+		display: block;
+		padding: 12px 7px;
+		margin-bottom: 10px;
+		margin-left: 0px;
+	}
+
+	h6 + blockquote {
+		background-color: $grey_background;
+		border: 1px solid $grey_border;
+		color: $text;
+	}
+
+	h5 + blockquote {
+		background-color: $grey_background_2;
+		border: 1px solid $grey_border;
+		color: $text;
+	}
+
+	a[href$="wowbtn"] {
+		display: inline-block;
+		@include wow-btn-active;
+		@include wow-btn-text;
+		color: #fff !important;
+		text-align: center;
+		width: calc(100% - 2px);
+		padding: 8px 0px;
+		margin-bottom: 8px;
+
+		&:hover {
+			@include wow-btn-active-hover;
+		}
+
+	}
+
 	// Weekly thread links
 	a {
 		$side-icon-margin: 35px;
