@@ -196,8 +196,16 @@ button {
 
 		// remove background from the textbox
 		.multi-list,
-		label:hover {
-			background: none;
+		label {
+			color: $text;
+			&:hover {
+				background: none;
+			}
+
+			a{
+				@include wow-btn-active;
+				@include wow-btn-text;
+			}
 		}
 
 		// dark input box
