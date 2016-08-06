@@ -398,6 +398,7 @@ button {
 		@include sprite-height($game-wow-fw);
 		@include sprite-image($game-wow-fw);
 		margin-right: 5px;
+		font-size: 0px;
 	}
 	a[href*="#warcraft"] {
 		@include sprite-position($game-wow-fw);
