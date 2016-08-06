@@ -119,22 +119,13 @@ a.thumbnail.self {
 	}
 }
 
-//@mixin special-background(){
-//	.linkflairlabel {
-//		font-size: x-small;
-//		max-width: 10em;
-//		overflow: hidden;
-//		text-overflow: ellipsis;
-//		white-space: nowrap;
-//	}
-//}
+.linkflairlabel {
+	max-width: unset;
+}
 
 .thing {
 	&.linkflair-bluepost,
 	&.linkflair-modpost {
-		.linkflairlabel {
-			max-width: unset;
-		}
 		padding-bottom: 13px;
 		margin-bottom: 0px;
 	}
