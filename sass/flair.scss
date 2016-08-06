@@ -80,7 +80,7 @@
 	@each $sprite in $sprites {
 		$sprite-name: nth($sprite, 10);
 		//.#{$sprite-name}:after {
-		.#{$sprite-name} a.thumbnail {
+		.#{$sprite-name}.self a.thumbnail {
 			@include sprite-position($sprite);
 			@include sprite-width($sprite);
 			@include sprite-height($sprite);
@@ -116,6 +116,51 @@ a.thumbnail.self {
 	img {
 		// hide the thumbnail image to reveal the NSFW icon underneath
 		display: none;
+	}
+}
+
+//@mixin special-background(){
+//	.linkflairlabel {
+//		font-size: x-small;
+//		max-width: 10em;
+//		overflow: hidden;
+//		text-overflow: ellipsis;
+//		white-space: nowrap;
+//	}
+//}
+
+.thing {
+	&.linkflair-bluepost,
+	&.linkflair-modpost {
+		.linkflairlabel {
+			max-width: unset;
+		}
+		padding-bottom: 13px;
+		margin-bottom: 0px;
+	}
+}
+
+.thing.linkflair-bluepost {
+	a.title {
+		color: rgb(0, 180, 255);
+	}
+	background: rgba(36, 58, 93, 0.75);
+
+	.linkflairlabel {
+		background: rgba(0, 0, 99, 0.4);
+		color: rgb(0, 180, 255);
+	}
+}
+
+.thing.linkflair-modpost {
+	a.title {
+		color: rgb(129, 181, 88)
+	}
+	background: rgba(41, 81, 10, 0.75);
+
+	.linkflairlabel {
+		background: rgba(7, 53, 4, 0.75);
+		color: rgb(129, 181, 88)
 	}
 }
 
