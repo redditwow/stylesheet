@@ -86,6 +86,11 @@
 
 	right: 10px;
 	bottom: 6px;
+
+	// allow res to override the position
+	&.res-navTop{
+		bottom: auto;
+	}
 }
 
 .user, .separator {
