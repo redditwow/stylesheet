@@ -130,7 +130,7 @@ span.score {
 	}
 }
 
-.gold-accent.comment-visits-box {
+.gold-accent.comment-visits-box, .archived-infobar, .locked-infobar {
 	//margin-top: 10px;
 	//padding: 0 10px 5px;
 	//background-color: #fffdcc;
@@ -141,4 +141,8 @@ span.score {
 	a {
 		@include wow-btn-text();
 	}
+}
+
+.reddit-infobar.with-icon::before {
+	background-color: $wow_btn_warning_background;
 }
