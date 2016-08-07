@@ -62,6 +62,16 @@
 	height: 112px;
 	width: 70px;
 	display: inline-block;
+
+	@include sprite($snoo);
+	&:hover{
+		@include sprite($snoo-glow-fw);
+	}
+
+	#header-img{
+		opacity: 0;
+	}
+
 }
 
 // Edit in the subreddit menu list
