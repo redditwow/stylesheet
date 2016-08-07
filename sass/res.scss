@@ -75,3 +75,15 @@
 	background: none !important;
 	color: #fff !important;
 }
+
+// RES Night Mode
+.res-nightmode {
+	// Use night mode's colours in the subreddit bar
+	#sr-header-area a {
+		background-color: #ccc;
+		color: #000;
+	}
+	.dropdown.srdrop .selected {
+		color: #000;
+	}
+}
