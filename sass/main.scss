@@ -32,6 +32,9 @@ body {
 	del {
 		color: darken($text, 20%) !important;
 	}
+	blockquote{
+		color: darken($text, 10%) !important;
+	}
 }
 
 
