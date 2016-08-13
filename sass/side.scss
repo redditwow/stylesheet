@@ -286,13 +286,13 @@ button {
 	h6 + blockquote {
 		background-color: $grey_background;
 		border: 1px solid $grey_border;
-		color: $text;
+		color: $text !important;
 	}
 
 	h5 + blockquote {
 		background-color: $grey_background_2;
 		border: 1px solid $grey_border;
-		color: $text;
+		color: $text !important;
 	}
 
 	a[href$="wowbtn"] {
