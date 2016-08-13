@@ -24,20 +24,11 @@ $grey_border: lighten(#090909, 25%);
 
 body {
 	background: url(../images/repeat-bg.jpg) left #111;
-	color: $text;
+	//color: $text;
+	color: $grey;
 }
 
-.md {
-	@include wow-link();
-	del {
-		color: darken($text, 20%) !important;
-	}
-	blockquote{
-		color: darken($text, 10%) !important;
-	}
-}
-
-
+@import "markdown.scss";
 @import "index.scss";
 @import "header.scss";
 @import "arrows.scss";

@@ -11,7 +11,7 @@ body > .content {
 }
 
 .entry .buttons li a {
-	color: $text;
+	color: darken($grey, 20%);
 }
 
 .domain a {

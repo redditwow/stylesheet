@@ -1,0 +1,20 @@
+.md {
+	@include wow-link();
+
+	color: $grey;
+
+	del {
+		color: darken($grey, 20%) !important;
+	}
+	blockquote {
+		color: darken($grey, 10%) !important;
+	}
+
+	code, pre, pre code, code pre {
+		border: 1px solid $grey_border !important;;
+		background-color: $grey_background_2 !important;;
+	}
+	a {
+		color: $title;
+	}
+}
