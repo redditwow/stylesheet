@@ -95,6 +95,12 @@ textarea {
 	}
 }
 
+.usertext.border .usertext-body {
+	/* @TODO Style better */
+	//color: $title;
+	background-color: transparent !important;
+}
+
 .single-page .link .rank {
 	display: block;
 	width: 2.2ex !important;
