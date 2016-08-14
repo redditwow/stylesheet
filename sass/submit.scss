@@ -45,7 +45,14 @@
 	// fixes weird alignment issue
 	.content h1 {
 		margin-left: 5px;
+	}
 
+	.submit_text h1 {
+		color: $green_title;
+	}
+
+	.submit_text {
+		max-height: unset;
 	}
 
 	input[type=text], input[type=url] {
