@@ -50,7 +50,7 @@ gulp.task('styles', ['sprites', 'flair-link', 'flair-user'], function () {
 gulp.task('flair-user', function () {
 	var spriteData = gulp.src('./flair_user/*.png').pipe(spritesmith({
 		imgName: 'sprites/flair-user.png',
-		cssName: 'sass/flair-user.scss',
+		cssName: 'sass/_flair-user.scss',
 		algorithm: 'binary-tree',
 		cssSpritesheetName: 'flair-user',
 		cssVarMap: function (sprite) {
@@ -64,7 +64,7 @@ gulp.task('flair-user', function () {
 gulp.task('flair-link', function () {
 	var spriteData = gulp.src('./flair_link/*.png').pipe(spritesmith({
 		imgName: 'sprites/flair-link.png',
-		cssName: 'sass/flair-link.scss',
+		cssName: 'sass/_flair-link.scss',
 		cssSpritesheetName: 'flair-link',
 		algorithm: 'binary-tree',
 		cssVarMap: function (sprite) {
@@ -78,7 +78,7 @@ gulp.task('flair-link', function () {
 gulp.task('sprites', function () {
 	var spriteData = gulp.src('./spritesheet_images/*').pipe(spritesmith({
 		imgName: 'sprites/spritesheet.png',
-		cssName: 'sass/spritesheet.scss',
+		cssName: 'sass/_spritesheet.scss',
 		cssSpritesheetName: 'spritesheet',
 		algorithm: 'binary-tree'
 	}));
