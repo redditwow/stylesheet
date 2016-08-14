@@ -354,10 +354,10 @@ button {
 		}
 
 		&[href$="tuesday"]:before {
-			@include sprite($inv-inscription-trinket-tank);
+			@include sprite($inv-shield-20);
 		}
 		&[href$="tuesday"]:hover:before {
-			@include sprite($inv-inscription-trinket-tank-glow-fw);
+			@include sprite($inv-shield-20-glow);
 		}
 
 		&[href$="wednesday"]:before {
