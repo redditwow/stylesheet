@@ -3,12 +3,16 @@
 	margin-top: 10px;
 }
 
+// fix for collapsed comments jerking about
+.thing.comment .entry {
+	margin-left: 42px;
+}
+
 .link .usertext-body .md {
 	background-color: $grey_background;
 	border: 1px solid $grey_border;
 	border-radius: 7px;
 }
-
 
 .linkinfo {
 	background: $grey_background;
@@ -126,7 +130,6 @@ span.score {
 		}
 	}
 }
-
 
 .reddit-infobar.with-icon::before {
 	background-color: $wow_btn_warning_background;
