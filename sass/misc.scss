@@ -197,6 +197,27 @@ html[lang="ns"] {
 ul.report-reasons {
 	background-color: transparent;
 }
+
 .entry .buttons li.reported-stamp {
 	color: #111111;
+}
+
+//search
+.searchpane {
+	background: $grey_background_2;
+	color: $grey;
+	border: 1px solid $grey_border;
+
+	@include wow-link();
+
+	input[type=text] {
+		background: $grey_background_2;
+		border: 1px solid $grey_border;
+		color: #ddd !important;
+	}
+}
+
+//debug for search, also footer
+.debuginfo {
+	color: $text
 }
