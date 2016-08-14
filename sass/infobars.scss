@@ -1,0 +1,58 @@
+// reddit newsletter
+section.infobar.newsletterbar {
+	width: 100%;
+}
+
+// EU cookie law
+.cookie-infobar {
+	background-color: rgba($wow_btn_background, 0.9);
+	border-color: $wow_btn_border;
+
+	&.with-icon {
+		&:before {
+			// @TODO replace this with a WoW icon
+			background-color: rgba($wow_btn_background, 0.9);
+		}
+	}
+
+	// @TODO this button is kinda ugly
+	.c-btn-primary {
+		background-color: #000;
+		border: 1px solid #000;
+		color: #ffffff;
+		border-radius: 0;
+		&:hover {
+			background-color: #111;
+			border: 1px solid #000;
+		}
+	}
+}
+
+// green info bars
+.contest-mode,
+.infobar,
+.infobar.mellow {
+	background-color: $wow_btn_background;
+	border: 1px solid $wow_btn_border;
+	color: #fff;
+	font-weight: normal;
+	text-shadow: 0px 1px 0px #000;
+}
+
+// yellow info bars
+.gold-accent.comment-visits-box,
+.archived-infobar,
+.locked-infobar {
+
+	@include wow-btn-warning();
+	@include wow-btn-text();
+
+	a {
+		@include wow-btn-text();
+	}
+
+	.md {
+		color: #fff;
+		@include wow-btn-text;
+	}
+}

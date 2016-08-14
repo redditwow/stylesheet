@@ -24,45 +24,6 @@ body > .content .link .rank,
 	width: 2.2ex !important;
 }
 
-// EU cookie law
-.cookie-infobar {
-	background-color: rgba($wow_btn_background, 0.9);
-	border-color: $wow_btn_border;
-
-	&.with-icon {
-		&:before {
-			// @TODO replace this with a WoW icon
-			background-color: rgba($wow_btn_background, 0.9);
-		}
-	}
-
-	// @TODO this button is kinda ugly
-	.c-btn-primary {
-		background-color: #000;
-		border: 1px solid #000;
-		color: #ffffff;
-		border-radius: 0;
-		&:hover {
-			background-color: #111;
-			border: 1px solid #000;
-		}
-	}
-}
-
-.reddit-infobar .md {
-	color: #fff;
-	@include wow-btn-text;
-}
-
-// reddit newsletter
-section.infobar.newsletterbar {
-	width: 100%;
-}
-
-// archived post
-.interstitial-message.md-container .md {
-	color: #222;
-}
 
 // about/edit settings
 .linefield, .linefield.mobile {
@@ -143,6 +104,12 @@ section.infobar.newsletterbar {
 	}
 
 }
+
+// archived post modal popup thingy
+.interstitial-message.md-container .md {
+	color: #222;
+}
+
 
 //spoilers
 //

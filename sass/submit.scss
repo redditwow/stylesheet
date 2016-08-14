@@ -42,16 +42,6 @@
 		left: 0px;
 	}
 
-	// .infobar changes limited to submit page only
-	// not sure how many other places this class is used
-	.infobar {
-		background-color: $wow_btn_background;
-		border: 1px solid $wow_btn_border;
-		color: #fff;
-		font-weight: normal;
-		text-shadow: 0px 1px 0px #000;
-	}
-
 	// fixes weird alignment issue
 	.content h1 {
 		margin-left: 5px;

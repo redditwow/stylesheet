@@ -9,16 +9,6 @@
 	border-radius: 7px;
 }
 
-//contest
-.contest-mode,
-.infobar,
-.infobar.mellow {
-	background-color: $wow_btn_background;
-	border: 1px solid $wow_btn_border;
-	color: #fff;
-	font-weight: normal;
-	text-shadow: 0px 1px 0px #000;
-}
 
 .linkinfo {
 	background: $grey_background;
@@ -137,18 +127,6 @@ span.score {
 	}
 }
 
-.gold-accent.comment-visits-box, .archived-infobar, .locked-infobar {
-	//margin-top: 10px;
-	//padding: 0 10px 5px;
-	//background-color: #fffdcc;
-	//border: solid 1px #e1b000;
-	//color: #9a7d2e;
-	@include wow-btn-warning();
-	@include wow-btn-text();
-	a {
-		@include wow-btn-text();
-	}
-}
 
 .reddit-infobar.with-icon::before {
 	background-color: $wow_btn_warning_background;
