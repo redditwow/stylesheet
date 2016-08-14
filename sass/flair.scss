@@ -153,6 +153,11 @@ a.thumbnail.self {
 		background: rgba(7, 53, 4, 0.75);
 		color: rgb(129, 181, 88)
 	}
+
+	.tagline .stickied-tagline,
+	.search-result-meta .stickied-tagline {
+		color: #97ED97;
+	}
 }
 
 // all the other link flairs
