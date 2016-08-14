@@ -52,7 +52,7 @@ body > .content .link .rank,
 		}
 	}
 
-	&.video {
+	&.video{
 		&.collapsed {
 			@include sprite($expando-plus-fw);
 		}
@@ -100,6 +100,23 @@ body > .content .link .rank,
 		&.expanded:hover {
 			@include sprite($expando-gallery-dark-fw);
 			background-position: $expando-gallery-dark-fw-offset-x $expando-gallery-dark-fw-offset-y !important;
+		}
+	}
+
+	&.video-muted  {
+
+		max-width: 25px !important;
+		max-height: 25px !important;
+
+		&.collapsed {
+			@include sprite($expando-plus-fw);
+			background-position: $expando-plus-fw-offset-x $expando-plus-fw-offset-y !important;
+		}
+		&.collapsed:hover,
+		&.expanded,
+		&.expanded:hover {
+			@include sprite($expando-plus-dark-fw);
+			background-position: $expando-plus-dark-fw-offset-x $expando-plus-dark-fw-offset-y !important;
 		}
 	}
 
