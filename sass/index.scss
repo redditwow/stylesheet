@@ -77,13 +77,15 @@ body > .content {
 			color: $title;
 
 			&:hover {
-				color: darken($title, 20%);
+				//color: darken($title, 20%);
+				text-decoration: underline;
 			}
 
 			&:visited {
-				color: darken($title, 30%);
+				color: darken($title, 35%);
 				&:hover {
-					color: darken($title, 40%);
+
+					//color: darken($title, 40%);
 				}
 
 			}
