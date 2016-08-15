@@ -40,6 +40,8 @@
 
 	//background: rgba(0, 0, 0, 0.5);
 
+	z-index: 9999;
+
 	li.selected a {
 		text-shadow: 0 0 10px #e6ff42, 0 0 10px #e6ff42;
 		color: $green_title;
