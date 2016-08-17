@@ -91,3 +91,10 @@ div.usertext-edit.md-container {
 		color: #000;
 	}
 }
+
+// allow RES to pin the header to the top
+body.pinHeader-sub, body.pinHeader-subanduser {
+	div#sr-header-area {
+		top: 0px;
+	}
+}
