@@ -7,19 +7,26 @@ var size        = require('gulp-size');
 var rename      = require('gulp-rename');
 var fs          = require('fs');
 var notify      = require("gulp-notify");
+var insert      = require('gulp-insert');
 
 gulp.task('styles', ['sprites', 'flair-link', 'flair-user'], function () {
 
-	gulp.src('sass/**/main.scss')
-		.pipe(sass().on('error', sass.logError))
-		.pipe(size({
-			showFiles: true
-		}))
-		.pipe(gulp.dest('./css/'));
+	var credits = fs.readFileSync('sass/credits.css', 'utf8');
+	var herenow = fs.readFileSync('sass/herenow.css', 'utf8');
 
 	gulp.src('sass/**/main.scss')
 		.pipe(sass().on('error', sass.logError))
-		.pipe(rename('reddit.css'))
+		.pipe(insert.prepend(herenow))
+		.pipe(insert.prepend(credits))
+		.pipe(rename('dev.css'))
+		.pipe(size({
+			showFiles: true
+		}))
+		.pipe(gulp.dest('./css'));
+
+	gulp.src('sass/**/main.scss')
+		.pipe(sass().on('error', sass.logError))
+		.pipe(rename('prod.css'))
 		.pipe(replace('../images/mini-panel.fw.png', '%%mini-panel%%'))
 		.pipe(replace('../images/repeat-bg.jpg', '%%repeat-bg%%'))
 		.pipe(replace('../sprites/spritesheet.png', '%%spritesheet%%'))
@@ -35,14 +42,12 @@ gulp.task('styles', ['sprites', 'flair-link', 'flair-user'], function () {
 			maxLineLen: 80,
 			uglyComments: true
 		}))
+		.pipe(insert.prepend(herenow))
+		.pipe(insert.prepend(credits))
 		.pipe(size({
 			showFiles: true
 		}))
-		.pipe(gulp.dest('./css/'))
-		.pipe(notify({
-			'title': '/r/wow CSS',
-			'message': 'Recompile complete'
-		}));
+		.pipe(gulp.dest('./css'));
 
 
 });
@@ -88,7 +93,7 @@ gulp.task('sprites', function () {
 gulp.task('demo', function () {
 
 	var sidebar = fs.readFileSync('demo/content/sidebar.html', 'utf8');
-	var snoo = fs.readFileSync('demo/content/header_snoo.html', 'utf8');
+	var snoo    = fs.readFileSync('demo/content/header_snoo.html', 'utf8');
 
 	gulp.src('demo/pages/*')
 		.pipe(replace('<!--%%sidebar%%-->', sidebar))

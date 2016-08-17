@@ -1,0 +1,12 @@
+.titlebox span.word {
+	display: none;
+}
+
+.titlebox span.number:after {
+	content: " demon hunters";
+}
+
+.titlebox .users-online span.number:after {
+	content: " other classes";
+}
+
