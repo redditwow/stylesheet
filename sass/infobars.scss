@@ -34,9 +34,10 @@ section.infobar.newsletterbar {
 .infobar.mellow {
 	background-color: $wow_btn_background;
 	border: 1px solid $wow_btn_border;
-	color: #fff;
-	font-weight: normal;
-	text-shadow: 0px 1px 0px #000;
+	@include wow-btn-text();
+	a {
+		color: #fff;
+	}
 }
 
 // yellow info bars
