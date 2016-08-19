@@ -6,8 +6,8 @@
 		display: none;
 	}
 
-	background: url(../images/repeat-bg.jpg) center #000; //fallback for legacy browsers
-	background: url(../images/side-divide.fw.png) left repeat-y, url(../images/repeat-bg.jpg) center;
+	background: url(../images/repeat-bg-dark.jpg) center #000; //fallback for legacy browsers
+	background: url(../images/side-divide.fw.png) left repeat-y, url(../images/repeat-bg-dark.jpg) center;
 	//background: url(../media-tab-bottom.png) left repeat-y, url(../repeat-bg.jpg) center;
 	padding-left: 25px;
 	//width: 326px;

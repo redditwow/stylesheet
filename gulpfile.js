@@ -29,6 +29,7 @@ gulp.task('styles', ['sprites', 'flair-link', 'flair-user'], function () {
 		.pipe(rename('prod.css'))
 		.pipe(replace('../images/mini-panel.fw.png', '%%mini-panel%%'))
 		.pipe(replace('../images/repeat-bg.jpg', '%%repeat-bg%%'))
+		.pipe(replace('../images/repeat-bg-dark.jpg', '%%repeat-bg-dark%%'))
 		.pipe(replace('../sprites/spritesheet.png', '%%spritesheet%%'))
 		.pipe(replace('../images/header-divide.fw.png', '%%header-divide%%'))
 		.pipe(replace('../images/game-icons-50.png', '%%game-icons-50%%'))
