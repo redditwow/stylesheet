@@ -1,6 +1,19 @@
 .footer-parent {
-	background: url(../images/section-divider.png) center top no-repeat;
-	padding-top: 110px;
+	background: url(../images/repeat-bg-dark.jpg) center;
+	//padding-top: 110px;
+	padding-top: 0;
+	margin-top: 40px;
+	padding-bottom: 40px;
+
+	&:before {
+		background: url(../images/header-divide.fw.png) center top repeat-x;
+		content: '';
+		display: inline-block;
+		height: 23px;
+		width: 100%;
+		top: -8px;
+		position: relative;
+	}
 
 	.footer {
 		color: darken($text, 20%);
@@ -27,6 +40,10 @@
 		color: #fff;
 		color: rgba(255, 255, 255, 0.2);
 	}
+}
+
+body .debuginfo {
+	display: none;
 }
 
 //
