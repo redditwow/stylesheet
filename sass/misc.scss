@@ -24,7 +24,6 @@ body > .content .link .rank,
 	width: 2.2ex !important;
 }
 
-
 // about/edit settings
 .linefield, .linefield.mobile {
 	background: transparent;
@@ -52,7 +51,7 @@ body > .content .link .rank,
 		}
 	}
 
-	&.video{
+	&.video {
 		&.collapsed {
 			@include sprite($expando-plus-fw);
 		}
@@ -103,7 +102,7 @@ body > .content .link .rank,
 		}
 	}
 
-	&.video-muted  {
+	&.video-muted {
 
 		max-width: 25px !important;
 		max-height: 25px !important;
@@ -126,7 +125,6 @@ body > .content .link .rank,
 .interstitial-message.md-container .md {
 	color: #222;
 }
-
 
 //spoilers
 //
@@ -204,4 +202,9 @@ ul.report-reasons {
 //debug for search, also footer
 .debuginfo {
 	color: $text
+}
+
+//beta clickbox???
+.expand-media:hover {
+	overflow: unset !important;
 }
