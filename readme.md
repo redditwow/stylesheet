@@ -3,7 +3,8 @@
 ## Building
 
 1. `npm install`
-2. `gulp`
+2. `gulp styles` to compile for the very first time
+3. `gulp` to watch for changes
 
 ## Adding new demo pages
 
