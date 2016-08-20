@@ -1,6 +1,6 @@
 
 .linkflairlabel {
-	color: $text;
+	color: $light_text;
 	border: lighten(black, 20%) 1px solid;
 	background: black;
 }
@@ -9,10 +9,10 @@
 
 .drop-choices {
 	//display: block !important;
-	color: $text;
+	color: $light_text;
 	background: $grey_background_2;
 	a, a.choice {
-		color: $text;
+		color: $light_text;
 		&:hover {
 			background: $grey_background;
 		}
@@ -138,7 +138,7 @@ a[href="#s"] {
 	cursor: default;
 
 	&:hover {
-		color: $text !important;
+		color: $light_text !important;
 		text-shadow: 0 0 0 !important;
 	}
 
@@ -152,7 +152,7 @@ html[lang="ns"] {
 	.linkflair-spoiler a.title:visited {
 		background: rgba(0, 0, 0, 0.2);
 		color: transparent !important;
-		text-shadow: 0 0 8px rgba($text, 0.9);
+		text-shadow: 0 0 8px rgba($light_text, 0.9);
 	}
 
 	.linkflair-spoiler a.title:hover,
@@ -187,7 +187,7 @@ ul.report-reasons {
 //search
 .searchpane {
 	background: $grey_background_2;
-	color: $grey;
+	color: $grey_text;
 	border: 1px solid $grey_border;
 
 	@include wow-link();
@@ -201,7 +201,7 @@ ul.report-reasons {
 
 //debug for search, also footer
 .debuginfo {
-	color: $text
+	color: $light_text
 }
 
 //beta clickbox???

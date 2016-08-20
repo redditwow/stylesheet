@@ -1,7 +1,7 @@
 $title: rgb(232, 227, 97);
 $green_title: rgb(19, 255, 41);
-$text: rgb(247, 250, 229);
-$grey: rgb(180, 180, 180);
+$light_text: rgb(247, 250, 229);
+$grey_text: rgb(180, 180, 180);
 
 $wow_btn_background: darken(#228822, 10%);
 $wow_btn_hover: darken($wow_btn_background, 10%);
@@ -26,8 +26,12 @@ $grey_border: lighten(#090909, 25%);
 
 body {
 	background: url(../images/repeat-bg.jpg) left #111;
+	//background: linear-gradient(to right, rgba(0, 1, 17, 0.65) 0%, rgba(0, 1, 15, 0.65) 10%, rgba(0, 0, 4, 0) 75%, rgba(0, 0, 0, 0) 100%);
+	//background: -moz-linear-gradient(left, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.65) 37%, rgba(0,0,0,0) 98%, rgba(0,0,0,0) 100%),
+	//url(../images/repeat-bg.jpg) left #111;
+
 	//color: $text;
-	color: $grey;
+	color: $grey_text;
 }
 
 @import "markdown.scss";

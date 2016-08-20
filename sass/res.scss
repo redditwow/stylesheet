@@ -18,7 +18,7 @@
 	background: rgba($grey_background_2, 0.5) !important;
 	border: $grey_border 1px solid !important;
 	border-radius: 0px !important;
-	color: $text;
+	color: $light_text;
 	margin: 40px auto 0px;
 	width: 50%;
 	h2, a {
@@ -28,7 +28,7 @@
 
 //[l=c]
 .redditSingleClick {
-	color: $text !important;
+	color: $light_text !important;
 }
 
 // live preview

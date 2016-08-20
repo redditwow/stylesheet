@@ -3,19 +3,19 @@ body > .content {
 }
 
 .tagline, .search-result-meta {
-	color: $text;
+	color: $light_text;
 }
 
 .tagline a {
-	color: $text;
+	color: $light_text;
 }
 
 .entry .buttons li a {
-	color: darken($grey, 20%);
+	color: darken($grey_text, 20%);
 }
 
 .domain a {
-	color: $grey;
+	color: $grey_text;
 }
 
 .thing {

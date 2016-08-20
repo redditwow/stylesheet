@@ -1,13 +1,13 @@
 .md {
 	@include wow-link();
 
-	color: $grey;
+	color: $grey_text;
 
 	del {
-		color: darken($grey, 20%) !important;
+		color: darken($grey_text, 20%) !important;
 	}
 	blockquote {
-		color: darken($grey, 10%) !important;
+		color: darken($grey_text, 10%) !important;
 	}
 
 	code, pre, pre code, code pre {

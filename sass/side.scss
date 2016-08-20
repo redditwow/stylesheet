@@ -10,11 +10,12 @@
 	background: url(../images/side-divide.fw.png) left repeat-y, url(../images/repeat-bg-dark.jpg) center;
 	//background: url(../media-tab-bottom.png) left repeat-y, url(../repeat-bg.jpg) center;
 	padding-left: 25px;
+
 	//width: 326px;
 	//background: #444;
-	color: $text;
+	color: $light_text;
 
-	// super hacky sidebar bottom border...
+	 //super hacky sidebar bottom border...
 	//&:after {
 	//	display: inline-block;
 	//	content: '';
@@ -34,7 +35,7 @@
 // yer a moderator, harry
 .titlebox form.toggle, .leavemoderator {
 	background: none;
-	color: $text;
+	color: $light_text;
 	a {
 		color: $title;
 	}
@@ -133,7 +134,7 @@ button {
 	text-align: right;
 	.title h1,
 	.more a {
-		color: $text;
+		color: $light_text;
 	}
 	.author {
 		color: $title;
@@ -170,11 +171,11 @@ button {
 //mod tools
 #moderation_tools {
 	.title {
-		color: $text;
+		color: $light_text;
 	}
 	.icon-menu a {
 		background: none;
-		color: $text;
+		color: $light_text;
 	}
 }
 
@@ -197,7 +198,7 @@ button {
 		// remove background from the textbox
 		.multi-list,
 		label {
-			color: $text;
+			color: $light_text;
 			&:hover {
 				background: none;
 			}
@@ -230,7 +231,7 @@ button {
 		background: none;
 	}
 	.subtitle {
-		color: $text
+		color: $light_text
 	}
 }
 
@@ -241,13 +242,13 @@ button {
 		color: $title;
 	}
 	small {
-		color: $text !important;
+		color: $light_text !important;
 	}
 }
 
 // account activity
 .account-activity-box a {
-	color: $text;
+	color: $light_text;
 }
 
 #search {
@@ -286,13 +287,13 @@ button {
 	h6 + blockquote {
 		background-color: $grey_background;
 		border: 1px solid $grey_border;
-		color: $text !important;
+		color: $light_text !important;
 	}
 
 	h5 + blockquote {
 		background-color: $grey_background_2;
 		border: 1px solid $grey_border;
-		color: $text !important;
+		color: $light_text !important;
 	}
 
 	a[href$="wowbtn"] {
