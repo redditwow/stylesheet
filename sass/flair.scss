@@ -135,7 +135,8 @@ a.thumbnail.self {
 	a.title,
 	a.title:visited,
 	a.title:active {
-		color: rgb(0, 180, 255);
+		// important to override stickies and whatnot
+		color: rgb(0, 180, 255) !important;
 	}
 	a.title:hover {
 		color: #fff;
