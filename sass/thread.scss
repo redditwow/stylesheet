@@ -12,6 +12,13 @@
 	background-color: $grey_background;
 	border: 1px solid $grey_border;
 	border-radius: 2px;
+
+	// This should make the width of self posts full width with the actual copy constrained to 40em, sort of
+	// like how comments work.
+	max-width: unset;
+	p {
+		max-width: 40em;
+	}
 }
 
 .linkinfo {
