@@ -82,7 +82,7 @@ body > .content {
 			}
 
 			&:visited {
-				color: darken($title, 35%);
+				color: $title_alt;
 				&:hover {
 
 					//color: darken($title, 40%);
