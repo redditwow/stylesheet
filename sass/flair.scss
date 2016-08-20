@@ -132,8 +132,13 @@ a.thumbnail.self {
 }
 
 .thing.linkflair-bluepost {
-	a.title {
+	a.title,
+	a.title:visited,
+	a.title:active {
 		color: rgb(0, 180, 255);
+	}
+	a.title:hover {
+		color: #fff;
 	}
 	background: rgba(36, 58, 93, 0.75);
 
@@ -144,8 +149,14 @@ a.thumbnail.self {
 }
 
 .thing.linkflair-modpost {
-	a.title {
-		color: rgb(129, 181, 88)
+	a.title,
+	a.title:visited,
+	a.title:active {
+		//color: rgb(129, 181, 88)
+		color: $green_title;
+	}
+	a.title:hover {
+		color: #fff;
 	}
 	background: rgba(41, 81, 10, 0.75);
 
