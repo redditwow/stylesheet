@@ -108,5 +108,5 @@ gulp.task('demo', function () {
 
 //Watch task
 gulp.task('default', function () {
-	gulp.watch('sass/**/*.scss', ['styles']);
+	gulp.watch(['sass/**/*.scss', '!sass/**/_*.scss'], ['styles']);
 });
