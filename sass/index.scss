@@ -18,9 +18,16 @@ body > .content {
 	color: $grey_text;
 }
 
-.thing {
+.thing.link {
 
 	padding: 5px 0px;
+
+	background: rgba(0, 0, 0, 0.1);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.9);
+
+	&:hover {
+		background: rgba(0, 0, 0, 0.2);
+	}
 
 	&.stickied.link a.title {
 		color: $green_title;
