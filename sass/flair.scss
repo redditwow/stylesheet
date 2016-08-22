@@ -67,14 +67,34 @@
 
 @include wow-sprites($flair-user-sprites);
 
-//.linkflairlabel {
-//	border:none;
-//	padding:4px;
-//	font-size:10px;
-//	position:relative;
-//	top:3px;
-//	background:rgba(255,255,244,0.5);
-//}
+// Special User Flairs
+
+// Blizzard Employees
+@include flair-class-colour('blizzard', $blizzard_blue);
+@mixin blizzard-employee($account, $extra) {
+	//.thing.comment[data-author='#{$account}'] > div:not(.child) .md {
+	//	color: #00b4ff;
+	//}
+	a.author[href$='reddit.com/user/#{$account}']:after {
+		content: $extra;
+	}
+}
+
+@include blizzard-employee('WatcherDev', ' - Ion Hazzikostas (Lead Game Designer)');
+@include blizzard-employee('Kalgan', " - Tom Chilton (Game Director)");
+@include blizzard-employee('Mumper_Blizz', " - Cory Stockton (Lead Game Designer)");
+@include blizzard-employee('Desvin', " - Brian Holinka (Lead PvP Designer)");
+@include blizzard-employee('devolore', " - Josh Allen (Community Manager)");
+@include blizzard-employee('Araxom', " - Blizzard Customer Support");
+@include blizzard-employee('TheFargo', " - Dave Kosak (Game Designer)");
+@include blizzard-employee('Kaivax', " - Randy Jordan (Community Manager)");
+@include blizzard-employee('Crithto', " - Community Team NA");
+
+//@include blizzard-employee('Ghostcrawler', " - Greg Street (Blizzard Emeritus)");
+@include blizzard-employee('Zarhym', " - Jonathan Brown (Former Community Manager)");
+@include blizzard-employee('bashiok_foreal', " - Micah Whipple (Former Community Manager)");
+
+// Link Flairs
 
 @mixin link-flairs($sprites) {
 	@each $sprite in $sprites {
@@ -136,7 +156,7 @@ a.thumbnail.self {
 	a.title:visited,
 	a.title:active {
 		// important to override stickies and whatnot
-		color: rgb(0, 180, 255) !important;
+		color: $blizzard_blue !important;
 	}
 	a.title:hover {
 		color: #fff;
