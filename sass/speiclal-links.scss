@@ -1,0 +1,46 @@
+@mixin special-colour-link($link, $colour) {
+	a[href*="#rwow#{$link}"] {
+		color: $colour !important;
+		&:hover, &:visited {
+			color: $colour !important;
+		}
+	}
+
+	a[href="#rwow#{$link}"] {
+		pointer-events: none;
+	}
+
+}
+
+// classes
+@include special-colour-link('c0', #C79C6E); //warrior
+@include special-colour-link('c1', #F58CBA); //paladin
+@include special-colour-link('c2', #ABD473); //hunter
+@include special-colour-link('c3', #FFF569); //rogue
+@include special-colour-link('c4', #FFFFFF); //priest
+@include special-colour-link('c5', #C41F3B); //deathknight
+@include special-colour-link('c6', #0070DE); //shaman
+@include special-colour-link('c7', #69CCF0); //mage
+@include special-colour-link('c8', #0070DE); //shaman
+@include special-colour-link('c9', #9482C9); //warlock
+@include special-colour-link('ca', #00FF96); //monk
+@include special-colour-link('cb', #FF7D0A); //druid
+@include special-colour-link('cc', #A330C9); //demonhunter
+
+// item qualities
+@include special-colour-link('q0', #9D9D9D); //poor
+@include special-colour-link('q1', #ffffff); //common
+@include special-colour-link('q2', #1EFF00); //uncommon
+@include special-colour-link('q3', #0070FF); //rare
+@include special-colour-link('q4', #a335ee); //epic
+@include special-colour-link('q5', #BFA760); //legendary
+@include special-colour-link('q6', #00CCFF); //heirloom
+
+//special
+//blizzard blue
+@include special-colour-link('bb', $blizzard_blue);
+//mod green
+@include special-colour-link('mg', $green_title);
+
+
+
