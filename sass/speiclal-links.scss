@@ -1,7 +1,11 @@
 @mixin special-colour-link($link, $colour) {
 	a[href*="#rwow#{$link}"] {
 		color: $colour !important;
-		&:hover, &:visited {
+		&:hover {
+			text-decoration: underline;
+			color: $colour !important;
+		}
+		&:visited {
 			color: $colour !important;
 		}
 	}
