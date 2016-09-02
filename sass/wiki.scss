@@ -1,0 +1,72 @@
+.wiki-page-content {
+	.md {
+		h1, h2 {
+			color: $green_title;
+		}
+	}
+
+	hr {
+		color: $green_title;
+	}
+
+	@include wow-link();
+
+}
+
+.wiki-page {
+	.wikititle {
+		color: $green_title;
+	}
+
+	.pageactions {
+		border-radius: 2px;
+		background: $grey_background_2;
+		border: 1px solid $grey_border;
+
+		.wikiaction {
+			background-color: transparent;
+			&:hover {
+				background-color: rgba(0, 0, 0, 0.5);
+			}
+		}
+
+		.wikiaction-current {
+			color: $bright_green_title;
+			background-color: rgba(0, 0, 0, 0.5);
+			&:hover{
+				text-shadow: 0 0 10px #e6ff42, 0 0 10px #e6ff42;
+			}
+		}
+
+	}
+
+	a {
+		color: $title;
+	}
+}
+
+
+// floating right table of contents
+.wiki-page .wiki-page-content .wiki > .toc > ul {
+	background: $grey_background_2;
+	border: 1px solid $grey_border;
+	ul {
+		border-left: 1px dotted $grey_border;
+	}
+}
+
+// remove right margin. page is weird with it...
+.wiki-page .wiki-page-content {
+	margin-right: 0;
+}
+
+// history table
+.generic-table {
+	color: $grey_text !important;
+}
+
+//talk page
+.wiki-page .wiki-page-content .description h2 {
+	color: $grey_text !important;
+}
+
