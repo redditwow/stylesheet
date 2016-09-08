@@ -59,63 +59,50 @@ textarea {
 	border: 1px solid $grey_border;
 }
 
+// The copious amount of !importants are brought to you by RES. Thanks RES.
+
 @mixin sub-comment() {
-	margin-right: 0px;
-	//margin-bottom: 0;
 
-	padding-bottom: 0;
-	//padding-right: 0;
+	margin-right: 0px !important;
+	margin-bottom: -1px !important;
 
-	border-right: none;
-	border-bottom: none;
+	padding-bottom: 0px !important;
+	border-right: none !important;
 
-	border-top-right-radius: 0;
-	border-bottom-right-radius: 0;
-	border-bottom-left-radius: 0;
 }
 
-.comment {
-	background-color: $grey_background;
-	border-radius: 3px;
+.res.res-commentBoxes div.comment, div.comment {
+	background-color: $grey_background !important;
+	border: 1px solid $grey_border !important;
 	position: relative;
 	outline: none;
-	border: 1px solid $grey_border;
-	//color: #fff !important;
-	padding-top: 0px !important;
 
-	margin: 10px;
+	padding: 0px !important;
+	margin: 10px 0px -1px 10px !important;
 
 	.child, .showreplies {
 		border-left: none;
 	}
 
-	+ .comment {
-		margin-bottom: 0px;
-		color: blue !important;
-		border: 1px solid red !important;
-	}
-
-	//border: 1px solid red !important;
-
-	.comment {
+	div.comment {
 		background-color: $grey_background_2 !important;
 		@include sub-comment();
-		.comment {
+		div.comment {
 			background-color: $grey_background !important;
 			@include sub-comment();
-			.comment {
+			div.comment {
 				background-color: $grey_background_2 !important;
 				@include sub-comment();
-				.comment {
+				div.comment {
 					background-color: $grey_background !important;
 					@include sub-comment();
-					.comment {
+					div.comment {
 						background-color: $grey_background_2 !important;
 						@include sub-comment();
-						.comment {
+						div.comment {
 							background-color: $grey_background !important;
 							@include sub-comment();
-							.comment {
+							div.comment {
 								background-color: $grey_background_2 !important;
 								@include sub-comment();
 							}
@@ -125,6 +112,12 @@ textarea {
 			}
 		}
 	}
+}
+
+// Rounded should only be applied on the left, and needs to override RES's rounded comments
+.res.res-commentBoxes.res-commentBoxes-rounded .comment,
+.comment {
+	border-radius: 3px 0px 0px 3px !important;
 }
 
 .usertext.border .usertext-body {
