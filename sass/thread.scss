@@ -59,34 +59,65 @@ textarea {
 	border: 1px solid $grey_border;
 }
 
+@mixin sub-comment() {
+	margin-right: 0px;
+	//margin-bottom: 0;
+
+	padding-bottom: 0;
+	//padding-right: 0;
+
+	border-right: none;
+	border-bottom: none;
+
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
 .comment {
 	background-color: $grey_background;
 	border-radius: 3px;
-	border: 1px solid $grey_border !important;
 	position: relative;
 	outline: none;
-	color: #fff !important;
+	border: 1px solid $grey_border;
+	//color: #fff !important;
 	padding-top: 0px !important;
+
 	margin: 10px;
 
 	.child, .showreplies {
 		border-left: none;
 	}
 
+	+ .comment {
+		margin-bottom: 0px;
+		color: blue !important;
+		border: 1px solid red !important;
+	}
+
+	//border: 1px solid red !important;
+
 	.comment {
 		background-color: $grey_background_2 !important;
+		@include sub-comment();
 		.comment {
 			background-color: $grey_background !important;
+			@include sub-comment();
 			.comment {
 				background-color: $grey_background_2 !important;
+				@include sub-comment();
 				.comment {
 					background-color: $grey_background !important;
+					@include sub-comment();
 					.comment {
 						background-color: $grey_background_2 !important;
+						@include sub-comment();
 						.comment {
 							background-color: $grey_background !important;
+							@include sub-comment();
 							.comment {
 								background-color: $grey_background_2 !important;
+								@include sub-comment();
 							}
 						}
 					}
