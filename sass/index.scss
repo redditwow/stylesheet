@@ -20,7 +20,8 @@ body > .content {
 
 .thing.link {
 
-	padding: 5px 0px;
+	padding: 15px 0px;
+	//margin: 10px 0px;
 
 	background: rgba(0, 0, 0, 0.1);
 	border-bottom: 1px solid rgba(0, 0, 0, 0.9);
@@ -46,17 +47,17 @@ body > .content {
 
 	// pushes the vote arrows and rank down to align with the thumbnail
 	.midcol {
-		margin-top: 15px;
+		margin-top: 2px;
 	}
 	.rank {
-		padding-top: 15px;
+		color: transparent;
 	}
 
 	a {
 
 		&.thumbnail {
 			margin-top: 9px;
-			margin-left: 20px;
+			margin-left: 28px;
 			&::after {
 				//positions the minipanel border over the top of the thumbnail
 				content: url(../images/mini-panel.fw.png);
@@ -101,3 +102,4 @@ body > .content {
 	}
 
 }
+
