@@ -142,22 +142,31 @@ span.score {
 	background-color: $wow_btn_warning_background;
 }
 
-.comment.noncollapsed .midcol {
-	margin-left: 30px;
-	margin-right: 10px;
-}
+// overwatch style left hand full height comment collapses
+.commentarea .comment {
 
-.commentarea .comment a.expand {
-	position: absolute;
-	top: 0;
-	left: 0;
-	padding: 4px 4px 0;
-	height: 100%;
-	opacity: .5;
-	box-sizing: border-box;
-	transition: 200ms;
+	a.expand {
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 4px 4px 0;
+		height: 100%;
+		box-sizing: border-box;
+		transition: 200ms;
+		color: $grey_text;
 
-	&:hover {
-		background: $green_title;
+		&:hover {
+			background: $wow_btn_background;
+		}
+	}
+
+	&.noncollapsed .midcol {
+		margin-left: 30px;
+		margin-right: 10px;
+	}
+
+	&.collapsed {
+		padding-top: 0 !important;
+		padding-bottom: 10px !important;
 	}
 }
