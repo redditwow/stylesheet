@@ -12,25 +12,25 @@
 	.res-nightmode .arrow, .arrow {
 		&.up {
 			@include sprite-position($arrow-up);
-			&:hover{
+			&:hover {
 				@include sprite-position($arrow-up-glow);
 			}
 		}
 		&.upmod {
 			@include sprite-position($arrow-up-pressed);
-			&:hover{
+			&:hover {
 				@include sprite-position($arrow-up-pressed-glow);
 			}
 		}
 		&.down {
 			@include sprite-position($arrow-down);
-			&:hover{
+			&:hover {
 				@include sprite-position($arrow-down-glow);
 			}
 		}
 		&.downmod {
 			@include sprite-position($arrow-down-pressed);
-			&:hover{
+			&:hover {
 				@include sprite-position($arrow-down-pressed-glow);
 			}
 		}
@@ -41,35 +41,35 @@
 	.res-nightmode .arrow, .arrow {
 		&.up {
 			@include sprite-position($arrow-up-grey);
-			&:hover{
+			&:hover {
 				@include sprite-position($arrow-up-grey-glow);
 			}
 		}
 		&.upmod {
 			@include sprite-position($arrow-up-pressed);
-			&:hover{
+			&:hover {
 				@include sprite-position($arrow-up-pressed-glow);
 			}
 		}
 		&.down {
 			@include sprite-position($arrow-down-grey);
-			&:hover{
+			&:hover {
 				@include sprite-position($arrow-down-grey-glow);
 			}
 		}
 		&.downmod {
 			@include sprite-position($arrow-down-pressed);
-			&:hover{
+			&:hover {
 				@include sprite-position($arrow-down-pressed-glow);
 			}
 		}
 	}
 }
 
-.thing .midcol {
-	margin-top: 9px;
-}
+.thing.comment {
+	.midcol {
+		margin-top: 9px;
+		width: 28px !important;
+	}
 
-.midcol {
-	width: 28px !important;
 }

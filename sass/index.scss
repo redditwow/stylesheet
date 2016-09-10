@@ -48,6 +48,8 @@ body > .content {
 	// pushes the vote arrows and rank down to align with the thumbnail
 	.midcol {
 		margin-top: 2px;
+		width: 3.1em !important;
+		overflow: visible;
 	}
 	.rank {
 		color: transparent;
@@ -57,7 +59,7 @@ body > .content {
 
 		&.thumbnail {
 			margin-top: 9px;
-			margin-left: 28px;
+			margin-left: 16px;
 			&::after {
 				//positions the minipanel border over the top of the thumbnail
 				content: url(../images/mini-panel.fw.png);
