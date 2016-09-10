@@ -4,7 +4,7 @@
 		height: 23px !important;
 		width: 28px !important;
 		// use the sprite image once to save space in the final stylesheet
-		@include sprite-image($arrow-up);
+		background-image: url($arrow-up-image) !important;
 	}
 }
 
