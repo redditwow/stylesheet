@@ -105,6 +105,10 @@ textarea {
 							div.comment {
 								background-color: $grey_background_2 !important;
 								@include sub-comment();
+								div.comment {
+									background-color: $grey_background !important;
+									@include sub-comment();
+								}
 							}
 						}
 					}
