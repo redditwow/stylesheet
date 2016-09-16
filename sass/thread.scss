@@ -188,6 +188,11 @@ span.score {
 		}
 	}
 
+	// push the reply form over to make room for the collapse link
+	.commentarea .comment .usertext-edit {
+		margin-left: 20px;
+	}
+
 	&.noncollapsed .midcol {
 		margin-left: 30px;
 		margin-right: 10px;
