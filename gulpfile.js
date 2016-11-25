@@ -39,6 +39,8 @@ gulp.task('styles', ['sprites', 'flair-link', 'flair-user'], function () {
 		.pipe(replace('../images/header-illidan-still.jpg', '%%header-illidan-still%%'))
 		.pipe(replace('../images/side-divide.fw.png', '%%side-divide%%'))
 		.pipe(replace('../images/arrows.png', '%%arrows%%'))
+		// reddit doesn't like @charset, so just remove it...
+		.pipe(replace('@charset "UTF-8";', ''))
 		.pipe(uglifycss({
 			maxLineLen: 80,
 			uglyComments: true
