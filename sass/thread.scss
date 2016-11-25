@@ -212,6 +212,16 @@ span.score {
 	}
 }
 
+//load more comments
+.morecomments {
+	a {
+		color: $green_title;
+	}
+	.gray {
+		color: $grey_text;
+	}
+}
+
 // push the reply form over to make room for the collapse link
 .commentarea .comment .usertext-edit {
 	margin-left: 20px;
