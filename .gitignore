@@ -2,3 +2,5 @@
 node_modules
 css
 demo/*.html
+sass/_*
+sprites/*
