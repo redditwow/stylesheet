@@ -62,3 +62,9 @@ $wow_btn_warning_border: darken(#F2BF27, 10%);
 		}
 	}
 }
+
+@mixin sprite-position-important($sprite) {
+	$sprite-offset-x: nth($sprite, 3);
+	$sprite-offset-y: nth($sprite, 4);
+	background-position: $sprite-offset-x  $sprite-offset-y !important;
+}

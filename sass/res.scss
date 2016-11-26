@@ -100,3 +100,55 @@ body.pinHeader-sub, body.pinHeader-subanduser {
 		top: 0px;
 	}
 }
+
+
+.markdownEditor {
+
+	// all the buttons... except the macro button
+	// style is copied from wow_btn, but with added !importants
+	.edit-btn:not(.btn-macro) {
+		background-image: url($res-a-bold-image) !important;
+		background-color: $wow_btn_background !important;
+		border: 1px solid $wow_btn_border !important;
+		transition: all 0.5s;
+		border-radius: 0;
+
+		&:hover {
+			transition: all 0.5s;
+			background-color: $wow_btn_hover !important;
+		}
+	}
+
+	// the toolbar itself
+	.btn-bold {
+		@include sprite-position-important($res-a-bold);
+	}
+	.btn-italic {
+		@include sprite-position-important($res-b-italic);
+	}
+	.btn-strike {
+		@include sprite-position-important($res-c-strikethrough);
+	}
+	.btn-superscript {
+		@include sprite-position-important($res-d-super);
+	}
+	.btn-link {
+		@include sprite-position-important($res-e-link);
+	}
+	.btn-quote {
+		@include sprite-position-important($res-f-quote);
+	}
+	.btn-code {
+		@include sprite-position-important($res-g-code);
+	}
+	.btn-list-unordered {
+		@include sprite-position-important($res-h-ul);
+	}
+	.btn-list-ordered {
+		@include sprite-position-important($res-i-ol);
+	}
+	.btn-table {
+		@include sprite-position-important($res-j-table);
+	}
+
+}
