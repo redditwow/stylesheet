@@ -114,6 +114,10 @@ a.thumbnail.default,
 a.thumbnail.self,
 .thing.over18 a.thumbnail {
 	background-image: url($flair-link-image) !important;
+	
+	// tmp fix for HDPI monitors
+	// our stylesheet does not support HDPI monitors, but reddit does and conflicts.
+	background-size: initial !important;
 }
 
 // special cases

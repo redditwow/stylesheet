@@ -39,6 +39,11 @@ body > .content .link .rank,
 // expandos
 
 .expando-button {
+
+	// tmp fix for HDPI monitors
+	// our stylesheet does not support HDPI monitors, but reddit does and conflicts.
+	background-size: initial !important;
+
 	background-color: transparent;
 	&.selftext {
 		&.collapsed {
