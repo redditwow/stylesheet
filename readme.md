@@ -38,3 +38,8 @@
 `reguser_index_res_side_only.html` is a frankenstein mix of regular reddit and RES's sidebar tweaks! Beware!
 
 The demo pages tend to be time capsules of reddit that get outdated fairly quickly. Feel free to update them, or create a live test subreddit and upload for a better demo experience. 
+
+## Thanks
+
+![BrowserStack](https://i.redd.it/vbwmjeq64d0y.png)   
+Special thanks to [BrowserStack](https://www.browserstack.com/) for providing us with a free account for testing.
