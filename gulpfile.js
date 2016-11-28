@@ -14,11 +14,14 @@ gulp.task('styles', ['sprites', 'flair-link', 'flair-user'], function () {
 	var credits = fs.readFileSync('sass/credits.css', 'utf8');
 	var herenow = fs.readFileSync('sass/herenow.css', 'utf8');
 
+	devMessage = 'This is not live! Generated on ' + new Date().toUTCString();
+
 	gulp.src('sass/**/main.scss')
 		.pipe(sass().on('error', sass.logError))
 		.pipe(insert.prepend(herenow))
 		.pipe(insert.prepend(credits))
 		.pipe(rename('dev.css'))
+		.pipe(replace('{{DEV}}', devMessage))
 		.pipe(size({
 			showFiles: true
 		}))
@@ -39,6 +42,7 @@ gulp.task('styles', ['sprites', 'flair-link', 'flair-user'], function () {
 		.pipe(replace('../images/header-illidan-still.jpg', '%%header-illidan-still%%'))
 		.pipe(replace('../images/side-divide.fw.png', '%%side-divide%%'))
 		.pipe(replace('../images/arrows.png', '%%arrows%%'))
+		.pipe(replace('{{DEV}}', devMessage))
 		// reddit doesn't like @charset, so just remove it...
 		.pipe(replace('@charset "UTF-8";', ''))
 		.pipe(uglifycss({
