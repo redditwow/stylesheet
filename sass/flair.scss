@@ -72,9 +72,16 @@
 // Blizzard Employees
 @include flair-class-colour('blizzard', $blizzard_blue);
 @mixin blizzard-employee($account, $extra) {
-	//.thing.comment[data-author='#{$account}'] > div:not(.child) .md {
-	//	color: #00b4ff;
-	//}
+	.thing.comment[data-author='#{$account}'] > div:not(.child) .md {
+		color: $blizzard_blue;
+		a {
+			//color: rgb(248, 183, 0) !important;
+			color: darken($title, 20%) !important;
+			&:hover {
+				color: #fff !important;
+			}
+		}
+	}
 	a.author[href$='reddit.com/user/#{$account}']:after {
 		content: $extra;
 	}
