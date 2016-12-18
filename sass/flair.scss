@@ -101,8 +101,27 @@
 @include blizzard-employee('Zarhym', " - Jonathan Brown (Former Community Manager)");
 @include blizzard-employee('bashiok_foreal', " - Micah Whipple (Former Community Manager)");
 
-// Link Flairs
+// Special for <Method>
+@include flair-class-colour('method', $method_orange);
+@mixin method($account, $extra) {
+	.thing.comment[data-author='#{$account}'] > div:not(.child) .md {
+		color: $method_orange;
+		a {
+			color: $method_orange !important;
+			&:hover {
+				color: #fff !important;
+			}
+		}
+	}
+	a.author[href$='reddit.com/user/#{$account}']:after {
+		content: $extra;
+	}
+}
+@include method('scomethod', " <Method>");
+@include method('methodroger', " <Method>");
+@include method('darriesrsly', " <Method>");
 
+// Link Flairs
 @mixin link-flairs($sprites) {
 	@each $sprite in $sprites {
 		$sprite-name: nth($sprite, 10);
@@ -121,7 +140,7 @@ a.thumbnail.default,
 a.thumbnail.self,
 .thing.over18 a.thumbnail {
 	background-image: url($flair-link-image) !important;
-	
+
 	// tmp fix for HDPI monitors
 	// our stylesheet does not support HDPI monitors, but reddit does and conflicts.
 	background-size: initial !important;
