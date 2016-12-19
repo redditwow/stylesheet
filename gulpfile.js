@@ -2,7 +2,7 @@ var gulp        = require('gulp');
 var sass        = require('gulp-sass');
 var replace     = require('gulp-replace');
 var spritesmith = require('gulp.spritesmith');
-var uglifycss   = require('gulp-uglifycss');
+var cleanCSS    = require('gulp-clean-css');
 var size        = require('gulp-size');
 var rename      = require('gulp-rename');
 var fs          = require('fs');
@@ -22,6 +22,9 @@ gulp.task('styles', ['sprites', 'flair-link', 'flair-user'], function () {
 		.pipe(insert.prepend(credits))
 		.pipe(rename('dev.css'))
 		.pipe(replace('{{DEV}}', devMessage))
+		.pipe(cleanCSS({
+			keepBreaks: true
+		}))
 		.pipe(size({
 			showFiles: true
 		}))
@@ -46,10 +49,7 @@ gulp.task('styles', ['sprites', 'flair-link', 'flair-user'], function () {
 		.pipe(replace('{{DEV}}', devMessage))
 		// reddit doesn't like @charset, so just remove it...
 		.pipe(replace('@charset "UTF-8";', ''))
-		.pipe(uglifycss({
-			maxLineLen: 80,
-			uglyComments: true
-		}))
+		.pipe(cleanCSS())
 		.pipe(insert.prepend(herenow))
 		.pipe(insert.prepend(credits))
 		.pipe(size({

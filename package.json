@@ -7,7 +7,7 @@
     "gulp-replace": "^0.5.4",
     "gulp-sass": "^2.2.0",
     "gulp-size": "^2.1.0",
-    "gulp-uglifycss": "^1.0.6",
-    "gulp.spritesmith": "^6.2.1"
+    "gulp.spritesmith": "^6.2.1",
+    "gulp-clean-css": "^2.3.2"
   }
 }
