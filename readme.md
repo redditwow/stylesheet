@@ -3,6 +3,7 @@
 ## Building
 
 1. `npm install`
+2. Copy `example_config.json` to `config.json` and optionally enable automatic deployments to stage
 2. `gulp styles` to compile for the very first time
 3. `gulp` to watch for changes
 
@@ -31,7 +32,14 @@
 
 3. Copy and paste all of `css/prod.css` into your subreddit's CSS setting
 4. That should be it!
-    
+
+## Automatic Deployments to Stage
+
+When the stylesheet is compiled, gulp can optionally upload the CSS to a staging subreddit. Note this does not (yet) handle image uploads, nor does it handle errors (e.g. missing images or CSS rules that reddit doesn't accept). To enable this:
+ 
+1. Create a [script app](https://www.reddit.com/prefs/apps/) on the reddit account you want to use to deploy code with. The name, description and URLs don't matter. Set them to anything you want.
+2. Set `automaticStagingDeployment` to `true` in `config.json` and fill out the other config options with the client ID and secret, and your account and password. They should be fairly self explanatory. 
+3. Enjoy automatic deployments!
  
 ## Notes and Helpful Information
 

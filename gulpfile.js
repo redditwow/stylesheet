@@ -8,6 +8,18 @@ var rename      = require('gulp-rename');
 var fs          = require('fs');
 var notify      = require("gulp-notify");
 var insert      = require('gulp-insert');
+var snoowrap    = require('snoowrap');
+var config      = require('./config.json');
+
+if (config.automaticStagingDeployment) {
+	const r = new snoowrap({
+		userAgent: 'WoW Style Bot by /u/Vusys',
+		clientId: config.clientId,
+		clientSecret: config.clientSecret,
+		username: config.username,
+		password: config.password
+	});
+}
 
 gulp.task('styles', ['sprites', 'flair-link', 'flair-user'], function () {
 
@@ -30,7 +42,7 @@ gulp.task('styles', ['sprites', 'flair-link', 'flair-user'], function () {
 		}))
 		.pipe(gulp.dest('./css'));
 
-	gulp.src('sass/**/main.scss')
+	var stream = gulp.src('sass/**/main.scss')
 		.pipe(sass().on('error', sass.logError))
 		.pipe(rename('prod.css'))
 		.pipe(replace('../images/mini-panel.fw.png', '%%mini-panel%%'))
@@ -55,7 +67,16 @@ gulp.task('styles', ['sprites', 'flair-link', 'flair-user'], function () {
 		.pipe(size({
 			showFiles: true
 		}))
-		.pipe(gulp.dest('./css'));
+		.pipe(gulp.dest('./css'))
+		.on('end', function () {
+			if (config.automaticStagingDeployment) {
+				r.getSubreddit(config.stagingSubreddit).updateStylesheet({
+					css: fs.readFileSync('./css/prod.css', 'utf8'),
+					reason: 'Updating from dev.'
+				});
+
+			}
+		});
 
 
 });

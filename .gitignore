@@ -4,3 +4,4 @@ demo/*.html
 css/*.css
 sass/_*
 sprites/*.png
+config.json

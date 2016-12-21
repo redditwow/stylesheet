@@ -1,0 +1,8 @@
+{
+  "automaticStagingDeployment": false,
+  "clientId": "xxxx",
+  "clientSecret": "xxxx",
+  "stagingSubreddit": "xxxx",
+  "username": "xxxx",
+  "password": "xxxx"
+}
