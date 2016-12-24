@@ -105,3 +105,7 @@ body > .content {
 
 }
 
+// Remove the thumbnail border from promoted links
+.organic-listing a.thumbnail:after {
+	content: none !important
+}
