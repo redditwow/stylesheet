@@ -61,7 +61,9 @@ gulp.task('styles', ['sprites', 'flair-link', 'flair-user'], function () {
 		.pipe(replace('{{DEV}}', devMessage))
 		// reddit doesn't like @charset, so just remove it...
 		.pipe(replace('@charset "UTF-8";', ''))
-		.pipe(cleanCSS())
+		.pipe(cleanCSS({
+			keepBreaks: true
+		}))
 		.pipe(insert.prepend(herenow))
 		.pipe(insert.prepend(credits))
 		.pipe(size({
