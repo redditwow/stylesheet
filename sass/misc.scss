@@ -223,14 +223,26 @@ ul.report-reasons {
 }
 
 //login box
-#login_login-main{
-	input[type=text] , input[type=password] {
+#login_login-main {
+	input[type=text], input[type=password] {
 		background: $grey_background_2;
 		border: 1px solid $grey_border;
 		color: #ddd;
 	}
 }
-.recover-password{
+
+.recover-password {
 	color: $green_title;
 }
 
+// promoted links
+.organic-listing {
+	border: solid 1px $grey_text;
+	.help.help-hoverable {
+		color: $green_title;
+	}
+}
+
+.sponsored-tagline {
+	color: $grey_text;
+}
