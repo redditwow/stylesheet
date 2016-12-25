@@ -221,3 +221,16 @@ ul.report-reasons {
 		margin: 0;
 	}
 }
+
+//login box
+#login_login-main{
+	input[type=text] , input[type=password] {
+		background: $grey_background_2;
+		border: 1px solid $grey_border;
+		color: #ddd;
+	}
+}
+.recover-password{
+	color: $green_title;
+}
+
