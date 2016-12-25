@@ -8,6 +8,10 @@ section.infobar.newsletterbar {
 	background-color: rgba($wow_btn_background, 0.9);
 	border-color: $wow_btn_border;
 
+	.md{
+		color: #fff;
+	}
+
 	&.with-icon {
 		&:before {
 			// @TODO replace this with a WoW icon
