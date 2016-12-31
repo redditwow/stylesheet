@@ -131,3 +131,9 @@ body.pinHeader-sub, body.pinHeader-subanduser {
 	}
 
 }
+
+.NERPageMarker {
+	color: $light_text !important;
+	background: $grey_background !important;
+	border: 1px solid $grey_border !important;
+}
