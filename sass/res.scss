@@ -32,7 +32,6 @@
 }
 
 // live preview
-
 .RESDialogSmall {
 	background-color: $grey_background !important;
 	border: $grey_border solid 1px !important;
@@ -43,28 +42,6 @@
 		border-bottom: none !important;
 	}
 }
-
-/*
-.res-commentBoxes div.commentarea div.comment, // 1
-.res-commentBoxes div.commentarea div.comment div.comment div.comment, // 3
-.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment, // 5
-.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment, // 7
-.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment // 9
-{
-	background-color: $grey_background !important;
-	border: 1px solid $grey_border !important;
-}
-
-.res-commentBoxes div.commentarea div.comment div.comment, // 2
-.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment, // 4
-.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment, // 6
-.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment, // 8
-.res-commentBoxes div.commentarea div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment div.comment // 10
-{
-	background-color: $grey_background_2 !important;
-	border: 1px solid $grey_border !important;
-}
-*/
 
 #userbarToggle {
 	background: $wow_btn_background !important;
@@ -101,12 +78,11 @@ body.pinHeader-sub, body.pinHeader-subanduser {
 	}
 }
 
-.res-commentBoxes .comment.spam{
+.res-commentBoxes .comment.spam {
 	background-image: none !important;
 }
 
 .markdownEditor {
-
 	// all the buttons... except the macro button
 	// style is copied from wow_btn, but with added !importants
 	.edit-btn:not(.btn-macro) {
