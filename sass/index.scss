@@ -110,6 +110,21 @@ body > .content {
 	content: none !important
 }
 
-.showreplies{
+.showreplies {
 	color: $green_title;
+}
+
+.nav-buttons {
+	color: $grey_text;
+	.separator {
+		color: $grey_text;
+	}
+
+	.prev-button a, .next-button a {
+		@include wow-btn-active;
+		@include wow-btn-text;
+		&:hover {
+			@include wow-btn-active-hover;
+		}
+	}
 }
