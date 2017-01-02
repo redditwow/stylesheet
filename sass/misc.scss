@@ -246,3 +246,8 @@ ul.report-reasons {
 .sponsored-tagline {
 	color: $grey_text;
 }
+
+// https://www.reddit.com/r/modtalk/comments/5llbts/little_css_trick_to_make_your_subreddit_look_a/
+.title, .tagline, .usertext {
+	max-height: 10000px;
+}
