@@ -1,0 +1,35 @@
+.wiki-page-rules {
+
+	background: $grey_background;
+
+	.wiki-page-content {
+
+		p {
+			font-size: 16px;
+			margin-left: 25px;
+		}
+
+		h1, h2 {
+			//text-align: center;
+			padding: 13px;
+
+			//background: red;
+			//width: 50%;
+			border-bottom: 1px $green_title solid;
+			//background: linear-gradient(to right, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+		}
+
+		h3 {
+			color: #ddd;
+			margin-left: 25px;
+		}
+
+		ul > li {
+			margin-bottom: 0.5em;
+			strong {
+				color: #ddd;
+			}
+		}
+
+	}
+}
