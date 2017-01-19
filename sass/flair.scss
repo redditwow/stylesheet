@@ -136,16 +136,18 @@
 	}
 }
 
-//.linkflair a.thumbnail,
+
 a.thumbnail.default,
 a.thumbnail.self,
-.thing.over18 a.thumbnail {
+.thing.over18 a.thumbnail,
+.thing.spoiler a.thumbnail.spoiler {
 	background-image: url($flair-link-image) !important;
 
 	// tmp fix for HDPI monitors
 	// our stylesheet does not support HDPI monitors, but reddit does and conflicts.
 	background-size: initial !important;
 }
+
 
 // special cases
 
@@ -158,7 +160,24 @@ a.thumbnail.self {
 	@include sprite-height($linkflair-default);
 }
 
-// nsfw (over18)
+// spoiler
+.thing.spoiler a.thumbnail.spoiler {
+	margin-right: 20px;
+	@include sprite-position($linkflair-spoiler);
+	@include sprite-width($linkflair-spoiler);
+	@include sprite-height($linkflair-spoiler);
+
+	img {
+		// hide the thumbnail image to reveal the icon underneath
+		display: none;
+	}
+}
+.spoiler-stamp {
+	color: $green_title;
+	padding: 0px 10px;
+}
+
+
 .thing.over18 a.thumbnail {
 	margin-right: 20px;
 	@include sprite-position($linkflair-over18);
