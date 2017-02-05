@@ -309,7 +309,47 @@ button {
 		&:hover {
 			@include wow-btn-active-hover;
 		}
+	}
 
+	a[href$="disbtn"] {
+
+		&:first-of-type{
+			margin-top: 10px;
+		}
+
+		&:before{
+			content: '';
+			display: block;
+			margin-left: -40px;
+			margin-bottom: -26px;
+			@include sprite($discord);
+		}
+
+		margin-left: 40px;
+		font-size: 14px;
+		height: 34px;
+		display: block;
+	}
+
+
+	a[href$="ircbtn"] {
+
+		&:first-of-type{
+			margin-top: 10px;
+		}
+
+		&:before{
+			content: '';
+			display: block;
+			margin-left: -40px;
+			margin-bottom: -26px;
+			@include sprite($irc);
+		}
+
+		margin-left: 40px;
+		font-size: 14px;
+		height: 34px;
+		display: block;
 	}
 
 	// Weekly thread links
