@@ -95,10 +95,12 @@
 @include blizzard-employee('Araxom', " - Blizzard Customer Support");
 @include blizzard-employee('TheFargo', " - Dave Kosak (Game Designer)");
 @include blizzard-employee('Kaivax', " - Randy Jordan (Community Manager)");
-@include blizzard-employee('Crithto', " - Community Team NA");
-@include blizzard-employee('aeridel', " - (Social Media Manager)");
+@include blizzard-employee('aeridel', " - Social Media Manager");
+@include blizzard-employee('Dromogaz', " - Blizzard Customer Support");
 
-//@include blizzard-employee('Ghostcrawler', " - Greg Street (Blizzard Emeritus)");
+// Former staff
+@include blizzard-employee('Ghostcrawler', " - Greg Street (Blizzard Emeritus)");
+@include blizzard-employee('Crithto', " - Former Community Team NA");
 @include blizzard-employee('Zarhym', " - Jonathan Brown (Former Community Manager)");
 @include blizzard-employee('bashiok_foreal', " - Micah Whipple (Former Community Manager)");
 
