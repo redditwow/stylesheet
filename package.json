@@ -2,13 +2,13 @@
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-insert": "^0.5.0",
-    "gulp-notify": "^2.2.0",
+    "gulp-notify": "^3.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4",
-    "gulp-sass": "^2.2.0",
+    "gulp-sass": "^3.1.0",
     "gulp-size": "^2.1.0",
     "gulp.spritesmith": "^6.2.1",
     "snoowrap": "^1.11.3",
-    "gulp-clean-css": "^2.3.2"
+    "gulp-clean-css": "^3.0.4"
   }
 }

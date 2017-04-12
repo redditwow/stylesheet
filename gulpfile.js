@@ -1,18 +1,18 @@
-var gulp        = require('gulp');
-var sass        = require('gulp-sass');
-var replace     = require('gulp-replace');
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var replace = require('gulp-replace');
 var spritesmith = require('gulp.spritesmith');
-var cleanCSS    = require('gulp-clean-css');
-var size        = require('gulp-size');
-var rename      = require('gulp-rename');
-var fs          = require('fs');
-var notify      = require("gulp-notify");
-var insert      = require('gulp-insert');
-var snoowrap    = require('snoowrap');
-var config      = require('./config.json');
+var cleanCSS = require('gulp-clean-css');
+var size = require('gulp-size');
+var rename = require('gulp-rename');
+var fs = require('fs');
+var notify = require("gulp-notify");
+var insert = require('gulp-insert');
+var snoowrap = require('snoowrap');
+var config = require('./config.json');
 
 if (config.automaticStagingDeployment) {
-	const r = new snoowrap({
+	var r = new snoowrap({
 		userAgent: 'WoW Style Bot by /u/Vusys',
 		clientId: config.clientId,
 		clientSecret: config.clientSecret,
@@ -35,7 +35,8 @@ gulp.task('styles', ['sprites', 'flair-link', 'flair-user'], function () {
 		.pipe(rename('dev.css'))
 		.pipe(replace('{{DEV}}', devMessage))
 		.pipe(cleanCSS({
-			keepBreaks: true
+			format: 'keep-breaks',
+			level: 2
 		}))
 		.pipe(size({
 			showFiles: true
@@ -62,7 +63,7 @@ gulp.task('styles', ['sprites', 'flair-link', 'flair-user'], function () {
 		// reddit doesn't like @charset, so just remove it...
 		.pipe(replace('@charset "UTF-8";', ''))
 		.pipe(cleanCSS({
-			keepBreaks: true
+			level: 2
 		}))
 		.pipe(insert.prepend(herenow))
 		.pipe(insert.prepend(credits))
@@ -124,7 +125,7 @@ gulp.task('sprites', function () {
 gulp.task('demo', function () {
 
 	var sidebar = fs.readFileSync('demo/content/sidebar.html', 'utf8');
-	var snoo    = fs.readFileSync('demo/content/header_snoo.html', 'utf8');
+	var snoo = fs.readFileSync('demo/content/header_snoo.html', 'utf8');
 
 	gulp.src('demo/pages/*')
 		.pipe(replace('<!--%%sidebar%%-->', sidebar))
