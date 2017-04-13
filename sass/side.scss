@@ -7,26 +7,8 @@
 	}
 
 	background: url(../images/background-wow-repeat.jpg) center #000;
-	//padding-left: 25px;
 
-	//width: 326px;
-	//background: #444;
 	color: $light_text;
-
-	 //super hacky sidebar bottom border...
-	//&:after {
-	//	display: inline-block;
-	//	content: '';
-	//	height: 23px;
-	//	width: calc(100% + 22px);
-	//	//width: 100%;
-	//	background: url(../images/header-divide.fw.png) bottom repeat-x;
-	//	overflow: hidden;
-	//	position: relative;
-	//	left: -22px;
-	//	top: 10px;
-	//	margin-right: -22px;
-	//}
 }
 
 // show my flair...
@@ -139,6 +121,9 @@ button {
 		&:hover {
 			text-decoration: underline;
 		}
+	}
+	.content{
+		@include wow-modern-box;
 	}
 	// message the moderators
 	a.helplink {
@@ -282,17 +267,13 @@ button {
 		margin-left: 0px;
 	}
 
-	h6 + blockquote {
-		background-color: $grey_background;
-		border: 1px solid $grey_border;
-		color: $light_text !important;
+	h6 + blockquote, h5 + blockquote  {
+		//background-color: $grey_background;
+		//border: 1px solid $grey_border;
+		//color: $light_text !important;
+		@include wow-modern-box;
 	}
 
-	h5 + blockquote {
-		background-color: $grey_background_2;
-		border: 1px solid $grey_border;
-		color: $light_text !important;
-	}
 
 	a[href$="wowbtn"] {
 		display: inline-block;

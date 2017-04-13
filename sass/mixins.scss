@@ -63,6 +63,13 @@ $wow_btn_warning_border: darken(#F2BF27, 10%);
 	}
 }
 
+@mixin wow-modern-box() {
+	background: rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 0 1px #000;
+	border: rgba(255, 255, 255, 0.15) solid 1px;
+}
+
+
 @mixin sprite-position-important($sprite) {
 	$sprite-offset-x: nth($sprite, 3);
 	$sprite-offset-y: nth($sprite, 4);
