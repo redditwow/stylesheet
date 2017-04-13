@@ -11,7 +11,7 @@
 
 1. Download page from reddit and save into the `pages`
 2. Merge downloaded files (images, css, js, etc) into the `files` directory and update references in the saved html to match. Delete anything not needed, like Google Analytics' files.
-3. Include the compiled legion CSS in the saved file below reddit's stock CSS: `	<link rel="stylesheet" href="../css/dev.css" type="text/css">`
+3. Include the compiled legion CSS in the saved file below reddit's stock CSS: `<link rel="stylesheet" href="../css/dev.css" type="text/css">`
 4. Replace the `#header-img-a` element with `<!--%%snoo%%-->` 
 5. Replace the `.md` element inside the sidebar with `<!--%%sidebar%%-->`
 6. Compile with `gulp demo`. 
