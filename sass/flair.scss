@@ -126,18 +126,16 @@
 @include method('cayna', " <Method>");
 
 // Link Flairs
-@mixin link-flairs($sprites) {
-	@each $sprite in $sprites {
-		$sprite-name: nth($sprite, 10);
-		//.#{$sprite-name}:after {
-		.#{$sprite-name}.self a.thumbnail {
-			@include sprite-position($sprite);
-			@include sprite-width($sprite);
-			@include sprite-height($sprite);
-			//background-position: -0px -909px !important;
-		}
-	}
-}
+//@mixin link-flairs($sprites) {
+//	@each $sprite in $sprites {
+//		$sprite-name: nth($sprite, 10);
+//		.#{$sprite-name}.self a.thumbnail {
+//			@include sprite-position($sprite);
+//			@include sprite-width($sprite);
+//			@include sprite-height($sprite);
+//		}
+//	}
+//}
 
 
 a.thumbnail.default,
@@ -154,7 +152,7 @@ a.thumbnail.self,
 
 // special cases
 
-// default, self
+ default, self
 a.thumbnail.default,
 a.thumbnail.self {
 	margin-right: 20px;
@@ -164,45 +162,46 @@ a.thumbnail.self {
 }
 
 // spoiler
-.thing.spoiler a.thumbnail.spoiler {
-	margin-right: 20px;
-	@include sprite-position($linkflair-spoiler);
-	@include sprite-width($linkflair-spoiler);
-	@include sprite-height($linkflair-spoiler);
+//.thing.spoiler a.thumbnail.spoiler {
+//	margin-right: 20px;
+//	@include sprite-position($linkflair-spoiler);
+//	@include sprite-width($linkflair-spoiler);
+//	@include sprite-height($linkflair-spoiler);
+//
+//	img {
+//		// hide the thumbnail image to reveal the icon underneath
+//		display: none;
+//	}
+//}
 
-	img {
-		// hide the thumbnail image to reveal the icon underneath
-		display: none;
-	}
-}
 .spoiler-stamp {
 	color: $green_title;
 	padding: 0px 10px;
 }
 
 
-.thing.over18 a.thumbnail {
-	margin-right: 20px;
-	@include sprite-position($linkflair-over18);
-	@include sprite-width($linkflair-over18);
-	@include sprite-height($linkflair-over18);
-	img {
-		// hide the thumbnail image to reveal the NSFW icon underneath
-		display: none;
-	}
-}
+//.thing.over18 a.thumbnail {
+//	margin-right: 20px;
+//	@include sprite-position($linkflair-over18);
+//	@include sprite-width($linkflair-over18);
+//	@include sprite-height($linkflair-over18);
+//	img {
+//		// hide the thumbnail image to reveal the NSFW icon underneath
+//		display: none;
+//	}
+//}
 
 .linkflairlabel {
 	max-width: unset;
 }
 
-.thing {
-	&.linkflair-bluepost,
-	&.linkflair-modpost {
-		padding-bottom: 13px;
-		margin-bottom: 0px;
-	}
-}
+//.thing {
+//	&.linkflair-bluepost,
+//	&.linkflair-modpost {
+//		padding-bottom: 13px;
+//		margin-bottom: 0px;
+//	}
+//}
 
 .thing.linkflair-bluepost {
 	a.title,
@@ -246,4 +245,4 @@ a.thumbnail.self {
 }
 
 // all the other link flairs
-@include link-flairs($flair-link-sprites);
+//@include link-flairs($flair-link-sprites);
