@@ -11,7 +11,15 @@ body.mod-toolbox {
 }
 
 // reset popup box colour back to default ish
-.tb-popup-content, .tb-window-wrapper{
+.tb-popup-content, .tb-window-wrapper {
 	color: #111;
 }
 
+// ugly hack to move the toolbox comment checkboxes so they don't overlap with our custom expandos
+// also resizes them a wee bit bigger to make them easier to click quickly
+.thing.comment input[type='checkbox'] {
+	margin-top: 10px !important;
+	margin-left: 35px !important;
+	margin-right: -35px !important;
+	transform: scale(1.5, 1.5);
+}
