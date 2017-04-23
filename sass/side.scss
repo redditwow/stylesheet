@@ -275,6 +275,14 @@ button {
 
 .side {
 
+	.md {
+		hr {
+			background: $grey_border;
+			height: 1px;
+			margin: 10px 0px;
+		}
+	}
+
 	// Notice panel
 	h5 + blockquote,
 	h6 + blockquote {
@@ -485,4 +493,12 @@ button {
 			@include sprite-position($game-teamfortressthree-hover-fw);
 		}
 	}
+
+	a[href*="#procss"] {
+		content: "";
+		display: inline-block;
+		@include sprite($procss-badge);
+		font-size: 0px;
+	}
+
 }
