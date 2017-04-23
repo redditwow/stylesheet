@@ -15,7 +15,7 @@
 	//background: #444;
 	color: $light_text;
 
-	 //super hacky sidebar bottom border...
+	//super hacky sidebar bottom border...
 	//&:after {
 	//	display: inline-block;
 	//	content: '';
@@ -203,7 +203,7 @@ button {
 				background: none;
 			}
 
-			a{
+			a {
 				@include wow-btn-active;
 				@include wow-btn-text;
 			}
@@ -321,11 +321,11 @@ button {
 
 	a[href$="disbtn"] {
 
-		&:first-of-type{
+		&:first-of-type {
 			margin-top: 10px;
 		}
 
-		&:before{
+		&:before {
 			content: '';
 			display: block;
 			margin-left: -40px;
@@ -339,14 +339,13 @@ button {
 		display: block;
 	}
 
-
 	a[href$="ircbtn"] {
 
-		&:first-of-type{
+		&:first-of-type {
 			margin-top: 10px;
 		}
 
-		&:before{
+		&:before {
 			content: '';
 			display: block;
 			margin-left: -40px;
