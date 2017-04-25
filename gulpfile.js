@@ -54,7 +54,7 @@ gulp.task('styles', ['sprites', 'flair-link', 'flair-user'], function () {
 		.pipe(replace('../images/game-icons-50.png', '%%game-icons-50%%'))
 		.pipe(replace('../images/section-divider.png', '%%section-divider%%'))
 		.pipe(replace('../sprites/flair-link.png', '%%flair-link-v2%%'))
-		.pipe(replace('../sprites/flair-user.png', '%%flair-user-v3%%'))
+		.pipe(replace('../sprites/flair-user.png', '%%flair-user-v5%%'))
 		.pipe(replace('../images/header-illidan-still.jpg', '%%header-illidan-still%%'))
 		.pipe(replace('../images/side-divide.fw.png', '%%side-divide%%'))
 		.pipe(replace('../images/arrows.png', '%%arrows%%'))

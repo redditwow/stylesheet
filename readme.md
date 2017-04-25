@@ -26,7 +26,7 @@
     
 2. Upload all the spritesheet images
     * The following images need to be renamed in the uploader:
-        * flair-user.png to flair-user-v3
+        * flair-user.png to flair-user-v5
         * flair-link.png to flair-user-v2
         * spritesheet.png to spritesheet-v5
     * The rest of the images can be uploaded as is.
