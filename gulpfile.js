@@ -49,7 +49,7 @@ gulp.task('styles', ['sprites', 'flair-link', 'flair-user'], function () {
 		.pipe(replace('../images/mini-panel.fw.png', '%%mini-panel%%'))
 		.pipe(replace('../images/repeat-bg.jpg', '%%repeat-bg-v2%%'))
 		.pipe(replace('../images/repeat-bg-dark.jpg', '%%repeat-bg-dark-v2%%'))
-		.pipe(replace('../sprites/spritesheet.png', '%%spritesheet-v5%%'))
+		.pipe(replace('../sprites/spritesheet.png', '%%spritesheet-v7%%'))
 		.pipe(replace('../images/header-divide.fw.png', '%%header-divide%%'))
 		.pipe(replace('../images/game-icons-50.png', '%%game-icons-50%%'))
 		.pipe(replace('../images/section-divider.png', '%%section-divider%%'))

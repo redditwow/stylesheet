@@ -496,8 +496,13 @@ button {
 	a[href*="#procss"] {
 		content: "";
 		display: inline-block;
-		@include sprite($procss-badge);
+		@include sprite($procss);
 		font-size: 0px;
+		opacity: 0.6;
+		transition: opacity .25s ease-in-out;
+		&:hover{
+			opacity: 1;
+		}
 	}
 
 }
