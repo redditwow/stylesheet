@@ -62,3 +62,10 @@
 		color: $title;
 	}
 }
+
+// revisions for automod, but I think appropriate for any
+.revision {
+     td {
+         color: $light_text;
+     }
+ }
