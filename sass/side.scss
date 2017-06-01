@@ -186,7 +186,7 @@ button {
 				background: none;
 			}
 
-			a{
+			a {
 				@include wow-btn-active;
 				@include wow-btn-text;
 			}
@@ -258,6 +258,14 @@ button {
 
 .side {
 
+	.md {
+		hr {
+			background: $grey_border;
+			height: 1px;
+			margin: 10px 0px;
+		}
+	}
+
 	// Notice panel
 	h5 + blockquote,
 	h6 + blockquote {
@@ -292,11 +300,11 @@ button {
 
 	a[href$="disbtn"] {
 
-		&:first-of-type{
+		&:first-of-type {
 			margin-top: 10px;
 		}
 
-		&:before{
+		&:before {
 			content: '';
 			display: block;
 			margin-left: -40px;
@@ -310,14 +318,13 @@ button {
 		display: block;
 	}
 
-
 	a[href$="ircbtn"] {
 
-		&:first-of-type{
+		&:first-of-type {
 			margin-top: 10px;
 		}
 
-		&:before{
+		&:before {
 			content: '';
 			display: block;
 			margin-left: -40px;
@@ -464,4 +471,17 @@ button {
 			@include sprite-position($game-teamfortressthree-hover-fw);
 		}
 	}
+
+	a[href*="#procss"] {
+		content: "";
+		display: inline-block;
+		@include sprite($procss);
+		font-size: 0px;
+		opacity: 0.6;
+		transition: opacity .25s ease-in-out;
+		&:hover{
+			opacity: 1;
+		}
+	}
+
 }
