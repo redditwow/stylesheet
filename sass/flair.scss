@@ -126,16 +126,16 @@
 @include method('cayna', " <Method>");
 
 // Link Flairs
-//@mixin link-flairs($sprites) {
-//	@each $sprite in $sprites {
-//		$sprite-name: nth($sprite, 10);
-//		.#{$sprite-name}.self a.thumbnail {
-//			@include sprite-position($sprite);
-//			@include sprite-width($sprite);
-//			@include sprite-height($sprite);
-//		}
-//	}
-//}
+@mixin link-flairs($sprites) {
+	@each $sprite in $sprites {
+		$sprite-name: nth($sprite, 10);
+		.#{$sprite-name}.self a.thumbnail {
+			@include sprite-position($sprite);
+			@include sprite-width($sprite);
+			@include sprite-height($sprite);
+		}
+	}
+}
 
 
 a.thumbnail.default,
@@ -148,11 +148,9 @@ a.thumbnail.self,
 	// our stylesheet does not support HDPI monitors, but reddit does and conflicts.
 	background-size: initial !important;
 }
-
+//
 
 // special cases
-
- default, self
 a.thumbnail.default,
 a.thumbnail.self {
 	margin-right: 20px;
@@ -245,4 +243,4 @@ a.thumbnail.self {
 }
 
 // all the other link flairs
-//@include link-flairs($flair-link-sprites);
+@include link-flairs($flair-link-sprites);
