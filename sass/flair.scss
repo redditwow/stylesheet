@@ -10,11 +10,11 @@
 }
 
 @mixin flair-faction-colour($faction, $colour) {
+	// co = colour only
+	.flair-co-#{$faction} + .author,
+	.flair-co-#{$faction} + .author:visited,
 	.flair-#{$faction} + .author,
 	.flair-#{$faction} + .author:visited {
-		//background-color: transparent;
-		//text-shadow: 0 0 1px $colour;
-		//color: $text;
 		color: $colour;
 	}
 }
