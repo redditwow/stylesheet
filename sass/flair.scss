@@ -20,11 +20,14 @@
 }
 
 @mixin flair-class-colour($class, $colour) {
-	.flair-#{$class} + .author, .flair-alliance-#{$class} + .author, .flair-horde-#{$class} + .author,
-	.flair-#{$class} + .author:visited, .flair-alliance-#{$class} + .author:visited, .flair-horde-#{$class} + .author:visited {
-		//background-color: transparent;
-		//text-shadow: 0px 0px 2px $colour;
-		//color: $text;
+	.flair-#{$class} + .author,
+	.flair-#{$class} + .author:visited,
+	.flair-co-#{$class} + .author,
+	.flair-co-#{$class} + .author:visited,
+	.flair-alliance-#{$class} + .author,
+	.flair-alliance-#{$class} + .author:visited,
+	.flair-horde-#{$class} + .author,
+	.flair-horde-#{$class} + .author:visited {
 		color: $colour;
 	}
 }
