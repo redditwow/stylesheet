@@ -1,19 +1,21 @@
 .footer-parent {
-	background: url(../images/repeat-bg-dark.jpg) center;
-	//padding-top: 110px;
+	//background: url(../images/repeat-bg-dark.jpg) center;
 	padding-top: 0;
 	margin-top: 40px;
 	padding-bottom: 40px;
 
-	&:before {
-		background: url(../images/header-divide.fw.png) center top repeat-x;
-		content: '';
-		display: inline-block;
-		height: 23px;
-		width: 100%;
-		top: -8px;
-		position: relative;
-	}
+	//&:before {
+	//	background: url(../images/header-divide.fw.png) center top repeat-x;
+	//	content: '';
+	//	display: inline-block;
+	//	height: 23px;
+	//	width: 100%;
+	//	top: -8px;
+	//	position: relative;
+	//}
+
+	border-top: rgba(255, 255, 255, 0.15) solid 1px;
+	box-shadow: 0 0 0 1px #000;
 
 	.footer {
 		color: darken($light_text, 20%);
