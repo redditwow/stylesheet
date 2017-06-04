@@ -1,4 +1,3 @@
-
 .thing .entry {
 	//margin-top: 10px;
 	// @todo put this back?
@@ -10,8 +9,8 @@
 }
 
 .link .usertext-body .md {
-	background-color: $grey_background;
-	border: 1px solid $grey_border;
+	background-color: rgba(0, 0, 0, 0.1) !important;
+	border: none;
 	border-radius: 2px;
 
 	// This should make the width of self posts full width with the actual copy constrained to 40em, sort of
@@ -63,22 +62,20 @@ textarea {
 // The copious amount of !importants are brought to you by RES. Thanks RES.
 
 @mixin sub-comment() {
-
 	margin-right: 0px !important;
 	margin-bottom: -1px !important;
 
 	padding-bottom: 0px !important;
 	border-right: none !important;
-
 }
 
 .res.res-commentBoxes div.comment, div.comment {
-	background-color: $grey_background !important;
+	background-color: rgba(0, 0, 0, 0.25) !important;
 	border: 1px solid $grey_border !important;
 	position: relative;
 	outline: none;
 
-	padding: 0px !important;
+	padding: 10px 0 0 0 !important;
 	margin: 10px 0px -1px 10px !important;
 
 	.child, .showreplies {
@@ -86,28 +83,28 @@ textarea {
 	}
 
 	div.comment {
-		background-color: $grey_background_2 !important;
+		background-color: rgba(0, 0, 0, 0.1) !important;
 		@include sub-comment();
 		div.comment {
-			background-color: $grey_background !important;
+			background-color: rgba(0, 0, 0, 0.1) !important;
 			@include sub-comment();
 			div.comment {
-				background-color: $grey_background_2 !important;
+				background-color: rgba(0, 0, 0, 0.1) !important;
 				@include sub-comment();
 				div.comment {
-					background-color: $grey_background !important;
+					background-color: rgba(0, 0, 0, 0.1) !important;
 					@include sub-comment();
 					div.comment {
-						background-color: $grey_background_2 !important;
+						background-color: rgba(0, 0, 0, 0.1) !important;
 						@include sub-comment();
 						div.comment {
-							background-color: $grey_background !important;
+							background-color: rgba(0, 0, 0, 0.1) !important;
 							@include sub-comment();
 							div.comment {
-								background-color: $grey_background_2 !important;
+								background-color: rgba(0, 0, 0, 0.1) !important;
 								@include sub-comment();
 								div.comment {
-									background-color: $grey_background !important;
+									background-color: rgba(0, 0, 0, 0.1) !important;
 									@include sub-comment();
 								}
 							}
