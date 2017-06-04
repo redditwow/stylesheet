@@ -1,14 +1,17 @@
 // side bar
 .side {
-
 	// removes wow title from the sidebar
 	h1.redditname {
 		display: none;
 	}
 
-	background: url(../images/background-wow-repeat.jpg) center #000;
-
 	color: $light_text;
+	background: url(../images/background-wow-repeat.jpg) center #000;
+	padding: 0px 10px;
+
+	.spacer:first-of-type {
+		margin-top: 2px;
+	}
 }
 
 // show my flair...
@@ -122,7 +125,7 @@ button {
 			text-decoration: underline;
 		}
 	}
-	.content{
+	.content {
 		@include wow-modern-box;
 	}
 	// message the moderators
@@ -275,13 +278,12 @@ button {
 		margin-left: 0px;
 	}
 
-	h6 + blockquote, h5 + blockquote  {
+	h6 + blockquote, h5 + blockquote {
 		//background-color: $grey_background;
 		//border: 1px solid $grey_border;
 		//color: $light_text !important;
 		@include wow-modern-box;
 	}
-
 
 	a[href$="wowbtn"] {
 		display: inline-block;
@@ -479,7 +481,7 @@ button {
 		font-size: 0px;
 		opacity: 0.6;
 		transition: opacity .25s ease-in-out;
-		&:hover{
+		&:hover {
 			opacity: 1;
 		}
 	}

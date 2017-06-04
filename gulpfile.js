@@ -48,6 +48,7 @@ gulp.task('styles', ['sprites', 'flair-link', 'flair-user'], function () {
 		.pipe(rename('prod.css'))
 		.pipe(replace('../images/mini-panel.fw.png', '%%mini-panel%%'))
 		.pipe(replace('../images/repeat-bg.jpg', '%%repeat-bg-v2%%'))
+		.pipe(replace('../images/background-wow-repeat.jpg', '%%background-wow-repeat%%'))
 		.pipe(replace('../images/repeat-bg-dark.jpg', '%%repeat-bg-dark-v2%%'))
 		.pipe(replace('../sprites/spritesheet.png', '%%spritesheet-v7%%'))
 		.pipe(replace('../images/header-divide.fw.png', '%%header-divide%%'))

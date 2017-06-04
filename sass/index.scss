@@ -1,5 +1,10 @@
-body > .content {
-	margin-right: 320px;
+body {
+	background: url(../images/background-wow-repeat.jpg) left #221912;
+	color: $grey_text;
+
+	> .content {
+		margin-right: 330px;
+	}
 }
 
 .tagline, .search-result-meta {
