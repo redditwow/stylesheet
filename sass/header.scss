@@ -1,9 +1,9 @@
 // header background
 #header {
 
-	height: 148px;
-	background: url("../images/header-illidan-still.jpg") center -158px;
-	margin-bottom: 20px;
+	height: 200px;
+	background: url("../images/khadgar.jpg") center -238px no-repeat #100F15;
+	//margin-bottom: 20px;
 	box-shadow: 0px 10px 14px 10px rgba(0, 0, 0, 0.2);
 
 	.redditname a {
@@ -39,25 +39,32 @@
 
 .tabmenu {
 	position: relative;
-	//top: -1px;
-	left: 220px;
+	left: -108px;
+	top: 45px;
+	padding: 10px 10px;
 
-	//background: rgba(0, 0, 0, 0.5);
+	background: url(../images/sitenav-bar-bg.jpg) repeat-x;
+	box-shadow: 0 0 10px rgba(0, 0, 0, .6);
+
+	border: 1px solid #000;
 
 	z-index: 9999;
 
-	li.selected a {
-		text-shadow: 0 0 10px #e6ff42, 0 0 10px #e6ff42;
-		color: $bright_green_title;
-		background: rgb(0, 0, 0);
-		background: rgba(0, 0, 0, 0.5);
+	li:not(.selected) a {
+		color: #FEDA39;
+		background: none;
 		border: none;
-		z-index: 100;
+
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-image: -webkit-linear-gradient(top, #efd100 0, #e2a233 38%, #f0c328 60%, #fff1a3 86%, #ffe13e 100%);
+		//background: rgb(0, 0, 0);
+		//background: rgba(0, 0, 0, 0.5);
 	}
-	li a {
-		color: #fff;
-		background: rgb(0, 0, 0);
-		background: rgba(0, 0, 0, 0.5);
+	li.selected a {
+		background: none;
+		color: white;
+		border: none;
 	}
 }
 

@@ -1,9 +1,14 @@
 body {
-	background: url(../images/background-wow-repeat.jpg) left #221912;
+	background: url(../images/background-wow-repeat.jpg) repeat-x center #221912;
 	color: $grey_text;
 
 	> .content {
+
+		background: url(../images/background-wow-top.jpg) repeat-x top #221912;
+		//background: url(../images/background-wow-repeat.jpg) repeat-x top #221912;
+		padding-top: 10px;
 		margin-right: 330px;
+		margin-top: 0px;
 	}
 }
 
@@ -26,10 +31,14 @@ body {
 .thing.link {
 
 	padding: 15px 0px; // 12px 0px;
+	//margin-bottom: 1px;
 
-	background: rgba(0, 0, 0, 0.1);
+	background: rgba(0, 0, 0, 0.25);
 	box-shadow: 0 0 0 1px #000;
 	border: rgba(255, 255, 255, 0.15) solid 1px;
+	//border-bottom: none;
+
+	//border-bottom: rgba(255, 255, 255, 0.15) solid 1px;
 
 	&:hover {
 		background: rgba(0, 0, 0, 0.2);

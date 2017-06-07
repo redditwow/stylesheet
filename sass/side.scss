@@ -6,8 +6,9 @@
 	}
 
 	color: $light_text;
-	background: url(../images/background-wow-repeat.jpg) center #000;
-	padding: 0px 10px;
+	//background: url(../images/background-wow-repeat.jpg) center #000;
+	background: transparent;
+	padding: 14px 10px 10px 10px;
 
 	.spacer:first-of-type {
 		margin-top: 2px;
