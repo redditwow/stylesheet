@@ -74,7 +74,29 @@
 
 // Blizzard Employees
 @include flair-class-colour('blizzard', $blizzard_blue);
-@mixin blizzard-employee($account, $extra) {
+// special overrides for blizzard's flair, moves the icon to the front to allow for
+// job titles and what not in the flair text
+.flair.flair-blizzard{
+	color: $blizzard_blue;
+	&:before {
+		@include sprite($flair-blizzard);
+		display: inline-block;
+		margin-right: 3px;
+		vertical-align: middle;
+		content: '';
+	}
+	&:after{
+		background: none !important;
+		width: 0;
+		content: '';
+	}
+	 +.author, +.author:visited {
+		 font-weight: 600;
+	}
+}
+
+
+@mixin blizzard-employee($account) {
 	.thing.comment[data-author='#{$account}'] > div:not(.child) .md {
 		color: $blizzard_blue;
 		a {
@@ -85,36 +107,32 @@
 			}
 		}
 	}
-	a.author[href$='reddit.com/user/#{$account}']:after {
-		content: $extra;
-	}
 }
 
-@include blizzard-employee('WatcherDev', ' - Ion Hazzikostas (Lead Game Designer)');
-@include blizzard-employee('Kalgan', " - Tom Chilton (Game Director)");
-@include blizzard-employee('Mumper_Blizz', " - Cory Stockton (Lead Game Designer)");
-@include blizzard-employee('Desvin', " - Brian Holinka (Lead PvP Designer)");
-@include blizzard-employee('devolore', " - Josh Allen (Community Manager)");
-@include blizzard-employee('Araxom', " - Blizzard Customer Support");
-@include blizzard-employee('TheFargo', " - Dave Kosak (Game Designer)");
-@include blizzard-employee('Kaivax', " - Randy Jordan (Community Manager)");
-@include blizzard-employee('aeridel', " - Social Media Manager");
-@include blizzard-employee('Dromogaz', " - Blizzard Customer Support");
+@include blizzard-employee('WatcherDev');
+@include blizzard-employee('Kalgan');
+@include blizzard-employee('Mumper_Blizz');
+@include blizzard-employee('Desvin');
+@include blizzard-employee('devolore');
+@include blizzard-employee('Araxom');
+@include blizzard-employee('TheFargo');
+@include blizzard-employee('Kaivax');
+@include blizzard-employee('aeridel');
+@include blizzard-employee('Dromogaz');
 
-
-@include blizzard-employee('Sigma_wow', '');
-@include blizzard-employee('Arempy_wow', '');
-@include blizzard-employee('Seph_WoW', '');
-@include blizzard-employee('Nimox_WOW', '');
-@include blizzard-employee('Solanis_WoW', '');
-@include blizzard-employee('Forge_WoW', '');
+// class design team
+@include blizzard-employee('Sigma_wow');
+@include blizzard-employee('Arempy_wow');
+@include blizzard-employee('Seph_WoW');
+@include blizzard-employee('Nimox_WOW');
+@include blizzard-employee('Solanis_WoW');
+@include blizzard-employee('Forge_WoW');
 
 
 // Former staff
-@include blizzard-employee('Ghostcrawler', " - Greg Street (Blizzard Emeritus)");
-@include blizzard-employee('Crithto', " - Former Community Team NA");
-@include blizzard-employee('Zarhym', " - Jonathan Brown (Former Community Manager)");
-@include blizzard-employee('bashiok_foreal', " - Micah Whipple (Former Community Manager)");
+@include blizzard-employee('Ghostcrawler');
+@include blizzard-employee('Crithto');
+@include blizzard-employee('Zarhym');
 
 // Special for <Method>
 @include flair-class-colour('method', $method_orange);
