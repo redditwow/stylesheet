@@ -28,7 +28,7 @@
     * The following images need to be renamed in the uploader:
         * flair-user.png to flair-user-v8
         * flair-link.png to flair-user-v2
-        * spritesheet.png to spritesheet-v7
+        * spritesheet.png to spritesheet-v8
     * The rest of the images can be uploaded as is.
 
 3. Copy and paste all of `css/prod.css` into your subreddit's CSS setting
