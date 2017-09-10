@@ -251,3 +251,41 @@ ul.report-reasons {
 .title, .tagline, .usertext {
 	max-height: 10000px;
 }
+
+.hover-bubble {
+	background-color: $grey_background_2;
+	border: $grey_border 1px solid;
+	color: $grey_text;
+
+	.author-tooltip__head {
+		background-color: $grey_background_2;
+		border-bottom-color: $grey_border;
+		a {
+			color: $green_title;
+		}
+	}
+
+	.author-tooltip__credentials-list li {
+		border-right-color: $grey_border;
+	}
+
+	.author-tooltip__credentials-list strong {
+		color: $green_title;
+	}
+
+	.author-tooltip__link-list {
+		@include wow-link();
+	}
+
+	&.anchor-bottom-left {
+		// outer boarder of the arrow
+		&:before {
+			border-top-color: $grey-border !important;
+		}
+		// inside colour of the arrow
+		&:after {
+			border-top-color: $grey_background_2 !important;
+		}
+	}
+
+}

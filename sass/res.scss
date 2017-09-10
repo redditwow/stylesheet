@@ -137,3 +137,29 @@ body.pinHeader-sub, body.pinHeader-subanduser {
 	background: $grey_background !important;
 	border: 1px solid $grey_border !important;
 }
+
+.RESHoverInfoCard {
+	&:before {
+		display: none !important;
+	}
+
+	.RESHoverTitle div {
+		@include wow-link();
+		.fancy-toggle-button a {
+			color: white !important;
+		}
+	}
+
+	.blueButton {
+		@include wow-btn-active();
+		&:hover {
+			@include wow-btn-active-hover();
+		}
+	}
+	.RESCloseButton {
+		@include wow-btn-remove();
+		&:hover {
+			@include wow-btn-remove-hover();
+		}
+	}
+}
