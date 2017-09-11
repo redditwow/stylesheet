@@ -1,0 +1,27 @@
+.thing.comment[data-author='WoW_Link_Bot_Staging'] > div:not(.child) .md,
+.thing.comment[data-author='WoW_Link_Bot'] > div:not(.child) .md {
+
+	ul {
+		background: #070C21;
+
+		border: 1px solid #777777;
+		border-top-color: #CFCFCF;
+
+		border-radius: 3px;
+		display: inline-block;
+		padding: 10px 15px;
+		list-style: none;
+
+		font-size: 12px;
+		color: white;
+
+		strong {
+			font-size: 14px;
+		}
+
+		// RES Key Nav
+		span.noCtrlF.keyNavAnnotation {
+			display: none;
+		}
+	}
+}

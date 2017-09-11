@@ -1,8 +1,12 @@
-@mixin special-colour-link($link, $colour) {
+@mixin special-colour-link($link, $colour, $no_underline: false) {
 	a[href*="#rwow#{$link}"] {
 		color: $colour !important;
 		&:hover {
-			text-decoration: underline;
+			@if $no_underline {
+				text-decoration: none;
+			} @else {
+				text-decoration: underline;
+			}
 			color: $colour !important;
 		}
 		&:visited {
@@ -14,6 +18,15 @@
 		pointer-events: none;
 	}
 
+}
+
+@mixin special-currency-link($link, $sprite) {
+	a[href*="#rwow#{$link}"] {
+		display: inline-block;
+		margin-left: 1px;
+		margin-right: 2px;
+		@include sprite($sprite);
+	}
 }
 
 // classes
@@ -39,6 +52,16 @@
 @include special-colour-link('q4', #a335ee); //epic
 @include special-colour-link('q5', #BFA760); //legendary
 @include special-colour-link('q6', #00CCFF); //heirloom
+
+// tooltips
+@include special-colour-link('t0', #FFF, true); //white
+@include special-colour-link('t1', #DBD107, true); //gold
+@include special-colour-link('t2', #1EFF00, true); //green
+
+// currency
+@include special-currency-link('mg', $money-gold);
+@include special-currency-link('ms', $money-silver);
+@include special-currency-link('mc', $money-copper);
 
 //special
 //blizzard blue
