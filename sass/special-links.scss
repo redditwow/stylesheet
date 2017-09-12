@@ -25,6 +25,7 @@
 		display: inline-block;
 		margin-left: 1px;
 		margin-right: 2px;
+		color: transparent !important;
 		@include sprite($sprite);
 	}
 }
@@ -57,11 +58,12 @@
 @include special-colour-link('t0', #FFF, true); //white
 @include special-colour-link('t1', #DBD107, true); //gold
 @include special-colour-link('t2', #1EFF00, true); //green
+@include special-colour-link('t3', #6bf, true); //toy blue
 
 // currency
-@include special-currency-link('mg', $money-gold);
-@include special-currency-link('ms', $money-silver);
-@include special-currency-link('mc', $money-copper);
+@include special-currency-link('ug', $money-gold);
+@include special-currency-link('us', $money-silver);
+@include special-currency-link('uc', $money-copper);
 
 //special
 //blizzard blue
