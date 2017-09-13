@@ -1,23 +1,14 @@
 @mixin special-colour-link($link, $colour, $no_underline: false) {
 	a[href*="#rwow#{$link}"] {
 		color: $colour !important;
+		pointer-events: none;
 		&:hover {
-			@if $no_underline {
-				text-decoration: none;
-			} @else {
-				text-decoration: underline;
-			}
 			color: $colour !important;
 		}
 		&:visited {
 			color: $colour !important;
 		}
 	}
-
-	a[href="#rwow#{$link}"] {
-		pointer-events: none;
-	}
-
 }
 
 @mixin special-currency-link($link, $sprite) {
@@ -26,39 +17,53 @@
 		margin-left: 1px;
 		margin-right: 2px;
 		color: transparent !important;
+		&:hover, &:visited {
+			color: transparent !important;
+		}
 		@include sprite($sprite);
 	}
 }
 
+a[href*="#pe"] {
+	pointer-events: auto !important;
+}
+
+a[href*="#ul"] {
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
 // classes
-@include special-colour-link('c0', #C79C6E); //warrior
-@include special-colour-link('c1', #F58CBA); //paladin
-@include special-colour-link('c2', #ABD473); //hunter
-@include special-colour-link('c3', #FFF569); //rogue
-@include special-colour-link('c4', #FFFFFF); //priest
-@include special-colour-link('c5', #C41F3B); //deathknight
-@include special-colour-link('c6', #0070DE); //shaman
-@include special-colour-link('c7', #69CCF0); //mage
-@include special-colour-link('c8', #0070DE); //shaman
-@include special-colour-link('c9', #9482C9); //warlock
-@include special-colour-link('ca', #00FF96); //monk
-@include special-colour-link('cb', #FF7D0A); //druid
-@include special-colour-link('cc', #A330C9); //demonhunter
+@include special-colour-link('c0', #c79c6e); //warrior
+@include special-colour-link('c1', #f58cba); //paladin
+@include special-colour-link('c2', #abd473); //hunter
+@include special-colour-link('c3', #fff569); //rogue
+@include special-colour-link('c4', #ffffff); //priest
+@include special-colour-link('c5', #c41f3b); //deathknight
+@include special-colour-link('c6', #0070de); //shaman
+@include special-colour-link('c7', #69ccf0); //mage
+@include special-colour-link('c8', #0070de); //shaman
+@include special-colour-link('c9', #9482c9); //warlock
+@include special-colour-link('ca', #00ff96); //monk
+@include special-colour-link('cb', #ff7d0a); //druid
+@include special-colour-link('cc', #a330c9); //demonhunter
 
 // item qualities
-@include special-colour-link('q0', #9D9D9D); //poor
+@include special-colour-link('q0', #9d9d9d); //poor
 @include special-colour-link('q1', #ffffff); //common
-@include special-colour-link('q2', #1EFF00); //uncommon
-@include special-colour-link('q3', #0070FF); //rare
+@include special-colour-link('q2', #1eff00); //uncommon
+@include special-colour-link('q3', #0070ff); //rare
 @include special-colour-link('q4', #a335ee); //epic
-@include special-colour-link('q5', #BFA760); //legendary
-@include special-colour-link('q6', #00CCFF); //heirloom
+@include special-colour-link('q5', #ff8000); //legendary
+@include special-colour-link('q6', #e5cc80); //artifact
+@include special-colour-link('q7', #00ccff); //heirloom
 
 // tooltips
-@include special-colour-link('t0', #FFF, true); //white
-@include special-colour-link('t1', #DBD107, true); //gold
-@include special-colour-link('t2', #1EFF00, true); //green
-@include special-colour-link('t3', #6bf, true); //toy blue
+@include special-colour-link('t0', #fff); //white
+@include special-colour-link('t1', #dbd107); //gold
+@include special-colour-link('t2', #1eff00); //green
+@include special-colour-link('t3', #6bf); //toy blue
 
 // currency
 @include special-currency-link('ug', $money-gold);

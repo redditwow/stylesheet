@@ -2,7 +2,8 @@
 .thing.comment[data-author='WoW_Link_Bot'] > div:not(.child) .md {
 
 	> ul {
-		background: #070C21;
+		background: rgba(17, 17, 34, 0.9);
+		width: 400px;
 
 		border: 1px solid #777777;
 		border-top-color: #CFCFCF;
@@ -16,7 +17,12 @@
 		color: white;
 
 		strong {
+			font-weight: normal;
 			font-size: 14px;
+		}
+		em {
+			font-style: normal;
+			float: right;
 		}
 
 		li p {
