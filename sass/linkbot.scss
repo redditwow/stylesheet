@@ -1,7 +1,10 @@
-.thing.comment[data-author='WoW_Link_Bot_Staging'] > div:not(.child) .md,
-.thing.comment[data-author='WoW_Link_Bot'] > div:not(.child) .md {
+.thing.comment .md {
 
-	> ul {
+	blockquote + h6{
+		display: none;
+	}
+
+	blockquote + h6 + ul{
 		background: rgba(17, 17, 34, 0.9);
 		width: 400px;
 
