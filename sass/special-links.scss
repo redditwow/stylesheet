@@ -1,4 +1,4 @@
-@mixin special-colour-link($link, $colour, $no_underline: false) {
+@mixin special-colour-link($link, $colour) {
 	a[href*="#rwow#{$link}"] {
 		color: $colour !important;
 		pointer-events: none;
