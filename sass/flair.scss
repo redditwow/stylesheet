@@ -129,7 +129,6 @@
 @include blizzard-employee('Solanis_WoW');
 @include blizzard-employee('Forge_WoW');
 
-
 // Former staff
 @include blizzard-employee('Ghostcrawler');
 @include blizzard-employee('Crithto');
@@ -170,7 +169,6 @@
 	}
 }
 
-
 a.thumbnail.default,
 a.thumbnail.self,
 .thing.over18 a.thumbnail,
@@ -188,7 +186,7 @@ a.thumbnail.self,
 // default, self
 a.thumbnail.default,
 a.thumbnail.self {
-	margin-right: 20px;
+	// margin-right: 20px;
 	@include sprite-position($linkflair-default);
 	@include sprite-width($linkflair-default);
 	@include sprite-height($linkflair-default);
@@ -196,7 +194,7 @@ a.thumbnail.self {
 
 // spoiler
 .thing.spoiler a.thumbnail.spoiler {
-	margin-right: 20px;
+	// margin-right: 20px;
 	@include sprite-position($linkflair-spoiler);
 	@include sprite-width($linkflair-spoiler);
 	@include sprite-height($linkflair-spoiler);
@@ -211,9 +209,8 @@ a.thumbnail.self {
 	padding: 0px 10px;
 }
 
-
 .thing.over18 a.thumbnail {
-	margin-right: 20px;
+	// margin-right: 20px;
 	@include sprite-position($linkflair-over18);
 	@include sprite-width($linkflair-over18);
 	@include sprite-height($linkflair-over18);

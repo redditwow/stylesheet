@@ -60,25 +60,16 @@ body > .content {
 		&.thumbnail {
 			margin-top: 9px;
 			margin-left: 15px;
-			&::after {
-				//positions the minipanel border over the top of the thumbnail
-				content: url(../images/mini-panel.fw.png);
-				z-index: 2;
-				position: absolute;
-				//left: 81px;
-				//margin-top: -11px;
-				left: 79px;
-				margin-top: -12px;
+
+			border: #333 solid 1px;
+			border-radius: 3px;
+
+			&:hover {
+				//box-shadow: 0 2px 5px 2px rgba(255, 255, 255, 0.2) inset;
 			}
+
 			img {
-				// aligns the thumbnail and clamps size
-				position: relative;
-				//top: 6px;
-				//left: 4px;
-				//top: 3px;
-				//left: 2px;
-				width: 56px !important;
-				height: 56px !important;
+				//position: relative;
 			}
 
 		}
