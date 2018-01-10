@@ -38,7 +38,7 @@ body > .content .link .rank,
 
 // expandos
 
-.expando-button {
+.top-matter .expando-button {
 
 	// tmp fix for HDPI monitors
 	// our stylesheet does not support HDPI monitors, but reddit does and conflicts.
@@ -77,6 +77,9 @@ body > .content .link .rank,
 
 		&.collapsed {
 			@include sprite($expando-image-fw);
+			// work around for RES changes
+			// @todo normalise this fix across the rest of the expandos
+			background-image: url($expando-image-fw-image) !important;
 			// Hack for RES
 			background-position: $expando-image-fw-offset-x $expando-image-fw-offset-y !important;
 		}
@@ -287,5 +290,4 @@ ul.report-reasons {
 			border-top-color: $grey_background_2 !important;
 		}
 	}
-
 }
