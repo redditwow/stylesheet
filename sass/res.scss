@@ -12,6 +12,13 @@
 	background-color: transparent !important;
 }
 
+
+.thing, .usertext {
+	.entry.res-selected, .entry.res-selected .md-container {
+		background: rgba(0, 0, 0, 0.2) !important;
+	}
+}
+
 //background-color: rgba($grey_background_2, 0.5) !important;
 
 .neverEndingReddit {
