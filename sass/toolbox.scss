@@ -23,3 +23,16 @@ body.mod-toolbox {
 	margin-right: -35px !important;
 	transform: scale(1.5, 1.5);
 }
+
+body.moderator {
+	.thing {
+		.title {
+			color: $title;
+		}
+		&.comment {
+			.title {
+				margin-left: 50px;
+			}
+		}
+	}
+}
