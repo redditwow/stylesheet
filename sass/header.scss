@@ -105,6 +105,11 @@
 	}
 }
 
+// Fix for subreddit dropdown below the logo
+#sr-header-area .drop-choices.srdrop {
+	z-index: 200;
+}
+
 .user, .separator {
 	color: #EEEEEE;
 }
