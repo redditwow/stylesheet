@@ -1,17 +1,15 @@
-$title: rgb(232, 227, 97);
-$title_alt: darken($title, 35%);
+$bfa_orange: rgb(248, 183, 0);
 
-// title colours almost identical to Wowhead.
-//$title: rgb(255, 209, 0);
-//$title_alt: rgb(246, 207, 119);
+$title: lighten($bfa_orange, 20%);
+$title_visited: darken($title, 35%);
 
-$green_title: rgb(64, 191, 64);
-$bright_green_title: rgb(19, 255, 41);
+$green_title: $bfa_orange;
+
 $light_text: rgb(247, 250, 229);
 $grey_text: rgb(187, 187, 187);
 
-$wow_btn_background: rgb(35, 83, 35);
-$wow_btn_hover: darken($wow_btn_background, 10%);
+$wow_btn_background: rgb(109, 23, 7);
+$wow_btn_hover: darken($wow_btn_background, 5%);
 $wow_btn_border: lighten($wow_btn_background, 15%);
 
 $wow_btn_remove_background: rgb(140, 31, 29);
@@ -24,10 +22,6 @@ $yellow_border: #F2BF27;
 
 $blizzard_blue: rgb(0, 180, 255);
 $method_orange: rgb(241, 140, 47);
-
-//$grey_background: lighten(#090909, 5%);
-//$grey_background_2: lighten(#090909, 10%);
-//$grey_border: lighten(#090909, 25%);
 
 $grey_background: rgb(26, 26, 26);
 $grey_background_2: rgb(36, 36, 36);
