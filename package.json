@@ -2,13 +2,16 @@
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-insert": "^0.5.0",
-    "gulp-notify": "^3.0.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-replace": "^0.5.4",
-    "gulp-sass": "^3.1.0",
-    "gulp-size": "^2.1.0",
-    "gulp.spritesmith": "^6.2.1",
-    "snoowrap": "^1.11.3",
-    "gulp-clean-css": "^3.0.4"
+    "gulp-notify": "^3.2.0",
+    "gulp-rename": "^1.2.3",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-size": "^3.0.0",
+    "gulp.spritesmith": "^6.9.0",
+    "snoowrap": "^1.15.2",
+    "gulp-clean-css": "^3.9.4"
+  },
+  "resolutions": {
+    "natives": "1.1.3"
   }
 }

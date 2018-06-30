@@ -38,7 +38,7 @@ body > .content .link .rank,
 
 // expandos
 
-.expando-button {
+.top-matter .expando-button {
 
 	// tmp fix for HDPI monitors
 	// our stylesheet does not support HDPI monitors, but reddit does and conflicts.
@@ -77,6 +77,9 @@ body > .content .link .rank,
 
 		&.collapsed {
 			@include sprite($expando-image-fw);
+			// work around for RES changes
+			// @todo normalise this fix across the rest of the expandos
+			background-image: url($expando-image-fw-image) !important;
 			// Hack for RES
 			background-position: $expando-image-fw-offset-x $expando-image-fw-offset-y !important;
 		}
@@ -250,4 +253,51 @@ ul.report-reasons {
 // https://www.reddit.com/r/modtalk/comments/5llbts/little_css_trick_to_make_your_subreddit_look_a/
 .title, .tagline, .usertext {
 	max-height: 10000px;
+}
+
+.hover-bubble {
+	background-color: $grey_background_2;
+	border: $grey_border 1px solid;
+	color: $grey_text;
+
+	.author-tooltip__head {
+		background-color: $grey_background_2;
+		border-bottom-color: $grey_border;
+		a {
+			color: $green_title;
+		}
+	}
+
+	.author-tooltip__credentials-list li {
+		border-right-color: $grey_border;
+	}
+
+	.author-tooltip__credentials-list strong {
+		color: $green_title;
+	}
+
+	.author-tooltip__link-list {
+		@include wow-link();
+	}
+
+	&.anchor-bottom-left {
+		// outer boarder of the arrow
+		&:before {
+			border-top-color: $grey-border !important;
+		}
+		// inside colour of the arrow
+		&:after {
+			border-top-color: $grey_background_2 !important;
+		}
+	}
+}
+
+// inline / expando cross post preview
+.crosspost-preview {
+	background: $grey_background;
+	border-color: $grey_border;
+}
+
+.crosspost-preview .title {
+	color: $title;
 }

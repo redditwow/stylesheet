@@ -34,7 +34,7 @@ section.infobar.newsletterbar {
 
 // green info bars
 .contest-mode,
-.infobar,
+.infobar:not(.listingsignupbar),
 .infobar.mellow {
 	background-color: $wow_btn_background;
 	border: 1px solid $wow_btn_border;
@@ -42,6 +42,10 @@ section.infobar.newsletterbar {
 	a {
 		color: #fff;
 	}
+}
+
+.infobar.listingsignupbar{
+	margin: 15px 0px !important;
 }
 
 // yellow info bars
