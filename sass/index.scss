@@ -1,10 +1,9 @@
 body {
-	background: url(../images/background-wow-repeat.jpg) repeat-x center #221912;
+	background: url(../images/background-wow-repeat.jpg) repeat center #221912;
 	color: $grey_text;
 
 	> .content {
-
-		background: url(../images/background-wow-top.jpg) repeat-x top #221912;
+		background: url(../images/background-wow-top.jpg) repeat-x top;
 		//background: url(../images/background-wow-repeat.jpg) repeat-x top #221912;
 		padding-top: 10px;
 		margin-right: 330px;
