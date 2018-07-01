@@ -1,52 +1,59 @@
+/**
+ * ##########
+ * User Flair
+ * ##########
+ */
+
+// loops over user flairs and creates the class to put the sprite image in the :after
 @mixin wow-sprites($sprites) {
-	@each $sprite in $sprites {
-		$sprite-name: nth($sprite, 10);
-		.#{$sprite-name}:after {
-			@include sprite-position($sprite);
-			@include sprite-width($sprite);
-			@include sprite-height($sprite);
-		}
-	}
+    @each $sprite in $sprites {
+        $sprite-name: nth($sprite, 10);
+        .#{$sprite-name}:after {
+            @include sprite-position($sprite);
+            @include sprite-width($sprite);
+            @include sprite-height($sprite);
+        }
+    }
 }
 
 @mixin flair-faction-colour($faction, $colour) {
-	// co = colour only
-	.flair-co-#{$faction} + .author,
-	.flair-co-#{$faction} + .author:visited,
-	.flair-#{$faction} + .author,
-	.flair-#{$faction} + .author:visited {
-		color: $colour;
-	}
+    // co = colour only
+    .flair-co-#{$faction} + .author,
+    .flair-co-#{$faction} + .author:visited,
+    .flair-#{$faction} + .author,
+    .flair-#{$faction} + .author:visited {
+        color: $colour;
+    }
 }
 
 @mixin flair-class-colour($class, $colour) {
-	.flair-#{$class} + .author,
-	.flair-#{$class} + .author:visited,
-	.flair-co-#{$class} + .author,
-	.flair-co-#{$class} + .author:visited,
-	.flair-alliance-#{$class} + .author,
-	.flair-alliance-#{$class} + .author:visited,
-	.flair-horde-#{$class} + .author,
-	.flair-horde-#{$class} + .author:visited {
-		color: $colour;
-	}
+    .flair-#{$class} + .author,
+    .flair-#{$class} + .author:visited,
+    .flair-co-#{$class} + .author,
+    .flair-co-#{$class} + .author:visited,
+    .flair-alliance-#{$class} + .author,
+    .flair-alliance-#{$class} + .author:visited,
+    .flair-horde-#{$class} + .author,
+    .flair-horde-#{$class} + .author:visited {
+        color: $colour;
+    }
 }
 
 .flair {
-	padding: 1px 3px;
-	margin: 0px;
-	border: 0;
-	border-radius: 0;
-	color: $light_text;
-	background: transparent;
-	&:after {
-		background: url($flair-user-image) no-repeat scroll 16px 16px transparent;
-		display: inline-block;
-		margin-left: 3px;
-		vertical-align: middle;
-		height: 18px;
-		content: '';
-	}
+    padding: 1px 3px;
+    margin: 0px;
+    border: 0;
+    border-radius: 0;
+    color: $light_text;
+    background: transparent;
+    &:after {
+        background: url($flair-user-image) no-repeat scroll 16px 16px transparent;
+        display: inline-block;
+        margin-left: 3px;
+        vertical-align: middle;
+        height: 18px;
+        content: '';
+    }
 }
 
 // colour only faction flairs
@@ -76,37 +83,36 @@
 @include flair-class-colour('blizzard', $blizzard_blue);
 // special overrides for blizzard's flair, moves the icon to the front to allow for
 // job titles and what not in the flair text
-.flair.flair-blizzard{
-	color: $blizzard_blue;
-	&:before {
-		@include sprite($flair-blizzard);
-		display: inline-block;
-		margin-right: 3px;
-		vertical-align: middle;
-		content: '';
-	}
-	&:after{
-		background: none !important;
-		width: 0;
-		content: '';
-	}
-	 +.author, +.author:visited {
-		 font-weight: 600;
-	}
+.flair.flair-blizzard {
+    color: $blizzard_blue;
+    &:before {
+        @include sprite($flair-blizzard);
+        display: inline-block;
+        margin-right: 3px;
+        vertical-align: middle;
+        content: '';
+    }
+    &:after {
+        background: none !important;
+        width: 0;
+        content: '';
+    }
+    + .author, + .author:visited {
+        font-weight: 600;
+    }
 }
 
-
 @mixin blizzard-employee($account) {
-	.thing.comment[data-author='#{$account}'] > div:not(.child) .md {
-		color: $blizzard_blue;
-		a {
-			//color: rgb(248, 183, 0) !important;
-			color: darken($title, 20%) !important;
-			&:hover {
-				color: #fff !important;
-			}
-		}
-	}
+    .thing.comment[data-author='#{$account}'] > div:not(.child) .md {
+        color: $blizzard_blue;
+        a {
+            //color: rgb(248, 183, 0) !important;
+            color: darken($title, 20%) !important;
+            &:hover {
+                color: #fff !important;
+            }
+        }
+    }
 }
 
 @include blizzard-employee('WatcherDev');
@@ -140,18 +146,18 @@
 // Special for <Method>
 @include flair-class-colour('method', $method_orange);
 @mixin method($account, $extra) {
-	.thing.comment[data-author='#{$account}'] > div:not(.child) .md {
-		color: $method_orange;
-		a {
-			color: $method_orange !important;
-			&:hover {
-				color: #fff !important;
-			}
-		}
-	}
-	a.author[href$='reddit.com/user/#{$account}']:after {
-		content: $extra;
-	}
+    .thing.comment[data-author='#{$account}'] > div:not(.child) .md {
+        color: $method_orange;
+        a {
+            color: $method_orange !important;
+            &:hover {
+                color: #fff !important;
+            }
+        }
+    }
+    a.author[href$='reddit.com/user/#{$account}']:after {
+        content: $extra;
+    }
 }
 
 @include method('scomethod', " <Method>");
@@ -159,121 +165,94 @@
 @include method('darriesrsly', " <Method>");
 @include method('cayna', " <Method>");
 
-// Link Flairs
-@mixin link-flairs($sprites) {
-	@each $sprite in $sprites {
-		$sprite-name: nth($sprite, 10);
-		.#{$sprite-name}.self a.thumbnail {
-			@include sprite-position($sprite);
-			@include sprite-width($sprite);
-			@include sprite-height($sprite);
-		}
-	}
-}
+/**
+ * ##########
+ * Thumbnails
+ * ##########
+ */
 
-a.thumbnail.default,
-a.thumbnail.self,
-.thing.over18 a.thumbnail,
-.thing.spoiler a.thumbnail.spoiler {
-	background-image: url($flair-link-image) !important;
-
-	// tmp fix for HDPI monitors
-	// our stylesheet does not support HDPI monitors, but reddit does and conflicts.
-	background-size: initial !important;
-}
-
-//
-
-// special cases
 a.thumbnail.default,
 a.thumbnail.self {
-	// margin-right: 20px;
-	@include sprite-position($linkflair-default);
-	@include sprite-width($linkflair-default);
-	@include sprite-height($linkflair-default);
+    @include retina-sprite(('default', $t-self, $t-self-2x));
+    margin: 10px 20px 10px 15px;
 }
 
-a.thumbnail.spoiler
+a.thumbnail.spoiler,
 .thing.spoiler a.thumbnail.spoiler {
-	// margin-right: 20px;
-	@include sprite-position($linkflair-spoiler);
-	@include sprite-width($linkflair-spoiler);
-	@include sprite-height($linkflair-spoiler);
-
-	img {
-		// hide the thumbnail image to reveal the icon underneath
-		display: none;
-	}
+    @include retina-sprite(('spoiler', $t-spoiler, $t-spoiler-2x));
+    margin: 10px 20px 10px 15px;
+    img {
+        // hide the thumbnail image to reveal the icon underneath
+        display: none;
+    }
 }
 
 .spoiler-stamp {
-	color: $green_title;
-	padding: 0px 10px;
+    color: $green_title;
+    padding: 0px 10px;
 }
 
 .thing.over18 a.thumbnail {
-	// margin-right: 20px;
-	@include sprite-position($linkflair-over18);
-	@include sprite-width($linkflair-over18);
-	@include sprite-height($linkflair-over18);
-	img {
-		// hide the thumbnail image to reveal the NSFW icon underneath
-		display: none;
-	}
+    @include retina-sprite(('nsfw', $t-nsfw, $t-nsfw-2x));
+    img {
+        // hide the thumbnail image to reveal the NSFW icon underneath
+        display: none;
+    }
 }
 
 .linkflairlabel {
-	max-width: unset;
+    max-width: unset;
 }
 
-//.thing {
-//	&.linkflair-bluepost,
-//	&.linkflair-modpost {
-//		padding-bottom: 13px;
-//		margin-bottom: 0px;
+//
+////.thing {
+////	&.linkflair-bluepost,
+////	&.linkflair-modpost {
+////		padding-bottom: 13px;
+////		margin-bottom: 0px;
+////	}
+////}
+//
+//.thing.linkflair-bluepost {
+//	a.title,
+//	a.title:visited,
+//	a.title:active {
+//		// important to override stickies and whatnot
+//		color: $blizzard_blue !important;
+//	}
+//	a.title:hover {
+//		color: #fff;
+//	}
+//	background: rgba(36, 58, 93, 0.75);
+//
+//	.linkflairlabel {
+//		background: rgba(0, 0, 99, 0.4);
+//		color: rgb(0, 180, 255);
 //	}
 //}
-
-.thing.linkflair-bluepost {
-	a.title,
-	a.title:visited,
-	a.title:active {
-		// important to override stickies and whatnot
-		color: $blizzard_blue !important;
-	}
-	a.title:hover {
-		color: #fff;
-	}
-	background: rgba(36, 58, 93, 0.75);
-
-	.linkflairlabel {
-		background: rgba(0, 0, 99, 0.4);
-		color: rgb(0, 180, 255);
-	}
-}
-
-.thing.linkflair-modpost {
-	a.title,
-	a.title:visited,
-	a.title:active {
-		//color: rgb(129, 181, 88)
-		color: $green_title;
-	}
-	a.title:hover {
-		color: #fff;
-	}
-	background: rgba(41, 81, 10, 0.75);
-
-	.linkflairlabel {
-		background: rgba(7, 53, 4, 0.75);
-		color: rgb(129, 181, 88)
-	}
-
-	.tagline .stickied-tagline,
-	.search-result-meta .stickied-tagline {
-		color: #97ED97;
-	}
-}
-
-// all the other link flairs
-@include link-flairs($flair-link-sprites);
+//
+//.thing.linkflair-modpost {
+//	a.title,
+//	a.title:visited,
+//	a.title:active {
+//		//color: rgb(129, 181, 88)
+//		color: $green_title;
+//	}
+//	a.title:hover {
+//		color: #fff;
+//	}
+//	background: rgba(41, 81, 10, 0.75);
+//
+//	.linkflairlabel {
+//		background: rgba(7, 53, 4, 0.75);
+//		color: rgb(129, 181, 88)
+//	}
+//
+//	.tagline .stickied-tagline,
+//	.search-result-meta .stickied-tagline {
+//		color: #97ED97;
+//	}
+//}
+//
+//// all the other link flairs
+//@include link-flairs($flair-link-sprites);

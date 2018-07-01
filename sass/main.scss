@@ -33,6 +33,8 @@ $grey_border: lighten(#090909, 25%);
 @import "_flair-user.scss";
 @import "_flair-link.scss";
 
+@include retina-sprites($retina-groups);
+
 @import "markdown.scss";
 @import "index.scss";
 @import "header.scss";
