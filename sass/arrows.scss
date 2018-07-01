@@ -1,75 +1,61 @@
-.midcol {
-	.res-nightmode .arrow,
-	.arrow {
-		height: 23px !important;
-		width: 28px !important;
-		// use the sprite image once to save space in the final stylesheet
-		background-image: url($arrow-up-image) !important;
-	}
+@include retina-sprites($retina-groups);
+
+.res-nightmode .arrow, .arrow {
+    margin-top: 6px;
+    margin-bottom: 6px;
 }
 
 .midcol.unvoted {
-	.res-nightmode .arrow, .arrow {
-		&.up {
-			@include sprite-position($arrow-up);
-			&:hover {
-				@include sprite-position($arrow-up-glow);
-			}
-		}
-		&.upmod {
-			@include sprite-position($arrow-up-pressed);
-			&:hover {
-				@include sprite-position($arrow-up-pressed-glow);
-			}
-		}
-		&.down {
-			@include sprite-position($arrow-down);
-			&:hover {
-				@include sprite-position($arrow-down-glow);
-			}
-		}
-		&.downmod {
-			@include sprite-position($arrow-down-pressed);
-			&:hover {
-				@include sprite-position($arrow-down-pressed-glow);
-			}
-		}
-	}
+    .res-nightmode .arrow,
+    .arrow {
+        &.up {
+            @include retina-sprite(('up', $n-arrow-up, $n-arrow-up-2x));
+            &:hover {
+                @include retina-sprite(('up-hover', $n-arrow-up-hover, $n-arrow-up-hover-2x));
+            }
+        }
+        &.down {
+            @include retina-sprite(('down', $n-arrow-down, $n-arrow-down-2x));
+            &:hover {
+                @include retina-sprite(('down-hover', $n-arrow-down-hover, $n-arrow-down-hover-2x));
+            }
+        }
+    }
 }
 
 .midcol.likes, .midcol.dislikes {
-	.res-nightmode .arrow, .arrow {
-		&.up {
-			@include sprite-position($arrow-up-grey);
-			&:hover {
-				@include sprite-position($arrow-up-grey-glow);
-			}
-		}
-		&.upmod {
-			@include sprite-position($arrow-up-pressed);
-			&:hover {
-				@include sprite-position($arrow-up-pressed-glow);
-			}
-		}
-		&.down {
-			@include sprite-position($arrow-down-grey);
-			&:hover {
-				@include sprite-position($arrow-down-grey-glow);
-			}
-		}
-		&.downmod {
-			@include sprite-position($arrow-down-pressed);
-			&:hover {
-				@include sprite-position($arrow-down-pressed-glow);
-			}
-		}
-	}
+    .res-nightmode .arrow, .arrow {
+
+        &.up {
+            @include retina-sprite(('up', $n-arrow-up, $n-arrow-up-2x));
+            &:hover {
+                @include retina-sprite(('up-hover', $n-arrow-up-hover, $n-arrow-up-hover-2x));
+            }
+        }
+        &.upmod {
+            @include retina-sprite(('upmod', $n-arrow-up-voted, $n-arrow-up-voted-2x));
+            &:hover {
+                @include retina-sprite(('upmod-hover', $n-arrow-up-voted-hover, $n-arrow-up-voted-hover-2x));
+            }
+        }
+
+        &.down {
+            @include retina-sprite(('down', $n-arrow-down, $n-arrow-down-2x));
+            &:hover {
+                @include retina-sprite(('down-hover', $n-arrow-down-hover, $n-arrow-down-hover-2x));
+            }
+        }
+        &.downmod {
+            @include retina-sprite(('downmod', $n-arrow-down-voted, $n-arrow-down-voted-2x));
+            &:hover {
+                @include retina-sprite(('downmod-hover', $n-arrow-down-voted-hover, $n-arrow-down-voted-hover-2x));
+            }
+        }
+    }
 }
 
 .thing.comment {
-	.midcol {
-		//margin-top: 0px;
-		width: 28px !important;
-	}
-
+    .midcol {
+        width: 28px !important;
+    }
 }
