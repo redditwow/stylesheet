@@ -46,23 +46,20 @@ gulp.task('styles', ['sprites', 'sprites-retina', 'flair-link', 'flair-user'], f
     var stream = gulp.src('sass/**/main.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(rename('prod.css'))
-        .pipe(replace('../images/mini-panel.fw.png', '%%mini-panel%%'))
-        .pipe(replace('../images/repeat-bg.jpg', '%%repeat-bg-v2%%'))
         .pipe(replace('../images/background-wow-repeat.jpg', '%%background-wow-repeat%%'))
-        .pipe(replace('../images/repeat-bg-dark.jpg', '%%repeat-bg-dark-v2%%'))
+        .pipe(replace('../images/side-divide.fw.png', '%%side-divide%%'))
+        .pipe(replace('../images/partyparrot.png', '%%partyparrot%%'))
+        // .pipe(replace('../images/sitenav-bar-bg.jpg', '%%sitenav-bar-bg%%'))
+        .pipe(replace('../images/background-wow-top.jpg', '%%background-wow-top%%'))
+        .pipe(replace('../images/hero.jpg', '%%hero%%'))
+
+        // Images that need cache busting
         .pipe(replace('../sprites/spritesheet.png', '%%spritesheet-v8%%'))
-        .pipe(replace('../images/header-divide.fw.png', '%%header-divide%%'))
-        .pipe(replace('../images/game-icons-50.png', '%%game-icons-50%%'))
-        .pipe(replace('../images/section-divider.png', '%%section-divider%%'))
+        .pipe(replace('../sprites/spritesheet-retina-2x.png', '%%spritesheet-retina-2x-v1%%'))
+        .pipe(replace('../sprites/spritesheet-retina-1x.png', '%%spritesheet-retina-1x-v1%%'))
         .pipe(replace('../sprites/flair-link.png', '%%flair-link-v3%%'))
         .pipe(replace('../sprites/flair-user.png', '%%flair-user-v8%%'))
-        .pipe(replace('../images/header-illidan-still.jpg', '%%header-illidan-still%%'))
-        .pipe(replace('../images/side-divide.fw.png', '%%side-divide%%'))
-        .pipe(replace('../images/arrows.png', '%%arrows%%'))
-        .pipe(replace('../images/partyparrot.png', '%%partyparrot%%'))
-        .pipe(replace('../images/khadgar.jpg', '%%sitenav-bar-bg%%'))
-        .pipe(replace('../images/sitenav-bar-bg.jpg', '%%sitenav-bar-bg%%'))
-        .pipe(replace('../images/background-wow-top.jpg', '%%background-wow-top%%'))
+
         .pipe(replace('{{DEV}}', devMessage))
         // reddit doesn't like @charset, so just remove it...
         .pipe(replace('@charset "UTF-8";', ''))
@@ -130,9 +127,9 @@ gulp.task('sprites-retina', function () {
     var spriteData = gulp.src('./spritesheet_images_retina/*').pipe(spritesmith({
         cssName: 'sass/_spritesheet-retina.scss',
         retinaSrcFilter: ['./spritesheet_images_retina/*@2x.png'],
-        imgName: 'sprites/spritesheet-retina.png',
-        retinaImgName: './sprites/spritesheet-retina@2x.png',
-        cssSpritesheetName: 'spritesheet',
+        imgName: 'sprites/spritesheet-retina-1x.png',
+        retinaImgName: './sprites/spritesheet-retina-2x.png',
+        cssSpritesheetName: 'spritesheet-retina',
         algorithm: 'binary-tree'
     }));
     return spriteData.pipe(gulp.dest('.'));
