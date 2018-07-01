@@ -46,6 +46,10 @@ gulp.task('styles', ['sprites', 'sprites-retina', 'flair-link', 'flair-user'], f
     var stream = gulp.src('sass/**/main.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(rename('prod.css'))
+        .pipe(cleanCSS({
+            level: 2
+        }))
+
         .pipe(replace('../images/background-wow-repeat.jpg', '%%background-wow-repeat%%'))
         .pipe(replace('../images/side-divide.fw.png', '%%side-divide%%'))
         .pipe(replace('../images/partyparrot.png', '%%partyparrot%%'))
@@ -54,18 +58,16 @@ gulp.task('styles', ['sprites', 'sprites-retina', 'flair-link', 'flair-user'], f
         .pipe(replace('../images/hero.jpg', '%%hero%%'))
 
         // Images that need cache busting
-        .pipe(replace('../sprites/spritesheet.png', '%%spritesheet-v8%%'))
-        .pipe(replace('../sprites/spritesheet-retina-2x.png', '%%spritesheet-retina-2x-v1%%'))
+        .pipe(replace('../sprites/spritesheet.png', '%%spritesheet-v9%%'))
         .pipe(replace('../sprites/spritesheet-retina-1x.png', '%%spritesheet-retina-1x-v1%%'))
+        .pipe(replace('../sprites/spritesheet-retina-2x.png', '%%spritesheet-retina-2x-v1%%'))
         .pipe(replace('../sprites/flair-link.png', '%%flair-link-v3%%'))
         .pipe(replace('../sprites/flair-user.png', '%%flair-user-v8%%'))
 
         .pipe(replace('{{DEV}}', devMessage))
         // reddit doesn't like @charset, so just remove it...
         .pipe(replace('@charset "UTF-8";', ''))
-        .pipe(cleanCSS({
-            level: 2
-        }))
+
         .pipe(insert.prepend(herenow))
         .pipe(insert.prepend(credits))
         .pipe(size({
