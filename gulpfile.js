@@ -55,6 +55,7 @@ gulp.task('styles', ['sprites', 'sprites-retina', 'flair-link', 'flair-user'], f
         .pipe(replace('../images/partyparrot.png', '%%partyparrot%%'))
         // .pipe(replace('../images/sitenav-bar-bg.jpg', '%%sitenav-bar-bg%%'))
         .pipe(replace('../images/background-wow-top.jpg', '%%background-wow-top%%'))
+        .pipe(replace('../images/background-wow-top-v2.jpg', '%%background-wow-top-v2%%'))
         .pipe(replace('../images/hero.jpg', '%%hero%%'))
 
         // Images that need cache busting
