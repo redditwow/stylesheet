@@ -172,17 +172,6 @@ html[lang="ns"] {
 
 }
 
-.link.promotedlink.promoted,
-.link.promotedlink.external,
-.organic-listing .link,
-.organic-listing .link.compressed,
-.organic-listing .link.promotedlink,
-.organic-listing .promoted,
-.link.promotedlink,
-.organic-listing .link {
-	background: url(../images/background-wow-repeat.jpg) left #221912;
-}
-
 // Mod Report Reasons
 ul.report-reasons {
 	background-color: transparent;
@@ -236,14 +225,6 @@ ul.report-reasons {
 
 .recover-password {
 	color: $green_title;
-}
-
-// promoted links
-.organic-listing {
-	border: solid 1px $grey_text;
-	.help.help-hoverable {
-		color: $green_title;
-	}
 }
 
 .sponsored-tagline {

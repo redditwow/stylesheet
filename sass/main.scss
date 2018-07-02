@@ -8,6 +8,8 @@ $green_title: $bfa_orange;
 $light_text: rgb(247, 250, 229);
 $grey_text: rgb(187, 187, 187);
 
+$reddit_promoted: #24A0ED;
+
 $wow_btn_background: rgb(109, 23, 7);
 $wow_btn_hover: darken($wow_btn_background, 5%);
 $wow_btn_border: lighten($wow_btn_background, 15%);
@@ -49,6 +51,7 @@ $grey_border: lighten(#090909, 25%);
 @import "rules.scss";
 @import "report-modal.scss";
 @import "partyparrot.scss";
+@import "adverts.scss";
 @import "footer.scss";
 
 @import "dev.scss";

@@ -1,0 +1,22 @@
+// Top organic advert outer element (above the stickies)
+// Overrides the inline style. https://css-tricks.com/override-inline-styles-with-css/
+#siteTable_organic[style],
+// top organic advert inner elements
+.link.promotedlink.promoted,
+.link.promotedlink.external,
+.organic-listing .link,
+.organic-listing .link.compressed,
+.organic-listing .link.promotedlink,
+.organic-listing .promoted,
+.link.promotedlink,
+.organic-listing .link {
+    display: block;
+    background-color: unset !important;
+    border: 1px solid $reddit_promoted;
+}
+
+// promoted links
+.organic-listing .help.help-hoverable {
+    color: $green_title;
+    border: 1px solid $reddit_promoted;
+}
