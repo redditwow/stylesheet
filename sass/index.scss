@@ -1,10 +1,13 @@
 body {
-    background: url(../images/background-wow-top-v2.jpg), url(../images/background-wow-repeat.jpg) repeat-x, repeat top, top;
+    background-image: url(../images/background-wow-top-v2.jpg), url(../images/background-wow-repeat.jpg); // repeat-x top
+    background-position: top, top;
+    background-repeat: repeat-x, repeat;
+
     color: $grey_text;
 
     > .content {
-        padding-top: 15px;
-        margin-right: 330px;
+        padding-top: 16px;
+        margin-right: 352px;
         margin-top: 0px;
         margin-left: 15px;
     }

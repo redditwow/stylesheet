@@ -1,106 +1,124 @@
 // side bar
 .side {
-	// removes wow title from the sidebar
-	h1.redditname {
-		display: none;
-	}
+    // removes wow title from the sidebar
+    h1.redditname {
+        display: none;
+    }
 
-	color: $light_text;
-	background: transparent;
-	padding: 14px 10px 10px 10px;
+    // Push the side down so the buttons can be absolutely positioned at the top
+    margin-top: 108px;
+    margin-right: 14px;
+    margin-bottom: 16px;
 
-	.spacer:first-of-type {
-		margin-top: 2px;
-	}
+    color: $light_text;
+    background: transparent;
+    padding: 0px 10px 10px 10px;
+
+    .spacer:nth-of-type(1), .spacer:nth-of-type(2), .spacer:nth-of-type(3) {
+        margin: 0px;
+    }
 }
 
 // show my flair...
 // yer a moderator, harry
 .titlebox form.toggle, .leavemoderator {
-	background: none;
-	color: $light_text;
-	a {
-		color: $title;
-	}
+    background: none;
+    color: $light_text;
+    a {
+        color: $title;
+    }
+}
+
+.res .RESDashboardToggle, .res .RESshortcutside {
+    background-image: none !important;
+    color: $title;
+    text-decoration: none;
+    border: none;
+    //padding: 4px 6px 4px 0;
+    //margin: 2px 6px 2px -4px;
+    text-align: left;
+    width: auto;
 }
 
 .side {
-	// RES extra fancy buttons (Dashboard, Subscribe)
-	.res-fancy-toggle-button {
-		@include wow-btn-active;
-		@include wow-btn-text;
-
-		text-transform: capitalize;
-		display: inline-block;
-		text-align: center;
-		height: 29px;
-		line-height: 29px;
-
-		// @TODO 50/50 split of the Dashboard and Subscribe buttons
-		// this seems to work in Firefox, but not in Webkit.
-
-		//margin: -7px 0px 12px 0px !important;
-		//padding: 0px !important;
-		//width: 48.5% !important;
-
-		width: auto;
-		margin: -7px 5px 12px 0px !important;
-
-		&:hover {
-			@include wow-btn-active-hover;
-		}
-
-		&.remove {
-			@include wow-btn-remove;
-			&:hover {
-				@include wow-btn-remove-hover;
-			}
-		}
-
-	}
-	// reddit stock subscribe button
-	.fancy-toggle-button {
-		display: block;
-		@include wow-btn-text;
-		margin: 7px 0 12px 0;
-		.active {
-			@include wow-btn-text;
-			display: block;
-			text-transform: capitalize;
-			height: 29px;
-			line-height: 29px;
-			text-align: center;
-			border-radius: 0px;
-		}
-		&.remove, .remove {
-			@include wow-btn-remove;
-			&:hover {
-				@include wow-btn-remove-hover;
-			}
-		}
-		.add {
-			@include wow-btn-active;
-			&:hover {
-				@include wow-btn-active-hover;
-			}
-		}
-	}
+    // reddit stock subscribe button
+    .fancy-toggle-button {
+        display: block;
+        @include wow-btn-text;
+        margin: 7px 0 12px 0;
+        .active {
+            @include wow-btn-text;
+            display: block;
+            text-transform: capitalize;
+            height: 29px;
+            line-height: 29px;
+            text-align: center;
+            border-radius: 0px;
+        }
+        &.remove, .remove {
+            @include wow-btn-remove;
+            &:hover {
+                @include wow-btn-remove-hover;
+            }
+        }
+        .add {
+            @include wow-btn-active;
+            &:hover {
+                @include wow-btn-active-hover;
+            }
+        }
+    }
 }
 
 // Submit buttons
+// WoW Button Styles
 .morelink,
 button {
-	@include wow-btn-active;
-	&:hover {
-		@include wow-btn-active-hover;
-	}
-	.nub {
-		display: none;
-	}
-	a {
-		@include wow-btn-text;
-		float: left;
-	}
+    @include wow-btn-active;
+    &:hover {
+        @include wow-btn-active-hover;
+    }
+    .nub {
+        display: none;
+    }
+    a {
+        @include wow-btn-text;
+        float: left;
+    }
+}
+
+.submit-link .morelink {
+    position: absolute;
+    top: 268px;
+    width: 152px;
+    margin-left: -8px;
+    //&:after {
+    //    text-align: center;
+    //    width: 300px;
+    //    line-height: 16px;
+    //    content: "Submit";
+    //    position: absolute;
+    //    top: -32px;
+    //    left: 1px;
+    //    font-size: 1.5em;
+    //    color: $title;
+    //}
+}
+
+.submit-text .morelink {
+    position: absolute;
+    top: 268px;
+    width: 152px;
+    margin-left: 156px;
+}
+
+// Make the approved and mod notices more roomy
+.leavemoderator, form.toggle.leavecontributor-button {
+    margin: 10px 0px;
+}
+
+.leavecontributor-button {
+
 }
 
 // moderator box
@@ -114,376 +132,376 @@ button {
 // .sidecontentbox is only used for the moderator and wiki panels.
 // might as well just use that instead of the above CSS
 .sidecontentbox {
-	text-align: right;
-	.title h1,
-	.more a {
-		color: $light_text;
-	}
-	.author {
-		color: $title;
-		&:hover {
-			text-decoration: underline;
-		}
-	}
-	.content {
-		@include wow-modern-box;
-	}
-	// message the moderators
-	a.helplink {
-		&:before {
-			content: '';
-			display: block;
-			border: #333 solid 1px;
-			border-radius: 3px;
-			margin-bottom: -40px;
-			@include sprite($inv-letter-05);
-		}
-		&:hover:before {
-			@include sprite($inv-letter-05-glow-fw);
-		}
-		padding-bottom: 29px;
-		display: block;
-		color: $title;
-		margin-left: 4px;
-		font-size: 18px;
-		float: none;
-		text-transform: capitalize;
-		&:hover {
-			color: darken($title, 20%);
-		}
-	}
+    text-align: right;
+    .title h1,
+    .more a {
+        color: $light_text;
+    }
+    .author {
+        color: $title;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .content {
+        border: none !important;;
+        //    @include wow-modern-box;
+    }
+    // message the moderators
+    a.helplink {
+        &:before {
+            content: '';
+            display: block;
+            border: #333 solid 1px;
+            border-radius: 3px;
+            margin-bottom: -40px;
+            @include sprite($inv-letter-05);
+        }
+        &:hover:before {
+            @include sprite($inv-letter-05-glow-fw);
+        }
+        padding-bottom: 29px;
+        display: block;
+        color: $title;
+        margin-left: 4px;
+        font-size: 18px;
+        float: none;
+        text-transform: capitalize;
+        &:hover {
+            color: darken($title, 20%);
+        }
+    }
 }
 
 //mod tools
 #moderation_tools {
-	.title {
-		color: $light_text;
-	}
-	.icon-menu a {
-		background: none;
-		color: $light_text;
-	}
+    .title {
+        color: $light_text;
+    }
+    .icon-menu a {
+        background: none;
+        color: $light_text;
+    }
 }
 
 // multi reddit bubble when hovering over subscribe
 .hover-bubble {
-	&.multi-selector {
-		background: $grey_background;
-		border-color: $grey_border;
+    &.multi-selector {
+        background: $grey_background;
+        border-color: $grey_border;
 
-		// categorise title
-		strong {
-			color: #fff;
-		}
+        // categorise title
+        strong {
+            color: #fff;
+        }
 
-		// /r/wow link
-		a.sr {
-			color: $title;
-		}
+        // /r/wow link
+        a.sr {
+            color: $title;
+        }
 
-		// remove background from the textbox
-		.multi-list,
-		label {
-			color: $light_text;
-			&:hover {
-				background: none;
-			}
+        // remove background from the textbox
+        .multi-list,
+        label {
+            color: $light_text;
+            &:hover {
+                background: none;
+            }
 
-			a {
-				@include wow-btn-active;
-				@include wow-btn-text;
-			}
-		}
+            a {
+                @include wow-btn-active;
+                @include wow-btn-text;
+            }
+        }
 
-		// dark input box
-		.create-multi {
-			input[type=text] {
-				background: $grey_background_2;
-				border: 1px solid $grey_border;
-				color: #ddd;
-			}
-		}
+        // dark input box
+        .create-multi {
+            input[type=text] {
+                background: $grey_background_2;
+                border: 1px solid $grey_border;
+                color: #ddd;
+            }
+        }
 
-		//nub
-		&:after {
-			border-left-color: $grey_border;
-		}
-	}
+        //nub
+        &:after {
+            border-left-color: $grey_border;
+        }
+    }
 }
 
 //create your own subreddit
 .sidebox {
-	.spacer {
-		background: none;
-	}
-	.subtitle {
-		color: $light_text
-	}
+    .spacer {
+        background: none;
+    }
+    .subtitle {
+        color: $light_text
+    }
 }
 
 //recently viewed links
 .gadget {
-
-	a {
-		color: $title;
-	}
-	small {
-		color: $light_text !important;
-	}
+    a {
+        color: $title;
+    }
+    small {
+        color: $light_text !important;
+    }
 }
 
 // account activity
 .account-activity-box a {
-	color: $light_text;
+    color: $light_text;
 }
 
 #search {
-	input[type=text] {
-		background: $grey_background_2;
-		border: 1px solid $grey_border;
-		color: #ddd;
-	}
+    position: absolute;
+    top: 313px;
+    right: 14px;
+    width: 320px;
+
+    @include wow-modern-box;
+    input[type=text] {
+        background: none;
+        border: none;
+        color: #fff;
+    }
+
+    #searchexpando {
+        border: none;
+        margin: 0;
+        padding: 4px;
+        line-height: 30px;
+    }
 }
 
 // search doodad
 #searchexpando {
-	background-color: $grey_background;
-	border: 1px solid $grey_border;
-	color: #fff;
-	border-radius: 0;
-	a {
-		color: #fff;
-	}
-	#moresearchinfo {
-		border-top: 1px solid $grey_border;
-	}
+    background-color: $grey_background;
+    border: 1px solid $grey_border;
+    color: #fff;
+    border-radius: 0;
+    a {
+        color: #fff;
+    }
+    #moresearchinfo {
+        border-top: 1px solid $grey_border;
+    }
 }
 
 .side {
 
-	.md {
-		hr {
-			background: $grey_border;
-			height: 1px;
-			margin: 10px 0px;
-		}
-	}
+    @include wow-modern-box;
 
-	// Notice panel
-	h5 + blockquote,
-	h6 + blockquote {
-		display: block;
-		padding: 12px 7px;
-		margin-bottom: 10px;
-		margin-left: 0px;
-	}
+    .md {
+        padding: 15px;
 
-	h6 + blockquote, h5 + blockquote {
-		//background-color: $grey_background;
-		//border: 1px solid $grey_border;
-		//color: $light_text !important;
-		@include wow-modern-box;
-	}
+        hr {
+            background: $grey_border;
+            height: 1px;
+            margin: 10px 0px;
+        }
+    }
 
-	a[href$="wowbtn"] {
-		display: inline-block;
-		@include wow-btn-active;
-		@include wow-btn-text;
-		color: #fff !important;
-		text-align: center;
-		width: calc(100% - 2px);
-		padding: 8px 0px;
-		margin-bottom: 8px;
+    a[href$="wowbtn"] {
+        display: inline-block;
+        @include wow-btn-active;
+        @include wow-btn-text;
+        color: #fff !important;
+        text-align: center;
+        width: calc(100% - 2px);
+        padding: 8px 0px;
+        margin-bottom: 8px;
 
-		&:hover {
-			@include wow-btn-active-hover;
-		}
-	}
+        &:hover {
+            @include wow-btn-active-hover;
+        }
+    }
 
-	a[href$="disbtn"] {
+    a[href$="disbtn"] {
 
-		&:first-of-type {
-			margin-top: 10px;
-		}
+        &:first-of-type {
+            margin-top: 10px;
+        }
 
-		&:before {
-			content: '';
-			display: block;
-			margin-left: -40px;
-			margin-bottom: -26px;
-			@include sprite($discord);
-		}
+        &:before {
+            content: '';
+            display: block;
+            margin-left: -40px;
+            margin-bottom: -26px;
+            @include sprite($discord);
+        }
 
-		margin-left: 40px;
-		font-size: 14px;
-		height: 34px;
-		display: block;
-	}
+        margin-left: 40px;
+        font-size: 14px;
+        height: 34px;
+        display: block;
+    }
 
-	a[href$="ircbtn"] {
+    a[href$="ircbtn"] {
 
-		&:first-of-type {
-			margin-top: 10px;
-		}
+        &:first-of-type {
+            margin-top: 10px;
+        }
 
-		&:before {
-			content: '';
-			display: block;
-			margin-left: -40px;
-			margin-bottom: -26px;
-			@include sprite($irc);
-		}
+        &:before {
+            content: '';
+            display: block;
+            margin-left: -40px;
+            margin-bottom: -26px;
+            @include sprite($irc);
+        }
 
-		margin-left: 40px;
-		font-size: 14px;
-		height: 34px;
-		display: block;
-	}
+        margin-left: 40px;
+        font-size: 14px;
+        height: 34px;
+        display: block;
+    }
 
-	// Weekly thread links
-	a {
-		$side-icon-margin: 35px;
+    // Weekly thread links
+    a {
+        $side-icon-margin: 35px;
 
-		&[href$="monday"],
-		&[href$="tuesday"],
-		&[href$="wednesday"],
-		&[href$="thursday"],
-		&[href$="friday"],
-		&[href$="saturday"],
-		&[href$="sunday"] {
-			height: 18px;
-			margin-bottom: 7px;
-			margin-left: $side-icon-margin;
-			display: block;
-			color: $green_title;
-			font-size: 14px;
-			&:hover {
-				color: #fff;
-			}
-			&:before {
-				content: '';
-				display: block;
-				border: #333 solid 1px;
-				border-radius: 3px;
-				margin-bottom: -23px;
-				margin-left: -$side-icon-margin;
-			}
-		}
+        &[href$="monday"],
+        &[href$="tuesday"],
+        &[href$="wednesday"],
+        &[href$="thursday"],
+        &[href$="friday"],
+        &[href$="saturday"],
+        &[href$="sunday"] {
+            height: 18px;
+            margin-bottom: 7px;
+            margin-left: $side-icon-margin;
+            display: block;
+            color: $green_title;
+            font-size: 14px;
+            &:hover {
+                color: #fff;
+            }
+            &:before {
+                content: '';
+                display: block;
+                border: #333 solid 1px;
+                border-radius: 3px;
+                margin-bottom: -23px;
+                margin-left: -$side-icon-margin;
+            }
+        }
 
-		// extra margin for the last icon
-		&[href$="saturday"] {
-			margin-bottom: 28px;
-		}
+        // extra margin for the last icon
+        &[href$="saturday"] {
+            margin-bottom: 28px;
+        }
 
-		&[href$="monday"]:before {
-			@include sprite($inv_pet-babymurlocs-blue);
-		}
-		&[href$="monday"]:hover:before {
-			@include sprite($inv_pet-babymurlocs-blue-glow-fw);
-		}
+        &[href$="monday"]:before {
+            @include sprite($inv_pet-babymurlocs-blue);
+        }
+        &[href$="monday"]:hover:before {
+            @include sprite($inv_pet-babymurlocs-blue-glow-fw);
+        }
 
-		&[href$="tuesday"]:before {
-			@include sprite($inv-shield-20);
-		}
-		&[href$="tuesday"]:hover:before {
-			@include sprite($inv-shield-20-glow);
-		}
+        &[href$="tuesday"]:before {
+            @include sprite($inv-shield-20);
+        }
+        &[href$="tuesday"]:hover:before {
+            @include sprite($inv-shield-20-glow);
+        }
 
-		&[href$="wednesday"]:before {
-			@include sprite($spell-holy-prayerofmendingtga);
-		}
-		&[href$="wednesday"]:hover:before {
-			@include sprite($spell-holy-prayerofmendingtga-glow-fw);
-		}
+        &[href$="wednesday"]:before {
+            @include sprite($spell-holy-prayerofmendingtga);
+        }
+        &[href$="wednesday"]:hover:before {
+            @include sprite($spell-holy-prayerofmendingtga-glow-fw);
+        }
 
-		&[href$="thursday"]:before {
-			@include sprite($inv-misc-bag-32);
-		}
-		&[href$="thursday"]:hover:before {
-			@include sprite($inv-misc-bag-32-glow-fw);
-		}
+        &[href$="thursday"]:before {
+            @include sprite($inv-misc-bag-32);
+        }
+        &[href$="thursday"]:hover:before {
+            @include sprite($inv-misc-bag-32-glow-fw);
+        }
 
-		&[href$="friday"]:before {
-			@include sprite($achievement-bg-topdps);
-		}
-		&[href$="friday"]:hover:before {
-			@include sprite($achievement-bg-topdps-glow-fw);
-		}
+        &[href$="friday"]:before {
+            @include sprite($achievement-bg-topdps);
+        }
+        &[href$="friday"]:hover:before {
+            @include sprite($achievement-bg-topdps-glow-fw);
+        }
 
-		&[href$="saturday"]:before {
-			@include sprite($achievement-bg-returnxflags-def-wsg);
-		}
-		&[href$="saturday"]:hover:before {
-			@include sprite($achievement-bg-returnxflags-def-wsg-glow-fw);
-		}
+        &[href$="saturday"]:before {
+            @include sprite($achievement-bg-returnxflags-def-wsg);
+        }
+        &[href$="saturday"]:hover:before {
+            @include sprite($achievement-bg-returnxflags-def-wsg-glow-fw);
+        }
 
-		&[href$="sunday"]:before {
-			@include sprite($ability-creature-cursed-05);
-		}
-		&[href$="sunday"]:hover:before {
-			@include sprite($ability-creature-cursed-05-glow-fw);
-		}
-	}
+        &[href$="sunday"]:before {
+            @include sprite($ability-creature-cursed-05);
+        }
+        &[href$="sunday"]:hover:before {
+            @include sprite($ability-creature-cursed-05-glow-fw);
+        }
+    }
 
-	// Other Blizzard Subreddits
-	a[href*="#game"] {
-		content: "";
-		display: inline-block;
-		// All these icons have the same size and use the same sprite image
-		// This saves a little space by not having to spread the size and image rules for every game.
-		@include sprite-width($game-wow-fw);
-		@include sprite-height($game-wow-fw);
-		@include sprite-image($game-wow-fw);
-		margin-right: 5px;
-		font-size: 0px;
-	}
-	a[href*="#warcraft"] {
-		@include sprite-position($game-wow-fw);
-		&:hover {
-			@include sprite-position($game-wow-hover-fw);
-		}
-	}
-	a[href*="#diablo"] {
-		@include sprite-position($game-diablo-fw);
-		&:hover {
-			@include sprite-position($game-diablo-hover-fw);
-		}
-	}
-	a[href*="#starcraft"] {
-		@include sprite-position($game-starcraft-fw);
-		&:hover {
-			@include sprite-position($game-starcraft-hover-fw);
-		}
-	}
-	a[href*="#hearthstone"] {
-		@include sprite-position($game-hearthstone-fw);
-		&:hover {
-			@include sprite-position($game-hearthstone-hover-fw);
-		}
-	}
-	a[href*="#heroesofthestorm"] {
-		@include sprite-position($game-heroesofthestorm-fw);
-		&:hover {
-			@include sprite-position($game-heroesofthestorm-hover-fw);
-		}
-	}
-	a[href*="#overwatch"] {
-		@include sprite-position($game-teamfortressthree-fw);
-		&:hover {
-			@include sprite-position($game-teamfortressthree-hover-fw);
-		}
-	}
+    // Other Blizzard Subreddits
+    a[href*="#game"] {
+        content: "";
+        display: inline-block;
+        // All these icons have the same size and use the same sprite image
+        // This saves a little space by not having to spread the size and image rules for every game.
+        @include sprite-width($game-wow-fw);
+        @include sprite-height($game-wow-fw);
+        @include sprite-image($game-wow-fw);
+        margin-right: 5px;
+        font-size: 0px;
+    }
+    a[href*="#warcraft"] {
+        @include sprite-position($game-wow-fw);
+        &:hover {
+            @include sprite-position($game-wow-hover-fw);
+        }
+    }
+    a[href*="#diablo"] {
+        @include sprite-position($game-diablo-fw);
+        &:hover {
+            @include sprite-position($game-diablo-hover-fw);
+        }
+    }
+    a[href*="#starcraft"] {
+        @include sprite-position($game-starcraft-fw);
+        &:hover {
+            @include sprite-position($game-starcraft-hover-fw);
+        }
+    }
+    a[href*="#hearthstone"] {
+        @include sprite-position($game-hearthstone-fw);
+        &:hover {
+            @include sprite-position($game-hearthstone-hover-fw);
+        }
+    }
+    a[href*="#heroesofthestorm"] {
+        @include sprite-position($game-heroesofthestorm-fw);
+        &:hover {
+            @include sprite-position($game-heroesofthestorm-hover-fw);
+        }
+    }
+    a[href*="#overwatch"] {
+        @include sprite-position($game-teamfortressthree-fw);
+        &:hover {
+            @include sprite-position($game-teamfortressthree-hover-fw);
+        }
+    }
 
-	a[href*="#procss"] {
-		content: "";
-		display: inline-block;
-		@include sprite($procss);
-		font-size: 0px;
-		opacity: 0.6;
-		transition: opacity .25s ease-in-out;
-		&:hover {
-			opacity: 1;
-		}
-	}
-
+    a[href*="#procss"] {
+        content: "";
+        display: inline-block;
+        @include sprite($procss);
+        font-size: 0px;
+        opacity: 0.6;
+        transition: opacity .25s ease-in-out;
+        &:hover {
+            opacity: 1;
+        }
+    }
 }
