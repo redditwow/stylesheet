@@ -3,136 +3,139 @@ body {
     color: $grey_text;
 
     > .content {
-        padding-top: 10px;
+        padding-top: 15px;
         margin-right: 330px;
         margin-top: 0px;
+        margin-left: 15px;
     }
 }
 
 .tagline, .search-result-meta {
-	color: $light_text;
+    color: $light_text;
 }
 
 .tagline a {
-	color: $light_text;
+    color: $light_text;
 }
 
 .entry .buttons li a {
-	color: darken($grey_text, 20%);
+    color: darken($grey_text, 20%);
 }
 
 .domain a {
-	color: $grey_text;
+    color: $grey_text;
 }
 
 .thing.link {
+    padding: 15px 0px;
+    margin-bottom: 0px;
 
-	padding: 15px 0px; // 12px 0px;
-	//margin-bottom: 1px;
+    background: rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 0 1px #000;
+    border: rgba(255, 255, 255, 0.15) solid 1px;
 
-	background: rgba(0, 0, 0, 0.25);
-	box-shadow: 0 0 0 1px #000;
-	border: rgba(255, 255, 255, 0.15) solid 1px;
-	//border-bottom: none;
+    &:hover {
+        background: rgba(0, 0, 0, 0.2);
+    }
 
-	//border-bottom: rgba(255, 255, 255, 0.15) solid 1px;
+    &.stickied.link a.title {
+        color: $green_title;
 
-	&:hover {
-		background: rgba(0, 0, 0, 0.2);
-	}
+        transition: color 0.2s;
 
-	&.stickied.link a.title {
-		color: $green_title;
+        &:hover {
+            color: white;
+        }
+    }
 
-		transition: color 0.2s;
+    .midcol {
+        margin-top: -4px;
+        margin-right: 14px;
+        margin-left: 14px;
+        width: 3.1em !important;
+        overflow: visible;
+    }
+    .rank {
+        display: none;
+    }
 
-		&:hover {
-			color: white;
-		}
-	}
+    a {
+        &.thumbnail:not(.default):not(.self):not(.spoiler) {
+            margin: 0px 12px 0px 0px;
+            img {
+                max-height: 64px;
+                height: auto !important;
+                width: auto !important;
+            }
+            border-radius: 2px;
+            position: relative;
+            border: 1px solid #403A34;
+            box-shadow: 0 0 0 1px #000;
+            background-color: $grey_background;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                box-shadow: inset 0 0 5px rgba(3, 0, 0, 0.4);
+            }
+        }
 
-	// pushes the vote arrows and rank down to align with the thumbnail
-	.midcol {
-		margin-top: -6px;
-		width: 3.1em !important;
-		overflow: visible;
-	}
-	.rank {
-		color: transparent;
-	}
+        //&.self{
+        //	margin-top: 10px;
+        //	margin-bottom: 10px;
+        //	margin-left: 15px;
+        //	margin-right: 20px;
+        //}
 
-	a {
-		&.thumbnail:not(.default):not(.self):not(.spoiler)  {
-			margin: 0px 12px 0px 0px;
-			img {
-				max-height: 64px;
-				height: auto !important;
-				width: auto !important;
-			}
-			border-radius: 2px;
-			position: relative;
-			border: 1px solid #403A34;
-			box-shadow: 0 0 0 1px #000;
-			background-color: $grey_background;
-			&::before {
-				content: "";
-				position: absolute;
-				top: 0;
-				right: 0;
-				left: 0;
-				bottom: 0;
-				box-shadow: inset 0 0 5px rgba(3, 0, 0, 0.4);
-			}
-		}
+        &.title {
+            color: $title;
 
-		//&.self{
-		//	margin-top: 10px;
-		//	margin-bottom: 10px;
-		//	margin-left: 15px;
-		//	margin-right: 20px;
-		//}
+            &:hover {
+                //color: darken($title, 20%);
+                text-decoration: underline;
+            }
 
-		&.title {
-			color: $title;
+            &:visited {
+                color: $title_visited;
+                &:hover {
+                    //color: darken($title, 40%);
+                }
 
-			&:hover {
-				//color: darken($title, 20%);
-				text-decoration: underline;
-			}
+            }
 
-			&:visited {
-				color: $title_visited;
-				&:hover {
-					//color: darken($title, 40%);
-				}
+        }
+    }
+}
 
-			}
-
-		}
-	}
-
+// Create a gap between the stickied threads. Tip of the hat to /r/overwatch
+.stickied + .clearleft + .thing:not(.stickied),
+.stickied + .thing:not(.stickied) {
+    margin-top: 20px !important;
 }
 
 // Remove the thumbnail border from promoted links
 .organic-listing a.thumbnail:after {
-	content: none !important
+    content: none !important
 }
 
 .showreplies {
-	color: $green_title;
+    color: $green_title;
 }
 
 .nav-buttons {
-	color: $grey_text;
-	.separator {
-		color: $grey_text;
-	}
+    color: $grey_text;
+    .separator {
+        color: $grey_text;
+    }
 
-	.prev-button a, .next-button a {
-		@include wow-btn-active;
-		@include wow-btn-text;
-		&:hover {
-			@include wow-btn-active-hover;
-		}
-	}
+    .prev-button a, .next-button a {
+        @include wow-btn-active;
+        @include wow-btn-text;
+        &:hover {
+            @include wow-btn-active-hover;
+        }
+    }
 }

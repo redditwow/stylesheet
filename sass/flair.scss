@@ -174,13 +174,13 @@
 a.thumbnail.default,
 a.thumbnail.self {
     @include retina-sprite(('default', $t-self, $t-self-2x));
-    margin: 10px 20px 10px 15px;
+    margin: 10px 20px 10px 12px;
 }
 
 a.thumbnail.spoiler,
 .thing.spoiler a.thumbnail.spoiler {
     @include retina-sprite(('spoiler', $t-spoiler, $t-spoiler-2x));
-    margin: 10px 20px 10px 15px;
+    margin: 10px 20px 10px 12px;
     img {
         // hide the thumbnail image to reveal the icon underneath
         display: none;
