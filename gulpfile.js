@@ -47,9 +47,10 @@ gulp.task('styles', ['sprites', 'sprites-retina', 'flair-link', 'flair-user'], f
         .pipe(sass().on('error', sass.logError))
         .pipe(rename('prod.css'))
         .pipe(cleanCSS({
-            level: 2
+            level: {
+                2: {all: true}
+            }
         }))
-
         .pipe(replace('../images/background-wow-repeat.jpg', '%%background-wow-repeat%%'))
         .pipe(replace('../images/side-divide.fw.png', '%%side-divide%%'))
         .pipe(replace('../images/partyparrot.png', '%%partyparrot%%'))
