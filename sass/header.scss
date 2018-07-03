@@ -1,164 +1,144 @@
 // header background
 #header {
 
-	height: 250px;
-	background: url("../images/hero.jpg") center no-repeat #100F15;
-	//margin-bottom: 20px;
-	box-shadow: 0px 10px 14px 10px rgba(0, 0, 0, 0.2);
+    height: 250px;
+    background: url("../images/hero.jpg") center no-repeat #100F15;
+    //margin-bottom: 20px;
+    box-shadow: 0px 10px 14px 10px rgba(0, 0, 0, 0.2);
 
-	.redditname a {
-		@include sprite($logo);
-		display: block;
-		margin: 0 auto;
-		font-size: 0px;
-		color: #364657;
-		position: absolute;
-		z-index: 100;
-		top: 128px;;
-		left: 145px;
+    .redditname {
+        position: absolute;
+        top: 31px;
+        width: 100%;
+    }
 
-		&:hover {
-			@include sprite($logo);
-		}
-	}
+    .redditname a {
+        @include retina-sprite($h-logo-group);
+        display: block;
+        margin: 0 auto;
+        font-size: 0px;
+        color: #364657;
+        //position: absolute;
+        z-index: 100;
+        //top: 128px;;
+        //left: 145px;
 
-	border-bottom: 1px #000 solid;
+        //&:hover {
+        //    @include sprite($logo);
+        //}
+    }
 
-	&:after {
-		border-bottom: 1px #fff solid;
-		//content: '';
-		//background: url(../images/header-divide.fw.png) repeat-x;
-		//height: 23px;
-		//position: absolute;
-		//left: 0;
-		//right: 0;
-		//top: 142px;
-	}
-
+    border-bottom: 1px #000 solid;
 }
 
 .tabmenu {
-	position: relative;
-	//top: -1px;
-	left: 220px;
+    position: relative;
+    top: 172px;
+    left: 140px;
 
-	//background: rgba(0, 0, 0, 0.5);
+    //background: rgba(0, 0, 0, 0.5);
 
-	z-index: 9999;
+    z-index: 9999;
 
-	li.selected a {
-		//text-shadow: 0 0 10px #e6ff42, 0 0 10px #e6ff42;
-		color: $bfa_orange;
-		background: rgb(0, 0, 0);
-		background: rgba(0, 0, 0, 0.5);
-		border: none;
-		z-index: 100;
-	}
-	li a {
-		color: #fff;
-		background: rgb(0, 0, 0);
-		background: rgba(0, 0, 0, 0.5);
-	}
+    li.selected a {
+        //text-shadow: 0 0 10px #e6ff42, 0 0 10px #e6ff42;
+        color: $bfa_orange;
+        background: none;
+        border: none;
+        z-index: 100;
+    }
+    li a {
+        color: #fff;
+        background: none;
+        margin: 0px;
+        padding: 0 16px;
+        font-weight: 400;
+        line-height: 44px;
+        height: 44px;
+        display: inline-block;
+        font-size: 13px;
+        text-shadow: 1px 1px 1px #000;
+        position: relative;
+    }
 }
 
-
-//.tabmenu {
-//	position: relative;
-//	left: -108px;
-//	top: 45px;
-//	padding: 10px 10px;
-//
-//	background: url(../images/sitenav-bar-bg.jpg) repeat-x;
-//	box-shadow: 0 0 10px rgba(0, 0, 0, .6);
-//
-//	border: 1px solid #000;
-//
-//	z-index: 9999;
-//
-//	li:not(.selected) a {
-//		color: #FEDA39;
-//		background: none;
-//		border: none;
-//
-//		-webkit-background-clip: text;
-//		//-webkit-text-fill-color: transparent;
-//		background-image: -webkit-linear-gradient(top, #efd100 0, #e2a233 38%, #f0c328 60%, #fff1a3 86%, #ffe13e 100%);
-//		//background: rgb(0, 0, 0);
-//		//background: rgba(0, 0, 0, 0.5);
-//	}
-//	li.selected a {
-//		background: none;
-//		color: white;
-//		border: none;
-//	}
-//}
+#header {
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 208px;
+        width: 100%;
+        height: 40px;
+        @include wow-modern-box;
+        background: rgba(0, 0, 0, 0.5);
+    }
+}
 
 // reddit/ snoo logo
 #header-img-a {
-	margin-top: 63px;
-	margin-left: 30px;
-	height: 128px;
-	width: 100px;
-	display: inline-block;
+    margin-top: 63px;
+    margin-left: 30px;
+    height: 128px;
+    width: 100px;
+    display: inline-block;
+    position: absolute;
+    z-index: 9999;
 
-	@include sprite($snoo);
-	&:hover {
-		@include sprite($snoo-hover);
-	}
+    @include sprite($snoo);
+    &:hover {
+        @include sprite($snoo-hover);
+    }
 
-	#header-img {
-		opacity: 0;
-	}
+    #header-img {
+        opacity: 0;
+    }
 
 }
 
 // Edit in the subreddit menu list
 #sr-more-link {
-	display: none;
-}
-
-#header-bottom-left {
-	//margin-top: 44px;
+    display: none;
 }
 
 // header subreddit list
 #sr-header-area,
-	// bottom right user panel
+    // bottom right user panel
 #header-bottom-right {
-	background: rgb(0, 0, 0);
-	background: rgba(0, 0, 0, 0.5);
-	padding: 5px 0px 5px 5px;
-	color: #EEEEEE;
-	white-space: nowrap;
-	border-bottom: 1px solid #1d1d1d;
-	a {
-		color: #eee;
-	}
-	border-top-left-radius: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 0px 5px 5px;
+    color: #EEEEEE;
+    white-space: nowrap;
+    border-bottom: 1px solid #1d1d1d;
+    a {
+        color: #eee;
+    }
+    border-top-left-radius: 0;
 
-	right: 10px;
-	bottom: 6px;
+    right: 10px;
+    bottom: 6px;
 
-	// allow res to override the position
-	&.res-navTop {
-		bottom: auto;
-	}
+    // allow res to override the position
+    &.res-navTop {
+        bottom: auto;
+    }
 }
 
 // Fix for subreddit dropdown below the logo
 #sr-header-area .drop-choices.srdrop {
-	z-index: 200;
+    z-index: 200;
 }
 
 .user, .separator {
-	color: #EEEEEE;
+    color: #EEEEEE;
 }
 
 // header subreddit list items
 .sr-bar a {
-	color: #eee
+    color: #eee
 }
 
 .dropdown.srdrop .selected {
-	color: #fff;
+    color: #fff;
 }

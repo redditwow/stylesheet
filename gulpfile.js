@@ -60,9 +60,9 @@ gulp.task('styles', ['sprites', 'sprites-retina', 'flair-link', 'flair-user'], f
         .pipe(replace('../images/hero.jpg', '%%hero%%'))
 
         // Images that need cache busting
-        .pipe(replace('../sprites/spritesheet.png', '%%spritesheet-v9%%'))
-        .pipe(replace('../sprites/spritesheet-retina-1x.png', '%%spritesheet-retina-1x-v3%%'))
-        .pipe(replace('../sprites/spritesheet-retina-2x.png', '%%spritesheet-retina-2x-v3%%'))
+        .pipe(replace('../sprites/spritesheet.png', '%%spritesheet-v11%%'))
+        .pipe(replace('../sprites/spritesheet-retina-1x.png', '%%spritesheet-retina-1x-v4%%'))
+        .pipe(replace('../sprites/spritesheet-retina-2x.png', '%%spritesheet-retina-2x-v4%%'))
         .pipe(replace('../sprites/flair-link.png', '%%flair-link-v3%%'))
         .pipe(replace('../sprites/flair-user.png', '%%flair-user-v8%%'))
 
