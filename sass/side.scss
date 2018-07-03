@@ -295,7 +295,7 @@ button {
     @include wow-modern-box;
 
     .md {
-        padding: 15px;
+        padding: 6px;
 
         hr {
             background: $grey_border;
@@ -310,7 +310,8 @@ button {
         @include wow-btn-text;
         color: #fff !important;
         text-align: center;
-        width: calc(100% - 2px);
+        //width: calc(100% - 2px);
+        width: 100%;
         padding: 8px 0px;
         margin-bottom: 8px;
 
@@ -448,60 +449,28 @@ button {
     a[href*="#game"] {
         content: "";
         display: inline-block;
-        // All these icons have the same size and use the same sprite image
-        // This saves a little space by not having to spread the size and image rules for every game.
-        @include sprite-width($game-wow-fw);
-        @include sprite-height($game-wow-fw);
-        @include sprite-image($game-wow-fw);
-        margin-right: 5px;
+        margin-right: 4px;
         font-size: 0px;
+        &:hover {
+            opacity: 0.8;
+        }
     }
     a[href*="#warcraft"] {
-        @include sprite-position($game-wow-fw);
-        &:hover {
-            @include sprite-position($game-wow-hover-fw);
-        }
+        @include retina-sprite(('g-wow', $g-world-of-warcraft, $g-world-of-warcraft-2x));
     }
     a[href*="#diablo"] {
-        @include sprite-position($game-diablo-fw);
-        &:hover {
-            @include sprite-position($game-diablo-hover-fw);
-        }
+        @include retina-sprite(('g-d3', $g-diablo-iii, $g-diablo-iii-2x));
     }
     a[href*="#starcraft"] {
-        @include sprite-position($game-starcraft-fw);
-        &:hover {
-            @include sprite-position($game-starcraft-hover-fw);
-        }
+        @include retina-sprite(('g-s2', $g-starcraft-ii, $g-starcraft-ii-2x));
     }
     a[href*="#hearthstone"] {
-        @include sprite-position($game-hearthstone-fw);
-        &:hover {
-            @include sprite-position($game-hearthstone-hover-fw);
-        }
+        @include retina-sprite(('g-hearthstone', $g-hearthstone, $g-hearthstone-2x));
     }
     a[href*="#heroesofthestorm"] {
-        @include sprite-position($game-heroesofthestorm-fw);
-        &:hover {
-            @include sprite-position($game-heroesofthestorm-hover-fw);
-        }
+        @include retina-sprite(('g-hots', $g-heroes-of-the-storm, $g-heroes-of-the-storm-2x));
     }
     a[href*="#overwatch"] {
-        @include sprite-position($game-teamfortressthree-fw);
-        &:hover {
-            @include sprite-position($game-teamfortressthree-hover-fw);
-        }
-    }
-
-    a[href*="#procss"] {
-        content: "";
-        display: inline-block;
-        @include sprite($procss);
-        font-size: 0px;
-        opacity: 0.6;
-        transition: opacity .25s ease-in-out;
-        &:hover {
-            opacity: 1;
-        }
+        @include retina-sprite(('g-overwatch', $g-like-team-fortress-two-but-not-as-good, $g-like-team-fortress-two-but-not-as-good-2x));
     }
 }
