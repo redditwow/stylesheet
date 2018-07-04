@@ -35,9 +35,6 @@
     position: relative;
     top: 172px;
     left: 140px;
-
-    //background: rgba(0, 0, 0, 0.5);
-
     z-index: 9999;
 
     li.selected a {
@@ -50,15 +47,19 @@
     li a {
         color: #fff;
         background: none;
-        margin: 0px;
+        margin: 3px 0px 0px 0px;
         padding: 0 16px;
         font-weight: 400;
-        line-height: 44px;
-        height: 44px;
+        line-height: 39px;
+        height: 40px;
         display: inline-block;
         font-size: 13px;
         text-shadow: 1px 1px 1px #000;
         position: relative;
+        transition: background-color 0.1s ease-in-out;
+        &:hover {
+            background: rgba(0, 0, 0, 0.5);
+        }
     }
 }
 
