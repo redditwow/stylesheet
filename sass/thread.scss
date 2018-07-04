@@ -1,226 +1,265 @@
 .thing .entry {
-	//margin-top: 10px;
-	// @todo put this back?
+    //margin-top: 10px;
+    // @todo put this back?
 }
 
 // fix for collapsed comments jerking about
 .thing.comment .entry {
-	margin-left: 42px;
+    margin-left: 42px;
 }
 
 .link .usertext-body .md {
-	background-color: rgba(0, 0, 0, 0.1) !important;
-	border: none;
-	border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    border: none;
+    border-radius: 2px;
 
-	// This should make the width of self posts full width with the actual copy constrained to 40em, sort of
-	// like how comments work.
-	max-width: unset;
-	p {
-		max-width: 60em;
-	}
+    // This should make the width of self posts full width with the actual copy constrained to 40em, sort of
+    // like how comments work.
+    max-width: unset;
+    p {
+        max-width: 60em;
+    }
 }
 
 .linkinfo {
-	background: $grey_background;
-	border: 1px solid $grey_border;
-	border-radius: 0px;
-	padding-bottom: 0px;
-	border-bottom: none;
-	.date {
-		border-bottom: 2px solid #0c1619;
-		padding: 5px 0;
-		&:before {
-			content: "Submitted ";
-		}
-		span {
-			display: none;
-		}
-	}
-	.shortlink {
-		font-size: 0;
-		input {
-			margin-top: 10px;
-			margin-left: -6px;
-			background: $grey_background_2;
-			border: 1px solid $grey_border;
-			color: #ddd;
-			width: 298px;
-			padding: 10px 0px;
-			text-align: center;
-			font-size: 14px;
-		}
-	}
+    background: none;
+    border: none;
+    //border-radius: 0px;
+    padding-bottom: 0px;
+    border-bottom: none;
+    .date {
+        //border-bottom: 2px solid #0c1619;
+        padding: 5px 0;
+        &:before {
+            content: "Submitted ";
+        }
+        span {
+            display: none;
+        }
+    }
+    .shortlink {
+        font-size: 0;
+        input {
+            margin-top: 10px;
+            margin-left: -14px;
+            margin-bottom: 10px;
+
+            background: rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 0 1px #000;
+
+            border-top: rgba(255, 255, 255, 0.15) solid 1px;
+            border-bottom: rgba(255, 255, 255, 0.15) solid 1px;
+            border-right: none;
+            border-left: none;
+
+            color: #ddd;
+            width: 318px;
+            padding: 10px 0px;
+            text-align: center;
+            font-size: 14px;
+        }
+    }
 }
 
 textarea {
-	color: $grey_text;
-	background-color: $grey_background;
-	border: 1px solid $grey_border;
+    color: $grey_text;
+    background-color: $grey_background;
+    border: 1px solid $grey_border;
+}
+
+div.comment {
+    .flat-list.buttons {
+        padding: 10px 0px;
+        margin: -10px 0px;
+        opacity: 0.4;
+        transition: opacity .10s ease-in-out;
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .tagline {
+        span.score, time {
+            color: $grey_text !important;
+        }
+    }
+
+    //give voting arrows in comments a bit more room to compensate for the lack of a total in the middle
+    .arrow.down, .arrow.downmod {
+        margin-top: 10px;
+    }
 }
 
 // The copious amount of !importants are brought to you by RES. Thanks RES.
-
 @mixin sub-comment() {
-	margin-right: 0px !important;
-	margin-bottom: -1px !important;
+    padding-bottom: 0px !important;
+    //border-right: none !important;
+}
 
-	padding-bottom: 0px !important;
-	border-right: none !important;
+.commentarea .sitetable.nestedlisting{
+    margin-right: 1px;
 }
 
 .res.res-commentBoxes div.comment, div.comment {
-	background-color: rgba(0, 0, 0, 0.25) !important;
-	border: 1px solid $grey_border !important;
-	position: relative;
-	outline: none;
+    background: url('../images/background-wow-repeat-dark.jpg') !important;
+    box-shadow: 0 0 0 1px #000 !important;
+    border: rgba(255, 255, 255, 0.15) solid 1px !important;
+    position: relative;
+    outline: none;
 
-	padding: 10px 0 0 0 !important;
-	margin: 10px 0px -1px 10px !important;
+    //padding: 10px 4px 10px 0px !important;
+    //margin: 10px 0px -1px 10px !important;
 
-	.child, .showreplies {
-		border-left: none;
-	}
+    padding: 10px 0px 10px 0px !important;
+    margin: 10px -1px -1px 10px !important;
 
-	div.comment {
-		background-color: rgba(0, 0, 0, 0.1) !important;
-		@include sub-comment();
-		div.comment {
-			background-color: rgba(0, 0, 0, 0.1) !important;
-			@include sub-comment();
-			div.comment {
-				background-color: rgba(0, 0, 0, 0.1) !important;
-				@include sub-comment();
-				div.comment {
-					background-color: rgba(0, 0, 0, 0.1) !important;
-					@include sub-comment();
-					div.comment {
-						background-color: rgba(0, 0, 0, 0.1) !important;
-						@include sub-comment();
-						div.comment {
-							background-color: rgba(0, 0, 0, 0.1) !important;
-							@include sub-comment();
-							div.comment {
-								background-color: rgba(0, 0, 0, 0.1) !important;
-								@include sub-comment();
-								div.comment {
-									background-color: rgba(0, 0, 0, 0.1) !important;
-									@include sub-comment();
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
+    &:not(:first-child) {
+        margin-top: 0px !important;
+    }
+
+    .child, .showreplies {
+        border-left: none;
+    }
+
+    div.comment {
+        background: url('../images/background-wow-repeat.jpg') !important;
+        @include sub-comment();
+        div.comment {
+            background: url('../images/background-wow-repeat-dark.jpg') !important;
+            @include sub-comment();
+            div.comment {
+                background: url('../images/background-wow-repeat.jpg') !important;
+                @include sub-comment();
+                div.comment {
+                    background: url('../images/background-wow-repeat-dark.jpg') !important;
+                    @include sub-comment();
+                    div.comment {
+                        background: url('../images/background-wow-repeat.jpg') !important;
+                        @include sub-comment();
+                        div.comment {
+                            background: url('../images/background-wow-repeat-dark.jpg') !important;
+                            @include sub-comment();
+                            div.comment {
+                                background: url('../images/background-wow-repeat.jpg') !important;
+                                @include sub-comment();
+                                div.comment {
+                                    background: url('../images/background-wow-repeat-dark.jpg') !important;
+                                    @include sub-comment();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
-// Rounded should only be applied on the left, and needs to override RES's rounded comments
 .res.res-commentBoxes.res-commentBoxes-rounded .comment,
 .comment {
-	border-radius: 3px 0px 0px 3px !important;
+    border-radius: 0px !important;
 }
 
 .usertext.border .usertext-body {
-	/* @TODO Style better */
-	//color: $title;
-	background-color: transparent !important;
+    /* @TODO Style better */
+    //color: $title;
+    background-color: transparent !important;
 }
 
 .single-page .link .rank {
-	display: block;
-	width: 2.2ex !important;
+    display: block;
+    width: 2.2ex !important;
 }
 
 // maybe RES
 span.score {
-	color: $light_text !important;
+    color: $light_text !important;
 }
 
 //new comments, obviously.
 .new-comment {
-	// remove reddit's highlighting
-	.usertext-body {
-		background-color: transparent !important;
-		border: none;
-	}
-	// add our own
-	.entry:before {
-		content: '';
-		display: inline-block;
-		float: right;
-		margin-right: 10px;
-		@include sprite($exclamation-fw);
-	}
+    // remove reddit's highlighting
+    .usertext-body {
+        background-color: transparent !important;
+        border: none;
+    }
+    // add our own
+    .entry:before {
+        content: '';
+        display: inline-block;
+        float: right;
+        margin-right: 10px;
+        @include sprite($exclamation-fw);
+    }
 }
 
 .usertext-edit {
-	a {
-		color: $title;
-		&:hover {
-			color: darken($title, 20%) !important;
-		}
-	}
+    a {
+        color: $title;
+        &:hover {
+            color: darken($title, 20%) !important;
+        }
+    }
 }
 
 .reddit-infobar.with-icon::before {
-	background-color: $wow_btn_warning_background;
+    background-color: $wow_btn_warning_background;
 }
 
 // overwatch style left hand full height comment collapses
 .commentarea .comment {
 
-	a.expand {
-		position: absolute;
-		top: 0;
-		left: 0;
-		padding: 4px 4px 0;
-		height: 100%;
-		box-sizing: border-box;
-		transition: 200ms;
-		color: $grey_text;
+    a.expand {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 4px 4px 0;
+        height: 100%;
+        box-sizing: border-box;
+        transition: 200ms;
+        color: $grey_text;
 
-		&:hover {
-			background: $wow_btn_background;
-		}
-	}
+        &:hover {
+            background: $wow_btn_background;
+        }
+    }
 
-	&.noncollapsed .midcol {
-		margin-left: 30px;
-		margin-right: 10px;
-	}
+    &.noncollapsed .midcol {
+        margin-left: 30px;
+        margin-right: 10px;
+    }
 
-	&.collapsed {
-		padding-top: 0 !important;
-		padding-bottom: 10px !important;
-	}
+    &.collapsed {
+        padding-top: 0 !important;
+        padding-bottom: 10px !important;
+    }
 }
 
 //continue this thread
 .deepthread {
-	a {
-		color: $green_title;
-	}
-	&:after {
-		background: none;
-		// reddit doesn't allow backslashes in CSS, so the below syntax can't be used :(
-		//content:'\25B6';
-		content: '▶';
-	}
+    a {
+        color: $green_title;
+    }
+    &:after {
+        background: none;
+        // reddit doesn't allow backslashes in CSS, so the below syntax can't be used :(
+        //content:'\25B6';
+        content: '▶';
+    }
 }
 
 //load more comments
 .morecomments {
-	a {
-		color: $green_title;
-	}
-	.gray {
-		color: $grey_text;
-	}
+    a {
+        color: $green_title;
+    }
+    .gray {
+        color: $grey_text;
+    }
+    margin: 5px 0px;
 }
 
 // push the reply form over to make room for the collapse link
 .commentarea .comment .usertext-edit {
-	margin-left: 20px;
+    margin-left: 20px;
 }

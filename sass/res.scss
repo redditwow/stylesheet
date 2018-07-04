@@ -3,7 +3,7 @@
 .res .RES-keyNav-activeElement,
 .res .commentarea .RES-keyNav-activeElement .md,
 .res .commentarea .res .RES-keyNav-activeElement.entry .noncollapsed {
-	background-color: rgba($grey_background_2, 0.5) !important;
+	background-color: transparent !important;
 }
 
 // comment highlights
@@ -12,10 +12,10 @@
 	background-color: transparent !important;
 }
 
-
 .thing, .usertext {
 	.entry.res-selected, .entry.res-selected .md-container {
-		background: rgba(0, 0, 0, 0.2) !important;
+		background-color: transparent !important;
+		//background: rgba(0, 0, 0, 0.2) !important;
 	}
 }
 

@@ -52,6 +52,7 @@ gulp.task('styles', ['sprites', 'sprites-retina', 'flair-link', 'flair-user'], f
             }
         }))
         .pipe(replace('../images/background-wow-repeat.jpg', '%%background-wow-repeat%%'))
+        .pipe(replace('../images/background-wow-repeat-dark.jpg', '%%background-wow-repeat-dark%%'))
         .pipe(replace('../images/side-divide.fw.png', '%%side-divide%%'))
         .pipe(replace('../images/partyparrot.png', '%%partyparrot%%'))
         // .pipe(replace('../images/sitenav-bar-bg.jpg', '%%sitenav-bar-bg%%'))
