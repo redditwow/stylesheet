@@ -102,10 +102,8 @@
 }
 
 // header subreddit list
-#sr-header-area,
-    // bottom right user panel
-#header-bottom-right {
-    background: rgb(0, 0, 0);
+#sr-header-area {
+
     background: rgba(0, 0, 0, 0.5);
     padding: 5px 0px 5px 5px;
     color: #EEEEEE;
@@ -115,7 +113,6 @@
         color: #eee;
     }
     border-top-left-radius: 0;
-
     right: 10px;
     bottom: 6px;
 
@@ -123,6 +120,26 @@
     &.res-navTop {
         bottom: auto;
     }
+}
+
+// bottom right user panel
+#header-bottom-right {
+    background: none;
+    color: #eee;
+    a {
+        color: #eee;
+    }
+    white-space: nowrap;
+    z-index: 999;
+    padding-right: 20px;
+    padding-bottom: 16px;
+    font-size: 12px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+.res-navTop #header-bottom-right {
+    background: rgba(0, 0, 0, 0.5) !important;
+    padding: 5px;
 }
 
 // Fix for subreddit dropdown below the logo
