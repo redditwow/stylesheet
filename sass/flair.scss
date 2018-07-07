@@ -18,11 +18,43 @@
 
 @each $group in $user-groups {
     $sprite-name: nth($group, 1);
-
     .#{$sprite-name}:after {
         @include retina-sprite($group);
-        //background-color: rgba(255, 255, 255, 0.1);
-        //@include retina-sprite($sprite);
+    }
+}
+
+@each $group in $bespoke-user-groups {
+    $sprite-name: nth($group, 1);
+    .#{$sprite-name}:after {
+        @include retina-sprite($group);
+    }
+}
+
+.flair-u-aphoenix,
+.flair-u-aptbot,
+.flair-u-bewmkin,
+.flair-u-colonel,
+.flair-u-exiled,
+.flair-u-flapsnapple,
+.flair-u-flopseh,
+.flair-u-gumdrops,
+.flair-u-herpdeeps,
+.flair-u-klngarthur,
+.flair-u-ladymirax,
+.flair-u-lhavelund,
+.flair-u-mmwq,
+.flair-u-phedre,
+.flair-u-redshirt,
+.flair-u-roboticide,
+.flair-u-sharkraptor,
+.flair-u-treasure,
+.flair-u-vertical,
+.flair-u-vusys,
+.flair-u-waahht,
+.flair-u-zvitiate {
+    &:after {
+        border-radius: 5px;
+        border: 1px solid #000;
     }
 }
 

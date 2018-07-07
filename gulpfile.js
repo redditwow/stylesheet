@@ -21,7 +21,7 @@ if (config.automaticStagingDeployment) {
     });
 }
 
-gulp.task('styles', ['sprites', 'sprites-retina', 'flair-link', 'flair-user'], function () {
+gulp.task('styles', ['sprites', 'sprites-retina', 'flair-link', 'flair-user', 'flair-user-bespoke'], function () {
 
     var credits = fs.readFileSync('sass/credits.css', 'utf8');
     var herenow = fs.readFileSync('sass/herenow.css', 'utf8');
@@ -68,6 +68,9 @@ gulp.task('styles', ['sprites', 'sprites-retina', 'flair-link', 'flair-user'], f
         .pipe(replace('../sprites/flair-user-1x.png', '%%flair-user-1x-v9%%'))
         .pipe(replace('../sprites/flair-user-2x.png', '%%flair-user-2x-v9%%'))
 
+        .pipe(replace('../sprites/flair-user-bespoke-1x.png', '%%flair-user-bespoke-1x-v2%%'))
+        .pipe(replace('../sprites/flair-user-bespoke-2x.png', '%%flair-user-bespoke-2x-v2%%'))
+
         .pipe(replace('{{DEV}}', devMessage))
         // reddit doesn't like @charset, so just remove it...
         .pipe(replace('@charset "UTF-8";', ''))
@@ -100,6 +103,22 @@ gulp.task('flair-user', function () {
         algorithm: 'binary-tree',
         cssSpritesheetName: 'flair-user',
         cssRetinaGroupsName: 'user-groups',
+        cssVarMap: function (sprite) {
+            sprite.name = 'flair-' + sprite.name
+        }
+    }));
+    return spriteData.pipe(gulp.dest('.'));
+});
+
+gulp.task('flair-user-bespoke', function () {
+    var spriteData = gulp.src('./flair_user_bespoke/*.png').pipe(spritesmith({
+        cssName: 'sass/_flair-user-bespoke.scss',
+        retinaSrcFilter: ['./flair_user_bespoke/*@2x.png'],
+        imgName: 'sprites/flair-user-bespoke-1x.png',
+        retinaImgName: './sprites/flair-user-bespoke-2x.png',
+        algorithm: 'binary-tree',
+        cssSpritesheetName: 'flair-user-bespoke',
+        cssRetinaGroupsName: 'bespoke-user-groups',
         cssVarMap: function (sprite) {
             sprite.name = 'flair-' + sprite.name
         }
