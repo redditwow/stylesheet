@@ -20,12 +20,10 @@
         color: #364657;
         //position: absolute;
         z-index: 100;
-        //top: 128px;;
-        //left: 145px;
 
-        //&:hover {
-        //    @include sprite($logo);
-        //}
+        &:hover {
+            @include retina-sprite($h-logo-glow-group);
+        }
     }
 
     border-bottom: 1px #000 solid;
