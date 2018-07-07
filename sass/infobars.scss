@@ -1,67 +1,78 @@
 // reddit newsletter
 section.infobar.newsletterbar {
-	width: 100%;
+    width: 100%;
 }
 
 // EU cookie law
 .cookie-infobar {
-	background-color: rgba($wow_btn_background, 0.9);
-	border-color: $wow_btn_border;
+    background-color: rgba($wow_btn_background, 0.9);
+    border-color: $wow_btn_border;
 
-	.md{
-		color: #fff;
-	}
+    .md {
+        color: #fff;
+    }
 
-	&.with-icon {
-		&:before {
-			// @TODO replace this with a WoW icon
-			background-color: rgba($wow_btn_background, 0.9);
-		}
-	}
+    &.with-icon {
+        &:before {
+            // @TODO replace this with a WoW icon
+            background-color: rgba($wow_btn_background, 0.9);
+        }
+    }
 
-	// @TODO this button is kinda ugly
-	.c-btn-primary {
-		background-color: #000;
-		border: 1px solid #000;
-		color: #ffffff;
-		border-radius: 0;
-		&:hover {
-			background-color: #111;
-			border: 1px solid #000;
-		}
-	}
+    // @TODO this button is kinda ugly
+    .c-btn-primary {
+        background-color: #000;
+        border: 1px solid #000;
+        color: #ffffff;
+        border-radius: 0;
+        &:hover {
+            background-color: #111;
+            border: 1px solid #000;
+        }
+    }
 }
 
 // green info bars
 .contest-mode,
-.infobar:not(.listingsignupbar),
+    //.infobar:not(.listingsignupbar),
 .infobar.mellow {
-	background-color: $wow_btn_background;
-	border: 1px solid $wow_btn_border;
-	@include wow-btn-text();
-	a {
-		color: #fff;
-	}
+    background-color: $wow_btn_background;
+    border: 1px solid $wow_btn_border;
+    @include wow-btn-text();
+    a {
+        color: #fff;
+    }
 }
 
-.infobar.listingsignupbar{
-	margin: 15px 0px !important;
-}
+//.infobar.listingsignupbar{
+//	margin: 15px 0px !important;
+//}
 
 // yellow info bars
 .gold-accent.comment-visits-box,
 .archived-infobar,
 .locked-infobar {
 
-	@include wow-btn-warning();
-	@include wow-btn-text();
+    @include wow-btn-warning();
+    @include wow-btn-text();
 
-	a {
-		@include wow-btn-text();
-	}
+    a {
+        @include wow-btn-text();
+    }
 
-	.md {
-		color: #fff;
-		@include wow-btn-text;
-	}
+    .md {
+        color: #fff;
+        @include wow-btn-text;
+    }
+}
+
+.infobar {
+    // Fake comment textarea on threads with a CTA to sign up.
+    &.commentsignupbar {
+        display: none;
+    }
+    // Yellow wavey snoo banner.
+    &.listingsignupbar {
+        display: none;
+    }
 }
