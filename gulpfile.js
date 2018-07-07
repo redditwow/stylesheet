@@ -8,6 +8,8 @@ var rename = require('gulp-rename');
 var fs = require('fs');
 var notify = require("gulp-notify");
 var insert = require('gulp-insert');
+var image = require('gulp-image');
+var newer = require('gulp-newer');
 var snoowrap = require('snoowrap');
 var config = require('./config.json');
 
@@ -62,8 +64,8 @@ gulp.task('styles', ['sprites', 'sprites-retina', 'flair-link', 'flair-user', 'f
 
         // Images that need cache busting
         .pipe(replace('../sprites/spritesheet.png', '%%spritesheet-v11%%'))
-        .pipe(replace('../sprites/spritesheet-retina-1x.png', '%%spritesheet-retina-1x-v4%%'))
-        .pipe(replace('../sprites/spritesheet-retina-2x.png', '%%spritesheet-retina-2x-v4%%'))
+        .pipe(replace('../sprites/spritesheet-retina-1x.png', '%%spritesheet-retina-1x-v5%%'))
+        .pipe(replace('../sprites/spritesheet-retina-2x.png', '%%spritesheet-retina-2x-v5%%'))
         .pipe(replace('../sprites/flair-link.png', '%%flair-link-v3%%'))
         .pipe(replace('../sprites/flair-user-1x.png', '%%flair-user-1x-v9%%'))
         .pipe(replace('../sprites/flair-user-2x.png', '%%flair-user-2x-v9%%'))
@@ -90,81 +92,88 @@ gulp.task('styles', ['sprites', 'sprites-retina', 'flair-link', 'flair-user', 'f
 
             }
         });
-
-
 });
 
 gulp.task('flair-user', function () {
-    var spriteData = gulp.src('./flair_user/*.png').pipe(spritesmith({
-        cssName: 'sass/_flair-user.scss',
-        retinaSrcFilter: ['./flair_user/*@2x.png'],
-        imgName: 'sprites/flair-user-1x.png',
-        retinaImgName: './sprites/flair-user-2x.png',
-        algorithm: 'binary-tree',
-        cssSpritesheetName: 'flair-user',
-        cssRetinaGroupsName: 'user-groups',
-        cssVarMap: function (sprite) {
-            sprite.name = 'flair-' + sprite.name
-        }
-    }));
+    var spriteData = gulp.src('./flair_user/*.png')
+        .pipe(newer('sprites/flair-user-1x.png'))
+        .pipe(spritesmith({
+            cssName: 'sass/_flair-user.scss',
+            retinaSrcFilter: ['./flair_user/*@2x.png'],
+            imgName: 'sprites/flair-user-1x.png',
+            retinaImgName: './sprites/flair-user-2x.png',
+            algorithm: 'binary-tree',
+            cssSpritesheetName: 'flair-user',
+            cssRetinaGroupsName: 'user-groups',
+            cssVarMap: function (sprite) {
+                sprite.name = 'flair-' + sprite.name
+            }
+        }));
     return spriteData.pipe(gulp.dest('.'));
 });
 
 gulp.task('flair-user-bespoke', function () {
-    var spriteData = gulp.src('./flair_user_bespoke/*.png').pipe(spritesmith({
-        cssName: 'sass/_flair-user-bespoke.scss',
-        retinaSrcFilter: ['./flair_user_bespoke/*@2x.png'],
-        imgName: 'sprites/flair-user-bespoke-1x.png',
-        retinaImgName: './sprites/flair-user-bespoke-2x.png',
-        algorithm: 'binary-tree',
-        cssSpritesheetName: 'flair-user-bespoke',
-        cssRetinaGroupsName: 'bespoke-user-groups',
-        cssVarMap: function (sprite) {
-            sprite.name = 'flair-' + sprite.name
-        }
-    }));
+    var spriteData = gulp.src('./flair_user_bespoke/*.png')
+        .pipe(newer('sprites/flair-user-bespoke-1x.png'))
+        .pipe(spritesmith({
+            cssName: 'sass/_flair-user-bespoke.scss',
+            retinaSrcFilter: ['./flair_user_bespoke/*@2x.png'],
+            imgName: 'sprites/flair-user-bespoke-1x.png',
+            retinaImgName: './sprites/flair-user-bespoke-2x.png',
+            algorithm: 'binary-tree',
+            cssSpritesheetName: 'flair-user-bespoke',
+            cssRetinaGroupsName: 'bespoke-user-groups',
+            cssVarMap: function (sprite) {
+                sprite.name = 'flair-' + sprite.name
+            }
+        }));
     return spriteData.pipe(gulp.dest('.'));
 });
 
 
 gulp.task('flair-link', function () {
-    var spriteData = gulp.src('./flair_link/*.png').pipe(spritesmith({
-        imgName: 'sprites/flair-link.png',
-        cssName: 'sass/_flair-link.scss',
-        cssSpritesheetName: 'flair-link',
-        algorithm: 'binary-tree',
-        cssVarMap: function (sprite) {
-            sprite.name = 'linkflair-' + sprite.name
-        }
-    }));
+    var spriteData = gulp.src('./flair_link/*.png')
+        .pipe(newer('sprites/flair-link.png'))
+        .pipe(spritesmith({
+            imgName: 'sprites/flair-link.png',
+            cssName: 'sass/_flair-link.scss',
+            cssSpritesheetName: 'flair-link',
+            algorithm: 'binary-tree',
+            cssVarMap: function (sprite) {
+                sprite.name = 'linkflair-' + sprite.name
+            }
+        }));
     return spriteData.pipe(gulp.dest('.'));
 });
 
 
 gulp.task('sprites', function () {
-    var spriteData = gulp.src('./spritesheet_images/*').pipe(spritesmith({
-        imgName: 'sprites/spritesheet.png',
-        cssName: 'sass/_spritesheet.scss',
-        cssSpritesheetName: 'spritesheet',
-        algorithm: 'binary-tree'
-    }));
+    var spriteData = gulp.src('./spritesheet_images/*')
+        .pipe(newer('sprites/spritesheet.png'))
+        .pipe(spritesmith({
+            imgName: 'sprites/spritesheet.png',
+            cssName: 'sass/_spritesheet.scss',
+            cssSpritesheetName: 'spritesheet',
+            algorithm: 'binary-tree'
+        }));
     return spriteData.pipe(gulp.dest('.'));
 });
 
 gulp.task('sprites-retina', function () {
-    var spriteData = gulp.src('./spritesheet_images_retina/*').pipe(spritesmith({
-        cssName: 'sass/_spritesheet-retina.scss',
-        retinaSrcFilter: ['./spritesheet_images_retina/*@2x.png'],
-        imgName: 'sprites/spritesheet-retina-1x.png',
-        retinaImgName: './sprites/spritesheet-retina-2x.png',
-        cssSpritesheetName: 'spritesheet-retina',
-        algorithm: 'binary-tree'
-    }));
+    var spriteData = gulp.src('./spritesheet_images_retina/*')
+        .pipe(newer('sprites/spritesheet-retina-2x.png'))
+        .pipe(spritesmith({
+            cssName: 'sass/_spritesheet-retina.scss',
+            retinaSrcFilter: ['./spritesheet_images_retina/*@2x.png'],
+            imgName: 'sprites/spritesheet-retina-1x.png',
+            retinaImgName: './sprites/spritesheet-retina-2x.png',
+            cssSpritesheetName: 'spritesheet-retina',
+            algorithm: 'binary-tree'
+        }));
     return spriteData.pipe(gulp.dest('.'));
 });
 
 gulp.task('demo', function () {
-
     var sidebar = fs.readFileSync('demo/content/sidebar.html', 'utf8');
     var snoo = fs.readFileSync('demo/content/header_snoo.html', 'utf8');
 
@@ -177,6 +186,11 @@ gulp.task('demo', function () {
         .pipe(gulp.dest('./demo/'));
 });
 
+gulp.task('image', function () {
+    gulp.src('./sprites/*')
+        .pipe(image())
+        .pipe(gulp.dest('./sprites'));
+});
 
 //Watch task
 gulp.task('default', function () {

@@ -9,6 +9,8 @@
     "gulp-sass": "^4.0.1",
     "gulp-size": "^3.0.0",
     "gulp.spritesmith": "^6.9.0",
+    "gulp-image": "^4.3.0",
+    "gulp-newer": "^1.4.0",
     "snoowrap": "^1.15.2"
   },
   "resolutions": {
