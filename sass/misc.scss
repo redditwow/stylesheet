@@ -1,44 +1,44 @@
 
 .linkflairlabel {
-	color: $light_text;
-	border: lighten(black, 20%) 1px solid;
-	background: black;
+    color: $light_text;
+    border: lighten(black, 20%) 1px solid;
+    background: black;
 }
 
 // Dropdowns, both the subreddit menu and comment orderer, maybe others too
 
 .drop-choices {
-	//display: block !important;
-	color: $light_text;
-	background: $grey_background_2;
-	a, a.choice {
-		color: $light_text;
-		&:hover {
-			background: $grey_background;
-		}
-	}
+    //display: block !important;
+    color: $light_text;
+    background: $grey_background_2;
+    a, a.choice {
+        color: $light_text;
+        &:hover {
+            background: $grey_background;
+        }
+    }
 }
 
 body > .content .link .rank,
 .rank-spacer {
-	width: 2.2ex !important;
+    width: 2.2ex !important;
 }
 
 // about/edit settings
 .linefield, .linefield.mobile {
-	background: transparent;
-	border: none;
-	.title {
-		color: $green_title;
-	}
-	a {
-		color: $title;
-	}
+    background: transparent;
+    border: none;
+    .title {
+        color: $green_title;
+    }
+    a {
+        color: $title;
+    }
 }
 
 // archived post modal popup thingy
 .interstitial-message.md-container .md {
-	color: #222;
+    color: #222;
 }
 
 //spoilers
@@ -47,145 +47,145 @@ a[href="/spoiler"],
 a[href="/s"],
 a[href="#spoiler"],
 a[href="#s"] {
-	background: rgba(0, 0, 0, 0.2);
-	color: transparent !important;
-	text-shadow: 0 0 8px rgba(0, 0, 0, 0.9);
-	cursor: default;
+    background: rgba(0, 0, 0, 0.2);
+    color: transparent !important;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.9);
+    cursor: default;
 
-	&:hover {
-		color: $grey_text !important;
-		text-shadow: 0 0 0 !important;
-	}
+    &:hover {
+        color: $grey_text !important;
+        text-shadow: 0 0 0 !important;
+    }
 
-	&:active {
-		pointer-events: none;
-	}
+    &:active {
+        pointer-events: none;
+    }
 }
 
 html[lang="ns"] {
-	.linkflair-spoiler a.title,
-	.linkflair-spoiler a.title:visited {
-		background: rgba(0, 0, 0, 0.2);
-		color: transparent !important;
-		text-shadow: 0 0 8px rgba($light_text, 0.9);
-	}
+    .linkflair-spoiler a.title,
+    .linkflair-spoiler a.title:visited {
+        background: rgba(0, 0, 0, 0.2);
+        color: transparent !important;
+        text-shadow: 0 0 8px rgba($light_text, 0.9);
+    }
 
-	.linkflair-spoiler a.title:hover,
-	.linkflair-spoiler:hover a.title {
-		background: transparent !important;
-		color: darken($title, 20%) !important;
-		text-shadow: 0 0 0 !important;
-	}
+    .linkflair-spoiler a.title:hover,
+    .linkflair-spoiler:hover a.title {
+        background: transparent !important;
+        color: darken($title, 20%) !important;
+        text-shadow: 0 0 0 !important;
+    }
 
 }
 
 // Mod Report Reasons
 ul.report-reasons {
-	background-color: transparent;
+    background-color: transparent;
 }
 
 .entry .buttons li.reported-stamp {
-	color: #111111;
+    color: #111111;
 }
 
 //search
 .searchpane {
-	background: $grey_background_2;
-	color: $grey_text;
-	border: 1px solid $grey_border;
+    background: $grey_background_2;
+    color: $grey_text;
+    border: 1px solid $grey_border;
 
-	@include wow-link();
+    @include wow-link();
 
-	input[type=text] {
-		background: $grey_background_2;
-		border: 1px solid $grey_border;
-		color: #ddd !important;
-	}
+    input[type=text] {
+        background: $grey_background_2;
+        border: 1px solid $grey_border;
+        color: #ddd !important;
+    }
 }
 
 //debug for search, also footer
 .debuginfo {
-	color: $light_text
+    color: $light_text
 }
 
 //beta clickbox???
 .expand-media:hover {
-	overflow: unset !important;
+    overflow: unset !important;
 }
 
 // recently review links
 .gadget {
-	.midcol {
-		width: 28px;
-		margin: 0;
-	}
+    .midcol {
+        width: 28px;
+        margin: 0;
+    }
 }
 
 //login box
 #login_login-main {
-	input[type=text], input[type=password] {
-		background: $grey_background_2;
-		border: 1px solid $grey_border;
-		color: #ddd;
-	}
+    input[type=text], input[type=password] {
+        background: $grey_background_2;
+        border: 1px solid $grey_border;
+        color: #ddd;
+    }
 }
 
 .recover-password {
-	color: $green_title;
+    color: $green_title;
 }
 
 .sponsored-tagline {
-	color: $grey_text;
+    color: $grey_text;
 }
 
 // https://www.reddit.com/r/modtalk/comments/5llbts/little_css_trick_to_make_your_subreddit_look_a/
 .title, .tagline, .usertext {
-	max-height: 10000px;
+    max-height: 10000px;
 }
 
 .hover-bubble {
-	background-color: $grey_background_2;
-	border: $grey_border 1px solid;
-	color: $grey_text;
+    background-color: $grey_background_2;
+    border: $grey_border 1px solid;
+    color: $grey_text;
 
-	.author-tooltip__head {
-		background-color: $grey_background_2;
-		border-bottom-color: $grey_border;
-		a {
-			color: $green_title;
-		}
-	}
+    .author-tooltip__head {
+        background-color: $grey_background_2;
+        border-bottom-color: $grey_border;
+        a {
+            color: $green_title;
+        }
+    }
 
-	.author-tooltip__credentials-list li {
-		border-right-color: $grey_border;
-	}
+    .author-tooltip__credentials-list li {
+        border-right-color: $grey_border;
+    }
 
-	.author-tooltip__credentials-list strong {
-		color: $green_title;
-	}
+    .author-tooltip__credentials-list strong {
+        color: $green_title;
+    }
 
-	.author-tooltip__link-list {
-		@include wow-link();
-	}
+    .author-tooltip__link-list {
+        @include wow-link();
+    }
 
-	&.anchor-bottom-left {
-		// outer boarder of the arrow
-		&:before {
-			border-top-color: $grey-border !important;
-		}
-		// inside colour of the arrow
-		&:after {
-			border-top-color: $grey_background_2 !important;
-		}
-	}
+    &.anchor-bottom-left {
+        // outer boarder of the arrow
+        &:before {
+            border-top-color: $grey-border !important;
+        }
+        // inside colour of the arrow
+        &:after {
+            border-top-color: $grey_background_2 !important;
+        }
+    }
 }
 
 // inline / expando cross post preview
 .crosspost-preview {
-	background: $grey_background;
-	border-color: $grey_border;
+    background: $grey_background;
+    border-color: $grey_border;
 }
 
 .crosspost-preview .title {
-	color: $title;
+    color: $title;
 }
