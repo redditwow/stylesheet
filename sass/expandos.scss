@@ -1,0 +1,87 @@
+.top-matter .expando-button {
+    background-color: transparent;
+    &.selftext {
+        &.collapsed {
+            @include retina-sprite($expando-aa-group);
+        }
+        &.collapsed:hover,
+        &.expanded,
+        &.expanded:hover {
+            @include retina-sprite($expando-aa-hover-group);
+        }
+    }
+
+    // Vanilla reddit uses this for images and videos
+    &.video {
+        &.collapsed {
+            @include retina-sprite($expando-plus-group);
+        }
+        &.collapsed:hover,
+        &.expanded,
+        &.expanded:hover {
+            @include retina-sprite($expando-plus-hover-group);
+        }
+    }
+
+    &.crosspost {
+        &.collapsed {
+            @include retina-sprite($expando-xpost-group);
+        }
+        &.collapsed:hover,
+        &.expanded,
+        &.expanded:hover {
+            @include retina-sprite($expando-xpost-hover-group);
+        }
+    }
+
+    // RES Additional Expandos
+
+    // Single image
+    &.image {
+        &.collapsed {
+            @include retina-sprite($expando-image-group);
+        }
+
+        max-width: unset;
+        max-height: unset;
+
+        &.collapsed:hover,
+        &.expanded,
+        &.expanded:hover {
+            @include retina-sprite($expando-image-hover-group);
+        }
+    }
+
+    // Gallery. RES also targets with both classes, so to match the specificity so must we.
+    &.image.gallery {
+        &.collapsed {
+            @include retina-sprite($expando-gallery-group);
+        }
+
+        max-width: unset;
+        max-height: unset;
+
+        &.collapsed:hover,
+        &.expanded,
+        &.expanded:hover {
+            @include retina-sprite($expando-gallery-hover-group);
+        }
+    }
+
+    // Gifs, etc
+    &.video-muted {
+        &.collapsed {
+            @include retina-sprite($expando-plus-group);
+        }
+
+        max-width: unset;
+        max-height: unset;
+
+        &.collapsed:hover,
+        &.expanded,
+        &.expanded:hover {
+            @include retina-sprite($expando-plus-hover-group);
+        }
+    }
+
+}

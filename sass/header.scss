@@ -18,9 +18,7 @@
         margin: 0 auto;
         font-size: 0px;
         color: #364657;
-        //position: absolute;
         z-index: 100;
-
         &:hover {
             @include retina-sprite($h-logo-glow-group);
         }
