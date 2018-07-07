@@ -142,3 +142,42 @@ body {
         }
     }
 }
+
+/**
+ * ##########
+ * Thumbnails
+ * ##########
+ */
+
+a.thumbnail.default,
+a.thumbnail.self {
+    @include retina-sprite(('default', $t-self, $t-self-2x));
+    margin: 10px 20px 10px 12px;
+}
+
+a.thumbnail.spoiler,
+.thing.spoiler a.thumbnail.spoiler {
+    @include retina-sprite(('spoiler', $t-spoiler, $t-spoiler-2x));
+    margin: 10px 20px 10px 12px;
+    img {
+        // hide the thumbnail image to reveal the icon underneath
+        display: none;
+    }
+}
+
+.spoiler-stamp {
+    color: $green_title;
+    padding: 0px 10px;
+}
+
+.thing.over18 a.thumbnail {
+    @include retina-sprite(('nsfw', $t-nsfw, $t-nsfw-2x));
+    img {
+        // hide the thumbnail image to reveal the NSFW icon underneath
+        display: none;
+    }
+}
+
+.linkflairlabel {
+    max-width: unset;
+}

@@ -65,7 +65,8 @@ gulp.task('styles', ['sprites', 'sprites-retina', 'flair-link', 'flair-user'], f
         .pipe(replace('../sprites/spritesheet-retina-1x.png', '%%spritesheet-retina-1x-v4%%'))
         .pipe(replace('../sprites/spritesheet-retina-2x.png', '%%spritesheet-retina-2x-v4%%'))
         .pipe(replace('../sprites/flair-link.png', '%%flair-link-v3%%'))
-        .pipe(replace('../sprites/flair-user.png', '%%flair-user-v8%%'))
+        .pipe(replace('../sprites/flair-user-1x.png', '%%flair-user-1x-v9%%'))
+        .pipe(replace('../sprites/flair-user-2x.png', '%%flair-user-2x-v9%%'))
 
         .pipe(replace('{{DEV}}', devMessage))
         // reddit doesn't like @charset, so just remove it...
@@ -92,10 +93,13 @@ gulp.task('styles', ['sprites', 'sprites-retina', 'flair-link', 'flair-user'], f
 
 gulp.task('flair-user', function () {
     var spriteData = gulp.src('./flair_user/*.png').pipe(spritesmith({
-        imgName: 'sprites/flair-user.png',
         cssName: 'sass/_flair-user.scss',
+        retinaSrcFilter: ['./flair_user/*@2x.png'],
+        imgName: 'sprites/flair-user-1x.png',
+        retinaImgName: './sprites/flair-user-2x.png',
         algorithm: 'binary-tree',
         cssSpritesheetName: 'flair-user',
+        cssRetinaGroupsName: 'user-groups',
         cssVarMap: function (sprite) {
             sprite.name = 'flair-' + sprite.name
         }

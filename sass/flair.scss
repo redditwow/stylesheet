@@ -5,14 +5,24 @@
  */
 
 // loops over user flairs and creates the class to put the sprite image in the :after
-@mixin wow-sprites($sprites) {
-    @each $sprite in $sprites {
-        $sprite-name: nth($sprite, 10);
-        .#{$sprite-name}:after {
-            @include sprite-position($sprite);
-            @include sprite-width($sprite);
-            @include sprite-height($sprite);
-        }
+//@mixin wow-sprites($retina-groups) {
+//    @each $sprite in $retina-groups {
+//        $sprite-name: nth($sprite, 10);
+//        .#{$sprite-name}:after {
+//            @include retina-sprite($sprite);
+//        }
+//    }
+//}
+//
+//@include wow-sprites($retina-groups);
+
+@each $group in $user-groups {
+    $sprite-name: nth($group, 1);
+
+    .#{$sprite-name}:after {
+        @include retina-sprite($group);
+        //background-color: rgba(255, 255, 255, 0.1);
+        //@include retina-sprite($sprite);
     }
 }
 
@@ -40,18 +50,17 @@
 }
 
 .flair {
-    padding: 1px 3px;
+    padding: 1px 6px 1px 3px;
     margin: 0px;
     border: 0;
     border-radius: 0;
     color: $light_text;
     background: transparent;
+    display: inline;
     &:after {
-        background: url($flair-user-image) no-repeat scroll 16px 16px transparent;
         display: inline-block;
         margin-left: 3px;
         vertical-align: middle;
-        height: 18px;
         content: '';
     }
 }
@@ -75,8 +84,6 @@
 @include flair-class-colour('warlock', #9482C9);
 @include flair-class-colour('warrior', #C79C6E);
 
-@include wow-sprites($flair-user-sprites);
-
 // Special User Flairs
 
 // Blizzard Employees
@@ -86,7 +93,7 @@
 .flair.flair-blizzard {
     color: $blizzard_blue;
     &:before {
-        @include sprite($flair-blizzard);
+        //@include sprite($flair-blizzard);
         display: inline-block;
         margin-right: 3px;
         vertical-align: middle;
@@ -164,95 +171,3 @@
 @include method('methodroger', " <Method>");
 @include method('darriesrsly', " <Method>");
 @include method('cayna', " <Method>");
-
-/**
- * ##########
- * Thumbnails
- * ##########
- */
-
-a.thumbnail.default,
-a.thumbnail.self {
-    @include retina-sprite(('default', $t-self, $t-self-2x));
-    margin: 10px 20px 10px 12px;
-}
-
-a.thumbnail.spoiler,
-.thing.spoiler a.thumbnail.spoiler {
-    @include retina-sprite(('spoiler', $t-spoiler, $t-spoiler-2x));
-    margin: 10px 20px 10px 12px;
-    img {
-        // hide the thumbnail image to reveal the icon underneath
-        display: none;
-    }
-}
-
-.spoiler-stamp {
-    color: $green_title;
-    padding: 0px 10px;
-}
-
-.thing.over18 a.thumbnail {
-    @include retina-sprite(('nsfw', $t-nsfw, $t-nsfw-2x));
-    img {
-        // hide the thumbnail image to reveal the NSFW icon underneath
-        display: none;
-    }
-}
-
-.linkflairlabel {
-    max-width: unset;
-}
-
-//
-////.thing {
-////	&.linkflair-bluepost,
-////	&.linkflair-modpost {
-////		padding-bottom: 13px;
-////		margin-bottom: 0px;
-////	}
-////}
-//
-//.thing.linkflair-bluepost {
-//	a.title,
-//	a.title:visited,
-//	a.title:active {
-//		// important to override stickies and whatnot
-//		color: $blizzard_blue !important;
-//	}
-//	a.title:hover {
-//		color: #fff;
-//	}
-//	background: rgba(36, 58, 93, 0.75);
-//
-//	.linkflairlabel {
-//		background: rgba(0, 0, 99, 0.4);
-//		color: rgb(0, 180, 255);
-//	}
-//}
-//
-//.thing.linkflair-modpost {
-//	a.title,
-//	a.title:visited,
-//	a.title:active {
-//		//color: rgb(129, 181, 88)
-//		color: $green_title;
-//	}
-//	a.title:hover {
-//		color: #fff;
-//	}
-//	background: rgba(41, 81, 10, 0.75);
-//
-//	.linkflairlabel {
-//		background: rgba(7, 53, 4, 0.75);
-//		color: rgb(129, 181, 88)
-//	}
-//
-//	.tagline .stickied-tagline,
-//	.search-result-meta .stickied-tagline {
-//		color: #97ED97;
-//	}
-//}
-//
-//// all the other link flairs
-//@include link-flairs($flair-link-sprites);
