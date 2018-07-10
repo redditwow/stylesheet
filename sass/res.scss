@@ -3,170 +3,186 @@
 .res .RES-keyNav-activeElement,
 .res .commentarea .RES-keyNav-activeElement .md,
 .res .commentarea .res .RES-keyNav-activeElement.entry .noncollapsed {
-	background-color: transparent !important;
+    background-color: transparent !important;
 }
 
 // comment highlights
 .RES-keyNav-activeElement,
 .RES-keyNav-activeElement div.md-container.usertext-body {
-	background-color: transparent !important;
+    background-color: transparent !important;
 }
 
 .thing, .usertext {
-	.entry.res-selected, .entry.res-selected .md-container {
-		background-color: transparent !important;
-		//background: rgba(0, 0, 0, 0.2) !important;
-	}
+    .entry.res-selected, .entry.res-selected .md-container {
+        background-color: transparent !important;
+        //background: rgba(0, 0, 0, 0.2) !important;
+    }
 }
 
 //background-color: rgba($grey_background_2, 0.5) !important;
 
 .neverEndingReddit {
-	background: rgba($grey_background_2, 0.5) !important;
-	border: $grey_border 1px solid !important;
-	border-radius: 0px !important;
-	color: $light_text;
-	margin: 40px auto 0px;
-	width: 50%;
-	h2, a {
-		color: $title;
-	}
+    background: rgba($grey_background_2, 0.5) !important;
+    border: $grey_border 1px solid !important;
+    border-radius: 0px !important;
+    color: $light_text;
+    margin: 40px auto 0px;
+    width: 50%;
+    h2, a {
+        color: $title;
+    }
 }
 
 //[l=c]
 .redditSingleClick {
-	color: $light_text !important;
+    color: $light_text !important;
 }
 
 // live preview
 .RESDialogSmall {
-	background-color: $grey_background !important;
-	border: $grey_border solid 1px !important;
-	border-radius: 0px !important;
-	> h3 {
-		color: $title !important;
-		background-color: $grey_background !important;
-		border-bottom: none !important;
-	}
+    background-color: $grey_background !important;
+    border: $grey_border solid 1px !important;
+    border-radius: 0px !important;
+    > h3 {
+        color: $title !important;
+        background-color: $grey_background !important;
+        border-bottom: none !important;
+    }
 }
 
 #userbarToggle {
-	background: $wow_btn_background !important;
-	border: 1px solid $wow_btn_border !important;
-	color: #fff !important;
-	border-radius: 0px !important;
+    background: $wow_btn_background !important;
+    border: 1px solid $wow_btn_border !important;
+    color: #fff !important;
+    border-radius: 0px !important;
 }
 
 #RESShortcutsEditContainer, #RESShortcutsSort, #RESShortcutsRight, #RESShortcutsLeft, #RESShortcutsAdd, #RESShortcutsTrash {
-	background: none !important;
-	color: #fff !important;
+    background: none !important;
+    color: #fff !important;
 }
 
 div.usertext-edit.md-container {
-	background-color: transparent !important;
+    background-color: transparent !important;
 }
 
 // RES Night Mode
 .res-nightmode {
-	// Use night mode's colours in the subreddit bar
-	#sr-header-area a {
-		background-color: #ccc;
-		color: #000;
-	}
-	.dropdown.srdrop .selected {
-		color: #000;
-	}
+    // Use night mode's colours in the subreddit bar
+    #sr-header-area a {
+        background-color: #ccc;
+        color: #000;
+    }
+    .dropdown.srdrop .selected {
+        color: #000;
+    }
 }
 
 // allow RES to pin the header to the top
 body.pinHeader-sub, body.pinHeader-subanduser {
-	div#sr-header-area {
-		top: 0px;
-	}
+    div#sr-header-area {
+        top: 0px;
+    }
 }
 
 .res-commentBoxes .comment.spam {
-	background-image: none !important;
+    background-image: none !important;
+}
+
+@mixin res-toolbar-btn($sprite-group) {
+    $x1: nth($sprite-group, 2);
+    $x2: nth($sprite-group, 3);
+
+    @include retina-sprite($sprite-group);
+
+    $sprite-image: nth($x1, 9);
+    background-image: url(#{$sprite-image}) !important;
+    background-position: nth($x1, 3) nth($x1, 4) !important;
+
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        $sprite-image: nth($x2, 9);
+        background-image: url(#{$sprite-image}) !important;
+    }
 }
 
 .markdownEditor {
-	// all the buttons... except the macro button
-	// style is copied from wow_btn, but with added !importants
-	.edit-btn:not(.btn-macro) {
-		background-image: url($res-a-bold-image) !important;
-		background-color: $wow_btn_background !important;
-		border: 1px solid $wow_btn_border !important;
-		transition: all 0.5s;
-		border-radius: 0;
+    // all the buttons... except the macro button
+    // style is copied from wow_btn, but with added !importants
+    .edit-btn:not(.btn-macro) {
+        //background-image: url($res-a-bold-image) !important;
+        background-color: $wow_btn_background !important;
+        border: 1px solid $wow_btn_border !important;
+        transition: all 0.5s;
+        border-radius: 0;
 
-		&:hover {
-			transition: all 0.5s;
-			background-color: $wow_btn_hover !important;
-		}
-	}
+        &:hover {
+            transition: background-color 0.5s;
+            background-color: $wow_btn_hover !important;
+        }
+    }
 
-	// the toolbar itself
-	.btn-bold {
-		@include sprite-position-important($res-a-bold);
-	}
-	.btn-italic {
-		@include sprite-position-important($res-b-italic);
-	}
-	.btn-strike {
-		@include sprite-position-important($res-c-strikethrough);
-	}
-	.btn-superscript {
-		@include sprite-position-important($res-d-super);
-	}
-	.btn-link {
-		@include sprite-position-important($res-e-link);
-	}
-	.btn-quote {
-		@include sprite-position-important($res-f-quote);
-	}
-	.btn-code {
-		@include sprite-position-important($res-g-code);
-	}
-	.btn-list-unordered {
-		@include sprite-position-important($res-h-ul);
-	}
-	.btn-list-ordered {
-		@include sprite-position-important($res-i-ol);
-	}
-	.btn-table {
-		@include sprite-position-important($res-j-table);
-	}
+    // the toolbar itself
+    .btn-bold {
+        @include res-toolbar-btn($res-a-bold-group);
+    }
+    .btn-italic {
+        @include res-toolbar-btn($res-b-italic-group);
+    }
+    .btn-strike {
+        @include res-toolbar-btn($res-c-strikethrough-group);
+    }
+    .btn-superscript {
+        @include res-toolbar-btn($res-d-super-group);
+    }
+    .btn-link {
+        @include res-toolbar-btn($res-e-link-group);
+    }
+    .btn-quote {
+        @include res-toolbar-btn($res-f-quote-group);
+    }
+    .btn-code {
+        @include res-toolbar-btn($res-g-code-group);
+    }
+    .btn-list-unordered {
+        @include res-toolbar-btn($res-h-ul-group);
+    }
+    .btn-list-ordered {
+        @include res-toolbar-btn($res-i-ol-group);
+    }
+    .btn-table {
+        @include res-toolbar-btn($res-j-table-group);
+    }
 
 }
 
 .NERPageMarker {
-	color: $light_text !important;
-	background: $grey_background !important;
-	border: 1px solid $grey_border !important;
+    color: $light_text !important;
+    background: $grey_background !important;
+    border: 1px solid $grey_border !important;
 }
 
 .RESHoverInfoCard {
-	&:before {
-		display: none !important;
-	}
+    &:before {
+        display: none !important;
+    }
 
-	.RESHoverTitle div {
-		@include wow-link();
-		.fancy-toggle-button a {
-			color: white !important;
-		}
-	}
+    .RESHoverTitle div {
+        @include wow-link();
+        .fancy-toggle-button a {
+            color: white !important;
+        }
+    }
 
-	.blueButton {
-		@include wow-btn-active();
-		&:hover {
-			@include wow-btn-active-hover();
-		}
-	}
-	.RESCloseButton {
-		@include wow-btn-remove();
-		&:hover {
-			@include wow-btn-remove-hover();
-		}
-	}
+    .blueButton {
+        @include wow-btn-active();
+        &:hover {
+            @include wow-btn-active-hover();
+        }
+    }
+    .RESCloseButton {
+        @include wow-btn-remove();
+        &:hover {
+            @include wow-btn-remove-hover();
+        }
+    }
 }
