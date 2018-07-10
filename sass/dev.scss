@@ -11,9 +11,3 @@ span.redditname a[href='https://www.reddit.com/r/WowStyleTest/']:after{
 	background: #000;
 	padding: 5px 10px;
 }
-
-// force the height on the header image so when the stylesheet is loaded via RES the header height is correct with the missing snoo.
-#header-img.default-header {
-    height: 158px;
-    margin-top: 63px;
-}
