@@ -1,37 +1,37 @@
 @mixin special-colour-link($link, $colour) {
-	a[href*="#rwow#{$link}"] {
-		color: $colour !important;
-		pointer-events: none;
-		&:hover {
-			color: $colour !important;
-		}
-		&:visited {
-			color: $colour !important;
-		}
-	}
+    a[href*="#rwow#{$link}"] {
+        color: $colour !important;
+        pointer-events: none;
+        &:hover {
+            color: $colour !important;
+        }
+        &:visited {
+            color: $colour !important;
+        }
+    }
 }
 
 @mixin special-currency-link($link, $sprite) {
-	a[href*="#rwow#{$link}"] {
-		display: inline-block;
-		margin-left: 1px;
-		margin-right: 2px;
-		color: transparent !important;
-		&:hover, &:visited {
-			color: transparent !important;
-		}
-		@include sprite($sprite);
-	}
+    a[href*="#rwow#{$link}"] {
+        display: inline-block;
+        margin-left: 1px;
+        margin-right: 2px;
+        color: transparent !important;
+        &:hover, &:visited {
+            color: transparent !important;
+        }
+        @include sprite($sprite);
+    }
 }
 
 a[href*="#pe"] {
-	pointer-events: auto !important;
+    pointer-events: auto !important;
 }
 
 a[href*="#ul"] {
-	&:hover {
-		text-decoration: underline;
-	}
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 // classes
@@ -73,7 +73,7 @@ a[href*="#ul"] {
 //blizzard blue
 @include special-colour-link('bb', $blizzard_blue);
 //mod green
-@include special-colour-link('mg', $green_title);
+@include special-colour-link('mg', rgb(64, 191, 64));
 
 
 

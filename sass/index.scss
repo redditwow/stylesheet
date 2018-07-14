@@ -42,7 +42,7 @@ body {
     }
 
     &.stickied.link a.title {
-        color: $green_title;
+        color: $bfa_orange;
 
         transition: color 0.2s;
 
@@ -125,7 +125,7 @@ body {
 }
 
 .showreplies {
-    color: $green_title;
+    color: $bfa_orange;
 }
 
 .nav-buttons {
@@ -166,7 +166,7 @@ a.thumbnail.spoiler,
 }
 
 .spoiler-stamp {
-    color: $green_title;
+    color: $bfa_orange;
     padding: 0px 10px;
 }
 

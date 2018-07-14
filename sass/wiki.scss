@@ -1,12 +1,12 @@
 .wiki-page-content {
 	.md {
 		h1, h2 {
-			color: $green_title;
+			color: $bfa_orange;
 		}
 	}
 
 	hr {
-		color: $green_title;
+		color: $bfa_orange;
 	}
 
 	@include wow-link();
@@ -15,7 +15,7 @@
 
 .wiki-page {
 	.wikititle {
-		color: $green_title;
+		color: $bfa_orange;
 	}
 
 	// the view, edit, history, talk, settings thing
