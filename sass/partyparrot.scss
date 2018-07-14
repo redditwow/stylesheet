@@ -23,6 +23,10 @@
     pointer-events: none; //added by /u/Vusys
 }
 
+.side .md [href$="parrot"] {
+    pointer-events: unset;
+}
+
 .md [href$="parrot"]:before {
     background: url(../images/partyparrot.png);
     display: inline-block;
@@ -39,7 +43,7 @@
 }
 
 .md [href*="/r/"]:before, .md [href*="wiki"]:before {
-    display: none
+    display: none !important;
 }
 
 .md [href="#shuffleparrot"]:before {
