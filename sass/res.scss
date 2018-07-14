@@ -188,3 +188,10 @@ body.pinHeader-sub, body.pinHeader-subanduser {
         }
     }
 }
+
+#REScommentSubToggle{
+    @include wow-btn-active();
+    &:hover {
+        @include wow-btn-active-hover();
+    }
+}

@@ -105,7 +105,7 @@ div.comment {
     //margin: 10px 0px -1px 10px !important;
 
     padding: 10px 0px 10px 0px !important;
-    margin: 10px -1px -1px 10px !important;
+    margin: 10px -1px -1px 0px !important;
 
     &:not(:first-child) {
         margin-top: 0px !important;
@@ -257,6 +257,7 @@ span.score {
 // push the reply form over to make room for the collapse link
 .commentarea .comment .usertext-edit {
     margin-left: 20px;
+    padding: 10px 5px;
 }
 
 .linkflair-w0-sun,
@@ -274,4 +275,31 @@ span.score {
             @include retina-sprite($lf-0-sun-group);
         }
     }
+}
+
+// All xxx Comments above the text area
+.panestack-title {
+    margin-right: 0px;
+    margin-left: 0px;
+    padding: 10px 5px;
+    @include wow-modern-box;
+}
+
+// Sorted by and mod buttons (set as suggested sort, enable contest mode, make announcement)
+.commentarea .menuarea {
+    margin: 10px 0px;
+
+    form.toggle {
+        a.togglebutton {
+            @include wow-btn-active;
+            color: #fff !important;
+            &:hover {
+                @include wow-btn-active-hover;
+            }
+        }
+    }
+}
+
+.commentarea > .usertext {
+    margin-left: 0px;
 }
