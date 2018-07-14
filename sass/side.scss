@@ -466,27 +466,43 @@ button {
         content: "";
         display: inline-block;
         margin-right: 4px;
+        margin-bottom: 10px;
         font-size: 0px;
         &:hover {
             opacity: 0.8;
         }
     }
-    a[href*="#warcraft"] {
-        @include retina-sprite(('g-wow', $g-world-of-warcraft, $g-world-of-warcraft-2x));
+    a[href*="#classic"] {
+        @include retina-sprite($g-world-of-warcraft-group);
     }
-    a[href*="#diablo"] {
-        @include retina-sprite(('g-d3', $g-diablo-iii, $g-diablo-iii-2x));
+    a[href*="#warcraft3"] {
+        @include retina-sprite($g-warcraft-iii-group);
+    }
+    a[href*="#diablo2"] {
+        @include retina-sprite($g-diablo-ii-group);
+    }
+    a[href*="#diablo3"] {
+        @include retina-sprite($g-diablo-iii-group);
     }
     a[href*="#starcraft"] {
-        @include retina-sprite(('g-s2', $g-starcraft-ii, $g-starcraft-ii-2x));
+        @include retina-sprite($g-starcraft-ii-group);
     }
     a[href*="#hearthstone"] {
-        @include retina-sprite(('g-hearthstone', $g-hearthstone, $g-hearthstone-2x));
+        @include retina-sprite($g-hearthstone-group);
     }
     a[href*="#heroesofthestorm"] {
-        @include retina-sprite(('g-hots', $g-heroes-of-the-storm, $g-heroes-of-the-storm-2x));
+        @include retina-sprite($g-heroes-of-the-storm-group);
     }
     a[href*="#overwatch"] {
-        @include retina-sprite(('g-overwatch', $g-like-team-fortress-two-but-not-as-good, $g-like-team-fortress-two-but-not-as-good-2x));
+        @include retina-sprite($g-like-team-fortress-two-but-not-as-good-group);
+    }
+    a[href*="#cod"] {
+        @include retina-sprite($g-call-of-duty-group);
+    }
+    a[href*="#destiny2"] {
+        @include retina-sprite($g-destiny-2-group);
+    }
+    a[href*="#starcraft-remaster"] {
+        @include retina-sprite($g-starcraft-remastered-group);
     }
 }
