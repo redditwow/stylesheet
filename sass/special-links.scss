@@ -11,7 +11,7 @@
     }
 }
 
-@mixin special-currency-link($link, $sprite) {
+@mixin special-currency-link($link, $sprite-group) {
     a[href*="#rwow#{$link}"] {
         display: inline-block;
         margin-left: 1px;
@@ -20,7 +20,7 @@
         &:hover, &:visited {
             color: transparent !important;
         }
-        @include sprite($sprite);
+        @include retina-sprite($sprite-group);
     }
 }
 
@@ -65,9 +65,9 @@ a[href*="#ul"] {
 @include special-colour-link('t3', #6bf); //toy blue
 
 // currency
-@include special-currency-link('ug', $money-gold);
-@include special-currency-link('us', $money-silver);
-@include special-currency-link('uc', $money-copper);
+@include special-currency-link('ug', $money-gold-group);
+@include special-currency-link('us', $money-silver-group);
+@include special-currency-link('uc', $money-copper-group);
 
 //special
 //blizzard blue
