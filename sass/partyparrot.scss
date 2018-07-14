@@ -1,88 +1,342 @@
 @-webkit-keyframes parrot {
-	from {
-		background-position: 0 0;
-	}
-	to {
-		background-position: 0 -2400px;
-	}
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 -2400px;
+    }
 }
 
 @keyframes parrot {
-	from {
-		background-position: 0 0;
-	}
-	to {
-		background-position: 0 -2400px;
-	}
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 -2400px;
+    }
 }
 
 .md [href$="parrot"] {
-	display: inline-block;
-	width: 30px;
-	height: 35px;
-	pointer-events: none; //added by /u/Vusys
+    display: inline-block;
+    width: 30px;
+    height: 35px;
+    pointer-events: none; //added by /u/Vusys
 }
 
 .md [href$="parrot"]:before {
-	background: url(../images/partyparrot.png);
-	display: inline-block;
-	height: 35px;
-	width: 30px;
-	-webkit-animation: parrot 3s steps(60) infinite;
-	animation: parrot 3s steps(60) infinite;
-	position: absolute;
-	content: "";
+    background: url(../images/partyparrot.png);
+    display: inline-block;
+    height: 35px;
+    width: 30px;
+    -webkit-animation: parrot 3s steps(60) infinite;
+    animation: parrot 3s steps(60) infinite;
+    position: absolute;
+    content: "";
 }
 
-.md [href*="/r/"],.md [href*="wiki"]{display:inline}
-.md [href*="/r/"]:before,.md [href*="wiki"]:before{display:none}
-.md [href="#shuffleparrot"]:before{width:75px;clip:rect(0,75px,30px,40px);margin-left:-40px}
-.md [href="#congaparrot"]:before{width:115px;clip:rect(0,115px,30px,80px);margin-left:-80px}
-.md [href="#aussieparrot"]:before{width:155px;clip:rect(0,155px,30px,120px);margin-left:-120px}
-.md [href="#aussiecongaparrot"]:before{width:195px;clip:rect(0,195px,30px,160px);margin-left:-160px}
-.md [href="#sadparrot"]:before{width:235px;clip:rect(0,235px,30px,200px);margin-left:-200px}
-.md [href="#shootingparrot"]:before{width:275px;clip:rect(0,275px,30px,240px);margin-left:-240px}
-.md [href="#ledootparrot"]:before{width:315px;clip:rect(0,315px,30px,280px);margin-left:-280px}
-.md [href="#popcornparrot"]:before{width:355px;clip:rect(0,355px,30px,320px);margin-left:-320px}
-.md [href="#dealwithitparrot"]:before{width:395px;clip:rect(0,395px,30px,360px);margin-left:-360px}
-.md [href="#explodeparrot"]:before{width:435px;clip:rect(0,435px,30px,400px);margin-left:-400px}
-.md [href="#runningparrot"]:before{width:475px;clip:rect(0,475px,30px,440px);margin-left:-440px}
-.md [href="#footballparrot"]:before{width:515px;clip:rect(0,515px,30px,480px);margin-left:-480px}
-.md [href="#chillparrot"]:before{width:555px;clip:rect(0,555px,30px,520px);margin-left:-520px}
-.md [href="#shufflefurtherparrot"]:before{width:595px;clip:rect(0,595px,30px,560px);margin-left:-560px}
-.md [href="#vikingparrot"]:before{width:635px;clip:rect(0,635px,30px,600px);margin-left:-600px}
-.md [href="#gildedparrot"]:before{width:675px;clip:rect(0,675px,30px,640px);margin-left:-640px}
-.md [href="#freedomparrot"]:before{width:715px;clip:rect(0,715px,30px,680px);margin-left:-680px}
-.md [href="#youtubeparrot"]:before{width:755px;clip:rect(0,755px,30px,720px);margin-left:-720px}
-.md [href="#middleparrot"]:before{width:795px;clip:rect(0,795px,30px,760px);margin-left:-760px}
-.md [href="#fiestaparrot"]:before{width:835px;clip:rect(0,835px,30px,800px);margin-left:-800px}
-.md [href="#cakedayparrot"]:before{width:875px;clip:rect(0,875px,30px,840px);margin-left:-840px}
-.md [href="#copparrot"]:before{width:915px;clip:rect(0,915px,30px,880px);margin-left:-880px}
-.md [href="#rightparrot"]:before{width:955px;clip:rect(0,955px,30px,920px);margin-left:-920px}
-.md [href="#shadesparrot"]:before{width:995px;clip:rect(0,995px,30px,960px);margin-left:-960px}
-.md [href="#upvoteparrot"]:before{width:1035px;clip:rect(0,1035px,30px,1000px);margin-left:-1000px}
-.md [href="#downvoteparrot"]:before{width:1075px;clip:rect(0,1075px,30px,1040px);margin-left:-1040px}
-.md [href="#scottishparrot"]:before{width:1115px;clip:rect(0,1115px,30px,1080px);margin-left:-1080px}
-.md [href="#loveparrot"]:before{width:1155px;clip:rect(0,1155px,30px,1120px);margin-left:-1120px}
-.md [href="#trumpparrot"]:before{width:1195px;clip:rect(0,1195px,30px,1160px);margin-left:-1160px}
-.md [href="#oldtimeyparrot"]:before{width:1235px;clip:rect(0,1235px,30px,1200px);margin-left:-1200px}
-.md [href="#reversecongaparrot"]:before{width:1275px;clip:rect(0,1275px,30px,1240px);margin-left:-1240px}
-.md [href="#aussiereversecongaparrot"]:before{width:1315px;clip:rect(0,1315px,30px,1280px);margin-left:-1280px}
-.md [href="#upcongaparrot"]:before{width:1355px;clip:rect(0,1355px,30px,1320px);margin-left:-1320px}
-.md [href="#downcongaparrot"]:before{width:1395px;clip:rect(0,1395px,30px,1360px);margin-left:-1360px}
-.md [href="#haloparrot"]:before{width:1435px;clip:rect(0,1435px,30px,1400px);margin-left:-1400px}
-.md [href="#jesterparrot"]:before{width:1475px;clip:rect(0,1475px,30px,1440px);margin-left:-1440px}
-.md [href="#cockarockerparrot"]:before{width:1515px;clip:rect(0,1515px,30px,1480px);margin-left:-1480px}
-.md [href="#angelparrot"]:before{width:1555px;clip:rect(0,1555px,30px,1520px);margin-left:-1520px}
-.md [href="#devilparrot"]:before{width:1595px;clip:rect(0,1595px,30px,1560px);margin-left:-1560px}
-.md [href="#pokemonparrot"]:before{width:1635px;clip:rect(0,1635px,30px,1600px);margin-left:-1600px}
-.md [href="#kparrot"]:before{width:1675px;clip:rect(0,1675px,30px,1640px);margin-left:-1640px}
-.md [href="#fartyparrot"]:before{width:1715px;clip:rect(0,1715px,30px,1680px);margin-left:-1680px}
-.md [href="#brcornerparrot"]:before{width:1755px;clip:rect(0,1755px,30px,1720px);margin-left:-1720px}
-.md [href="#trcornerparrot"]:before{width:1795px;clip:rect(0,1795px,30px,1760px);margin-left:-1760px}
-.md [href="#blcornerparrot"]:before{width:1835px;clip:rect(0,1835px,30px,1800px);margin-left:-1800px}
-.md [href="#tlcornerparrot"]:before{width:1875px;clip:rect(0,1875px,30px,1840px);margin-left:-1840px}
-.md [href="#chuckleparrot"]:before{width:1915px;clip:rect(0,1915px,30px,1880px);margin-left:-1880px}
-.md [href="#fastleftparrot"]:before{-webkit-animation: parrot 1.2s steps(60) infinite; animation: parrot 1.2s steps(60) infinite}
-.md [href="#fastrightparrot"]:before{-webkit-animation: parrot 1.2s steps(60) infinite; animation: parrot 1.2s steps(60) infinite;width:955px;clip:rect(0,955px,40px,920px);margin-left:-920px}
-.md [href="#blankparrot"]:before{background:transparent}
+.md [href*="/r/"], .md [href*="wiki"] {
+    display: inline
+}
+
+.md [href*="/r/"]:before, .md [href*="wiki"]:before {
+    display: none
+}
+
+.md [href="#shuffleparrot"]:before {
+    width: 75px;
+    clip: rect(0, 75px, 30px, 40px);
+    margin-left: -40px
+}
+
+.md [href="#congaparrot"]:before {
+    width: 115px;
+    clip: rect(0, 115px, 30px, 80px);
+    margin-left: -80px
+}
+
+.md [href="#aussieparrot"]:before {
+    width: 155px;
+    clip: rect(0, 155px, 30px, 120px);
+    margin-left: -120px
+}
+
+.md [href="#aussiecongaparrot"]:before {
+    width: 195px;
+    clip: rect(0, 195px, 30px, 160px);
+    margin-left: -160px
+}
+
+.md [href="#sadparrot"]:before {
+    width: 235px;
+    clip: rect(0, 235px, 30px, 200px);
+    margin-left: -200px
+}
+
+.md [href="#shootingparrot"]:before {
+    width: 275px;
+    clip: rect(0, 275px, 30px, 240px);
+    margin-left: -240px
+}
+
+.md [href="#ledootparrot"]:before {
+    width: 315px;
+    clip: rect(0, 315px, 30px, 280px);
+    margin-left: -280px
+}
+
+.md [href="#popcornparrot"]:before {
+    width: 355px;
+    clip: rect(0, 355px, 30px, 320px);
+    margin-left: -320px
+}
+
+.md [href="#dealwithitparrot"]:before {
+    width: 395px;
+    clip: rect(0, 395px, 30px, 360px);
+    margin-left: -360px
+}
+
+.md [href="#explodeparrot"]:before {
+    width: 435px;
+    clip: rect(0, 435px, 30px, 400px);
+    margin-left: -400px
+}
+
+.md [href="#runningparrot"]:before {
+    width: 475px;
+    clip: rect(0, 475px, 30px, 440px);
+    margin-left: -440px
+}
+
+.md [href="#footballparrot"]:before {
+    width: 515px;
+    clip: rect(0, 515px, 30px, 480px);
+    margin-left: -480px
+}
+
+.md [href="#chillparrot"]:before {
+    width: 555px;
+    clip: rect(0, 555px, 30px, 520px);
+    margin-left: -520px
+}
+
+.md [href="#shufflefurtherparrot"]:before {
+    width: 595px;
+    clip: rect(0, 595px, 30px, 560px);
+    margin-left: -560px
+}
+
+.md [href="#vikingparrot"]:before {
+    width: 635px;
+    clip: rect(0, 635px, 30px, 600px);
+    margin-left: -600px
+}
+
+.md [href="#gildedparrot"]:before {
+    width: 675px;
+    clip: rect(0, 675px, 30px, 640px);
+    margin-left: -640px
+}
+
+.md [href="#freedomparrot"]:before {
+    width: 715px;
+    clip: rect(0, 715px, 30px, 680px);
+    margin-left: -680px
+}
+
+.md [href="#youtubeparrot"]:before {
+    width: 755px;
+    clip: rect(0, 755px, 30px, 720px);
+    margin-left: -720px
+}
+
+.md [href="#middleparrot"]:before {
+    width: 795px;
+    clip: rect(0, 795px, 30px, 760px);
+    margin-left: -760px
+}
+
+.md [href="#fiestaparrot"]:before {
+    width: 835px;
+    clip: rect(0, 835px, 30px, 800px);
+    margin-left: -800px
+}
+
+.md [href="#cakedayparrot"]:before {
+    width: 875px;
+    clip: rect(0, 875px, 30px, 840px);
+    margin-left: -840px
+}
+
+.md [href="#copparrot"]:before {
+    width: 915px;
+    clip: rect(0, 915px, 30px, 880px);
+    margin-left: -880px
+}
+
+.md [href="#rightparrot"]:before {
+    width: 955px;
+    clip: rect(0, 955px, 30px, 920px);
+    margin-left: -920px
+}
+
+.md [href="#shadesparrot"]:before {
+    width: 995px;
+    clip: rect(0, 995px, 30px, 960px);
+    margin-left: -960px
+}
+
+.md [href="#upvoteparrot"]:before {
+    width: 1035px;
+    clip: rect(0, 1035px, 30px, 1000px);
+    margin-left: -1000px
+}
+
+.md [href="#downvoteparrot"]:before {
+    width: 1075px;
+    clip: rect(0, 1075px, 30px, 1040px);
+    margin-left: -1040px
+}
+
+.md [href="#scottishparrot"]:before {
+    width: 1115px;
+    clip: rect(0, 1115px, 30px, 1080px);
+    margin-left: -1080px
+}
+
+.md [href="#loveparrot"]:before {
+    width: 1155px;
+    clip: rect(0, 1155px, 30px, 1120px);
+    margin-left: -1120px
+}
+
+.md [href="#trumpparrot"]:before {
+    width: 1195px;
+    clip: rect(0, 1195px, 30px, 1160px);
+    margin-left: -1160px
+}
+
+.md [href="#oldtimeyparrot"]:before {
+    width: 1235px;
+    clip: rect(0, 1235px, 30px, 1200px);
+    margin-left: -1200px
+}
+
+.md [href="#reversecongaparrot"]:before {
+    width: 1275px;
+    clip: rect(0, 1275px, 30px, 1240px);
+    margin-left: -1240px
+}
+
+.md [href="#aussiereversecongaparrot"]:before {
+    width: 1315px;
+    clip: rect(0, 1315px, 30px, 1280px);
+    margin-left: -1280px
+}
+
+.md [href="#upcongaparrot"]:before {
+    width: 1355px;
+    clip: rect(0, 1355px, 30px, 1320px);
+    margin-left: -1320px
+}
+
+.md [href="#downcongaparrot"]:before {
+    width: 1395px;
+    clip: rect(0, 1395px, 30px, 1360px);
+    margin-left: -1360px
+}
+
+.md [href="#haloparrot"]:before {
+    width: 1435px;
+    clip: rect(0, 1435px, 30px, 1400px);
+    margin-left: -1400px
+}
+
+.md [href="#jesterparrot"]:before {
+    width: 1475px;
+    clip: rect(0, 1475px, 30px, 1440px);
+    margin-left: -1440px
+}
+
+.md [href="#cockarockerparrot"]:before {
+    width: 1515px;
+    clip: rect(0, 1515px, 30px, 1480px);
+    margin-left: -1480px
+}
+
+.md [href="#angelparrot"]:before {
+    width: 1555px;
+    clip: rect(0, 1555px, 30px, 1520px);
+    margin-left: -1520px
+}
+
+.md [href="#devilparrot"]:before {
+    width: 1595px;
+    clip: rect(0, 1595px, 30px, 1560px);
+    margin-left: -1560px
+}
+
+.md [href="#pokemonparrot"]:before {
+    width: 1635px;
+    clip: rect(0, 1635px, 30px, 1600px);
+    margin-left: -1600px
+}
+
+.md [href="#kparrot"]:before {
+    width: 1675px;
+    clip: rect(0, 1675px, 30px, 1640px);
+    margin-left: -1640px
+}
+
+.md [href="#fartyparrot"]:before {
+    width: 1715px;
+    clip: rect(0, 1715px, 30px, 1680px);
+    margin-left: -1680px
+}
+
+.md [href="#brcornerparrot"]:before {
+    width: 1755px;
+    clip: rect(0, 1755px, 30px, 1720px);
+    margin-left: -1720px
+}
+
+.md [href="#trcornerparrot"]:before {
+    width: 1795px;
+    clip: rect(0, 1795px, 30px, 1760px);
+    margin-left: -1760px
+}
+
+.md [href="#blcornerparrot"]:before {
+    width: 1835px;
+    clip: rect(0, 1835px, 30px, 1800px);
+    margin-left: -1800px
+}
+
+.md [href="#tlcornerparrot"]:before {
+    width: 1875px;
+    clip: rect(0, 1875px, 30px, 1840px);
+    margin-left: -1840px
+}
+
+.md [href="#chuckleparrot"]:before {
+    width: 1915px;
+    clip: rect(0, 1915px, 30px, 1880px);
+    margin-left: -1880px
+}
+
+.md [href="#fastleftparrot"]:before {
+    -webkit-animation: parrot 1.2s steps(60) infinite;
+    animation: parrot 1.2s steps(60) infinite
+}
+
+.md [href="#fastrightparrot"]:before {
+    -webkit-animation: parrot 1.2s steps(60) infinite;
+    animation: parrot 1.2s steps(60) infinite;
+    width: 955px;
+    clip: rect(0, 955px, 40px, 920px);
+    margin-left: -920px
+}
+
+.md [href="#blankparrot"]:before {
+    background: transparent
+}

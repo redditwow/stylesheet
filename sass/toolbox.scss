@@ -1,38 +1,38 @@
 //toolbox buttons
 body.mod-toolbox {
-	.tb-general-button,
-	li a.tb-general-button,
-	.tb-bracket-button {
-		background-color: rgba($wow_btn_background, 0.9) !important;
-		border: 1px solid $wow_btn_border !important;
-		color: #fff !important;
-		text-shadow: 0px 1px 0px #000;
-	}
+    .tb-general-button,
+    li a.tb-general-button,
+    .tb-bracket-button {
+        background-color: rgba($wow_btn_background, 0.9) !important;
+        border: 1px solid $wow_btn_border !important;
+        color: #fff !important;
+        text-shadow: 0px 1px 0px #000;
+    }
 }
 
 // reset popup box colour back to default ish
 .tb-popup-content, .tb-window-wrapper {
-	color: #111;
+    color: #111;
 }
 
 // ugly hack to move the toolbox comment checkboxes so they don't overlap with our custom expandos
 // also resizes them a wee bit bigger to make them easier to click quickly
 .thing.comment input[type='checkbox'] {
-	margin-top: 10px !important;
-	margin-left: 35px !important;
-	margin-right: -35px !important;
-	transform: scale(1.5, 1.5);
+    margin-top: 10px !important;
+    margin-left: 35px !important;
+    margin-right: -35px !important;
+    transform: scale(1.5, 1.5);
 }
 
 body.moderator {
-	.thing {
-		.title {
-			color: $title;
-		}
-		&.comment {
-			.title {
-				margin-left: 50px;
-			}
-		}
-	}
+    .thing {
+        .title {
+            color: $title;
+        }
+        &.comment {
+            .title {
+                margin-left: 50px;
+            }
+        }
+    }
 }

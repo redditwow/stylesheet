@@ -1,12 +1,12 @@
 .titlebox span.word {
-	display: none;
+    display: none;
 }
 
 .titlebox span.number:after {
-	content: " Horde Apologists";
+    content: " Horde Apologists";
 }
 
 .titlebox .users-online span.number:after {
-	content: " Fine with Being Evil";
+    content: " Fine with Being Evil";
 }
 

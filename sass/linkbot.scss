@@ -1,40 +1,40 @@
 .thing.comment .md {
 
-	blockquote + h6{
-		display: none;
-	}
+    blockquote + h6 {
+        display: none;
+    }
 
-	blockquote + h6 + ul{
-		background: rgba(17, 17, 34, 0.9);
-		width: 400px;
+    blockquote + h6 + ul {
+        background: rgba(17, 17, 34, 0.9);
+        width: 400px;
 
-		border: 1px solid #777777;
-		border-top-color: #CFCFCF;
+        border: 1px solid #777777;
+        border-top-color: #CFCFCF;
 
-		border-radius: 3px;
-		display: inline-block;
-		padding: 10px 15px;
-		list-style: none;
+        border-radius: 3px;
+        display: inline-block;
+        padding: 10px 15px;
+        list-style: none;
 
-		font-size: 12px;
-		color: white;
+        font-size: 12px;
+        color: white;
 
-		strong {
-			font-weight: normal;
-			font-size: 14px;
-		}
-		em {
-			font-style: normal;
-			float: right;
-		}
+        strong {
+            font-weight: normal;
+            font-size: 14px;
+        }
+        em {
+            font-style: normal;
+            float: right;
+        }
 
-		li p {
-			line-height: 1.2em;
-		}
+        li p {
+            line-height: 1.2em;
+        }
 
-		// RES Key Nav
-		span.noCtrlF.keyNavAnnotation {
-			display: none;
-		}
-	}
+        // RES Key Nav
+        span.noCtrlF.keyNavAnnotation {
+            display: none;
+        }
+    }
 }

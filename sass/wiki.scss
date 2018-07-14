@@ -1,71 +1,70 @@
 .wiki-page-content {
-	.md {
-		h1, h2 {
-			color: $bfa_orange;
-		}
-	}
+    .md {
+        h1, h2 {
+            color: $bfa_orange;
+        }
+    }
 
-	hr {
-		color: $bfa_orange;
-	}
+    hr {
+        color: $bfa_orange;
+    }
 
-	@include wow-link();
-
+    @include wow-link();
 }
 
 .wiki-page {
-	.wikititle {
-		color: $bfa_orange;
-	}
+    .wikititle {
+        color: $bfa_orange;
+    }
 
-	// the view, edit, history, talk, settings thing
-	.pageactions {
-		border-radius: 2px;
-		background: $grey_background_2;
-		border: 1px solid $grey_border;
+    // the view, edit, history, talk, settings thing
+    .pageactions {
+        border-radius: 2px;
+        background: $grey_background_2;
+        border: 1px solid $grey_border;
 
-		.wikiaction {
-			background-color: transparent;
-			&:hover {
-				background-color: rgba(0, 0, 0, 0.5);
-			}
-		}
+        .wikiaction {
+            background-color: transparent;
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+        }
 
-		.wikiaction-current {
-			color: $bfa_orange;
-			background-color: rgba(0, 0, 0, 0.5);
-			&:hover {
-				text-shadow: 0 0 10px #e6ff42, 0 0 10px #e6ff42;
-			}
-		}
-	}
+        .wikiaction-current {
+            color: $bfa_orange;
+            background-color: rgba(0, 0, 0, 0.5);
+            &:hover {
+                text-shadow: 0 0 10px #e6ff42, 0 0 10px #e6ff42;
+            }
+        }
+    }
 
-	.wiki-page-content {
-		// remove right margin. page is weird with it...
-		margin-right: 0;
+    .wiki-page-content {
+        // remove right margin. page is weird with it...
+        margin-right: 0;
 
-		// floating right table of contents
-		.wiki > .toc > ul {
-			background: $grey_background_2;
-			border: 1px solid $grey_border;
-			ul {
-				border-left: 1px dotted $grey_border;
-			}
-		}
+        // floating right table of contents
+        .wiki > .toc > ul {
+            background: $grey_background_2;
+            border: 1px solid $grey_border;
+            ul {
+                border-left: 1px dotted $grey_border;
+            }
+        }
 
-		.description h2 {
-			color: $grey_text !important;
-		}
-	}
+        .description h2 {
+            color: $grey_text !important;
+        }
+    }
 
-	a {
-		color: $title;
-	}
+    a {
+        color: $title;
+    }
 }
 
 // revisions for automod, but I think appropriate for any
 .revision {
-     td {
-         color: $light_text;
-     }
- }
+    td {
+        color: $light_text;
+    }
+}

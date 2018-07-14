@@ -1,51 +1,38 @@
 .footer-parent {
-	background-color: rgba(0, 0, 0, 0.15);
-	padding-top: 0;
-	margin-top: 40px;
-	padding-bottom: 40px;
+    background-color: rgba(0, 0, 0, 0.15);
+    padding-top: 0;
+    margin-top: 40px;
+    padding-bottom: 40px;
+    border-top: rgba(255, 255, 255, 0.15) solid 1px;
+    box-shadow: 0 0 0 1px #000;
 
-	//&:before {
-	//	background: url(../images/header-divide.fw.png) center top repeat-x;
-	//	content: '';
-	//	display: inline-block;
-	//	height: 23px;
-	//	width: 100%;
-	//	top: -8px;
-	//	position: relative;
-	//}
+    .footer {
+        color: darken($light_text, 20%);
+        border: none;
+        text-transform: capitalize;
 
-	border-top: rgba(255, 255, 255, 0.15) solid 1px;
-	box-shadow: 0 0 0 1px #000;
+        a {
+            color: #fff;
+            color: rgba(255, 255, 255, 0.6);
+        }
 
-	.footer {
-		color: darken($light_text, 20%);
-		border: none;
-		text-transform: capitalize;
+        .flat-vert.title {
+            color: #fff;
+            color: rgba(255, 255, 255, 0.8);
+        }
 
-		a {
-			color: #fff;
-			color: rgba(255, 255, 255, 0.6);
-		}
+        .col {
+            border: none;
+        }
 
-		.flat-vert.title {
-			color: #fff;
-			color: rgba(255, 255, 255, 0.8);
-		}
+    }
 
-		.col {
-			border: none;
-		}
-
-	}
-
-	.bottommenu {
-		color: #fff;
-		color: rgba(255, 255, 255, 0.2);
-	}
+    .bottommenu {
+        color: #fff;
+        color: rgba(255, 255, 255, 0.2);
+    }
 }
 
 body .debuginfo {
-	display: none;
+    display: none;
 }
-
-//
