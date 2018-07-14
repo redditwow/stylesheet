@@ -101,11 +101,11 @@ gulp.task('styles', ['sprites-legacy', 'sprites-retina', 'sprites-snoo', 'sprite
 });
 
 gulp.task('flair-user', function () {
-    var spriteData = gulp.src('./flair_user/*.png')
+    var spriteData = gulp.src('./spritesheet_images/flair_user/*.png')
         .pipe(newer('sprites/flair-user-1x.png'))
         .pipe(spritesmith({
             cssName: 'sass/_flair-user.scss',
-            retinaSrcFilter: ['./flair_user/*@2x.png'],
+            retinaSrcFilter: ['./spritesheet_images/flair_user/*@2x.png'],
             imgName: 'sprites/flair-user-1x.png',
             retinaImgName: './sprites/flair-user-2x.png',
             algorithm: 'binary-tree',
@@ -119,11 +119,11 @@ gulp.task('flair-user', function () {
 });
 
 gulp.task('flair-user-bespoke', function () {
-    var spriteData = gulp.src('./flair_user_bespoke/*.png')
+    var spriteData = gulp.src('./spritesheet_images/flair_user_bespoke/*.png')
         .pipe(newer('sprites/flair-user-bespoke-1x.png'))
         .pipe(spritesmith({
             cssName: 'sass/_flair-user-bespoke.scss',
-            retinaSrcFilter: ['./flair_user_bespoke/*@2x.png'],
+            retinaSrcFilter: ['./spritesheet_images/flair_user_bespoke/*@2x.png'],
             imgName: 'sprites/flair-user-bespoke-1x.png',
             retinaImgName: './sprites/flair-user-bespoke-2x.png',
             algorithm: 'binary-tree',
@@ -137,7 +137,7 @@ gulp.task('flair-user-bespoke', function () {
 });
 
 gulp.task('flair-link', function () {
-    var spriteData = gulp.src('./flair_link/*.png')
+    var spriteData = gulp.src('./spritesheet_images/flair_link/*.png')
         .pipe(newer('sprites/flair-link.png'))
         .pipe(spritesmith({
             imgName: 'sprites/flair-link.png',
