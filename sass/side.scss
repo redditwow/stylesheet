@@ -337,7 +337,6 @@ button {
     }
 
     a[href$="disbtn"] {
-
         &:first-of-type {
             margin-top: 10px;
         }
@@ -347,27 +346,7 @@ button {
             display: block;
             margin-left: -40px;
             margin-bottom: -26px;
-            @include sprite($discord);
-        }
-
-        margin-left: 40px;
-        font-size: 14px;
-        height: 34px;
-        display: block;
-    }
-
-    a[href$="ircbtn"] {
-
-        &:first-of-type {
-            margin-top: 10px;
-        }
-
-        &:before {
-            content: '';
-            display: block;
-            margin-left: -40px;
-            margin-bottom: -26px;
-            @include sprite($irc);
+            @include retina-sprite($sb-discord-group)
         }
 
         margin-left: 40px;
@@ -411,53 +390,53 @@ button {
             margin-bottom: 28px;
         }
 
+        &[href$="sunday"]:before {
+            @include retina-sprite($sb-0-sun-group)
+        }
+        &[href$="sunday"]:hover:before {
+            @include retina-sprite($sb-0-sun-glow-group)
+        }
+
         &[href$="monday"]:before {
-            @include sprite($inv_pet-babymurlocs-blue);
+            @include retina-sprite($sb-1-mon-group)
         }
         &[href$="monday"]:hover:before {
-            @include sprite($inv_pet-babymurlocs-blue-glow-fw);
+            @include retina-sprite($sb-1-mon-glow-group)
         }
 
         &[href$="tuesday"]:before {
-            @include sprite($inv-shield-20);
+            @include retina-sprite($sb-2-tue-group)
         }
         &[href$="tuesday"]:hover:before {
-            @include sprite($inv-shield-20-glow);
+            @include retina-sprite($sb-2-tue-glow-group)
         }
 
         &[href$="wednesday"]:before {
-            @include sprite($spell-holy-prayerofmendingtga);
+            @include retina-sprite($sb-3-wed-group)
         }
         &[href$="wednesday"]:hover:before {
-            @include sprite($spell-holy-prayerofmendingtga-glow-fw);
+            @include retina-sprite($sb-3-wed-glow-group)
         }
 
         &[href$="thursday"]:before {
-            @include sprite($inv-misc-bag-32);
+            @include retina-sprite($sb-4-thur-group)
         }
         &[href$="thursday"]:hover:before {
-            @include sprite($inv-misc-bag-32-glow-fw);
+            @include retina-sprite($sb-4-thur-glow-group)
         }
 
         &[href$="friday"]:before {
-            @include sprite($achievement-bg-topdps);
+            @include retina-sprite($sb-5-fri-group)
         }
         &[href$="friday"]:hover:before {
-            @include sprite($achievement-bg-topdps-glow-fw);
+            @include retina-sprite($sb-5-fri-glow-group)
         }
 
         &[href$="saturday"]:before {
-            @include sprite($achievement-bg-returnxflags-def-wsg);
+            @include retina-sprite($sb-6-sat-group)
         }
         &[href$="saturday"]:hover:before {
-            @include sprite($achievement-bg-returnxflags-def-wsg-glow-fw);
-        }
-
-        &[href$="sunday"]:before {
-            @include sprite($ability-creature-cursed-05);
-        }
-        &[href$="sunday"]:hover:before {
-            @include sprite($ability-creature-cursed-05-glow-fw);
+            @include retina-sprite($sb-6-sat-glow-group)
         }
     }
 
