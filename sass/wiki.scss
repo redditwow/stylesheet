@@ -20,8 +20,8 @@
     // the view, edit, history, talk, settings thing
     .pageactions {
         border-radius: 2px;
-        background: $grey_background_2;
-        border: 1px solid $grey_border;
+        background: $generic_background;
+        border: 1px solid $generic_border;
 
         .wikiaction {
             background-color: transparent;
@@ -45,10 +45,10 @@
 
         // floating right table of contents
         .wiki > .toc > ul {
-            background: $grey_background_2;
-            border: 1px solid $grey_border;
+            background: $generic_background;
+            border: 1px solid $generic_border;
             ul {
-                border-left: 1px dotted $grey_border;
+                border-left: 1px dotted $generic_border;
             }
         }
 

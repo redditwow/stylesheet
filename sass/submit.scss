@@ -16,7 +16,7 @@
 }
 
 .formtabs-content {
-    border-top: $grey_border 1px solid;
+    border-top: $generic_border 1px solid;
 }
 
 .submit-page {
@@ -33,8 +33,8 @@
                 color: white;
             }
             .selected a {
-                background-color: $grey_background !important;
-                border: 1px solid $grey_border;
+                background-color: $generic_background !important;
+                border: 1px solid $generic_border;
                 text-shadow: none;
                 color: $bfa_orange;
             }
@@ -55,8 +55,8 @@
     }
 
     input[type=text], input[type=url] {
-        background: $grey_background_2;
-        border: 1px solid $grey_border;
+        background: $generic_background;
+        border: 1px solid $generic_border;
         color: #ddd;
     }
 

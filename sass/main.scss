@@ -23,9 +23,8 @@ $yellow_border: #F2BF27;
 $blizzard_blue: rgb(0, 180, 255);
 $method_orange: rgb(241, 140, 47);
 
-$grey_background: rgb(26, 26, 26);
-$grey_background_2: rgb(36, 36, 36);
-$grey_border: lighten(#090909, 25%);
+$generic_background: lighten(#28211b, 5%);
+$generic_border: lighten($generic_background, 10%);
 
 @import "mixins.scss";
 @import "_spritesheet.scss";

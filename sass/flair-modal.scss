@@ -40,8 +40,8 @@
     }
 
     input[type=text], input[type=url] {
-        background: $grey_background_2;
-        border: 1px solid $grey_border;
+        background: $generic_background;
+        border: 1px solid $generic_border;
         color: #ddd;
     }
 }

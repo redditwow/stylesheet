@@ -22,8 +22,8 @@
 //background-color: rgba($grey_background_2, 0.5) !important;
 
 .neverEndingReddit {
-    background: rgba($grey_background_2, 0.5) !important;
-    border: $grey_border 1px solid !important;
+    background: rgba($generic_background, 0.5) !important;
+    border: $generic_border 1px solid !important;
     border-radius: 0px !important;
     color: $light_text;
     margin: 40px auto 0px;
@@ -40,12 +40,12 @@
 
 // live preview
 .RESDialogSmall {
-    background-color: $grey_background !important;
-    border: $grey_border solid 1px !important;
+    background-color: $generic_background !important;
+    border: $generic_border solid 1px !important;
     border-radius: 0px !important;
     > h3 {
         color: $title !important;
-        background-color: $grey_background !important;
+        background-color: $generic_background !important;
         border-bottom: none !important;
     }
 }

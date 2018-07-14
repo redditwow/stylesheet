@@ -187,8 +187,8 @@ button {
 // multi reddit bubble when hovering over subscribe
 .hover-bubble {
     &.multi-selector {
-        background: $grey_background;
-        border-color: $grey_border;
+        background: $generic_background;
+        border-color: $generic_border;
 
         // categorise title
         strong {
@@ -217,15 +217,15 @@ button {
         // dark input box
         .create-multi {
             input[type=text] {
-                background: $grey_background_2;
-                border: 1px solid $grey_border;
+                background: $generic_background;
+                border: 1px solid $generic_border;
                 color: #ddd;
             }
         }
 
         //nub
         &:after {
-            border-left-color: $grey_border;
+            border-left-color: $generic_border;
         }
     }
 }
@@ -278,15 +278,15 @@ button {
 
 // search doodad
 #searchexpando {
-    background-color: $grey_background;
-    border: 1px solid $grey_border;
+    background-color: $generic_background;
+    border: 1px solid $generic_border;
     color: #fff;
     border-radius: 0;
     a {
         color: #fff;
     }
     #moresearchinfo {
-        border-top: 1px solid $grey_border;
+        border-top: 1px solid $generic_border;
     }
 }
 
@@ -298,7 +298,7 @@ button {
         padding: 6px;
 
         hr {
-            background: $grey_border;
+            background: $generic_border;
             height: 1px;
             margin: 10px 0px;
         }
