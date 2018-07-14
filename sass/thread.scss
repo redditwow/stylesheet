@@ -303,3 +303,8 @@ span.score {
 .commentarea > .usertext {
     margin-left: 0px;
 }
+
+// remove background from [deleted]
+.usertext.grayed .usertext-body{
+    background: none;
+}
