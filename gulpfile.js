@@ -23,7 +23,7 @@ if (config.automaticStagingDeployment) {
     });
 }
 
-gulp.task('styles', ['sprites-legacy', 'sprites-retina', 'sprites-snoo', 'sprites-logo', 'flair-link', 'flair-user', 'flair-user-bespoke'], function () {
+gulp.task('styles', ['sprites-retina', 'sprites-snoo', 'sprites-logo', 'flair-link', 'flair-user', 'flair-user-bespoke'], function () {
 
     var credits = fs.readFileSync('sass/credits.css', 'utf8');
     var herenow = fs.readFileSync('sass/herenow.css', 'utf8');
@@ -59,9 +59,8 @@ gulp.task('styles', ['sprites-legacy', 'sprites-retina', 'sprites-snoo', 'sprite
         .pipe(replace('../images/hero.jpg', '%%hero%%'))
         .pipe(replace('../images/partyparrot.png', '%%partyparrot%%'))
 
-        // Images that need cache busting
-        .pipe(replace('../sprites/spritesheet.png', '%%spritesheet-v12%%'))
-
+        // Reddit aggressively caches images, so all of these images have a version number on the end to bust the cache
+        // after changes have been made. This is a manual process :(
         .pipe(replace('../sprites/spritesheet-retina-1x.png', '%%spritesheet-retina-1x-v10%%'))
         .pipe(replace('../sprites/spritesheet-retina-2x.png', '%%spritesheet-retina-2x-v10%%'))
 
@@ -147,18 +146,6 @@ gulp.task('flair-link', function () {
             cssVarMap: function (sprite) {
                 sprite.name = 'linkflair-' + sprite.name
             }
-        }));
-    return spriteData.pipe(gulp.dest('.'));
-});
-
-gulp.task('sprites-legacy', function () {
-    var spriteData = gulp.src('./spritesheet_images/legacy/*')
-        .pipe(newer('sprites/spritesheet.png'))
-        .pipe(spritesmith({
-            imgName: 'sprites/spritesheet.png',
-            cssName: 'sass/_spritesheet.scss',
-            cssSpritesheetName: 'spritesheet',
-            algorithm: 'binary-tree'
         }));
     return spriteData.pipe(gulp.dest('.'));
 });

@@ -73,11 +73,11 @@
     }
     .report-form-blocked-user .report-form-action-img,
     .report-form-block-user .report-form-action-img {
-        @include sprite($inv_shield-1h-silverhand-b-01);
+        @include retina-sprite($rm-block-group)
     }
     .report-form-unsubscribed .report-form-action-img,
     .report-form-unsubscribe .report-form-action-img {
-        @include sprite($spell-chargenegative);
+        @include retina-sprite($rm-unsub-group)
     }
     .report-form-block-user, .report-form-unsubscribe {
         min-height: 55px;

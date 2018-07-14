@@ -155,10 +155,10 @@ button {
             border: #333 solid 1px;
             border-radius: 3px;
             margin-bottom: -40px;
-            @include sprite($inv-letter-05);
+            @include retina-sprite($x-modmail-group)
         }
         &:hover:before {
-            @include sprite($inv-letter-05-glow-fw);
+            @include retina-sprite($x-modmail-glow-group)
         }
         padding-bottom: 29px;
         display: block;
