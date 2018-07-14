@@ -44,15 +44,15 @@ section.infobar.newsletterbar {
     }
 }
 
-//.infobar.listingsignupbar{
-//	margin: 15px 0px !important;
-//}
+//archived post. Adds 1px extra margin to the sides to bring the width in to match the thread
+.reddit-infobar.with-icon {
+    margin: 5px 1px 10px 1px;
+}
 
 // yellow info bars
 .gold-accent.comment-visits-box,
 .archived-infobar,
 .locked-infobar {
-
     @include wow-btn-warning();
     @include wow-btn-text();
 
