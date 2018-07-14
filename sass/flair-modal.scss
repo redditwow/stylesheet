@@ -4,27 +4,31 @@
     left: 50% !important;
     margin-left: -225px;
     width: 500px !important;
-    box-shadow: 0 0 24px rgba(0, 0, 0, .9) !important;
-    background: $grey_background;
-    border: $grey_border 1px solid;
+    box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.9) !important;
+    background: url(../images/background-wow-repeat.jpg) repeat;
 
     &.drop-choices.active {
-        border: $grey_border 1px solid;
+        box-shadow: 0 0 0 1px #000;
+        border: rgba(255, 255, 255, 0.15) solid 1px;
+    }
+
+    .flairoptionpane {
+        max-height: 400px;
     }
 
     h2 {
         background: none;
         font-size: 16px;
         text-transform: capitalize;
-        color: $bfa_orange;
+        color: #fff;
     }
 
     li {
         background-color: transparent;
         border: none !important;
         &:hover {
-            background-color: $grey_background_2;
-            border: 1px solid $grey_border;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: none;
         }
         a {
             color: $light_text !important;
