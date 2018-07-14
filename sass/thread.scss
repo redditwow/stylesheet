@@ -95,7 +95,7 @@ div.comment {
 }
 
 .res.res-commentBoxes div.comment, div.comment {
-    background: url('../images/background-wow-repeat-dark.jpg') !important;
+    background: url('../images/bg-repeat-dark.jpg') !important;
     box-shadow: 0 0 0 1px #000 !important;
     border: rgba(255, 255, 255, 0.15) solid 1px !important;
     position: relative;
@@ -116,28 +116,28 @@ div.comment {
     }
 
     div.comment {
-        background: url('../images/background-wow-repeat.jpg') !important;
+        background: url('../images/bg-repeat.jpg') !important;
         @include sub-comment();
         div.comment {
-            background: url('../images/background-wow-repeat-dark.jpg') !important;
+            background: url('../images/bg-repeat-dark.jpg') !important;
             @include sub-comment();
             div.comment {
-                background: url('../images/background-wow-repeat.jpg') !important;
+                background: url('../images/bg-repeat.jpg') !important;
                 @include sub-comment();
                 div.comment {
-                    background: url('../images/background-wow-repeat-dark.jpg') !important;
+                    background: url('../images/bg-repeat-dark.jpg') !important;
                     @include sub-comment();
                     div.comment {
-                        background: url('../images/background-wow-repeat.jpg') !important;
+                        background: url('../images/bg-repeat.jpg') !important;
                         @include sub-comment();
                         div.comment {
-                            background: url('../images/background-wow-repeat-dark.jpg') !important;
+                            background: url('../images/bg-repeat-dark.jpg') !important;
                             @include sub-comment();
                             div.comment {
-                                background: url('../images/background-wow-repeat.jpg') !important;
+                                background: url('../images/bg-repeat.jpg') !important;
                                 @include sub-comment();
                                 div.comment {
-                                    background: url('../images/background-wow-repeat-dark.jpg') !important;
+                                    background: url('../images/bg-repeat-dark.jpg') !important;
                                     @include sub-comment();
                                 }
                             }

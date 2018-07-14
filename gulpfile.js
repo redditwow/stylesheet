@@ -23,7 +23,7 @@ if (config.automaticStagingDeployment) {
     });
 }
 
-gulp.task('styles', ['sprites', 'sprites-retina', 'flair-link', 'flair-user', 'flair-user-bespoke'], function () {
+gulp.task('styles', ['sprites-legacy', 'sprites-retina', 'sprites-snoo', 'sprites-logo', 'flair-link', 'flair-user', 'flair-user-bespoke'], function () {
 
     var credits = fs.readFileSync('sass/credits.css', 'utf8');
     var herenow = fs.readFileSync('sass/herenow.css', 'utf8');
@@ -45,7 +45,7 @@ gulp.task('styles', ['sprites', 'sprites-retina', 'flair-link', 'flair-user', 'f
         }))
         .pipe(gulp.dest('./css'));
 
-    var stream = gulp.src('sass/**/main.scss')
+    gulp.src('sass/**/main.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(rename('prod.css'))
         .pipe(cleanCSS({
@@ -53,20 +53,26 @@ gulp.task('styles', ['sprites', 'sprites-retina', 'flair-link', 'flair-user', 'f
                 2: {all: true}
             }
         }))
-        .pipe(replace('../images/background-wow-repeat.jpg', '%%background-wow-repeat%%'))
-        .pipe(replace('../images/background-wow-repeat-dark.jpg', '%%background-wow-repeat-dark%%'))
-        .pipe(replace('../images/side-divide.fw.png', '%%side-divide%%'))
-        .pipe(replace('../images/partyparrot.png', '%%partyparrot%%'))
-        // .pipe(replace('../images/sitenav-bar-bg.jpg', '%%sitenav-bar-bg%%'))
-        .pipe(replace('../images/background-wow-top.jpg', '%%background-wow-top%%'))
-        .pipe(replace('../images/background-wow-top-v2.jpg', '%%background-wow-top-v2%%'))
+        .pipe(replace('../images/bg-repeat-dark.jpg', '%%bg-repeat-dark%%'))
+        .pipe(replace('../images/bg-repeat.jpg', '%%bg-repeat%%'))
+        .pipe(replace('../images/bg-top.jpg', '%%bg-top%%'))
         .pipe(replace('../images/hero.jpg', '%%hero%%'))
+        .pipe(replace('../images/partyparrot.png', '%%partyparrot%%'))
 
         // Images that need cache busting
         .pipe(replace('../sprites/spritesheet.png', '%%spritesheet-v12%%'))
-        .pipe(replace('../sprites/spritesheet-retina-1x.png', '%%spritesheet-retina-1x-v9%%'))
-        .pipe(replace('../sprites/spritesheet-retina-2x.png', '%%spritesheet-retina-2x-v9%%'))
+
+        .pipe(replace('../sprites/spritesheet-retina-1x.png', '%%spritesheet-retina-1x-v10%%'))
+        .pipe(replace('../sprites/spritesheet-retina-2x.png', '%%spritesheet-retina-2x-v10%%'))
+
+        .pipe(replace('../sprites/spritesheet-snoo-1x.png', '%%spritesheet-snoo-1x-v0%%'))
+        .pipe(replace('../sprites/spritesheet-snoo-2x.png', '%%spritesheet-snoo-2x-v0%%'))
+
+        .pipe(replace('../sprites/spritesheet-logo-1x.png', '%%spritesheet-logo-1x-v0%%'))
+        .pipe(replace('../sprites/spritesheet-logo-2x.png', '%%spritesheet-logo-2x-v0%%'))
+
         .pipe(replace('../sprites/flair-link.png', '%%flair-link-v3%%'))
+
         .pipe(replace('../sprites/flair-user-1x.png', '%%flair-user-1x-v11%%'))
         .pipe(replace('../sprites/flair-user-2x.png', '%%flair-user-2x-v11%%'))
 
@@ -130,7 +136,6 @@ gulp.task('flair-user-bespoke', function () {
     return spriteData.pipe(gulp.dest('.'));
 });
 
-
 gulp.task('flair-link', function () {
     var spriteData = gulp.src('./flair_link/*.png')
         .pipe(newer('sprites/flair-link.png'))
@@ -146,9 +151,8 @@ gulp.task('flair-link', function () {
     return spriteData.pipe(gulp.dest('.'));
 });
 
-
-gulp.task('sprites', function () {
-    var spriteData = gulp.src('./spritesheet_images/*')
+gulp.task('sprites-legacy', function () {
+    var spriteData = gulp.src('./spritesheet_images/legacy/*')
         .pipe(newer('sprites/spritesheet.png'))
         .pipe(spritesmith({
             imgName: 'sprites/spritesheet.png',
@@ -160,11 +164,11 @@ gulp.task('sprites', function () {
 });
 
 gulp.task('sprites-retina', function () {
-    var spriteData = gulp.src('./spritesheet_images_retina/*')
+    var spriteData = gulp.src('./spritesheet_images/kitchen_sink/*')
         .pipe(newer('sprites/spritesheet-retina-2x.png'))
         .pipe(spritesmith({
             cssName: 'sass/_spritesheet-retina.scss',
-            retinaSrcFilter: ['./spritesheet_images_retina/*@2x.png'],
+            retinaSrcFilter: ['./spritesheet_images/kitchen_sink/*@2x.png'],
             imgName: 'sprites/spritesheet-retina-1x.png',
             retinaImgName: './sprites/spritesheet-retina-2x.png',
             cssSpritesheetName: 'spritesheet-retina',
@@ -173,22 +177,57 @@ gulp.task('sprites-retina', function () {
     return spriteData.pipe(gulp.dest('.'));
 });
 
-gulp.task('demo', function () {
-    var sidebar = fs.readFileSync('demo/content/sidebar.html', 'utf8');
-    var snoo = fs.readFileSync('demo/content/header_snoo.html', 'utf8');
 
-    gulp.src('demo/pages/*')
-        .pipe(replace('<!--%%sidebar%%-->', sidebar))
-        .pipe(replace('<!--%%snoo%%-->', snoo))
-        .pipe(size({
-            showFiles: true
-        }))
-        .pipe(gulp.dest('./demo/'));
+gulp.task('sprites-snoo', function () {
+    var spriteData = gulp.src('./spritesheet_images/snoo/*')
+        .pipe(newer('sprites/spritesheet-snoo-2x.png'))
+        .pipe(spritesmith({
+            cssName: 'sass/_spritesheet-snoo.scss',
+            retinaSrcFilter: ['./spritesheet_images/snoo/*@2x.png'],
+            imgName: 'sprites/spritesheet-snoo-1x.png',
+            retinaImgName: './sprites/spritesheet-snoo-2x.png',
+            cssSpritesheetName: 'spritesheet-snoo',
+            algorithm: 'top-down'
+        }));
+    return spriteData.pipe(gulp.dest('.'));
 });
 
-gulp.task('image', function () {
-    gulp.src('./sprites/*')
-        .pipe(image())
+gulp.task('sprites-logo', function () {
+    var spriteData = gulp.src('./spritesheet_images/logo/*')
+        .pipe(newer('sprites/spritesheet-logo-2x.png'))
+        .pipe(spritesmith({
+            cssName: 'sass/_spritesheet-logo.scss',
+            retinaSrcFilter: ['./spritesheet_images/logo/*@2x.png'],
+            imgName: 'sprites/spritesheet-logo-1x.png',
+            retinaImgName: './sprites/spritesheet-logo-2x.png',
+            cssSpritesheetName: 'spritesheet-logo',
+            algorithm: 'top-down'
+        }));
+    return spriteData.pipe(gulp.dest('.'));
+});
+
+gulp.task('images', ['images-lossless', 'images-lossy']);
+
+gulp.task('images-lossless', function () {
+    gulp.src('./sprites/*snoo*')
+        .pipe(image({
+            // zopflipng: ['-y', '--iterations=15', '--splitting=3', '--filters=01234mepb', '--lossy_8bit', '--lossy_transparent'],
+            // zopflipng: ['-y', '-m', '--lossy_8bit', '--lossy_transparent'],
+            pngquant: false,
+            concurrent: 2,
+        }))
+        .pipe(gulp.dest('./sprites'));
+});
+
+gulp.task('images-lossy', function () {
+    gulp.src([
+        './sprites/*',
+        '!./sprites/*snoo*',
+    ])
+        .pipe(image({
+            concurrent: 2,
+            pngquant: ['--speed=1', '--nofs', '--force'],
+        }))
         .pipe(gulp.dest('./sprites'));
 });
 
