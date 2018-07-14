@@ -23,7 +23,7 @@ if (config.automaticStagingDeployment) {
     });
 }
 
-gulp.task('styles', ['sprites-retina', 'sprites-snoo', 'sprites-logo', 'flair-link', 'flair-user', 'flair-user-bespoke'], function () {
+gulp.task('styles', ['sprites-retina', 'sprites-snoo', 'sprites-logo', 'flair-user', 'flair-user-bespoke'], function () {
 
     var credits = fs.readFileSync('sass/credits.css', 'utf8');
     var herenow = fs.readFileSync('sass/herenow.css', 'utf8');
@@ -61,16 +61,14 @@ gulp.task('styles', ['sprites-retina', 'sprites-snoo', 'sprites-logo', 'flair-li
 
         // Reddit aggressively caches images, so all of these images have a version number on the end to bust the cache
         // after changes have been made. This is a manual process :(
-        .pipe(replace('../sprites/spritesheet-retina-1x.png', '%%spritesheet-retina-1x-v12%%'))
-        .pipe(replace('../sprites/spritesheet-retina-2x.png', '%%spritesheet-retina-2x-v12%%'))
+        .pipe(replace('../sprites/spritesheet-retina-1x.png', '%%spritesheet-retina-1x-v14%%'))
+        .pipe(replace('../sprites/spritesheet-retina-2x.png', '%%spritesheet-retina-2x-v14%%'))
 
         .pipe(replace('../sprites/spritesheet-snoo-1x.png', '%%spritesheet-snoo-1x-v0%%'))
         .pipe(replace('../sprites/spritesheet-snoo-2x.png', '%%spritesheet-snoo-2x-v0%%'))
 
         .pipe(replace('../sprites/spritesheet-logo-1x.png', '%%spritesheet-logo-1x-v0%%'))
         .pipe(replace('../sprites/spritesheet-logo-2x.png', '%%spritesheet-logo-2x-v0%%'))
-
-        .pipe(replace('../sprites/flair-link.png', '%%flair-link-v3%%'))
 
         .pipe(replace('../sprites/flair-user-1x.png', '%%flair-user-1x-v11%%'))
         .pipe(replace('../sprites/flair-user-2x.png', '%%flair-user-2x-v11%%'))
@@ -130,21 +128,6 @@ gulp.task('flair-user-bespoke', function () {
             cssRetinaGroupsName: 'bespoke-user-groups',
             cssVarMap: function (sprite) {
                 sprite.name = 'flair-' + sprite.name
-            }
-        }));
-    return spriteData.pipe(gulp.dest('.'));
-});
-
-gulp.task('flair-link', function () {
-    var spriteData = gulp.src('./spritesheet_images/flair_link/*.png')
-        .pipe(newer('sprites/flair-link.png'))
-        .pipe(spritesmith({
-            imgName: 'sprites/flair-link.png',
-            cssName: 'sass/_flair-link.scss',
-            cssSpritesheetName: 'flair-link',
-            algorithm: 'binary-tree',
-            cssVarMap: function (sprite) {
-                sprite.name = 'linkflair-' + sprite.name
             }
         }));
     return spriteData.pipe(gulp.dest('.'));
