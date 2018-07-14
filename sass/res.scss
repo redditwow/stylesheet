@@ -157,8 +157,10 @@ body.pinHeader-sub, body.pinHeader-subanduser {
 
 .NERPageMarker {
     color: $light_text !important;
-    background: $grey_background !important;
-    border: 1px solid $grey_border !important;
+    background: rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 0 0 1px #000 !important;
+    border: rgba(255, 255, 255, 0.15) solid 1px !important;
+    padding: 10px 0px 15px 0px;
 }
 
 .RESHoverInfoCard {

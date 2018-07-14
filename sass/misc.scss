@@ -189,3 +189,11 @@ ul.report-reasons {
 .crosspost-preview .title {
     color: $title;
 }
+
+// I am not entirely sure where these are used natively, but RES uses them when the infinite scrolling fails
+.nextprev a, .next-suggestions a {
+    @include wow-btn-active;
+    &:hover {
+        @include wow-btn-active-hover;
+    }
+}
