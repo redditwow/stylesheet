@@ -42,9 +42,9 @@
     display: inline
 }
 
-.md [href*="/r/"]:before, .md [href*="wiki"]:before {
-    display: none !important;
-}
+//.md [href*="/r/"]:before, .md [href*="wiki"]:before {
+//    display: none !important;
+//}
 
 .md [href="#shuffleparrot"]:before {
     width: 75px;
