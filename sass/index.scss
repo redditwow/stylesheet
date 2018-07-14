@@ -21,8 +21,10 @@ body {
     color: $light_text;
 }
 
-.entry .buttons li a {
-    color: darken($grey_text, 20%);
+.entry .buttons {
+    li a, .give-gold.gold-give-gold {
+        color: darken($grey_text, 20%);
+    }
 }
 
 .domain a {
