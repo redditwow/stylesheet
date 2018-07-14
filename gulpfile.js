@@ -61,8 +61,8 @@ gulp.task('styles', ['sprites-retina', 'sprites-snoo', 'sprites-logo', 'flair-li
 
         // Reddit aggressively caches images, so all of these images have a version number on the end to bust the cache
         // after changes have been made. This is a manual process :(
-        .pipe(replace('../sprites/spritesheet-retina-1x.png', '%%spritesheet-retina-1x-v10%%'))
-        .pipe(replace('../sprites/spritesheet-retina-2x.png', '%%spritesheet-retina-2x-v10%%'))
+        .pipe(replace('../sprites/spritesheet-retina-1x.png', '%%spritesheet-retina-1x-v12%%'))
+        .pipe(replace('../sprites/spritesheet-retina-2x.png', '%%spritesheet-retina-2x-v12%%'))
 
         .pipe(replace('../sprites/spritesheet-snoo-1x.png', '%%spritesheet-snoo-1x-v0%%'))
         .pipe(replace('../sprites/spritesheet-snoo-2x.png', '%%spritesheet-snoo-2x-v0%%'))
