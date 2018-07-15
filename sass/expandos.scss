@@ -1,4 +1,6 @@
-.top-matter .expando-button {
+.top-matter .expando-button, // listing
+.usertext-body .expando-button // comments
+{
     background-color: transparent;
     &.selftext {
         &.collapsed {
@@ -83,5 +85,8 @@
             @include retina-sprite($expando-plus-hover-group);
         }
     }
+}
 
+.res-freetext-expando .expando-button {
+    transform: none;
 }
