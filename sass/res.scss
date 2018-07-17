@@ -189,9 +189,23 @@ body.pinHeader-sub, body.pinHeader-subanduser {
     }
 }
 
-#REScommentSubToggle{
+#REScommentSubToggle {
     @include wow-btn-active();
     &:hover {
         @include wow-btn-active-hover();
+    }
+}
+
+//lol
+#baconBit {
+    &.makeitrain {
+        display: block;
+        transform: unset !important;
+        transition: unset !important;
+        position: fixed !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        @include retina-sprite($x-hackreason-group);
     }
 }
