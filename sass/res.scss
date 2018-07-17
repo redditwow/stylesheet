@@ -196,6 +196,11 @@ body.pinHeader-sub, body.pinHeader-subanduser {
     }
 }
 
+a.voteWeight {
+    color: $grey_text !important;
+    background-color: transparent !important;
+}
+
 //lol
 #baconBit {
     &.makeitrain {
