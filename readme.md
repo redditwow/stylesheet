@@ -4,10 +4,10 @@
 
 1. `npm install`
 2. Copy `example_config.json` to `config.json` and optionally enable automatic deployments to stage
-2. `gulp styles` to compile for the very first time
-3. `gulp image` to crush the spritesheet images down to a more manageable filesize. The generated spritesheets are massively bloated and this step reduces them by about 70%.
+3. `gulp styles` to compile for the very first time
+4. `gulp images` to crush the spritesheet images down to a more manageable filesize. The generated spritesheets are massively bloated and this step reduces them by about 70%.
     * This requires you to have `libjpeg` and `libpng` installed on your machine
-3. `gulp` to watch for changes
+5. `gulp` to watch for changes
 
 ## Installation
 
@@ -15,7 +15,7 @@
 2. Upload all the spritesheet images
     * These files require manually adding a version number on the end to bust reddit's cache. The version number is manually set in the gulp file for each individual file.
 3. Copy and paste all of `css/prod.css` into your subreddit's CSS setting
-4. In your subreddit settings: upload `images/snoo.png` as the header image
+4. In your subreddit settings: upload `spritesheet_images/snoo/x-snoo.png` as the header image
 5. In the flair settings, set user and link flair to display on the left
 6. That should be it!
 
@@ -29,9 +29,20 @@ When the stylesheet is compiled, gulp can optionally upload the CSS to a staging
 
 # Notes
 
-* Most individual sprite images are Fireworks PNGs 
- 
-## Thanks
+## Images and Sprites
+
+Most individual sprite images are Fireworks PNGs. This includes: 
+   * The Snoo and logo, where the glow effect is a filter; 
+   * The sidebar images with a hover effect, where the inner glow is also a filter;
+   * The RES markdown editor toolbar buttons, where the glyphs are fonts and can be rescaled fairly easy to support multiple DPIs;
+   
+If you are editing these images, it would be nice to keep them as Fireworks PNGs.   
+
+There are two gulp tasks for compressing images. All images except for the Snoo goes through the lossy [pngquant](https://pngquant.org/) to reduce the file size. Unfortunately this is too lossy for our Snoo which has noticeable dithering when compressed. It gets its own task which disables the lossy compression. 
+   
+The spritesheet is split into separate sprites for the Snoo, logo, user flair, bespoke user flair, and everything else. Snoo gets its own file because it requires lossless compression. The logo because it's so large (as in file size). The user flair is split because it's easier to maintain as the generic flair so rarely changes while the bespoke changes more often.
+
+# Thanks
 
 ![BrowserStack](https://i.redd.it/vbwmjeq64d0y.png)   
 Special thanks to [BrowserStack](https://www.browserstack.com/) for providing us with a free account for testing.
