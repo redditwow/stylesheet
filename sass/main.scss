@@ -27,7 +27,6 @@ $generic_background: lighten(#28211b, 5%);
 $generic_border: lighten($generic_background, 10%);
 
 @import "mixins.scss";
-@import "_spritesheet.scss";
 @import "_spritesheet-retina.scss";
 @import "_spritesheet-snoo.scss";
 @import "_spritesheet-logo.scss";
