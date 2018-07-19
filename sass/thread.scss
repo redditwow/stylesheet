@@ -84,14 +84,26 @@ div.comment {
     }
 }
 
-// The copious amount of !importants are brought to you by RES. Thanks RES.
 @mixin sub-comment() {
     padding-bottom: 0px !important;
-    //border-right: none !important;
+    margin-left: 5px !important;
 }
 
 .commentarea .sitetable.nestedlisting {
     margin-right: 1px;
+}
+
+// This fixes deeply nested collapsed comments being too short in some browsers
+div.comment.collapsed {
+    min-height: 25px;
+    .tagline {
+        // keep the text centred
+        line-height: 25px;
+    }
+    a.expand {
+        // remove the vertical padding off the expand button so it doesn't look weirdly pushed down
+        padding: 0px 4px;
+    }
 }
 
 .res.res-commentBoxes div.comment, div.comment {
@@ -101,15 +113,8 @@ div.comment {
     position: relative;
     outline: none;
 
-    //padding: 10px 4px 10px 0px !important;
-    //margin: 10px 0px -1px 10px !important;
-
     padding: 10px 0px 10px 0px !important;
-    margin: 10px -1px -1px 0px !important;
-
-    &:not(:first-child) {
-        margin-top: 0px !important;
-    }
+    margin: 15px -1px -1px 0px !important;
 
     .child, .showreplies {
         border-left: none;
