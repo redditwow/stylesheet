@@ -38,7 +38,7 @@ body.moderator {
 }
 
 .thing.comment.spam {
-    .entry, .midcol {
+    > .entry, > .midcol {
         // important to override RES
         background-color: rgba(255, 0, 0, 0.05) !important;
     }
