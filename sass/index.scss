@@ -65,40 +65,45 @@ body {
         display: none !important;
     }
 
-    a {
-        &.thumbnail:not(.default):not(.self):not(.spoiler) {
-            margin: 0px 12px 0px 0px;
-            img {
-                max-height: 64px;
-                height: auto !important;
-                width: auto !important;
-            }
-            border-radius: 2px;
-            position: relative;
-            border: 1px solid #403A34;
-            box-shadow: 0 0 0 1px #000;
-            background-color: $generic_background;
-            &::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                right: 0;
-                left: 0;
-                bottom: 0;
-                box-shadow: inset 0 0 5px rgba(3, 0, 0, 0.4);
+    // The thumbnail border should not be shown for links where we replace the thumbnail with one of our own. These are:
+    //
+    // * All nsfw posts
+    // * All spoilers
+    // * All self posts
+    // * Links without a thumbnail
+    //
+    // All of these can be excluded by targeting their respective classes on the thumbnail element, *except* for nsfw
+    // posts which doesn't have a .over18 on the thumbnail. Instead that is targeted on the upmost .thing.link element
+    &:not(.over18) {
+        a {
+            &.thumbnail:not(.default):not(.self):not(.spoiler) {
+                margin: 0px 12px 0px 0px;
+                img {
+                    max-height: 64px;
+                    height: auto !important;
+                    width: auto !important;
+                }
+                border-radius: 2px;
+                position: relative;
+                border: 1px solid #403A34;
+                box-shadow: 0 0 0 1px #000;
+                background-color: $generic_background;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    bottom: 0;
+                    box-shadow: inset 0 0 5px rgba(3, 0, 0, 0.4);
+                }
             }
         }
+    }
 
-        //&.self{
-        //	margin-top: 10px;
-        //	margin-bottom: 10px;
-        //	margin-left: 15px;
-        //	margin-right: 20px;
-        //}
-
+    a {
         &.title {
             color: $title;
-
             &:hover {
                 //color: darken($title, 20%);
                 text-decoration: underline;
@@ -109,9 +114,7 @@ body {
                 &:hover {
                     //color: darken($title, 40%);
                 }
-
             }
-
         }
     }
 }
@@ -155,13 +158,13 @@ body {
 a.thumbnail.default,
 a.thumbnail.self {
     @include retina-sprite(('default', $t-self, $t-self-2x));
-    margin: 10px 20px 10px 12px;
+    margin: 10px 22px 10px 12px;
 }
 
 a.thumbnail.spoiler,
 .thing.spoiler a.thumbnail.spoiler {
     @include retina-sprite(('spoiler', $t-spoiler, $t-spoiler-2x));
-    margin: 10px 20px 10px 12px;
+    margin: 10px 22px 10px 12px;
     img {
         // hide the thumbnail image to reveal the icon underneath
         display: none;
@@ -175,6 +178,7 @@ a.thumbnail.spoiler,
 
 .thing.over18 a.thumbnail {
     @include retina-sprite(('nsfw', $t-nsfw, $t-nsfw-2x));
+    margin: 10px 22px 10px 12px;
     img {
         // hide the thumbnail image to reveal the NSFW icon underneath
         display: none;
@@ -183,4 +187,49 @@ a.thumbnail.spoiler,
 
 .linkflairlabel {
     max-width: unset;
+}
+
+.linkflair-w0-sun,
+.linkflair-w1-mon,
+.linkflair-w2-tue,
+.linkflair-w3-wed,
+.linkflair-w4-thur,
+.linkflair-w5-fri,
+.linkflair-w6-sat {
+    &.self {
+        a.thumbnail {
+            border: 1px solid #403a34;
+            box-shadow: inset 0 0 5px rgba(3, 0, 0, .4);
+            margin: 2px 19px 10px 7px;
+            box-shadow: 0 0 0 1px #000;
+        }
+    }
+}
+
+.linkflair-w0-sun.self a.thumbnail {
+    @include retina-sprite($lf-0-sun-group);
+}
+
+.linkflair-w1-mon.self a.thumbnail {
+    @include retina-sprite($lf-1-mon-group);
+}
+
+.linkflair-w2-tue.self a.thumbnail {
+    @include retina-sprite($lf-2-tue-group);
+}
+
+.linkflair-w3-wed.self a.thumbnail {
+    @include retina-sprite($lf-3-wed-group);
+}
+
+.linkflair-w4-thur.self a.thumbnail {
+    @include retina-sprite($lf-4-thur-group);
+}
+
+.linkflair-w5-fri.self a.thumbnail {
+    @include retina-sprite($lf-5-fri-group);
+}
+
+.linkflair-w6-sat.self a.thumbnail {
+    @include retina-sprite($lf-6-sat-group);
 }
