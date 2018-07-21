@@ -214,3 +214,17 @@ a.voteWeight {
         @include retina-sprite($x-hackreason-group);
     }
 }
+
+body.res-nightmode {
+    #sr-header-area {
+        text-shadow: none;
+    }
+
+    // remove the mountain and brown backgrounds
+    background: unset;
+
+    // removes the background from flair. RES nightmode adds a background that looks weird with our icon flairs
+    .flair, .linkflairlabel {
+        background: unset !important;
+    }
+}

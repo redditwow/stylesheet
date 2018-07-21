@@ -107,7 +107,7 @@ div.comment.collapsed {
 }
 
 .res.res-commentBoxes div.comment, div.comment {
-    background: url('../images/bg-repeat-dark.jpg') !important;
+
     box-shadow: 0 0 0 1px #000 !important;
     border: rgba(255, 255, 255, 0.15) solid 1px !important;
     position: relative;
@@ -120,30 +120,33 @@ div.comment.collapsed {
         border-left: none;
     }
 
-    div.comment {
-        background: url('../images/bg-repeat.jpg') !important;
-        @include sub-comment();
+    body:not(.res-nightmode) & {
+        background: url('../images/bg-repeat-dark.jpg') !important;
         div.comment {
-            background: url('../images/bg-repeat-dark.jpg') !important;
+            background: url('../images/bg-repeat.jpg') !important;
             @include sub-comment();
             div.comment {
-                background: url('../images/bg-repeat.jpg') !important;
+                background: url('../images/bg-repeat-dark.jpg') !important;
                 @include sub-comment();
                 div.comment {
-                    background: url('../images/bg-repeat-dark.jpg') !important;
+                    background: url('../images/bg-repeat.jpg') !important;
                     @include sub-comment();
                     div.comment {
-                        background: url('../images/bg-repeat.jpg') !important;
+                        background: url('../images/bg-repeat-dark.jpg') !important;
                         @include sub-comment();
                         div.comment {
-                            background: url('../images/bg-repeat-dark.jpg') !important;
+                            background: url('../images/bg-repeat.jpg') !important;
                             @include sub-comment();
                             div.comment {
-                                background: url('../images/bg-repeat.jpg') !important;
+                                background: url('../images/bg-repeat-dark.jpg') !important;
                                 @include sub-comment();
                                 div.comment {
-                                    background: url('../images/bg-repeat-dark.jpg') !important;
+                                    background: url('../images/bg-repeat.jpg') !important;
                                     @include sub-comment();
+                                    div.comment {
+                                        background: url('../images/bg-repeat-dark.jpg') !important;
+                                        @include sub-comment();
+                                    }
                                 }
                             }
                         }
@@ -152,6 +155,7 @@ div.comment.collapsed {
             }
         }
     }
+
 }
 
 .res.res-commentBoxes.res-commentBoxes-rounded .comment,
