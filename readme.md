@@ -4,7 +4,7 @@
 
 1. `npm install`
 2. Copy `example_config.json` to `config.json` and optionally enable automatic deployments to stage
-3. `gulp styles` to compile for the very first time
+3. `gulp styles` to compile for the first time. Use `gulp` to compile and watch for changes or `gulp watch` to just watch.
 4. `gulp images` to crush the spritesheet images down to a more manageable filesize. The generated spritesheets are massively bloated and this step reduces them by about 70%.
     * This requires you to have `libjpeg` and `libpng` installed on your machine
 5. `gulp` to watch for changes

@@ -202,6 +202,8 @@ gulp.task('images-lossy', function () {
 });
 
 //Watch task
-gulp.task('default', function () {
+gulp.task('watch', function () {
     gulp.watch(['sass/**/*.scss', '!sass/**/_*.scss'], ['styles']);
 });
+
+gulp.task('default', ['styles', 'watch']);
