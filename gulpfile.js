@@ -56,7 +56,7 @@ gulp.task('styles', ['sprites-retina', 'sprites-snoo', 'sprites-logo', 'flair-us
         .pipe(replace('../images/bg-repeat-dark.jpg', '%%bg-repeat-dark%%'))
         .pipe(replace('../images/bg-repeat.jpg', '%%bg-repeat%%'))
         .pipe(replace('../images/bg-top.jpg', '%%bg-top%%'))
-        .pipe(replace('../images/hero.jpg', '%%hero%%'))
+        .pipe(replace('../images/hero-v2.jpg', '%%hero-v2%%'))
         .pipe(replace('../images/partyparrot.png', '%%partyparrot%%'))
 
         // Reddit aggressively caches images, so all of these images have a version number on the end to bust the cache
