@@ -221,7 +221,7 @@ body.res-nightmode {
     }
 
     // remove the mountain and brown backgrounds
-    background: unset;
+    background-image: unset;
 
     // removes the background from flair. RES nightmode adds a background that looks weird with our icon flairs
     .flair, .linkflairlabel {
