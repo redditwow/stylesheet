@@ -10,6 +10,14 @@
         color: darken($grey_text, 10%) !important;
     }
 
+    hr {
+        background: darken($grey_text, 30%) !important;
+    }
+
+    td, th {
+        border-color: darken($grey_text, 30%) !important;;
+    }
+
     code, pre, pre code, code pre {
         border: 1px solid $generic_border !important;;
         background-color: $generic_background !important;;
