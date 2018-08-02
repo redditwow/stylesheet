@@ -3,10 +3,10 @@
 }
 
 .titlebox span.number:after {
-    content: " chilling in Darnassus";
+    content: " pending faction changes";
 }
 
 .titlebox .users-online span.number:after {
-    content: " playing with matches";
+    content: " loyal to Sylvanas";
 }
 
