@@ -133,11 +133,6 @@
         vertical-align: middle;
         content: '';
     }
-    &:after {
-        background: none !important;
-        width: 0;
-        content: '';
-    }
     + .author, + .author:visited {
         font-weight: 600;
     }
