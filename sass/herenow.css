@@ -3,10 +3,10 @@
 }
 
 .titlebox span.number:after {
-    content: " pending faction changes";
+    content: " capping their main";
 }
 
 .titlebox .users-online span.number:after {
-    content: " loyal to Sylvanas";
+    content: " getting ganked in warmode";
 }
 
