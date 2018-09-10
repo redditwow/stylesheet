@@ -16,7 +16,7 @@
     }
 }
 
-.md [href$="parrot"] {
+.md [href$="parrot"][href^="#"] {
     display: inline-block;
     width: 30px;
     height: 35px;
@@ -27,15 +27,14 @@
     pointer-events: unset;
 }
 
-.md [href$="parrot"]:before {
+.md [href$="parrot"][href^="#"]:before, .md [href$="parrot"][href^="/"]:before{
     background: url(../images/partyparrot.png);
     display: inline-block;
     height: 35px;
-    width: 30px;
-    -webkit-animation: parrot 3s steps(60) infinite;
-    animation: parrot 3s steps(60) infinite;
     position: absolute;
     content: "";
+    -webkit-animation: parrot 3s steps(60) infinite;
+    animation: parrot 3s steps(60) infinite;
 }
 
 .md [href*="/r/"], .md [href*="wiki"] {
@@ -45,6 +44,11 @@
 //.md [href*="/r/"]:before, .md [href*="wiki"]:before {
 //    display: none !important;
 //}
+
+
+.md [href$="parrot"]:before {
+    width: 30px;
+}
 
 .md [href="#shuffleparrot"]:before {
     width: 75px;
