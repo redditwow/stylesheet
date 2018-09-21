@@ -24,7 +24,7 @@ body.mod-toolbox {
     transform: scale(1.5, 1.5);
 }
 
-.mod-toolbox #noresults.error {
+body.mod-toolbox #noresults.error[class*='tb'] {
     min-width: unset;
     min-height: unset;
     margin: 50px auto;
