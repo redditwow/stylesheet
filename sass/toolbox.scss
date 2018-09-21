@@ -24,6 +24,13 @@ body.mod-toolbox {
     transform: scale(1.5, 1.5);
 }
 
+.mod-toolbox #noresults.error {
+    min-width: unset;
+    min-height: unset;
+    margin: 50px auto;
+    @include retina-sprite($x-cleared-the-mod-queue-group);
+}
+
 body.moderator {
     .thing {
         .title {
