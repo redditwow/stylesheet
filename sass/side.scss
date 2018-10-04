@@ -318,6 +318,19 @@ button {
             margin: 15px -15px;
             padding: 5px;
         }
+
+        h5 + blockquote {
+            background: rgba(255, 255, 255, 0.05);
+            border: $bfa_orange solid 1px;
+            margin: 30px -16px 30px -16px;
+            padding: 16px;
+            color: $light_text !important;
+            box-shadow: 0px 0px 31px 3px rgba($bfa_orange, 0.45);
+            h1 {
+                margin-top: 0px;
+            }
+        }
+
     }
 
     a[href$="wowbtn"] {
