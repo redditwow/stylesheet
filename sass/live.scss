@@ -1,0 +1,17 @@
+body.embed.liveupdate-app {
+
+    .content {
+        margin: 0;
+        background: none !important;
+    }
+
+    .liveupdate-listing {
+        li.liveupdate:hover {
+            time, a.author {
+                color: white;
+            }
+        }
+
+    }
+
+}
