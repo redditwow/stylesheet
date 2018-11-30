@@ -32,7 +32,7 @@
 #header-bottom-left .tabmenu {
     position: relative;
     top: 172px;
-    left: 130px;
+    left: 230px;
     z-index: 9999;
 
     li.selected a {
@@ -78,17 +78,17 @@
 
 // reddit/ snoo logo
 #header-img-a {
-    margin-top: 34px;
-    margin-left: 24px;
+    margin-top: 15px;
+    margin-left: 25px;
     height: 128px;
     width: 100px;
     display: inline-block;
     position: absolute;
     z-index: 9999;
 
-    @include retina-sprite($x-snoo-group);
+    @include retina-sprite($x-xmas-snoo-group);
     &:hover {
-        @include retina-sprite($x-snoo-glow-group);
+        @include retina-sprite($x-xmas-snoo-glow-group);
     }
     #header-img {
         opacity: 0;
