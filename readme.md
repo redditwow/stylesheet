@@ -42,6 +42,11 @@ There are two gulp tasks for compressing images. All images except for the Snoo 
    
 The spritesheet is split into separate sprites for the Snoo, logo, user flair, bespoke user flair, and everything else. Snoo gets its own file because it requires lossless compression. The logo because it's so large (as in file size). The user flair is split because it's easier to maintain as the generic flair so rarely changes while the bespoke changes more often.
 
+## Featured Artist Sizes
+
+* 2x: 640x400
+* 1x: 320x200
+
 # Thanks
 
 ![BrowserStack](https://i.redd.it/vbwmjeq64d0y.png)   

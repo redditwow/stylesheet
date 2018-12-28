@@ -60,6 +60,11 @@ gulp.task('styles', ['sprites-retina', 'sprites-snoo', 'sprites-logo', 'flair-us
         .pipe(replace('../images/hero-fire.jpg', '%%hero-fire%%'))
         .pipe(replace('../images/partyparrot.png', '%%partyparrot%%'))
 
+        .pipe(replace('../images/artist-1.jpg', '%%artist-1%%'))
+        .pipe(replace('../images/artist-1@2x.jpg', '%%artist-1-2x%%'))
+        .pipe(replace('../images/artist-2.jpg', '%%artist-2%%'))
+        .pipe(replace('../images/artist-2@2x.jpg', '%%artist-2-2x%%'))
+
         // Reddit aggressively caches images, so all of these images have a version number on the end to bust the cache
         // after changes have been made. This is a manual process :(
         .pipe(replace('../sprites/spritesheet-retina-1x.png', '%%spritesheet-retina-1x-v19%%'))
@@ -148,6 +153,20 @@ gulp.task('sprites-retina', function () {
     return spriteData.pipe(gulp.dest('.'));
 });
 
+// gulp.task('sprites-artists', function () {
+//     var spriteData = gulp.src('./spritesheet_images/artists/*')
+//         .pipe(newer('sprites/spritesheet-artists-2x.png'))
+//         .pipe(spritesmith({
+//             cssName: 'sass/_spritesheet-artists.scss',
+//             retinaSrcFilter: ['./spritesheet_images/artists/*@2x.png'],
+//             imgName: 'sprites/spritesheet-artists-1x.png',
+//             retinaImgName: './sprites/spritesheet-artists-2x.png',
+//             cssSpritesheetName: 'spritesheet-artists',
+//             algorithm: 'binary-tree'
+//         }));
+//     return spriteData.pipe(gulp.dest('.'));
+// });
+
 
 gulp.task('sprites-snoo', function () {
     var spriteData = gulp.src('./spritesheet_images/snoo/*')
@@ -192,7 +211,7 @@ gulp.task('images-lossless', function () {
 
 gulp.task('images-lossy', function () {
     gulp.src([
-        './sprites/*',
+        './sprites/*.png',
         '!./sprites/*snoo*',
     ])
         .pipe(image({
