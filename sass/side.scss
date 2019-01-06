@@ -378,7 +378,8 @@ button {
         &[href$="thursday"],
         &[href$="friday"],
         &[href$="saturday"],
-        &[href$="sunday"] {
+        &[href$="sunday"],
+        &[href$="recruitment"] {
             height: 18px;
             margin-bottom: 7px;
             margin-left: $side-icon-margin;
@@ -399,7 +400,7 @@ button {
         }
 
         // extra margin for the last icon
-        &[href$="saturday"] {
+        &[href$="sunday"] {
             margin-bottom: 28px;
         }
 
@@ -450,6 +451,14 @@ button {
         }
         &[href$="saturday"]:hover:before {
             @include retina-sprite($sb-6-sat-glow-group)
+        }
+
+        &[href$="recruitment"]:before {
+            @include retina-sprite($sb-recruitment-group)
+        }
+
+        &[href$="recruitment"]:hover:before {
+            @include retina-sprite($sb-recruitment-glow-group)
         }
     }
 

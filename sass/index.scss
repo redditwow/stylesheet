@@ -199,7 +199,8 @@ a.thumbnail.spoiler,
 .linkflair-w3-wed,
 .linkflair-w4-thur,
 .linkflair-w5-fri,
-.linkflair-w6-sat {
+.linkflair-w6-sat,
+.linkflair-recruitment {
     &.self {
         a.thumbnail {
             border: 1px solid #403a34;
@@ -236,4 +237,8 @@ a.thumbnail.spoiler,
 
 .linkflair-w6-sat.self a.thumbnail {
     @include retina-sprite($lf-6-sat-group);
+}
+
+.linkflair-recruitment.self a.thumbnail {
+    @include retina-sprite($lf-recruitment-group);
 }
