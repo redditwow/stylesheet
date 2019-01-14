@@ -10,6 +10,25 @@ body.mod-toolbox {
     }
 }
 
+.mod-toolbox {
+    .mod-popup, .tb-page-overlay {
+        textarea, input {
+            color: #111 !important;
+            background: white !important;
+        }
+
+        input {
+            border: #363636 solid 1px !important;
+        }
+    }
+
+    .mod-popup {
+        .tb-popup-title {
+            color: #111;
+        }
+    }
+}
+
 // reset popup box colour back to default ish
 .tb-popup-content, .tb-window-wrapper {
     color: #111;
