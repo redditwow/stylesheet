@@ -64,6 +64,12 @@ gulp.task('styles', ['sprites-retina', 'sprites-snoo', 'sprites-logo', 'flair-us
         .pipe(replace('../images/artist-1@2x.jpg', '%%artist-1-2x%%'))
         .pipe(replace('../images/artist-2.jpg', '%%artist-2%%'))
         .pipe(replace('../images/artist-2@2x.jpg', '%%artist-2-2x%%'))
+
+        .pipe(replace('../images/artist-1a.jpg', '%%artist-1a%%'))
+        .pipe(replace('../images/artist-1a@2x.jpg', '%%artist-1a-2x%%'))
+        .pipe(replace('../images/artist-2a.jpg', '%%artist-2a%%'))
+        .pipe(replace('../images/artist-2a@2x.jpg', '%%artist-2a-2x%%'))
+
         .pipe(replace('../images/artist-3.jpg', '%%artist-3%%'))
         .pipe(replace('../images/artist-3@2x.jpg', '%%artist-3-2x%%'))
 
