@@ -73,6 +73,9 @@ gulp.task('styles', ['sprites-retina', 'sprites-snoo', 'sprites-logo', 'flair-us
         .pipe(replace('../images/artist-3.jpg', '%%artist-3%%'))
         .pipe(replace('../images/artist-3@2x.jpg', '%%artist-3-2x%%'))
 
+        .pipe(replace('../images/x-vusys.png', '%%x-vusys%%'))
+        .pipe(replace('../images/x-vusys@2x.png', '%%x-vusys-2x%%'))
+
         // Reddit aggressively caches images, so all of these images have a version number on the end to bust the cache
         // after changes have been made. This is a manual process :(
         .pipe(replace('../sprites/spritesheet-retina-1x.png', '%%spritesheet-retina-1x-v21%%'))

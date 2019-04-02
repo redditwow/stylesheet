@@ -53,8 +53,9 @@
 .flair-u-treasure,
 .flair-u-vertical,
 .flair-u-vusys,
+.flair-u-vusys2,
 .flair-u-waahht,
-.flair-u-zvitiate{
+.flair-u-zvitiate {
     &:after {
         border-radius: 5px;
         border: 1px solid #000;
@@ -204,3 +205,44 @@
 @include method('methodroger', " <Method>");
 @include method('darriesrsly', " <Method>");
 @include method('cayna', " <Method>");
+
+// Special for Vusys
+@keyframes vusys {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 -1372px;
+    }
+}
+
+.flair-u-vusys2 {
+    &:after {
+        width: 28px;
+        height: 28px;
+        display: inline-block;
+        background-image: url('../images/x-vusys.png');
+        animation: vusys 9s steps(49) infinite;
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .flair-u-vusys2 {
+        &:after {
+            background-image: url('../images/x-vusys@2x.png');
+            background-size: 28px 1372px;
+        }
+    }
+}
+
+// Hack to hide titles on old reddit, required for text only flairs on new reddit
+//span.flair-std {
+//    &[title="Alliance"] {
+//        font-size: 0;
+//        display: inline-block;
+//        line-height: 28px;
+//    }
+//    &:after{
+//        line-height: 28px;
+//    }
+//}
