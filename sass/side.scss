@@ -368,6 +368,25 @@ button {
         display: block;
     }
 
+    a[href$="twitchbtn"] {
+        &:first-of-type {
+            margin-top: 10px;
+        }
+
+        &:before {
+            content: '';
+            display: block;
+            margin-left: -40px;
+            margin-bottom: -26px;
+            @include retina-sprite($sb-twitch-group)
+        }
+
+        margin-left: 40px;
+        font-size: 14px;
+        height: 34px;
+        display: block;
+    }
+
     // Weekly thread links
     a {
         $side-icon-margin: 35px;
