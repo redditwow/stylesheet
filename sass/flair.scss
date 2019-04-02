@@ -234,15 +234,3 @@
         }
     }
 }
-
-// Hack to hide titles on old reddit, required for text only flairs on new reddit
-//span.flair-std {
-//    &[title="Alliance"] {
-//        font-size: 0;
-//        display: inline-block;
-//        line-height: 28px;
-//    }
-//    &:after{
-//        line-height: 28px;
-//    }
-//}
