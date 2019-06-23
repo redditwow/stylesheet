@@ -3,10 +3,9 @@
 }
 
 .titlebox span.number:after {
-    content: " watching the world first race";
+    content: " at sea";
 }
 
 .titlebox .users-online span.number:after {
-    content: " think Serenity will win this time";
+    content: " sleeping with the fishes";
 }
-
