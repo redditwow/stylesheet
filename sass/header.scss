@@ -90,9 +90,9 @@
     z-index: 9999;
 
     @include retina-sprite($x-snoo-group);
-    &:hover {
-        @include retina-sprite($x-snoo-glow-group);
-    }
+    //&:hover {
+    //    @include retina-sprite($x-snoo-glow-group);
+    //}
     #header-img {
         opacity: 0;
     }
