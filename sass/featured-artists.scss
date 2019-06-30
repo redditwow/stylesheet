@@ -1,6 +1,6 @@
 .side {
     // Featured Artists
-    a[href*="#fa-img-1"], a[href*="#fa-img-2"] ,
+    a[href*="#fa-img-1"], a[href*="#fa-img-2"],
     a[href*="#fa-img-1a"], a[href*="#fa-img-2a"] {
         display: block;
         width: 320px;
@@ -14,7 +14,17 @@
     a[href*="#fa-img-3"] {
         display: block;
         width: 320px;
-        height: 450px;
+        height: 426px;
+        margin: 0px -16px;
+        font-size: 0px;
+        z-index: 10;
+        pointer-events: none;
+    }
+
+    a[href*="#fa-img-4"] {
+        display: block;
+        width: 320px;
+        height: 388px;
         margin: 0px -16px;
         font-size: 0px;
         z-index: 10;
@@ -37,9 +47,13 @@
         background: url(../images/artist-2a.jpg);
     }
 
-    //a[href*="#fa-img-3"] {
-    //    background: url(../images/artist-3.jpg);
-    //}
+    a[href*="#fa-img-3"] {
+        background: url(../images/artist-3.jpg);
+    }
+
+    a[href*="#fa-img-4"] {
+        background: url(../images/artist-4.jpg);
+    }
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
@@ -64,10 +78,15 @@
             background-size: 320px 200px !important;
         }
 
-        //a[href*="#fa-img-3"] {
-        //    background: url(../images/artist-3@2x.jpg) !important;
-        //    background-size: 320px 450px !important;
-        //}
+        a[href*="#fa-img-3"] {
+            background: url(../images/artist-3@2x.jpg) !important;
+            background-size: 320px 426px !important;
+        }
+
+        a[href*="#fa-img-4"] {
+            background: url(../images/artist-4@2x.jpg) !important;
+            background-size: 320px 388px !important;
+        }
     }
 }
 

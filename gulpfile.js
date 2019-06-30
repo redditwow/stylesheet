@@ -73,6 +73,9 @@ gulp.task('styles', ['sprites-retina', 'sprites-snoo', 'sprites-logo', 'flair-us
         .pipe(replace('../images/artist-3.jpg', '%%artist-3%%'))
         .pipe(replace('../images/artist-3@2x.jpg', '%%artist-3-2x%%'))
 
+        .pipe(replace('../images/artist-4.jpg', '%%artist-4%%'))
+        .pipe(replace('../images/artist-4@2x.jpg', '%%artist-4-2x%%'))
+
         .pipe(replace('../images/x-vusys.png', '%%x-vusys%%'))
         .pipe(replace('../images/x-vusys@2x.png', '%%x-vusys-2x%%'))
 
