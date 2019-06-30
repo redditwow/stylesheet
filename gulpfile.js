@@ -23,7 +23,7 @@ if (config.automaticStagingDeployment) {
     });
 }
 
-gulp.task('styles', ['sprites-retina', 'sprites-snoo', 'sprites-logo', 'flair-user', 'flair-user-bespoke'], function () {
+gulp.task('styles', ['sprites-retina', 'sprites-snoo',  'flair-user', 'flair-user-bespoke'], function () {
 
     var credits = fs.readFileSync('sass/credits.css', 'utf8');
     var herenow = fs.readFileSync('sass/herenow.css', 'utf8');
@@ -83,9 +83,6 @@ gulp.task('styles', ['sprites-retina', 'sprites-snoo', 'sprites-logo', 'flair-us
 
         .pipe(replace('../sprites/spritesheet-snoo-1x.png', '%%spritesheet-snoo-1x-v4%%'))
         .pipe(replace('../sprites/spritesheet-snoo-2x.png', '%%spritesheet-snoo-2x-v4%%'))
-
-        .pipe(replace('../sprites/spritesheet-logo-1x.png', '%%spritesheet-logo-1x-v0%%'))
-        .pipe(replace('../sprites/spritesheet-logo-2x.png', '%%spritesheet-logo-2x-v0%%'))
 
         .pipe(replace('../sprites/flair-user-1x.png', '%%flair-user-1x-v11%%'))
         .pipe(replace('../sprites/flair-user-2x.png', '%%flair-user-2x-v11%%'))
@@ -164,21 +161,6 @@ gulp.task('sprites-retina', function () {
     return spriteData.pipe(gulp.dest('.'));
 });
 
-// gulp.task('sprites-artists', function () {
-//     var spriteData = gulp.src('./spritesheet_images/artists/*')
-//         .pipe(newer('sprites/spritesheet-artists-2x.png'))
-//         .pipe(spritesmith({
-//             cssName: 'sass/_spritesheet-artists.scss',
-//             retinaSrcFilter: ['./spritesheet_images/artists/*@2x.png'],
-//             imgName: 'sprites/spritesheet-artists-1x.png',
-//             retinaImgName: './sprites/spritesheet-artists-2x.png',
-//             cssSpritesheetName: 'spritesheet-artists',
-//             algorithm: 'binary-tree'
-//         }));
-//     return spriteData.pipe(gulp.dest('.'));
-// });
-
-
 gulp.task('sprites-snoo', function () {
     var spriteData = gulp.src('./spritesheet_images/snoo/*')
         .pipe(newer('sprites/spritesheet-snoo-2x.png'))
@@ -188,20 +170,6 @@ gulp.task('sprites-snoo', function () {
             imgName: 'sprites/spritesheet-snoo-1x.png',
             retinaImgName: './sprites/spritesheet-snoo-2x.png',
             cssSpritesheetName: 'spritesheet-snoo',
-            algorithm: 'top-down'
-        }));
-    return spriteData.pipe(gulp.dest('.'));
-});
-
-gulp.task('sprites-logo', function () {
-    var spriteData = gulp.src('./spritesheet_images/logo/*')
-        .pipe(newer('sprites/spritesheet-logo-2x.png'))
-        .pipe(spritesmith({
-            cssName: 'sass/_spritesheet-logo.scss',
-            retinaSrcFilter: ['./spritesheet_images/logo/*@2x.png'],
-            imgName: 'sprites/spritesheet-logo-1x.png',
-            retinaImgName: './sprites/spritesheet-logo-2x.png',
-            cssSpritesheetName: 'spritesheet-logo',
             algorithm: 'top-down'
         }));
     return spriteData.pipe(gulp.dest('.'));
