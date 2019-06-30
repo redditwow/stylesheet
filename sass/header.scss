@@ -15,15 +15,18 @@
     }
 
     .redditname a {
-        @include retina-sprite($h-logo-group);
+        background: url("../images/logo.png") no-repeat 0px 0px;
+        //display:inline-block;
+        width: 262px;
+        height: 108px;
+        animation: logo 2.4s infinite steps(1);
         display: block;
-        margin: 0 auto;
+        margin: 37px auto;
         font-size: 0px;
-        color: #364657;
         z-index: 100;
-        &:hover {
-            @include retina-sprite($h-logo-glow-group);
-        }
+        //&:hover {
+        //    @include retina-sprite($h-logo-glow-group);
+        //}
     }
 
     border-bottom: 1px #000 solid;
