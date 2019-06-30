@@ -121,30 +121,38 @@ div.comment.collapsed {
     }
 
     body:not(.res-nightmode) & {
-        background: url('../images/bg-repeat-dark.jpg') !important;
+        background: #161616 !important;
+
         div.comment {
-            background: url('../images/bg-repeat.jpg') !important;
+            background: #252525 !important;
             @include sub-comment();
+
             div.comment {
-                background: url('../images/bg-repeat-dark.jpg') !important;
+                background: #161616 !important;
                 @include sub-comment();
+
                 div.comment {
-                    background: url('../images/bg-repeat.jpg') !important;
+                    background: #252525 !important;
                     @include sub-comment();
+
                     div.comment {
-                        background: url('../images/bg-repeat-dark.jpg') !important;
+                        background: #161616 !important;
                         @include sub-comment();
+
                         div.comment {
-                            background: url('../images/bg-repeat.jpg') !important;
+                            background: #252525 !important;
                             @include sub-comment();
+
                             div.comment {
-                                background: url('../images/bg-repeat-dark.jpg') !important;
+                                background: #161616 !important;
                                 @include sub-comment();
+
                                 div.comment {
-                                    background: url('../images/bg-repeat.jpg') !important;
+                                    background: #252525 !important;
                                     @include sub-comment();
+
                                     div.comment {
-                                        background: url('../images/bg-repeat-dark.jpg') !important;
+                                        background: #161616 !important;
                                         @include sub-comment();
                                     }
                                 }
