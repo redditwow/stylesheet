@@ -3,9 +3,9 @@
 }
 
 .titlebox span.number:after {
-    content: " at sea";
+    content: " being phased";
 }
 
 .titlebox .users-online span.number:after {
-    content: " sleeping with the fishes";
+    content: " in a perfectly balanced phase";
 }
