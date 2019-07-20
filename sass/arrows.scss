@@ -7,46 +7,46 @@
     .res-nightmode .arrow,
     .arrow {
         &.up {
-            @include retina-sprite(('up', $n-arrow-up, $n-arrow-up-2x));
+            @include retina-sprite($n-arrow-up-n-group);
             &:hover {
-                @include retina-sprite(('up-hover', $n-arrow-up-hover, $n-arrow-up-hover-2x));
+                @include retina-sprite($n-arrow-up-n-hover-group);
             }
         }
         &.down {
-            @include retina-sprite(('down', $n-arrow-down, $n-arrow-down-2x));
+            @include retina-sprite($n-arrow-down-n-group);
             &:hover {
-                @include retina-sprite(('down-hover', $n-arrow-down-hover, $n-arrow-down-hover-2x));
+                @include retina-sprite($n-arrow-down-n-hover-group);
             }
         }
     }
 }
 
-.midcol.likes, .midcol.dislikes {
+.midcol.likes, .midcol.dislikes{
     .res-nightmode .arrow, .arrow {
 
         &.up {
-            @include retina-sprite(('up', $n-arrow-up, $n-arrow-up-2x));
+            @include retina-sprite($n-arrow-up-v-down-group);
             &:hover {
-                @include retina-sprite(('up-hover', $n-arrow-up-hover, $n-arrow-up-hover-2x));
+                @include retina-sprite($n-arrow-up-v-down-hover-group);
             }
         }
         &.upmod {
-            @include retina-sprite(('upmod', $n-arrow-up-voted, $n-arrow-up-voted-2x));
+            @include retina-sprite($n-arrow-up-v-up-group);
             &:hover {
-                @include retina-sprite(('upmod-hover', $n-arrow-up-voted-hover, $n-arrow-up-voted-hover-2x));
+                @include retina-sprite($n-arrow-up-v-up-hover-group);
             }
         }
 
         &.down {
-            @include retina-sprite(('down', $n-arrow-down, $n-arrow-down-2x));
+            @include retina-sprite($n-arrow-down-v-down-group);
             &:hover {
-                @include retina-sprite(('down-hover', $n-arrow-down-hover, $n-arrow-down-hover-2x));
+                @include retina-sprite($n-arrow-down-v-down-hover-group);
             }
         }
         &.downmod {
-            @include retina-sprite(('downmod', $n-arrow-down-voted, $n-arrow-down-voted-2x));
+            @include retina-sprite($n-arrow-down-v-up-group);
             &:hover {
-                @include retina-sprite(('downmod-hover', $n-arrow-down-voted-hover, $n-arrow-down-voted-hover-2x));
+                @include retina-sprite($n-arrow-down-v-up-hover-group);
             }
         }
     }
