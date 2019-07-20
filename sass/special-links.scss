@@ -11,19 +11,6 @@
     }
 }
 
-@mixin special-currency-link($link, $sprite-group) {
-    a[href*="#rwow#{$link}"] {
-        display: inline-block;
-        margin-left: 1px;
-        margin-right: 2px;
-        color: transparent !important;
-        &:hover, &:visited {
-            color: transparent !important;
-        }
-        @include retina-sprite($sprite-group);
-    }
-}
-
 a[href*="#pe"] {
     pointer-events: auto !important;
 }
@@ -63,11 +50,6 @@ a[href*="#ul"] {
 @include special-colour-link('t1', #dbd107); //gold
 @include special-colour-link('t2', #1eff00); //green
 @include special-colour-link('t3', #6bf); //toy blue
-
-// currency
-@include special-currency-link('ug', $money-gold-group);
-@include special-currency-link('us', $money-silver-group);
-@include special-currency-link('uc', $money-copper-group);
 
 //special
 //blizzard blue
