@@ -1,6 +1,6 @@
 @mixin wow-btn-active() {
-    background: $wow_btn_background;
-    border: 1px solid $wow_btn_border;
+    background: linear-gradient(0deg, rgba(85,0,0,1) 0%, rgba(108,0,0,1) 50%, rgba(85,0,0,1) 100%);
+    border: 1px solid black;
     transition: all 0.5s;
     color: #fff;
     border-radius: 0;
@@ -8,13 +8,13 @@
 
 @mixin wow-btn-active-hover() {
     transition: all 0.5s;
-    background: $wow_btn_hover;
-    border: 1px solid $wow_btn_border;
+    background: linear-gradient(0deg, rgba(95,0,0,1) 0%, rgba(118,0,0,1) 50%, rgba(95,0,0,1) 100%);
+    border: 1px solid black;
 }
 
 @mixin wow-btn-remove() {
-    background: $wow_btn_remove_background;
-    border: 1px solid $wow_btn_remove_border;
+    background: linear-gradient(0deg, rgba(85,0,0,1) 0%, rgba(108,0,0,1) 50%, rgba(85,0,0,1) 100%);
+    border: 1px solid black;
     transition: all 0.5s;
     color: #fff;
     border-radius: 0;
