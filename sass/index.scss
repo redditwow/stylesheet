@@ -78,32 +78,33 @@ body {
     //
     // All of these can be excluded by targeting their respective classes on the thumbnail element, *except* for nsfw
     // posts which doesn't have a .over18 on the thumbnail. Instead that is targeted on the upmost .thing.link element
-    &:not(.over18) {
-        a {
-            &.thumbnail:not(.default):not(.self):not(.spoiler) {
-                margin: 0px 12px 0px 0px;
-                img {
-                    max-height: 64px;
-                    height: auto !important;
-                    width: auto !important;
-                }
-                border-radius: 2px;
-                position: relative;
-                border: 1px solid #403A34;
-                box-shadow: 0 0 0 1px #000;
-                background-color: $generic_background;
-                &::before {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    left: 0;
-                    bottom: 0;
-                    box-shadow: inset 0 0 5px rgba(3, 0, 0, 0.4);
-                }
-            }
+
+    a.thumbnail {
+        margin: 0px 12px 0px 0px;
+
+        img {
+            max-height: 64px;
+            height: auto !important;
+            width: auto !important;
+        }
+
+        border-radius: 2px;
+        position: relative;
+        border: 1px solid #403A34;
+        box-shadow: 0 0 0 1px #000;
+        background-color: $generic_background;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            box-shadow: inset 0 0 5px rgba(3, 0, 0, 0.4);
         }
     }
+
 
     a {
         &.title {
