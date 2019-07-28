@@ -1,10 +1,19 @@
 .side {
     // Featured Artists
-    a[href*="#fa-img-1"], a[href*="#fa-img-2"],
-    a[href*="#fa-img-1a"], a[href*="#fa-img-2a"] {
+    a[href*="#fa-img-1"] {
         display: block;
         width: 320px;
-        height: 200px;
+        height: 385px;
+        margin: 0px -16px;
+        font-size: 0px;
+        z-index: 10;
+        pointer-events: none;
+    }
+
+    a[href*="#fa-img-2"] {
+        display: block;
+        width: 320px;
+        height: 414px;
         margin: 0px -16px;
         font-size: 0px;
         z-index: 10;
@@ -39,14 +48,6 @@
         background: url(../images/artist-2.jpg);
     }
 
-    a[href*="#fa-img-1a"] {
-        background: url(../images/artist-1a.jpg);
-    }
-
-    a[href*="#fa-img-2a"] {
-        background: url(../images/artist-2a.jpg);
-    }
-
     a[href*="#fa-img-3"] {
         background: url(../images/artist-3.jpg);
     }
@@ -60,22 +61,12 @@
     .side {
         a[href*="#fa-img-1"] {
             background: url(../images/artist-1@2x.jpg) !important;
-            background-size: 320px 200px !important;
+            background-size: 320px 385px !important;
         }
 
         a[href*="#fa-img-2"] {
             background: url(../images/artist-2@2x.jpg) !important;
-            background-size: 320px 200px !important;
-        }
-
-        a[href*="#fa-img-1a"] {
-            background: url(../images/artist-1a@2x.jpg) !important;
-            background-size: 320px 200px !important;
-        }
-
-        a[href*="#fa-img-2a"] {
-            background: url(../images/artist-2a@2x.jpg) !important;
-            background-size: 320px 200px !important;
+            background-size: 320px 414px !important;
         }
 
         a[href*="#fa-img-3"] {
