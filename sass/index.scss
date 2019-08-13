@@ -1,7 +1,8 @@
 body {
-    background-image: url(../images/forum-bg.jpg);
+    background-image: url(../images/bg-top.jpg);
     background-color: #000;
-    background-position: top, top;
+    background-position-y: 245px;
+    background-position: center;
     background-repeat: repeat-x, repeat;
 
     color: $grey_text;

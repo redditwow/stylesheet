@@ -23,7 +23,7 @@ $yellow_border: #F2BF27;
 $blizzard_blue: rgb(0, 180, 255);
 $method_orange: rgb(241, 140, 47);
 
-$generic_background: lighten(#28211b, 5%);
+$generic_background: #000;
 $generic_border: lighten($generic_background, 10%);
 
 @import "mixins.scss";

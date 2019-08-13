@@ -56,7 +56,7 @@ gulp.task('styles', ['sprites-retina', 'sprites-snoo',  'flair-user', 'flair-use
         .pipe(replace('../images/bg-repeat-dark.jpg', '%%bg-repeat-dark%%'))
         .pipe(replace('../images/bg-repeat.jpg', '%%bg-repeat%%'))
         .pipe(replace('../images/bg-top.jpg', '%%bg-top%%'))
-        .pipe(replace('../images/hero-v2.jpg', '%%hero-v2%%'))
+        .pipe(replace('../images/hero-v2.jpg', '%%hero-classic2%%'))
         .pipe(replace('../images/hero-fire.jpg', '%%hero-fire%%'))
 
         .pipe(replace('../images/forum-bg.jpg', '%%forum-bg%%'))
