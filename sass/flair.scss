@@ -16,11 +16,141 @@
 //
 //@include wow-sprites($retina-groups);
 
-@each $group in $user-groups {
-    $sprite-name: nth($group, 1);
-    .#{$sprite-name}:after {
-        @include retina-sprite($group);
-    }
+@function capitalize($string) {
+    @return to-upper-case(str-slice($string, 1, 1)) + str-slice($string, 2);
+}
+
+//$classes: ('druid', 'hunter', 'mage', 'paladin', 'priest', 'rogue', 'shaman', 'warlock', 'warrior');
+//
+//@each $class in $classes {
+//
+//    $group: 'flair-c-' + $class + '-group';
+//
+//    .#{$class}:after {
+//        @include retina-sprite($group);
+//    }
+//}
+
+
+// Classes
+.flair-Druid:after {
+    @include retina-sprite($flair-c-druid-group);
+}
+
+.flair-Hunter:after {
+    @include retina-sprite($flair-c-hunter-group);
+}
+
+.flair-Mage:after {
+    @include retina-sprite($flair-c-mage-group);
+}
+
+.flair-Paladin:after {
+    @include retina-sprite($flair-c-paladin-group);
+}
+
+.flair-Priest:after {
+    @include retina-sprite($flair-c-priest-group);
+}
+
+.flair-Rogue:after {
+    @include retina-sprite($flair-c-rogue-group);
+}
+
+.flair-Shaman:after {
+    @include retina-sprite($flair-c-shaman-group);
+}
+
+.flair-Warlock:after {
+    @include retina-sprite($flair-c-warlock-group);
+}
+
+.flair-Warrior:after {
+    @include retina-sprite($flair-c-warrior-group);
+}
+
+// Factions
+.flair-Horde:after {
+    @include retina-sprite($flair-f-horde-group);
+}
+
+.flair-Alliance:after {
+    @include retina-sprite($flair-f-alliance-group);
+}
+
+// Alliance Classes
+.flair-Alliance-Druid:after {
+    @include retina-sprite($flair-alliance-druid-group);
+}
+
+.flair-Alliance-Hunter:after {
+    @include retina-sprite($flair-alliance-hunter-group);
+}
+
+.flair-Alliance-Mage:after {
+    @include retina-sprite($flair-alliance-mage-group);
+}
+
+.flair-Alliance-Paladin:after {
+    @include retina-sprite($flair-alliance-paladin-group);
+}
+
+.flair-Alliance-Priest:after {
+    @include retina-sprite($flair-alliance-priest-group);
+}
+
+.flair-Alliance-Rogue:after {
+    @include retina-sprite($flair-alliance-rogue-group);
+}
+
+.flair-Alliance-Shaman:after {
+    @include retina-sprite($flair-alliance-shaman-group);
+}
+
+.flair-Alliance-Warlock:after {
+    @include retina-sprite($flair-alliance-warlock-group);
+}
+
+.flair-Alliance-Warrior:after {
+    @include retina-sprite($flair-alliance-warrior-group);
+}
+
+
+// Horde Classes
+.flair-Horde-Druid:after {
+    @include retina-sprite($flair-horde-druid-group);
+}
+
+.flair-Horde-Hunter:after {
+    @include retina-sprite($flair-horde-hunter-group);
+}
+
+.flair-Horde-Mage:after {
+    @include retina-sprite($flair-horde-mage-group);
+}
+
+.flair-Horde-Paladin:after {
+    @include retina-sprite($flair-horde-paladin-group);
+}
+
+.flair-Horde-Priest:after {
+    @include retina-sprite($flair-horde-priest-group);
+}
+
+.flair-Horde-Rogue:after {
+    @include retina-sprite($flair-horde-rogue-group);
+}
+
+.flair-Horde-Shaman:after {
+    @include retina-sprite($flair-horde-shaman-group);
+}
+
+.flair-Horde-Warlock:after {
+    @include retina-sprite($flair-horde-warlock-group);
+}
+
+.flair-Horde-Warrior:after {
+    @include retina-sprite($flair-horde-warrior-group);
 }
 
 @each $group in $bespoke-user-groups {
@@ -67,23 +197,23 @@
 
 @mixin flair-faction-colour($faction, $colour) {
     // co = colour only
-    .flair-co-#{$faction} + .author,
-    .flair-co-#{$faction} + .author:visited,
-    .flair-#{$faction} + .author,
-    .flair-#{$faction} + .author:visited {
+    .flair-co-#{capitalize($faction)} + .author,
+    .flair-co-#{capitalize($faction)} + .author:visited,
+    .flair-#{capitalize($faction)} + .author,
+    .flair-#{capitalize($faction)} + .author:visited {
         color: $colour;
     }
 }
 
 @mixin flair-class-colour($class, $colour) {
-    .flair-#{$class} + .author,
-    .flair-#{$class} + .author:visited,
-    .flair-co-#{$class} + .author,
-    .flair-co-#{$class} + .author:visited,
-    .flair-alliance-#{$class} + .author,
-    .flair-alliance-#{$class} + .author:visited,
-    .flair-horde-#{$class} + .author,
-    .flair-horde-#{$class} + .author:visited {
+    .flair-#{capitalize($class)} + .author,
+    .flair-#{capitalize($class)} + .author:visited,
+    .flair-co-#{capitalize($class)} + .author,
+    .flair-co-#{capitalize($class)} + .author:visited,
+    .flair-Alliance-#{capitalize($class)} + .author,
+    .flair-Alliance-#{capitalize($class)} + .author:visited,
+    .flair-Horde-#{capitalize($class)} + .author,
+    .flair-Horde-#{capitalize($class)} + .author:visited {
         color: $colour;
     }
 }
@@ -96,6 +226,7 @@
     color: $light_text;
     background: transparent;
     display: inline;
+
     &:after {
         display: inline-block;
         margin-left: 3px;
@@ -131,6 +262,7 @@
 // job titles and what not in the flair text
 .flair.flair-blizzard {
     color: $blizzard_blue;
+
     &:before {
         //@include sprite($flair-blizzard);
         display: inline-block;
@@ -138,6 +270,7 @@
         vertical-align: middle;
         content: '';
     }
+
     + .author, + .author:visited {
         font-weight: 600;
     }
@@ -146,9 +279,11 @@
 @mixin blizzard-employee($account) {
     .thing.comment[data-author='#{$account}'] > div:not(.child) .md {
         color: $blizzard_blue;
+
         a {
             //color: rgb(248, 183, 0) !important;
             color: darken($title, 20%) !important;
+
             &:hover {
                 color: #fff !important;
             }
@@ -192,8 +327,10 @@
 @mixin method($account, $extra) {
     .thing.comment[data-author='#{$account}'] > div:not(.child) .md {
         color: $method_orange;
+
         a {
             color: $method_orange !important;
+
             &:hover {
                 color: #fff !important;
             }
