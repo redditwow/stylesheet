@@ -153,6 +153,31 @@
     @include retina-sprite($flair-horde-warrior-group);
 }
 
+// Bespoke
+.flair-blizz:after, .flair-Blizz:after {
+    @include retina-sprite($flair-x-blizzard-group);
+}
+
+.flair-bwrench:after {
+    @include retina-sprite($flair-x-bwrench-group);
+}
+
+.flair-crown:after {
+    @include retina-sprite($flair-x-crown-group);
+}
+
+.flair-engi:after {
+    @include retina-sprite($flair-x-engi-group);
+}
+
+.flair-scroll:after {
+    @include retina-sprite($flair-x-scroll-group);
+}
+
+.flair-wrench:after {
+    @include retina-sprite($flair-x-wrench-group);
+}
+
 @each $group in $bespoke-user-groups {
     $sprite-name: nth($group, 1);
     .#{$sprite-name}:after {
