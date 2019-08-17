@@ -78,6 +78,14 @@
     @include retina-sprite($flair-f-alliance-group);
 }
 
+.flair-Alliance-Horde:after {
+    @include retina-sprite($flair-f-alliance-horde-group);
+}
+
+.flair-Horde-Alliance:after {
+    @include retina-sprite($flair-f-horde-alliance-group);
+}
+
 // Alliance Classes
 .flair-Alliance-Druid:after {
     @include retina-sprite($flair-alliance-druid-group);

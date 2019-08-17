@@ -77,8 +77,8 @@ gulp.task('styles', ['sprites-retina', 'sprites-snoo',  'flair-user', 'flair-use
         .pipe(replace('../sprites/spritesheet-snoo-1x.png', '%%spritesheet-snoo-1x-v4%%'))
         .pipe(replace('../sprites/spritesheet-snoo-2x.png', '%%spritesheet-snoo-2x-v4%%'))
 
-        .pipe(replace('../sprites/flair-user-1x.png', '%%flair-user-1x-v0%%'))
-        .pipe(replace('../sprites/flair-user-2x.png', '%%flair-user-2x-v0%%'))
+        .pipe(replace('../sprites/flair-user-1x.png', '%%flair-user-1x-v1%%'))
+        .pipe(replace('../sprites/flair-user-2x.png', '%%flair-user-2x-v1%%'))
 
         .pipe(replace('../sprites/flair-user-bespoke-1x.png', '%%flair-user-bespoke-1x-v0%%'))
         .pipe(replace('../sprites/flair-user-bespoke-2x.png', '%%flair-user-bespoke-2x-v0%%'))
