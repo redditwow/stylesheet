@@ -154,6 +154,11 @@ div.comment.collapsed {
                                     div.comment {
                                         background: #161616 !important;
                                         @include sub-comment();
+
+                                        div.comment {
+                                            background: #252525 !important;
+                                            @include sub-comment();
+                                        }
                                     }
                                 }
                             }
