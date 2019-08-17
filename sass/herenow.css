@@ -3,9 +3,10 @@
 }
 
 .titlebox span.number:after {
-    content: " at sea";
+    content: " waiting in queue";
 }
 
 .titlebox .users-online span.number:after {
-    content: " sleeping with the fishes";
+    content: " layers currently open";
 }
+
