@@ -55,6 +55,7 @@ body.moderator {
         .title {
             color: $title;
         }
+
         &.comment {
             .title {
                 margin-left: 50px;
@@ -67,5 +68,13 @@ body.moderator {
     > .entry, > .midcol {
         // important to override RES
         background-color: rgba(255, 0, 0, 0.05) !important;
+    }
+}
+
+div.reason-popup {
+    color: black;
+
+    button, button:hover, button:active {
+        background: unset !important;
     }
 }
