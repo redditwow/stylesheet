@@ -3,10 +3,10 @@
 }
 
 .titlebox span.number:after {
-    content: " waiting in queue";
+    content: " people in queue";
 }
 
 .titlebox .users-online span.number:after {
-    content: " layers currently open";
+    content: " minute wait time";
 }
 
