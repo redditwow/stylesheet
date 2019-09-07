@@ -1,21 +1,16 @@
 // keyboard highlights
 // https://www.reddit.com/r/Enhancement/comments/2gd92i/how_do_i_override_backgroundcolor_of/
-.res .RES-keyNav-activeElement,
-.res .commentarea .RES-keyNav-activeElement .md,
-.res .commentarea .res .RES-keyNav-activeElement.entry .noncollapsed {
-    background-color: transparent !important;
-}
-
-// comment highlights
-.RES-keyNav-activeElement,
-.RES-keyNav-activeElement div.md-container.usertext-body {
-    background-color: transparent !important;
-}
 
 .thing, .usertext {
-    .entry.res-selected, .entry.res-selected .md-container {
+    .entry.res-selected {
+        //background: transparent !important;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0) 50%, rgba($yellow_border, 0.15) 90%, rgba($yellow_border, 0.25) 100%) !important;
+        border-right: 1px solid $yellow_border;
+    }
+
+    //.entry.res-selected,
+    .entry.res-selected .md-container {
         background-color: transparent !important;
-        //background: rgba(0, 0, 0, 0.2) !important;
     }
 }
 
