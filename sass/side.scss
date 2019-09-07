@@ -296,6 +296,10 @@ button {
             padding-left: 5px;
         }
 
+        ol {
+            padding-left: 15px;
+        }
+
         h1 {
             @include wow-modern-box;
             background: rgba(255, 255, 255, 0.05);
