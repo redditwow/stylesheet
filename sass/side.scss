@@ -87,28 +87,17 @@ button {
     }
 }
 
-.submit-link .morelink {
+.submit-link .morelink, .submit-text .morelink {
     position: absolute;
-    top: 268px;
+    top: 217px;
     width: 152px;
+}
+
+.submit-link .morelink {
     margin-left: -8px;
-    //&:after {
-    //    text-align: center;
-    //    width: 300px;
-    //    line-height: 16px;
-    //    content: "Submit";
-    //    position: absolute;
-    //    top: -32px;
-    //    left: 1px;
-    //    font-size: 1.5em;
-    //    color: $title;
-    //}
 }
 
 .submit-text .morelink {
-    position: absolute;
-    top: 268px;
-    width: 152px;
     margin-left: 156px;
 }
 
@@ -257,7 +246,7 @@ button {
 
 #search {
     position: absolute;
-    top: 218px;
+    top: 260px;
     right: 14px;
     width: 320px;
 
