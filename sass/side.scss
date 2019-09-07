@@ -357,6 +357,24 @@ button {
         display: block;
     }
 
+    a[href$="dislgbtn"] {
+        &:first-of-type {
+            margin-top: 10px;
+        }
+
+        margin-left: 50px;
+
+        &:before {
+            content: '';
+            display: block;
+            @include retina-sprite($sb-lg-discord-group)
+        }
+
+        font-size: 0px;
+        height: 52px;
+        display: inline-block;
+    }
+
     a[href$="twitchbtn"] {
         &:first-of-type {
             margin-top: 10px;
