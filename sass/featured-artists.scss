@@ -20,29 +20,6 @@
         pointer-events: none;
     }
 
-    // Special for October
-    a[href*="#fa-img-2"] {
-        pointer-events: auto !important;
-        background-position-x: -320px !important;
-        transition: background-position 1s ease;
-        &:hover{
-            background-position-x: 0 !important;
-        }
-    }
-
-    //// Special for October
-    //a[href*="#fa-img-2"] {
-    //    pointer-events: auto !important;
-    //    background-position-x: -320px !important;
-    //    transition: all 1s ease;
-    //    z-index: 9999;
-    //    &:hover{
-    //        width: 640px;
-    //        margin-left: -336px;
-    //        background-position-x: 0 !important;
-    //    }
-    //}
-
     a[href*="#fa-img-3"] {
         display: block;
         width: 320px;
@@ -89,7 +66,7 @@
 
         a[href*="#fa-img-2"] {
             background: url(../images/artist-2@2x.jpg) !important;
-            background-size: 320px 500px !important;
+            background-size: 640px 500px !important;
         }
 
         a[href*="#fa-img-3"] {
@@ -100,6 +77,33 @@
         a[href*="#fa-img-4"] {
             background: url(../images/artist-4@2x.jpg) !important;
             background-size: 320px 388px !important;
+        }
+    }
+}
+
+
+.side {
+    // Special for October
+    a[href*="#fa-img-2"] {
+        pointer-events: auto !important;
+        background-position-x: -320px !important;
+        transition: background-position 1s ease;
+
+        &:hover {
+            background-position-x: 0 !important;
+        }
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .side {
+        // Special for October
+        a[href*="#fa-img-2"] {
+            background-position-x: -320px !important;
+            transition: background-position 1s ease;
+            &:hover {
+                background-position-x: 0 !important;
+            }
         }
     }
 }
