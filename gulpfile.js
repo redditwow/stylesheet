@@ -102,6 +102,7 @@ gulp.task('styles', ['sprites-retina', 'sprites-snoo', 'sprites-logo', 'flair-us
 
         .pipe(insert.prepend(herenow))
         .pipe(insert.prepend(credits))
+        .pipe(insert.append("\n\n/* Jeffrey Epstein didn't kill himself */"))
         .pipe(size({
             showFiles: true
         }))
