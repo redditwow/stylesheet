@@ -23,7 +23,7 @@
     a[href*="#fa-img-3"] {
         display: block;
         width: 320px;
-        height: 426px;
+        height: 463px;
         margin: 0px -16px;
         font-size: 0px;
         z-index: 10;
@@ -33,7 +33,7 @@
     a[href*="#fa-img-4"] {
         display: block;
         width: 320px;
-        height: 388px;
+        height: 284px;
         margin: 0px -16px;
         font-size: 0px;
         z-index: 10;
@@ -71,12 +71,12 @@
 
         a[href*="#fa-img-3"] {
             background: url(../images/artist-3@2x.jpg) !important;
-            background-size: 320px 426px !important;
+            background-size: 320px 463px !important;
         }
 
         a[href*="#fa-img-4"] {
             background: url(../images/artist-4@2x.jpg) !important;
-            background-size: 320px 388px !important;
+            background-size: 320px 284px !important;
         }
     }
 }
@@ -94,17 +94,3 @@
         }
     }
 }
-
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .side {
-        // Special for October
-        a[href*="#fa-img-2"] {
-            background-position-x: -320px !important;
-            transition: background-position 1s ease;
-            &:hover {
-                background-position-x: 0 !important;
-            }
-        }
-    }
-}
-
