@@ -525,4 +525,12 @@ button {
     a[href*="#starcraft-remaster"] {
         @include retina-sprite($g-starcraft-remastered-group);
     }
+    a[href*="#ms"] {
+        // Another reference to that Korean pay to win MMO that died in 2009?
+        // ...yes.
+        @include retina-sprite($g-ms-group);
+    }
+    a[href*="#mystery"] {
+        @include retina-sprite($g-mystery-group);
+    }
 }
