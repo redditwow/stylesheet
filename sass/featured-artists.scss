@@ -3,7 +3,7 @@
     a[href*="#fa-img-1"] {
         display: block;
         width: 320px;
-        height: 440px;
+        height: 320px;
         margin: 0px -16px;
         font-size: 0px;
         z-index: 10;
@@ -13,7 +13,7 @@
     a[href*="#fa-img-2"] {
         display: block;
         width: 320px;
-        height: 500px;
+        height: 341px;
         margin: 0px -16px;
         font-size: 0px;
         z-index: 10;
@@ -61,12 +61,12 @@
     .side {
         a[href*="#fa-img-1"] {
             background: url(../images/artist-1@2x.jpg) !important;
-            background-size: 320px 440px !important;
+            background-size: 320px 320px !important;
         }
 
         a[href*="#fa-img-2"] {
             background: url(../images/artist-2@2x.jpg) !important;
-            background-size: 640px 500px !important;
+            background-size: 320px 341px !important;
         }
 
         a[href*="#fa-img-3"] {
@@ -77,20 +77,6 @@
         a[href*="#fa-img-4"] {
             background: url(../images/artist-4@2x.jpg) !important;
             background-size: 320px 284px !important;
-        }
-    }
-}
-
-
-.side {
-    // Special for October
-    a[href*="#fa-img-2"] {
-        pointer-events: auto !important;
-        background-position-x: -320px !important;
-        transition: background-position 1s ease;
-
-        &:hover {
-            background-position-x: 0 !important;
         }
     }
 }
