@@ -58,6 +58,7 @@ gulp.task('styles', ['sprites-retina', 'sprites-snoo', 'sprites-logo', 'flair-us
         .pipe(replace('../images/bg-top.jpg', '%%bg-top%%'))
         .pipe(replace('../images/hero-v2.jpg', '%%hero-v2%%'))
         .pipe(replace('../images/hero-fire.jpg', '%%hero-fire%%'))
+        .pipe(replace('../images/hero-xmas.jpg', '%%hero-xmas%%'))
         .pipe(replace('../images/partyparrot.png', '%%partyparrot%%'))
 
         .pipe(replace('../images/artist-1.jpg', '%%artist-1%%'))
