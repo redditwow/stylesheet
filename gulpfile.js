@@ -59,6 +59,7 @@ gulp.task('styles', ['sprites-retina', 'sprites-snoo', 'sprites-logo', 'flair-us
         .pipe(replace('../images/hero-v2.jpg', '%%hero-v2%%'))
         .pipe(replace('../images/hero-fire.jpg', '%%hero-fire%%'))
         .pipe(replace('../images/hero-xmas.jpg', '%%hero-xmas%%'))
+        .pipe(replace('../images/hero-valentine.jpg', '%%hero-valentine%%'))
         .pipe(replace('../images/partyparrot.png', '%%partyparrot%%'))
 
         .pipe(replace('../images/artist-1.jpg', '%%artist-1%%'))
@@ -103,7 +104,7 @@ gulp.task('styles', ['sprites-retina', 'sprites-snoo', 'sprites-logo', 'flair-us
 
         .pipe(insert.prepend(herenow))
         .pipe(insert.prepend(credits))
-        .pipe(insert.append("\n\n/* Jeffrey Epstein didn't kill himself */"))
+        .pipe(insert.append("\n\n/* If you are reading this, PM /u/vusys to win a prize. */"))
         .pipe(size({
             showFiles: true
         }))
