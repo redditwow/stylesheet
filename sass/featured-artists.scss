@@ -23,7 +23,7 @@
     a[href*="#fa-img-3"] {
         display: block;
         width: 320px;
-        height: 200px;
+        height: 303px;
         margin: 0px -16px;
         font-size: 0px;
         z-index: 10;
@@ -33,7 +33,7 @@
     a[href*="#fa-img-4"] {
         display: block;
         width: 320px;
-        height: 180px;
+        height: 287px;
         margin: 0px -16px;
         font-size: 0px;
         z-index: 10;
@@ -71,12 +71,12 @@
 
         a[href*="#fa-img-3"] {
             background: url(../images/artist-3@2x.jpg) !important;
-            background-size: 320px 200px !important;
+            background-size: 320px 303px !important;
         }
 
         a[href*="#fa-img-4"] {
             background: url(../images/artist-4@2x.jpg) !important;
-            background-size: 320px 180px !important;
+            background-size: 320px 287px !important;
         }
     }
 }
