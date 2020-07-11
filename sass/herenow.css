@@ -3,10 +3,10 @@
 }
 
 .titlebox span.number:after {
-    content: " reading Shadowlands info";
+    content: " minutes to post your auctions";
 }
 
 .titlebox .users-online span.number:after {
-    content: " abilities returning";
+    content: " locked out of classic instances";
 }
 
