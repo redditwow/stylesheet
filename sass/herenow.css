@@ -3,10 +3,10 @@
 }
 
 .titlebox span.number:after {
-    content: " minutes to post your auctions";
+    content: " upvoting art";
 }
 
 .titlebox .users-online span.number:after {
-    content: " locked out of classic instances";
+    content: " puzzled at the amount of art on the front page";
 }
 
