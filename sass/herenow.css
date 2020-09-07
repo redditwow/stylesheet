@@ -3,10 +3,10 @@
 }
 
 .titlebox span.number:after {
-    content: " upvoting art";
+    content: " bugs in the beta";
 }
 
 .titlebox .users-online span.number:after {
-    content: " puzzled at the amount of art on the front page";
+    content: " bugs likely to be fixed before release";
 }
 
