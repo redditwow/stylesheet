@@ -30,8 +30,18 @@ body.mod-toolbox {
 }
 
 // reset popup box colour back to default ish
-.tb-popup-content, .tb-window-wrapper {
+.tb-popup-content, .tb-window-wrapper, .reason-popup {
     color: #111;
+}
+
+.reason-popup-innercontent{
+    // Flug keeps adding removal reasons
+    max-height: 80vh;
+    overflow: scroll;
+}
+
+.reason-check{
+    transform: scale(2);
 }
 
 // ugly hack to move the toolbox comment checkboxes so they don't overlap with our custom expandos

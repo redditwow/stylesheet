@@ -83,8 +83,8 @@ gulp.task('styles', ['sprites-retina', 'sprites-snoo', 'sprites-logo', 'flair-us
 
         // Reddit aggressively caches images, so all of these images have a version number on the end to bust the cache
         // after changes have been made. This is a manual process :(
-        .pipe(replace('../sprites/spritesheet-retina-1x.png', '%%spritesheet-retina-1x-v24%%'))
-        .pipe(replace('../sprites/spritesheet-retina-2x.png', '%%spritesheet-retina-2x-v24%%'))
+        .pipe(replace('../sprites/spritesheet-retina-1x.png', '%%spritesheet-retina-1x-v26%%'))
+        .pipe(replace('../sprites/spritesheet-retina-2x.png', '%%spritesheet-retina-2x-v26%%'))
 
         .pipe(replace('../sprites/spritesheet-snoo-1x.png', '%%spritesheet-snoo-1x-v4%%'))
         .pipe(replace('../sprites/spritesheet-snoo-2x.png', '%%spritesheet-snoo-2x-v4%%'))
@@ -92,11 +92,11 @@ gulp.task('styles', ['sprites-retina', 'sprites-snoo', 'sprites-logo', 'flair-us
         .pipe(replace('../sprites/spritesheet-logo-1x.png', '%%spritesheet-logo-1x-v0%%'))
         .pipe(replace('../sprites/spritesheet-logo-2x.png', '%%spritesheet-logo-2x-v0%%'))
 
-        .pipe(replace('../sprites/flair-user-1x.png', '%%flair-user-1x-v13%%'))
-        .pipe(replace('../sprites/flair-user-2x.png', '%%flair-user-2x-v13%%'))
+        .pipe(replace('../sprites/flair-user-1x.png', '%%flair-user-1x-v15%%'))
+        .pipe(replace('../sprites/flair-user-2x.png', '%%flair-user-2x-v15%%'))
 
-        .pipe(replace('../sprites/flair-user-bespoke-1x.png', '%%flair-user-bespoke-1x-v18%%'))
-        .pipe(replace('../sprites/flair-user-bespoke-2x.png', '%%flair-user-bespoke-2x-v18%%'))
+        .pipe(replace('../sprites/flair-user-bespoke-1x.png', '%%flair-user-bespoke-1x-v23%%'))
+        .pipe(replace('../sprites/flair-user-bespoke-2x.png', '%%flair-user-bespoke-2x-v23%%'))
 
         .pipe(replace('{{DEV}}', devMessage))
         // reddit doesn't like @charset, so just remove it...
