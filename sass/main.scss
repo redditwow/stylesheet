@@ -26,7 +26,8 @@ $method_orange: rgb(241, 140, 47);
 $generic_background: lighten(#28211b, 5%);
 $generic_border: lighten($generic_background, 10%);
 
-$no_snoos: false;
+$no_snoos: true;
+$no_logo: true;
 
 @import "mixins.scss";
 @import "_spritesheet-retina.scss";

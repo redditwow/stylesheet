@@ -7,6 +7,6 @@
 }
 
 .titlebox .users-online span.number:after {
-    content: " bugs likely to be fixed before release";
+    content: " bugs that will be fixed before launch";
 }
 

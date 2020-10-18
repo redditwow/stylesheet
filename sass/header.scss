@@ -43,6 +43,15 @@
         font-size: 0;
         color: #364657;
         z-index: 100;
+
+        @if $no_snoos == true {
+            opacity: 0;
+            &:hover {
+                &:after {
+                    opacity: 0;
+                }
+            }
+        }
     }
 
     border-bottom: 1px #000 solid;
