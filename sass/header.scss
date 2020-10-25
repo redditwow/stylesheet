@@ -2,7 +2,7 @@
 #header {
 
     height: 250px;
-    background: url("../images/hero-shadowlands.png") center no-repeat #100F15;
+    background: url("../images/hero-shadowlands-v3.jpg") center no-repeat #100F15;
     background-size: 2810px 250px;
     //margin-bottom: 20px;
     box-shadow: 0px 10px 14px 10px rgba(0, 0, 0, 0.2);
@@ -25,9 +25,7 @@
             position: inherit;
             opacity: 0.0;
             transition: opacity 250ms ease-in-out;
-            //&:hover{
-            //    opacity: 1;
-            //}
+            background-color: transparent;
         }
 
         &:hover {

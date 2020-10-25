@@ -61,6 +61,8 @@ gulp.task('styles', ['sprites-retina', 'sprites-snoo', 'sprites-logo', 'flair-us
         .pipe(replace('../images/hero-xmas.jpg', '%%hero-xmas%%'))
         .pipe(replace('../images/hero-valentine.jpg', '%%hero-valentine%%'))
         .pipe(replace('../images/hero-hallowsend-2020.jpg', '%%hero-hallowsend-2020%%'))
+        .pipe(replace('../images/hero-shadowlands-v2.jpg', '%%hero-shadowlands-v2%%'))
+        .pipe(replace('../images/hero-shadowlands-v3.jpg', '%%hero-shadowlands-v3%%'))
         .pipe(replace('../images/partyparrot.png', '%%partyparrot%%'))
 
         .pipe(replace('../images/artist-1.jpg', '%%artist-1%%'))

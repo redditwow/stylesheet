@@ -1,9 +1,9 @@
-span.redditname a[href*='StyleTest']:after {
+span.redditname a[href*='StyleTest']:before {
     content: '{{DEV}}';
     display: block;
     position: absolute;
     top: 10px;
-    left: 30%;
+    left: 20%;
     z-index: 9999;
     width: 240px;
     color: $bfa_orange;
