@@ -58,7 +58,7 @@
 #header-bottom-left .tabmenu {
     position: relative;
     top: 172px;
-    left: 230px;
+    left: 160px;
     z-index: 9999;
 
     li.selected a {
@@ -107,7 +107,7 @@
 // reddit/ snoo logo
 @if $no_snoos != true {
     #header-img-a {
-        margin-top: 17px;
+        margin-top: 8px;
         margin-left: 7px;
         height: 128px;
         width: 100px;

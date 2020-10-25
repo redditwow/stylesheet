@@ -1,15 +1,16 @@
-span.redditname a[href*='StyleTest']:before {
+html.res-r-wowstyletestflat:before {
     content: '{{DEV}}';
     display: block;
-    position: absolute;
-    top: 10px;
-    left: 20%;
+    position: fixed;
+    bottom: 50%;
+    left: 0;
     z-index: 9999;
-    width: 240px;
     color: $bfa_orange;
-    font-size: 13px;
+    font-size: 16px;
     background: #000;
+    border: 1px solid white;
     padding: 5px 10px;
+    font-family: sans-serif;
 }
 
 #image-upload {
