@@ -1,0 +1,65 @@
+.search-result-group {
+    max-width: unset;
+}
+
+
+.search-result {
+    background: rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 0 1px #000;
+    border: rgba(255, 255, 255, 0.15) solid 1px;
+
+    padding: 10px;
+    margin: 0;
+
+    vertical-align: unset;
+
+    &.has-thumbnail > .thumbnail {
+        flex: 0 0 50px;
+    }
+}
+
+// Submission name
+.search-result-header,
+    // X comments
+.search-result :link,
+.search-result :link > mark,
+    // to /r/wow
+.search-result :visited,
+.search-result :visited > mark {
+    color: $title;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.search-expando-button {
+    display: inline-block;
+    padding: 3px 10px;
+    margin-top: 10px;
+
+    @include wow-btn-active;
+    @include wow-btn-text;
+}
+
+// remove white glow from
+.search-expando.collapsed:before {
+    display: none;
+    //background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #000 100%);
+}
+
+#previoussearch {
+    #search {
+        width: unset;
+        padding: 15px 10px;
+    }
+}
+
+.combined-search-page .search-submit-button {
+    @include wow-btn-active;
+    @include wow-btn-text;
+}
+
+.search-result-group-header {
+    border-bottom: 2px rgba(255, 255, 255, 0.15) solid;
+}

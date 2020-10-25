@@ -219,3 +219,31 @@ body.res-nightmode {
         background: unset !important;
     }
 }
+
+// Search Refine Help
+.res-searchHelper-searchPageTabs ul.res-search-tabs {
+    a {
+        display: inline-block;
+        padding: 3px 10px;
+        margin-top: 10px;
+
+        @include wow-btn-active;
+        @include wow-btn-text;
+
+        color: white !important;
+    }
+
+    li, li.res-search-tab-active {
+        background: unset
+    }
+}
+
+.res-searchHelper-searchPageTabs .combined-search-page #previoussearch .res-search-pane {
+    background: rgba(0, 0, 0, 0.25) !important;
+    box-shadow: 0 0 0 1px #000;
+    border: rgba(255, 255, 255, 0.15) solid 1px;
+}
+
+//.res-searchHelper-searchPageTabs ul.res-search-tabs li.res-search-tab-active {
+//    background: unset !important;
+//}
