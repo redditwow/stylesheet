@@ -3,10 +3,10 @@
 }
 
 .titlebox span.number:after {
-    content: " bugs in the beta";
+    content: " people killing Nathanos";
 }
 
 .titlebox .users-online span.number:after {
-    content: " bugs that will be fixed before launch";
+    content: " people also killing Nathanos";
 }
 
