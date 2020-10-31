@@ -8,6 +8,25 @@
         background: url(../images/sl-map.jpg);
         box-shadow: 0px 10px 5px #191919, 0px -10px 5px #191919;
     }
+
+    table {
+        width: 100%;
+    }
+
+    thead {
+        display: none;
+    }
+}
+
+.side {
+    .md {
+        td, th {
+            border-left: none !important;
+            border-right: none !important;
+            border-top: 1px solid  darken($grey_text, 40%) !important;
+            border-bottom: 1px solid  darken($grey_text, 50%) !important;
+        }
+    }
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
