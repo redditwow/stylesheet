@@ -15,12 +15,12 @@
     }
 
     td, th {
-        border-color: darken($grey_text, 30%) !important;;
+        border-color: darken($grey_text, 30%) !important;
     }
 
     code, pre, pre code, code pre {
-        border: 1px solid $generic_border !important;;
-        background-color: $generic_background !important;;
+        border: 1px solid $generic_border !important;
+        background-color: $generic_background !important;
     }
     a {
         color: $title;
