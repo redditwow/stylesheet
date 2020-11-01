@@ -147,28 +147,53 @@ button {
         border: none !important;;
         //    @include wow-modern-box;
     }
+    
     // message the moderators
-    a.helplink {
-        &:before {
-            content: '';
+    .message-button {
+
+        margin: 5px 0 30px 60px;
+
+        .c-btn.c-btn-primary {
+            background: none;
+            border: none;
+            padding: 0;
+
+            //padding-bottom: 29px;
             display: block;
-            border: #333 solid 1px;
-            border-radius: 3px;
-            margin-bottom: -40px;
-            @include retina-sprite($x-modmail-group)
-        }
-        &:hover:before {
-            @include retina-sprite($x-modmail-glow-group)
-        }
-        padding-bottom: 29px;
-        display: block;
-        color: $title;
-        margin-left: 4px;
-        font-size: 18px;
-        float: none;
-        text-transform: capitalize;
-        &:hover {
-            color: darken($title, 20%);
+            color: $title;
+            margin-left: -6px;
+            float: none;
+            font-size: 15px;
+            font-weight: 100;
+
+            text-transform: uppercase;
+            //text-transform: lowercase;
+            //&:first-letter {
+            //    text-transform: uppercase;
+            //}
+
+            &:hover {
+                color: darken($title, 20%);
+            }
+
+            // letter icon
+            &:before {
+                content: '';
+                display: block;
+                border: #333 solid 1px;
+                border-radius: 3px;
+                margin-bottom: -35px;
+                position: relative;
+                // not sure why Fx thinks these don't do anything, they do.
+                top: 6px;
+                left: -31px;
+                pointer-events: none;
+                @include retina-sprite($x-modmail-group)
+            }
+
+            &:hover:before {
+                @include retina-sprite($x-modmail-glow-group)
+            }
         }
     }
 }
