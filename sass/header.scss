@@ -9,48 +9,65 @@
 
     .redditname {
         position: absolute;
-        top: 56px;
+        top: 40px;
         left: 0px;
         width: 100%;
     }
 
     .redditname a {
-
-        &:after {
-            display: inline-block;
-            content: '';
-            @include retina-sprite($sl-logo-group);
-            width: inherit;
-            height: inherit;
-            position: inherit;
-            opacity: 0.0;
-            transition: opacity 250ms ease-in-out;
-            background-color: transparent;
-        }
-
-        &:hover {
-            &:after {
-                opacity: 1;
-            }
-        }
-
-        @include retina-sprite($sl-logo-m-group);
-
+        @include retina-sprite($sl-logo-group);
         display: block;
         margin: 0 auto;
-        font-size: 0;
+        font-size: 0px;
         color: #364657;
         z-index: 100;
 
+        &:hover {
+            @include retina-sprite($sl-logo-m-group);
+        }
+
         @if $no_snoos == true {
             opacity: 0;
-            &:hover {
-                &:after {
-                    opacity: 0;
-                }
-            }
         }
     }
+
+    //.redditname a {
+    //
+    //    &:after {
+    //        display: inline-block;
+    //        content: '';
+    //        @include retina-sprite($sl-logo-group);
+    //        width: inherit;
+    //        height: inherit;
+    //        position: inherit;
+    //        opacity: 0.0;
+    //        transition: opacity 250ms ease-in-out;
+    //        background-color: transparent;
+    //    }
+    //
+    //    &:hover {
+    //        &:after {
+    //            opacity: 1;
+    //        }
+    //    }
+    //
+    //    @include retina-sprite($sl-logo-m-group);
+    //
+    //    display: block;
+    //    margin: 0 auto;
+    //    font-size: 0;
+    //    color: #364657;
+    //    z-index: 100;
+    //
+    //    @if $no_snoos == true {
+    //        opacity: 0;
+    //        &:hover {
+    //            &:after {
+    //                opacity: 0;
+    //            }
+    //        }
+    //    }
+    //}
 
     border-bottom: 1px #000 solid;
 }
