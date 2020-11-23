@@ -84,6 +84,11 @@ gulp.task('styles', ['sprites-retina', 'sprites-snoo', 'sprites-logo', 'flair-us
         .pipe(replace('../images/sl-map.jpg', '%%sl-map%%'))
         .pipe(replace('../images/sl-map@2x.jpg', '%%sl-map-2x%%'))
 
+        .pipe(replace('../images/2m-subs@2x.png', '%%2m-subs-2x%%'))
+        .pipe(replace('../images/2m-subs.png', '%%2m-subs%%'))
+        .pipe(replace('../images/2m-subs-reverse@2x.png', '%%2m-subs-reverse-2x%%'))
+        .pipe(replace('../images/2m-subs-reverse.png', '%%2m-subs-reverse%%'))
+
         .pipe(replace('../images/x-vusys.png', '%%x-vusys%%'))
         .pipe(replace('../images/x-vusys@2x.png', '%%x-vusys-2x%%'))
 

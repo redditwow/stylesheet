@@ -1,0 +1,68 @@
+#header {
+    position: relative;
+    overflow: hidden;
+}
+
+#sr-header-area:before, #sr-header-area:after {
+    content: '';
+    width: 468px;
+    height: 170px;
+    display: inline-block;
+
+    bottom: 15%;
+    position: absolute;
+
+    animation: linear infinite;
+    animation-duration: 11s;
+}
+
+#sr-header-area:before {
+    background: url(../images/2m-subs.png);
+    animation-name: yeet;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    #sr-header-area:before {
+        background: url(../images/2m-subs@2x.png);
+        background-size: 468px 170px !important;
+    }
+}
+
+#sr-header-area:after {
+    background: url(../images/2m-subs-reverse.png);
+    animation-name: yeet-reverse;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    #sr-header-area:after {
+        background: url(../images/2m-subs-reverse@2x.png);
+        background-size: 468px 170px !important;
+    }
+}
+
+@-webkit-keyframes yeet {
+    0% {
+        left: -936px;
+    }
+    30% {
+        left: 150%;
+    }
+    100% {
+        left: 150%;
+    }
+}
+
+@-webkit-keyframes yeet-reverse {
+    0% {
+        left: 150%;
+    }
+    40% {
+        left: 150%;
+    }
+    70% {
+        left: -936px;
+    }
+    100% {
+        left: -936px;
+    }
+}
