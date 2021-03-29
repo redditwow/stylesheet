@@ -96,6 +96,29 @@
 @include flair-class-colour('warlock', #9482C9);
 @include flair-class-colour('warrior', #C79C6E);
 
+// Special for Shadowlands
+
+@include flair-class-colour('cov-fae', #c1eefb);
+@include flair-class-colour('cov-kyrian', #9fd3fc);
+@include flair-class-colour('cov-necro', #1c7d50);
+@include flair-class-colour('cov-venthyr', #e53939);
+
+.flair-cov-fae:after {
+    margin: -12px -10px -12px -8px;
+}
+
+.flair-cov-kyrian:after {
+    margin: -8px -10px -8px -8px;
+}
+
+.flair-cov-venthyr:after {
+    margin: -8px -8px -8px -8px;
+}
+
+.flair-cov-necro:after {
+    margin: -8px -8px -8px -8px;
+}
+
 // Special User Flairs
 
 // Blizzard Employees
