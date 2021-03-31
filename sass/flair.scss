@@ -103,6 +103,10 @@
 @include flair-class-colour('cov-necro', #1c7d50);
 @include flair-class-colour('cov-venthyr', #e53939);
 
+.flair-cov-fae, .flair-cov-kyrian, .flair-cov-necro, .flair-cov-venthyr{
+    pointer-events: none;
+}
+
 .flair-cov-fae:after {
     margin: -12px -10px -12px -8px;
 }
