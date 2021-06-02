@@ -395,6 +395,24 @@ button {
         display: block;
     }
 
+    a[href$="procssbtn"] {
+        &:first-of-type {
+            margin-top: 10px;
+        }
+
+        &:before {
+            content: '';
+            display: block;
+            margin-left: -3px;
+            margin-bottom: -26px;
+            @include retina-sprite($x-procss-group)
+        }
+        
+        font-size: 0;
+        height: 112px;
+        display: block;
+    }
+
     a[href$="twitchbtn"] {
         &:first-of-type {
             margin-top: 10px;
