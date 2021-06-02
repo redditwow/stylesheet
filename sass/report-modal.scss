@@ -1,117 +1,14 @@
-.report-modal {
-    .modal-header {
-        background-color: $generic_background;
-    }
-    .modal-header-title {
+.framed-modal .modal-content {
+    &:before {
+        display: block;
+        position: absolute;
+        top: -40px;
+        left: 0px;
+        content: 'Due to reddit limitations, we are not able to style the contents of this modal. Sorry about that, but thanks for reporting this content!';
+        background: rgba(0, 0, 0, 0.75);
         color: $bfa_orange;
+        font-size: 14px;
+        box-sizing: border-box;
+        padding: 3px 5px;
     }
-
-    .modal-content {
-        box-shadow: 0 0 24px rgba(0, 0, 0, .9) !important;
-        background-color: $generic_background;
-        border: $generic_border 1px solid;
-    }
-
-    // Footer text
-    .report-reason-item .report-reason-display {
-        color: $light_text;
-    }
-    .report-form-bottom-panel .report-form-content-policy p {
-        color: $light_text;
-        @include wow-link();
-    }
-
-    // Close button at the top right
-    .c-close.c-hide-text {
-        width: 120%;
-        text-indent: unset;
-        white-space: normal;
-        overflow: auto;
-        color: $light_text;
-    }
-    // Other reason input control
-    .report-reason-other .c-form-control.other-reason-text {
-        background: $generic_background;
-        border: 1px solid $generic_border;
-        color: #ddd;
-        &:focus {
-            box-shadow: none;
-        }
-    }
-
-    // Copyright / Trademark
-    .report-form-big-content-policy,
-    .report-form-last-step-text,
-    .report-form-last-step-text-custom-rules {
-        color: $light_text;
-    }
-
-    // We've received your report action titles
-    .report-form-block-user a,
-    .report-form-blocked-user a,
-    .report-form-unsubscribe a,
-    .report-form-unsubscribed a {
-        color: $light_text;
-    }
-    // We've received your report action blurbs
-    .report-form-block-user .report-form-action-desc p,
-    .report-form-blocked-user .report-form-action-desc p,
-    .report-form-unsubscribe .report-form-action-desc p,
-    .report-form-unsubscribed .report-form-action-desc p {
-        color: $grey_text;
-    }
-
-    .report-form-action-img {
-        padding: 0px !important;
-        width: 34px;
-        height: 34px;
-        border: #333 solid 1px;
-        border-radius: 3px;
-        img {
-            display: none;
-        }
-    }
-    .report-form-blocked-user .report-form-action-img,
-    .report-form-block-user .report-form-action-img {
-        @include retina-sprite($rm-block-group)
-    }
-    .report-form-unsubscribed .report-form-action-img,
-    .report-form-unsubscribe .report-form-action-img {
-        @include retina-sprite($rm-unsub-group)
-    }
-    .report-form-block-user, .report-form-unsubscribe {
-        min-height: 55px;
-    }
-
-    // Buttons
-    .report-form-bottom-panel .c-submit-group .report-back,
-    .report-form-bottom-panel .c-submit-group .report-cancel,
-    .report-form-bottom-panel .c-submit-group .report-close {
-        @include wow-btn-remove;
-        &:hover {
-            @include wow-btn-remove-hover;
-        }
-    }
-
-    .report-form-bottom-panel .c-submit-group .report-submit {
-        @include wow-btn-active;
-        &:hover {
-            @include wow-btn-active-hover;
-        }
-    }
-
-    .report-file-complaint {
-        @include wow-btn-active;
-        // Arrow in the button
-        span {
-            color: white;
-        }
-        &:hover {
-            @include wow-btn-active-hover;
-        }
-    }
-}
-
-.modal-backdrop.in.report-modal-backdrop {
-    opacity: 0.6;
 }
