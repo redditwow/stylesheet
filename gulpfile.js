@@ -108,8 +108,8 @@ gulp.task('styles', ['sprites-retina', 'sprites-snoo', 'sprites-logo', 'flair-us
         .pipe(replace('../sprites/flair-user-1x.png', '%%flair-user-1x-v16%%'))
         .pipe(replace('../sprites/flair-user-2x.png', '%%flair-user-2x-v16%%'))
 
-        .pipe(replace('../sprites/flair-user-bespoke-1x.png', '%%flair-user-bespoke-1x-v26%%'))
-        .pipe(replace('../sprites/flair-user-bespoke-2x.png', '%%flair-user-bespoke-2x-v26%%'))
+        .pipe(replace('../sprites/flair-user-bespoke-1x.png', '%%flair-user-bespoke-1x-v27%%'))
+        .pipe(replace('../sprites/flair-user-bespoke-2x.png', '%%flair-user-bespoke-2x-v27%%'))
 
         .pipe(replace('{{DEV}}', devMessage))
         // reddit doesn't like @charset, so just remove it...
