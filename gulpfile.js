@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 var replace = require('gulp-replace');
 var spritesmith = require('gulp.spritesmith');
 var cleanCSS = require('gulp-clean-css');
