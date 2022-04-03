@@ -1,0 +1,125 @@
+$suffixes: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z;
+
+@each $suffix in $suffixes {
+    .commentarea form[id^="form-t3_"][id$="#{$suffix}"] {
+        &:after {
+            display: block;
+            content: " ";
+            position: fixed;
+            bottom: 75px;
+            right: 100px;
+
+            background-color: rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 0px 60px 60px rgba(0, 0, 0, 0.3);
+        }
+    }
+}
+
+.commentarea form[id^="form-t3_"][id$="0"]:after {
+    @include sprite($c1);
+}
+.commentarea form[id^="form-t3_"][id$="1"]:after {
+    @include sprite($c2);
+}
+.commentarea form[id^="form-t3_"][id$="2"]:after {
+    @include sprite($c3);
+}
+.commentarea form[id^="form-t3_"][id$="3"]:after {
+    @include sprite($c4);
+}
+.commentarea form[id^="form-t3_"][id$="4"]:after {
+    @include sprite($c5);
+}
+.commentarea form[id^="form-t3_"][id$="5"]:after {
+    @include sprite($c6);
+}
+.commentarea form[id^="form-t3_"][id$="6"]:after {
+    @include sprite($c7);
+}
+.commentarea form[id^="form-t3_"][id$="7"]:after {
+    @include sprite($c8);
+}
+.commentarea form[id^="form-t3_"][id$="8"]:after {
+    @include sprite($c9);
+}
+.commentarea form[id^="form-t3_"][id$="9"]:after {
+    @include sprite($c10);
+}
+.commentarea form[id^="form-t3_"][id$="a"]:after {
+    @include sprite($c11);
+}
+.commentarea form[id^="form-t3_"][id$="b"]:after {
+    @include sprite($c12);
+}
+.commentarea form[id^="form-t3_"][id$="c"]:after {
+    @include sprite($c13);
+}
+.commentarea form[id^="form-t3_"][id$="d"]:after {
+    @include sprite($c14);
+}
+.commentarea form[id^="form-t3_"][id$="e"]:after {
+    @include sprite($c15);
+}
+.commentarea form[id^="form-t3_"][id$="f"]:after {
+    @include sprite($c16);
+}
+.commentarea form[id^="form-t3_"][id$="g"]:after {
+    @include sprite($c17);
+}
+.commentarea form[id^="form-t3_"][id$="h"]:after {
+    @include sprite($c18);
+}
+.commentarea form[id^="form-t3_"][id$="i"]:after {
+    @include sprite($c19);
+}
+.commentarea form[id^="form-t3_"][id$="j"]:after {
+    @include sprite($c20);
+}
+.commentarea form[id^="form-t3_"][id$="k"]:after {
+    @include sprite($c21);
+}
+.commentarea form[id^="form-t3_"][id$="l"]:after {
+    @include sprite($c22);
+}
+.commentarea form[id^="form-t3_"][id$="m"]:after {
+    @include sprite($c23);
+}
+.commentarea form[id^="form-t3_"][id$="n"]:after {
+    @include sprite($c24);
+}
+.commentarea form[id^="form-t3_"][id$="o"]:after {
+    @include sprite($c25);
+}
+.commentarea form[id^="form-t3_"][id$="p"]:after {
+    @include sprite($c26);
+}
+.commentarea form[id^="form-t3_"][id$="q"]:after {
+    @include sprite($c27);
+}
+.commentarea form[id^="form-t3_"][id$="r"]:after {
+    @include sprite($c28);
+}
+.commentarea form[id^="form-t3_"][id$="s"]:after {
+    @include sprite($c29);
+}
+.commentarea form[id^="form-t3_"][id$="t"]:after {
+    @include sprite($c30);
+}
+.commentarea form[id^="form-t3_"][id$="u"]:after {
+    @include sprite($c31);
+}
+.commentarea form[id^="form-t3_"][id$="v"]:after {
+    @include sprite($c32);
+}
+.commentarea form[id^="form-t3_"][id$="w"]:after {
+    @include sprite($c33);
+}
+.commentarea form[id^="form-t3_"][id$="x"]:after {
+    @include sprite($c34);
+}
+.commentarea form[id^="form-t3_"][id$="y"]:after {
+    @include sprite($c35);
+}
+.commentarea form[id^="form-t3_"][id$="z"]:after {
+    @include sprite($c36);
+}

@@ -30,6 +30,7 @@ $no_snoos: false;
 $shy_logo: false;
 
 @import "mixins.scss";
+@import "_spritesheet-clippy.scss";
 @import "_spritesheet-retina.scss";
 @import "_spritesheet-snoo.scss";
 @import "_spritesheet-logo.scss";
@@ -68,5 +69,6 @@ $shy_logo: false;
 @import "flair.scss";
 
 //@import "2m.scss";
+@import "22-04-01.scss";
 
 
