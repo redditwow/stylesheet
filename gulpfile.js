@@ -105,8 +105,8 @@ gulp.task('styles', ['sprites-retina', 'sprites-snoo', 'sprites-logo', 'flair-us
         .pipe(replace('../sprites/spritesheet-logo-1x.png', '%%spritesheet-logo-1x-v1%%'))
         .pipe(replace('../sprites/spritesheet-logo-2x.png', '%%spritesheet-logo-2x-v1%%'))
 
-        .pipe(replace('../sprites/flair-user-1x.png', '%%flair-user-1x-v17%%'))
-        .pipe(replace('../sprites/flair-user-2x.png', '%%flair-user-2x-v17%%'))
+        .pipe(replace('../sprites/flair-user-1x.png', '%%flair-user-1x-v18%%'))
+        .pipe(replace('../sprites/flair-user-2x.png', '%%flair-user-2x-v18%%'))
 
         .pipe(replace('../sprites/flair-user-bespoke-1x.png', '%%flair-user-bespoke-1x-v32%%'))
         .pipe(replace('../sprites/flair-user-bespoke-2x.png', '%%flair-user-bespoke-2x-v32%%'))
