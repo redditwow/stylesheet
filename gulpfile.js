@@ -67,21 +67,21 @@ gulp.task('styles', ['sprites-retina', 'sprites-snoo', 'sprites-logo', 'flair-us
         .pipe(replace('../images/hero-aph.jpg', '%%hero-aph%%'))
         .pipe(replace('../images/partyparrot.png', '%%partyparrot%%'))
 
-        .pipe(replace('../images/artist-1.jpg', '%%artist-1%%'))
-        .pipe(replace('../images/artist-1@2x.jpg', '%%artist-1-2x%%'))
-        .pipe(replace('../images/artist-2.jpg', '%%artist-2%%'))
-        .pipe(replace('../images/artist-2@2x.jpg', '%%artist-2-2x%%'))
+        .pipe(replace('../images/c-1.jpg', '%%c-1%%'))
+        .pipe(replace('../images/c-1@2x.jpg', '%%c-1-2x%%'))
+        .pipe(replace('../images/c-2.jpg', '%%c-2%%'))
+        .pipe(replace('../images/c-2@2x.jpg', '%%c-2-2x%%'))
 
-        .pipe(replace('../images/artist-1a.jpg', '%%artist-1a%%'))
-        .pipe(replace('../images/artist-1a@2x.jpg', '%%artist-1a-2x%%'))
-        .pipe(replace('../images/artist-2a.jpg', '%%artist-2a%%'))
-        .pipe(replace('../images/artist-2a@2x.jpg', '%%artist-2a-2x%%'))
+        .pipe(replace('../images/c-1a.jpg', '%%c-1a%%'))
+        .pipe(replace('../images/c-1a@2x.jpg', '%%c-1a-2x%%'))
+        .pipe(replace('../images/c-2a.jpg', '%%c-2a%%'))
+        .pipe(replace('../images/c-2a@2x.jpg', '%%c-2a-2x%%'))
 
-        .pipe(replace('../images/artist-3.jpg', '%%artist-3%%'))
-        .pipe(replace('../images/artist-3@2x.jpg', '%%artist-3-2x%%'))
+        .pipe(replace('../images/c-3.jpg', '%%c-3%%'))
+        .pipe(replace('../images/c-3@2x.jpg', '%%c-3-2x%%'))
 
-        .pipe(replace('../images/artist-4.jpg', '%%artist-4%%'))
-        .pipe(replace('../images/artist-4@2x.jpg', '%%artist-4-2x%%'))
+        .pipe(replace('../images/c-4.jpg', '%%c-4%%'))
+        .pipe(replace('../images/c-4@2x.jpg', '%%c-4-2x%%'))
 
         .pipe(replace('../images/sl-map.jpg', '%%sl-map%%'))
         .pipe(replace('../images/sl-map@2x.jpg', '%%sl-map-2x%%'))
