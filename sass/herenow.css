@@ -3,10 +3,10 @@
 }
 
 .titlebox span.number:after {
-    content: " with no tier sets";
+    content: " voted for Grimrail";
 }
 
 .titlebox .users-online span.number:after {
-    content: " with 4 piece tier set";
+    content: " actually want to run Grimrail";
 }
 
