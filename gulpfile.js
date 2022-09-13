@@ -68,48 +68,46 @@ gulp.task('styles', ['sprites-retina', 'sprites-snoo', 'sprites-logo', 'flair-us
         .pipe(replace('../images/partyparrot.png', '%%partyparrot%%'))
 
         .pipe(replace('../images/c-1.jpg', '%%c-1%%'))
-        .pipe(replace('../images/c-1@2x.jpg', '%%c-1-2x%%'))
+        .pipe(replace('../images/c-1-2x.jpg', '%%c-1-2x%%'))
         .pipe(replace('../images/c-2.jpg', '%%c-2%%'))
-        .pipe(replace('../images/c-2@2x.jpg', '%%c-2-2x%%'))
+        .pipe(replace('../images/c-2-2x.jpg', '%%c-2-2x%%'))
 
         .pipe(replace('../images/c-1a.jpg', '%%c-1a%%'))
-        .pipe(replace('../images/c-1a@2x.jpg', '%%c-1a-2x%%'))
+        .pipe(replace('../images/c-1a-2x.jpg', '%%c-1a-2x%%'))
         .pipe(replace('../images/c-2a.jpg', '%%c-2a%%'))
-        .pipe(replace('../images/c-2a@2x.jpg', '%%c-2a-2x%%'))
+        .pipe(replace('../images/c-2a-2x.jpg', '%%c-2a-2x%%'))
 
         .pipe(replace('../images/c-3.jpg', '%%c-3%%'))
-        .pipe(replace('../images/c-3@2x.jpg', '%%c-3-2x%%'))
+        .pipe(replace('../images/c-3-2x.jpg', '%%c-3-2x%%'))
 
         .pipe(replace('../images/c-4.jpg', '%%c-4%%'))
-        .pipe(replace('../images/c-4@2x.jpg', '%%c-4-2x%%'))
+        .pipe(replace('../images/c-4-2x.jpg', '%%c-4-2x%%'))
 
         .pipe(replace('../images/sl-map.jpg', '%%sl-map%%'))
-        .pipe(replace('../images/sl-map@2x.jpg', '%%sl-map-2x%%'))
+        .pipe(replace('../images/sl-map-2x.jpg', '%%sl-map-2x%%'))
 
-        .pipe(replace('../images/2m-subs@2x.png', '%%2m-subs-2x%%'))
+        .pipe(replace('../images/2m-subs-2x.png', '%%2m-subs-2x%%'))
         .pipe(replace('../images/2m-subs.png', '%%2m-subs%%'))
-        .pipe(replace('../images/2m-subs-reverse@2x.png', '%%2m-subs-reverse-2x%%'))
+        .pipe(replace('../images/2m-subs-reverse-2x.png', '%%2m-subs-reverse-2x%%'))
         .pipe(replace('../images/2m-subs-reverse.png', '%%2m-subs-reverse%%'))
 
         .pipe(replace('../images/x-vusys.png', '%%x-vusys%%'))
-        .pipe(replace('../images/x-vusys@2x.png', '%%x-vusys-2x%%'))
+        .pipe(replace('../images/x-vusys-2x.png', '%%x-vusys-2x%%'))
 
-        // Reddit aggressively caches images, so all of these images have a version number on the end to bust the cache
-        // after changes have been made. This is a manual process :(
-        .pipe(replace('../sprites/spritesheet-retina-1x.png', '%%spritesheet-retina-1x-v28%%'))
-        .pipe(replace('../sprites/spritesheet-retina-2x.png', '%%spritesheet-retina-2x-v28%%'))
+        .pipe(replace('../sprites/spritesheet-retina-1x.png', '%%spritesheet-retina-1x%%'))
+        .pipe(replace('../sprites/spritesheet-retina-2x.png', '%%spritesheet-retina-2x%%'))
 
-        .pipe(replace('../sprites/spritesheet-snoo-1x.png', '%%spritesheet-snoo-1x-v5%%'))
-        .pipe(replace('../sprites/spritesheet-snoo-2x.png', '%%spritesheet-snoo-2x-v5%%'))
+        .pipe(replace('../sprites/spritesheet-snoo-1x.png', '%%spritesheet-snoo-1x%%'))
+        .pipe(replace('../sprites/spritesheet-snoo-2x.png', '%%spritesheet-snoo-2x%%'))
 
-        .pipe(replace('../sprites/spritesheet-logo-1x.png', '%%spritesheet-logo-1x-v1%%'))
-        .pipe(replace('../sprites/spritesheet-logo-2x.png', '%%spritesheet-logo-2x-v1%%'))
+        .pipe(replace('../sprites/spritesheet-logo-1x.png', '%%spritesheet-logo-1x%%'))
+        .pipe(replace('../sprites/spritesheet-logo-2x.png', '%%spritesheet-logo-2x%%'))
 
-        .pipe(replace('../sprites/flair-user-1x.png', '%%flair-user-1x-v18%%'))
-        .pipe(replace('../sprites/flair-user-2x.png', '%%flair-user-2x-v18%%'))
+        .pipe(replace('../sprites/flair-user-1x.png', '%%flair-user-1x%%'))
+        .pipe(replace('../sprites/flair-user-2x.png', '%%flair-user-2x%%'))
 
-        .pipe(replace('../sprites/flair-user-bespoke-1x.png', '%%flair-user-bespoke-1x-v33%%'))
-        .pipe(replace('../sprites/flair-user-bespoke-2x.png', '%%flair-user-bespoke-2x-v33%%'))
+        .pipe(replace('../sprites/flair-user-bespoke-1x.png', '%%flair-user-bespoke-1x%%'))
+        .pipe(replace('../sprites/flair-user-bespoke-2x.png', '%%flair-user-bespoke-2x%%'))
 
         .pipe(replace('{{DEV}}', devMessage))
         // reddit doesn't like @charset, so just remove it...
