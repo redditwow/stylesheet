@@ -3,10 +3,10 @@
 }
 
 .titlebox span.number:after {
-    content: " voted for Grimrail";
+    content: " waiting for beta key";
 }
 
 .titlebox .users-online span.number:after {
-    content: " actually want to run Grimrail";
+    content: " playing the beta";
 }
 
