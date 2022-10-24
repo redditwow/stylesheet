@@ -1,8 +1,8 @@
 body {
     background-image: url(../images/bg-top.jpg), url(../images/bg-repeat.jpg);
-    background-color: #28211b;
-    background-position: top, top;
-    background-repeat: repeat-x, repeat;
+    background-color: #231a13;
+    background-position: top center, top center;
+    background-repeat: no-repeat, repeat-y;
 
     color: $grey_text;
 
