@@ -95,8 +95,8 @@ gulp.task('styles', ['sprites-retina', 'sprites-snoo', 'sprites-logo', 'flair-us
         .pipe(replace('../images/x-vusys.png', '%%x-vusys%%'))
         .pipe(replace('../images/x-vusys-2x.png', '%%x-vusys-2x%%'))
 
-        .pipe(replace('../sprites/spritesheet-retina-1x.png', '%%spritesheet-retina-1x%%'))
-        .pipe(replace('../sprites/spritesheet-retina-2x.png', '%%spritesheet-retina-2x%%'))
+        .pipe(replace('../sprites/sr1x.png', '%%sr1x%%'))
+        .pipe(replace('../sprites/sr2x.png', '%%sr2x%%'))
 
         .pipe(replace('../sprites/spritesheet-snoo-1x.png', '%%spritesheet-snoo-1x%%'))
         .pipe(replace('../sprites/spritesheet-snoo-2x.png', '%%spritesheet-snoo-2x%%'))
@@ -104,11 +104,11 @@ gulp.task('styles', ['sprites-retina', 'sprites-snoo', 'sprites-logo', 'flair-us
         .pipe(replace('../sprites/spritesheet-logo-1x.png', '%%spritesheet-logo-1x%%'))
         .pipe(replace('../sprites/spritesheet-logo-2x.png', '%%spritesheet-logo-2x%%'))
 
-        .pipe(replace('../sprites/flair-user-1x.png', '%%flair-user-1x%%'))
-        .pipe(replace('../sprites/flair-user-2x.png', '%%flair-user-2x%%'))
+        .pipe(replace('../sprites/fu1x.png', '%%fu1x%%'))
+        .pipe(replace('../sprites/fu2x.png', '%%fu2x%%'))
 
-        .pipe(replace('../sprites/flair-user-bespoke-1x.png', '%%flair-user-bespoke-1x%%'))
-        .pipe(replace('../sprites/flair-user-bespoke-2x.png', '%%flair-user-bespoke-2x%%'))
+        .pipe(replace('../sprites/fb1x.png', '%%fb1x%%'))
+        .pipe(replace('../sprites/fb2x.png', '%%fb2x%%'))
 
         .pipe(replace('{{DEV}}', devMessage))
         // reddit doesn't like @charset, so just remove it...
@@ -134,12 +134,12 @@ gulp.task('styles', ['sprites-retina', 'sprites-snoo', 'sprites-logo', 'flair-us
 
 gulp.task('flair-user', function () {
     var spriteData = gulp.src('./spritesheet_images/flair_user/*.png')
-        .pipe(newer('sprites/flair-user-1x.png'))
+        .pipe(newer('sprites/fu1x.png'))
         .pipe(spritesmith({
             cssName: 'sass/_flair-user.scss',
             retinaSrcFilter: ['./spritesheet_images/flair_user/*@2x.png'],
-            imgName: 'sprites/flair-user-1x.png',
-            retinaImgName: './sprites/flair-user-2x.png',
+            imgName: 'sprites/fu1x.png',
+            retinaImgName: './sprites/fu2x.png',
             algorithm: 'binary-tree',
             cssSpritesheetName: 'flair-user',
             cssRetinaGroupsName: 'user-groups',
@@ -152,12 +152,12 @@ gulp.task('flair-user', function () {
 
 gulp.task('flair-user-bespoke', function () {
     var spriteData = gulp.src('./spritesheet_images/flair_user_bespoke/*.png')
-        .pipe(newer('sprites/flair-user-bespoke-1x.png'))
+        .pipe(newer('sprites/fb1x.png'))
         .pipe(spritesmith({
             cssName: 'sass/_flair-user-bespoke.scss',
             retinaSrcFilter: ['./spritesheet_images/flair_user_bespoke/*@2x.png'],
-            imgName: 'sprites/flair-user-bespoke-1x.png',
-            retinaImgName: './sprites/flair-user-bespoke-2x.png',
+            imgName: 'sprites/fb1x.png',
+            retinaImgName: './sprites/fb2x.png',
             algorithm: 'binary-tree',
             cssSpritesheetName: 'flair-user-bespoke',
             cssRetinaGroupsName: 'bespoke-user-groups',
@@ -170,12 +170,12 @@ gulp.task('flair-user-bespoke', function () {
 
 gulp.task('sprites-retina', function () {
     var spriteData = gulp.src('./spritesheet_images/kitchen_sink/*')
-        .pipe(newer('sprites/spritesheet-retina-2x.png'))
+        .pipe(newer('sprites/sr2x.png'))
         .pipe(spritesmith({
             cssName: 'sass/_spritesheet-retina.scss',
             retinaSrcFilter: ['./spritesheet_images/kitchen_sink/*@2x.png'],
-            imgName: 'sprites/spritesheet-retina-1x.png',
-            retinaImgName: './sprites/spritesheet-retina-2x.png',
+            imgName: 'sprites/sr1x.png',
+            retinaImgName: './sprites/sr2x.png',
             cssSpritesheetName: 'spritesheet-retina',
             algorithm: 'binary-tree'
         }));
