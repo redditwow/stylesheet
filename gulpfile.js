@@ -116,7 +116,7 @@ gulp.task('styles', ['sprites-retina', 'sprites-snoo', 'sprites-logo', 'flair-us
 
         .pipe(insert.prepend(herenow))
         .pipe(insert.prepend(credits))
-        .pipe(insert.append("\n\n/* Bollocks to Nathanos */"))
+        // .pipe(insert.append("\n\n/* Bollocks to Nathanos */"))
         .pipe(size({
             showFiles: true
         }))
