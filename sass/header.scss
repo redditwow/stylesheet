@@ -1,31 +1,32 @@
 // header background
 #header {
 
-    height: 250px;
-    background: url("../images/hero-shadowlands-v3.jpg") center no-repeat #100F15;
-    background-size: 2810px 250px;
+    height: 325px;
+    background: url("../images/hero-df.jpg") center no-repeat #484787;
+    background-size: 2810px 325px;
     //margin-bottom: 20px;
     box-shadow: 0px 10px 14px 10px rgba(0, 0, 0, 0.2);
 
     .redditname {
         position: absolute;
-        top: 40px;
-        left: 0px;
+        top: 50px;
+        left: 0;
         width: 100%;
     }
 
     .redditname a {
-        @include retina-sprite($sl-logo-group);
+        @include retina-sprite($df-logo-group);
         display: block;
         margin: 0 auto;
         font-size: 0px;
         color: #364657;
         z-index: 100;
 
-        transition: opacity .25s ease-in-out;
+        transition: background-image .25s ease-in-out;
+        //transition: opacity .25s ease-in-out;
 
         &:hover {
-            @include retina-sprite($sl-logo-m-group);
+            @include retina-sprite($df-logo-m-group);
 
             @if $shy_logo == true {
                 opacity: 1;
@@ -80,8 +81,8 @@
 
 #header-bottom-left .tabmenu {
     position: relative;
-    top: 172px;
-    left: 160px;
+    top: 246px;
+    left: 235px;
     z-index: 9999;
 
     li.selected a {
@@ -117,7 +118,7 @@
         content: '';
         display: block;
         position: absolute;
-        top: 208px;
+        top: 283px;
         width: 100%;
         height: 40px;
         @include wow-modern-box;
@@ -130,8 +131,8 @@
 // reddit/ snoo logo
 @if $no_snoos != true {
     #header-img-a {
-        margin-top: 8px;
-        margin-left: 7px;
+        margin-top: 34px;
+        margin-left: -13px;
         height: 128px;
         width: 100px;
         display: inline-block;

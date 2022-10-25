@@ -19,8 +19,6 @@
     }
 }
 
-// show my flair...
-// yer a moderator, harry
 .titlebox form.toggle, .leavemoderator {
     background: none;
     color: $light_text;
@@ -89,7 +87,7 @@ button {
 
 .submit-link .morelink {
     position: absolute;
-    top: 268px;
+    top: 389px;
     width: 152px;
     margin-left: -8px;
     //&:after {
@@ -107,7 +105,7 @@ button {
 
 .submit-text .morelink {
     position: absolute;
-    top: 268px;
+    top: 389px;
     width: 152px;
     margin-left: 156px;
 }
@@ -147,7 +145,7 @@ button {
         border: none !important;;
         //    @include wow-modern-box;
     }
-    
+
     // message the moderators
     .message-button {
 
@@ -212,8 +210,9 @@ button {
 // multi reddit bubble when hovering over subscribe
 .hover-bubble {
     &.multi-selector {
-        background: $generic_background;
-        border-color: $generic_border;
+
+        @include wow-modern-box;
+        background: rgba(38, 30, 24, 0.95);
 
         // categorise title
         strong {
@@ -282,7 +281,7 @@ button {
 
 #search {
     position: absolute;
-    top: 313px;
+    top: 343px;
     right: 14px;
     width: 320px;
 
@@ -294,28 +293,32 @@ button {
     }
 
     #searchexpando {
-        border: none;
-        margin: 0;
-        padding: 4px;
+
         line-height: 30px;
         position: relative;
         z-index: 1;
+
+        @include wow-modern-box;
+        background: rgba(38, 30, 24, 0.95);
+
+        width: 296px;
+
+        padding: 9px;
+        //border: 1px solid $generic_border;
+        color: #fff;
+        border-radius: 0;
+        margin: 16px auto;
+
+        a {
+            color: $title;
+        }
+
+        #moresearchinfo {
+            border-top: 1px solid $generic_border;
+        }
     }
 }
 
-// search doodad
-#searchexpando {
-    background-color: $generic_background;
-    border: 1px solid $generic_border;
-    color: #fff;
-    border-radius: 0;
-    a {
-        color: #fff;
-    }
-    #moresearchinfo {
-        border-top: 1px solid $generic_border;
-    }
-}
 
 .side {
 
@@ -407,7 +410,7 @@ button {
             margin-bottom: -26px;
             @include retina-sprite($x-procss-group)
         }
-        
+
         font-size: 0;
         height: 112px;
         display: block;
