@@ -47,6 +47,7 @@ a[href*="#ul"] {
 @include special-colour-link('ca', #00ff96); //monk
 @include special-colour-link('cb', #ff7d0a); //druid
 @include special-colour-link('cc', #a330c9); //demonhunter
+@include special-colour-link('cd', #33937f); //evoker
 
 // item qualities
 @include special-colour-link('q0', #9d9d9d); //poor
