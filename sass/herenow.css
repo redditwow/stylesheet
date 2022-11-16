@@ -3,10 +3,10 @@
 }
 
 .titlebox span.number:after {
-    content: " waiting for beta key";
+    content: " getting an ugly mount";
 }
 
 .titlebox .users-online span.number:after {
-    content: " playing the beta";
+    content: " angry people :(";
 }
 
