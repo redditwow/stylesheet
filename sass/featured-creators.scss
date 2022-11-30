@@ -22,7 +22,7 @@
     a[href*="#fa-img-3"] {
         display: block;
         width: 320px;
-        height: 306px;
+        height: 320px;
         margin: 0px -16px;
         font-size: 0px;
         z-index: 10;
@@ -32,7 +32,7 @@
     a[href*="#fa-img-4"] {
         display: block;
         width: 320px;
-        height: 180px;
+        height: 212px;
         margin: 0px -16px;
         font-size: 0px;
         z-index: 10;
@@ -48,11 +48,11 @@
     }
 
     a[href*="#fa-img-3"] {
-        background: url(../images/c-3.jpg);
+        background: url(../images/c-3.webp);
     }
 
     a[href*="#fa-img-4"] {
-        background: url(../images/c-4.jpg);
+        background: url(../images/c-4.webp);
     }
 }
 
@@ -69,13 +69,13 @@
         }
 
         a[href*="#fa-img-3"] {
-            background: url(../images/c-3-2x.jpg) !important;
-            background-size: 320px 306px !important;
+            background: url(../images/c-3-2x.webp) !important;
+            background-size: 320px 320px !important;
         }
 
         a[href*="#fa-img-4"] {
-            background: url(../images/c-4-2x.jpg) !important;
-            background-size: 320px 180px !important;
+            background: url(../images/c-4-2x.webp) !important;
+            background-size: 320px 212px !important;
         }
     }
 }
