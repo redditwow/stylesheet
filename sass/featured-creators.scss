@@ -2,7 +2,7 @@
     a[href*="#fa-img-1"] {
         display: block;
         width: 320px;
-        height: 263px;
+        height: 320px;
         margin: 0px -16px;
         font-size: 0px;
         z-index: 10;
@@ -12,7 +12,7 @@
     a[href*="#fa-img-2"] {
         display: block;
         width: 320px;
-        height: 320px;
+        height: 480px;
         margin: 0px -16px;
         font-size: 0px;
         z-index: 10;
@@ -40,11 +40,11 @@
     }
 
     a[href*="#fa-img-1"] {
-        background: url(../images/c-1.jpg);
+        background: url(../images/c-1.webp);
     }
 
     a[href*="#fa-img-2"] {
-        background: url(../images/c-2.jpg);
+        background: url(../images/c-2.webp);
     }
 
     a[href*="#fa-img-3"] {
@@ -59,13 +59,13 @@
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .side {
         a[href*="#fa-img-1"] {
-            background: url(../images/c-1-2x.jpg) !important;
-            background-size: 320px 263px !important;
+            background: url(../images/c-1-2x.webp) !important;
+            background-size: 320px 320px !important;
         }
 
         a[href*="#fa-img-2"] {
-            background: url(../images/c-2-2x.jpg) !important;
-            background-size: 320px 320px !important;
+            background: url(../images/c-2-2x.webp) !important;
+            background-size: 320px 480px !important;
         }
 
         a[href*="#fa-img-3"] {
