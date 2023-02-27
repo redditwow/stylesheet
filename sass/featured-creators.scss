@@ -12,7 +12,7 @@
     a[href*="#fa-img-2"] {
         display: block;
         width: 320px;
-        height: 480px;
+        height: 320px;
         margin: 0px -16px;
         font-size: 0px;
         z-index: 10;
@@ -65,7 +65,7 @@
 
         a[href*="#fa-img-2"] {
             background: url(../images/c-2-2x.webp) !important;
-            background-size: 320px 480px !important;
+            background-size: 320px 320px !important;
         }
 
         a[href*="#fa-img-3"] {
