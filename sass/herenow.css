@@ -3,10 +3,10 @@
 }
 
 .titlebox span.number:after {
-    content: " enjoying Dragonflight";
+    content: " complaining about affixes";
 }
 
 .titlebox .users-online span.number:after {
-    content: " complaining about the Dracthyr bot";
+    content: " posting chat logs";
 }
 
