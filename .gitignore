@@ -3,5 +3,5 @@ node_modules
 demo/*.html
 css/*.css
 sass/_*
-sprites/*.png
+sprites/*
 config.json
