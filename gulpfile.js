@@ -12,6 +12,8 @@ var image = require('gulp-image');
 var newer = require('gulp-newer');
 var snoowrap = require('snoowrap');
 var config = require('./config.json');
+var webp = require('gulp-webp');
+
 
 if (config.automaticStagingDeployment) {
     var r = new snoowrap({
@@ -23,7 +25,9 @@ if (config.automaticStagingDeployment) {
     });
 }
 
-gulp.task('styles', ['sprites-retina', 'sprites-snoo', 'sprites-logo', 'flair-user', 'flair-user-bespoke'], function () {
+gulp.task('styles', [
+    'webp',
+], function () {
 
     var credits = fs.readFileSync('sass/credits.css', 'utf8');
     var herenow = fs.readFileSync('sass/herenow.css', 'utf8');
@@ -231,27 +235,24 @@ gulp.task('sprites-logo', function () {
     return spriteData.pipe(gulp.dest('.'));
 });
 
-gulp.task('images', ['images-lossless', 'images-lossy']);
+gulp.task('sprite-gen', [
+    'sprites-retina', 'sprites-snoo', 'sprites-logo',
+    'flair-user', 'flair-user-bespoke',
+]);
 
-gulp.task('images-lossless', function () {
-    gulp.src('./sprites/*snoo*')
-        .pipe(image({
-            // zopflipng: ['-y', '--iterations=15', '--splitting=3', '--filters=01234mepb', '--lossy_8bit', '--lossy_transparent'],
-            // zopflipng: ['-y', '-m', '--lossy_8bit', '--lossy_transparent'],
-            pngquant: false,
-            concurrent: 2,
-        }))
-        .pipe(gulp.dest('./sprites'));
-});
+// gulp.task('sprite-optimisation', [
+//     'sprites-retina', 'sprites-snoo', 'sprites-logo',
+//     'flair-user', 'flair-user-bespoke',
+// ]);
 
-gulp.task('images-lossy', function () {
+
+gulp.task('webp', ['sprite-gen'], function () {
     gulp.src([
         './sprites/*.png',
-        '!./sprites/*snoo*',
+        // '!./sprites/*snoo*',
     ])
-        .pipe(image({
-            concurrent: 2,
-            pngquant: ['--speed=1', '--nofs', '--force'],
+        .pipe(webp({
+            lossless: 0
         }))
         .pipe(gulp.dest('./sprites'));
 });
