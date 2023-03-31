@@ -70,6 +70,7 @@ gulp.task('styles', [
         .pipe(replace('../images/hero-shadowlands-v3.jpg', '%%hero-shadowlands-v3%%'))
         .pipe(replace('../images/hero-aph.jpg', '%%hero-aph%%'))
         .pipe(replace('../images/hero-df.jpg', '%%hero-df%%'))
+        .pipe(replace('../images/hero-df-new.webp', '%%hero-df-new%%'))
         .pipe(replace('../images/partyparrot.png', '%%partyparrot%%'))
 
         .pipe(replace('../images/c-1.jpg', '%%c-1%%'))

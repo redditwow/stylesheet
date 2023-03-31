@@ -1,10 +1,8 @@
-// header background
-#header {
 
-    height: 325px;
-    background: url("../images/hero-df.jpg") center no-repeat #484787;
-    background-size: 2810px 325px;
-    //margin-bottom: 20px;
+#header {
+    height: 250px;
+    background: url("../images/hero-df-new.webp") center no-repeat #484787;
+    background-size: 2810px 250px;
     box-shadow: 0px 10px 14px 10px rgba(0, 0, 0, 0.2);
 
     .redditname {
@@ -81,8 +79,8 @@
 
 #header-bottom-left .tabmenu {
     position: relative;
-    top: 246px;
-    left: 235px;
+    top: 172px;
+    left: 186px;
     z-index: 9999;
 
     li.selected a {
@@ -118,7 +116,7 @@
         content: '';
         display: block;
         position: absolute;
-        top: 283px;
+        top: 208px;
         width: 100%;
         height: 40px;
         @include wow-modern-box;
@@ -131,8 +129,8 @@
 // reddit/ snoo logo
 @if $no_snoos != true {
     #header-img-a {
-        margin-top: 34px;
-        margin-left: -13px;
+        margin-top: 3px;
+        margin-left: 15px;
         height: 128px;
         width: 100px;
         display: inline-block;
@@ -183,7 +181,7 @@
 
     // move the menu closer to the back link
     #header-bottom-left .tabmenu {
-        left: 145px;
+        left: 195px;
     }
 }
 
