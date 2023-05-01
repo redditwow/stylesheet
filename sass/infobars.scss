@@ -38,6 +38,7 @@ section.infobar.newsletterbar {
 .infobar.mellow {
     background-color: $wow_btn_background;
     border: 1px solid $wow_btn_border;
+    margin-top: 15px;
     @include wow-btn-text();
     a {
         color: #fff;

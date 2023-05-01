@@ -260,7 +260,8 @@ span.score {
     .gray {
         color: $grey_text;
     }
-    margin: 5px 0px;
+    display: inline-block;
+    margin: 5px;
 }
 
 // push the reply form over to make room for the collapse link

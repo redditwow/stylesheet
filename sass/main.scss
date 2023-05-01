@@ -18,7 +18,7 @@ $wow_btn_remove_border: lighten($wow_btn_remove_background, 15%);
 
 $yellow_background: darken(#FCF8E3, 0%);
 $yellow_hover: darken($yellow_background, 10%);
-$yellow_border: #F2BF27;
+$yellow_border: rgb(242, 191, 39);
 
 $blizzard_blue: rgb(0, 180, 255);
 $method_orange: rgb(241, 140, 47);
@@ -42,7 +42,7 @@ $shy_logo: false;
 @import "header.scss";
 @import "arrows.scss";
 @import "side.scss";
-//@import "featured-creators.scss";
+@import "featured-creators.scss";
 @import "misc.scss";
 @import "expandos.scss";
 @import "infobars.scss";

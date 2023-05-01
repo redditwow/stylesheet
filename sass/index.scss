@@ -32,9 +32,11 @@ body {
     }
 }
 
-.domain a {
+.spam .domain, .spam .domain a {
     color: $grey_text;
 }
+
+
 
 .thing.link {
     padding: 15px 0px;
@@ -47,6 +49,15 @@ body {
     &:hover {
         background: rgba(0, 0, 0, 0.2);
     }
+
+    &.spam {
+        background: rgba(35, 1, 1, 0.25);
+        &:hover {
+            background: rgba(35, 0, 0, 0.2);
+        }
+    }
+
+
 
     &.stickied.link a.title {
         color: $bfa_orange;
