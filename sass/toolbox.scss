@@ -20,25 +20,53 @@
 
   border-radius: 0;
 
+  $tb_negative: rgba(118, 18, 15, 0.9);
+  $tb_neutral: rgba(86, 86, 86, 0.9);
+  $tb_ignore: rgba(63, 63, 63, 0.9);
+  $tb_positive: rgba(21, 100, 21, 0.9);
+
+
   &.negative {
-    background: rgba(118, 18, 15, 0.9) !important;
-    border-color: lighten(rgba(118, 18, 15, 0.9), 10) !important;
+    background: $tb_negative !important;
+    border-color: lighten($tb_negative, 10) !important;
+
+    &.pressed, :hover {
+      background: darken($tb_negative, 10) !important;
+      border-color: darken($tb_negative, 5) !important;
+    }
   }
 
   &.neutral {
-    background: rgba(86, 86, 86, 0.9) !important;
-    border-color: lighten(rgba(86, 86, 86, 0.9), 10) !important;
+    background: $tb_neutral !important;
+    border-color: lighten($tb_neutral, 10) !important;
+
+    &.pressed, :hover {
+      background: darken($tb_neutral, 10) !important;
+      border-color: darken($tb_neutral, 5) !important;
+    }
   }
 
   &.ignore {
-    background: rgba(63, 63, 63, 0.9) !important;
-    border-color: lighten(rgba(63, 63, 63, 0.9), 10) !important;
+    background: $tb_ignore !important;
+    border-color: lighten($tb_ignore, 10) !important;
+
+    &.pressed, :hover {
+      background: darken($tb_ignore, 10) !important;
+      border-color: darken($tb_ignore, 5) !important;
+    }
   }
 
   &.positive {
-    background: rgba(21, 100, 21, 0.9) !important;
-    border-color: lighten(rgba(21, 100, 21, 0.9), 10) !important;
+    background: $tb_positive !important;
+    border-color: lighten($tb_positive, 10) !important;
+
+    &.pressed, :hover {
+      background: darken($tb_positive, 10) !important;
+      border-color: darken($tb_positive, 5) !important;
+    }
   }
+
+
 }
 
 // Selectors taken from toolbox.css
@@ -90,16 +118,16 @@ body.mod-toolbox {
 body.moderator {
   .thing {
     .title {
-      color: $title !important;
+      color: $title;
     }
 
     a {
-      @include wow-link();
+      //@include wow-link();
     }
 
     &.comment {
       .title {
-        margin-left: 50px;
+        //margin-left: 50px;
       }
     }
   }
@@ -116,91 +144,3 @@ body.mod-toolbox #noresults.error[class*='tb'] {
   margin: 50px auto;
   @include retina-sprite($x-cleared-the-mod-queue-group);
 }
-
-/*
-
-//toolbox buttons
-
-
-.mod-toolbox {
-  .mod-popup, .tb-page-overlay {
-    textarea, input {
-      color: #111 !important;
-      background: white !important;
-    }
-
-    input {
-      border: #363636 solid 1px !important;
-    }
-  }
-
-  .mod-popup {
-    .tb-popup-title {
-      color: #111;
-    }
-  }
-}
-
-// reset popup box colour back to default ish
-.tb-popup-content, .tb-window-wrapper, .reason-popup {
-  color: #111;
-}
-
-.reason-popup-innercontent {
-  // Flug keeps adding removal reasons
-  max-height: 80vh;
-  overflow: scroll;
-}
-
-.reason-check {
-  transform: scale(2);
-}
-
-// ugly hack to move the toolbox comment checkboxes so they don't overlap with our custom expandos
-// also resizes them a wee bit bigger to make them easier to click quickly
-.thing.comment input[type='checkbox'] {
-  //margin-top: 10px !important;
-  //margin-left: 35px !important;
-  //margin-right: -35px !important;
-  transform: scale(1.5, 1.5);
-}
-
-
-
-body.moderator {
-  .thing {
-    .title {
-      color: $title;
-    }
-
-    &.comment {
-      .title {
-        margin-left: 50px;
-      }
-    }
-  }
-}
-
-.thing.comment.spam {
-  > .entry, > .midcol {
-    // important to override RES
-    background-color: rgba(255, 0, 0, 0.05) !important;
-  }
-}
-
-.tb-highlight-action-reason {
-  background-color: rgba(248, 183, 0, 0.3) !important;
-}
-
-.action-reason {
-  padding: 10px 15px !important;
-  @include wow-link();
-  @include wow-modern-box();
-
-  background-color: rgba(248, 183, 0, 0.05) !important;
-  display: inline-block;
-  min-width: 200px;
-  margin: 5px;
-}
-
- */
