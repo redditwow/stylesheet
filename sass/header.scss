@@ -1,13 +1,13 @@
 
 #header {
     height: 250px;
-    background: url("../images/hero-df-new.webp") center no-repeat #484787;
+    background: url("../images/hero-tww.webp") center no-repeat #484787;
     background-size: 2810px 250px;
     box-shadow: 0px 10px 14px 10px rgba(0, 0, 0, 0.2);
 
     .redditname {
         position: absolute;
-        top: 50px;
+        top: 25px;
         left: 0;
         width: 100%;
     }
@@ -15,13 +15,10 @@
     .redditname a {
         @include retina-sprite($df-logo-group);
         display: block;
-        margin: 0 auto;
         font-size: 0px;
         color: #364657;
         z-index: 100;
-
-        transition: background-image .25s ease-in-out;
-        //transition: opacity .25s ease-in-out;
+        margin: -20px auto 0;
 
         &:hover {
             @include retina-sprite($df-logo-m-group);
@@ -129,8 +126,8 @@
 // reddit/ snoo logo
 @if $no_snoos != true {
     #header-img-a {
-        margin-top: 3px;
-        margin-left: 15px;
+        margin-top: -1px;
+        margin-left: 10px;
         height: 128px;
         width: 100px;
         display: inline-block;
