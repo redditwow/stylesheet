@@ -125,7 +125,7 @@
 
 // reddit/ snoo logo
 @if $no_snoos != true {
-    #header-img-a {
+    #header-img.default-header {
         margin-top: -1px;
         margin-left: 10px;
         height: 128px;
@@ -140,12 +140,12 @@
             @include retina-sprite($x-snoo-glow-group);
         }
 
-        #header-img {
+        #header-img.default-header {
             opacity: 0;
         }
     }
 } @else {
-    #header-img-a {
+    #header-img.default-header {
         position: absolute;
         z-index: 9999;
 
@@ -167,7 +167,7 @@
             }
         }
 
-        #header-img {
+        #header-img.default-header {
             height: 0;
             width: 0;
             opacity: 0;
