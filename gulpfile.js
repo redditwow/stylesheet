@@ -57,10 +57,11 @@ gulp.task('styles', [
                 2: {all: true}
             }
         }))
-        .pipe(replace('../images/bg-repeat-dark.jpg', '%%bg-repeat-dark%%'))
-        .pipe(replace('../images/bg-repeat.jpg', '%%bg-repeat%%'))
-        .pipe(replace('../images/bg-top.jpg', '%%bg-top%%'))
-        .pipe(replace('../images/hero-v2.jpg', '%%hero-v2%%'))
+        .pipe(replace('../images/bg-repeat-dark.png', '%%bg-repeat-dark%%'))
+        .pipe(replace('../images/bg-repeat.png', '%%bg-repeat%%'))
+        .pipe(replace('../images/bg-top.png', '%%bg-top%%'))
+        .pipe(replace('../images/hero-midnight.jpg', '%%hero-midnight%%'))
+        /* Old Hero Images
         .pipe(replace('../images/hero-fire.jpg', '%%hero-fire%%'))
         .pipe(replace('../images/hero-xmas.jpg', '%%hero-xmas%%'))
         .pipe(replace('../images/hero-valentine.jpg', '%%hero-valentine%%'))
@@ -72,6 +73,7 @@ gulp.task('styles', [
         .pipe(replace('../images/hero-df.jpg', '%%hero-df%%'))
         .pipe(replace('../images/hero-df-new.webp', '%%hero-df-new%%'))
         .pipe(replace('../images/hero-tww.webp', '%%hero-tww%%'))
+        */
         .pipe(replace('../images/partyparrot.png', '%%partyparrot%%'))
 
         .pipe(replace('../images/c-1.jpg', '%%c-1%%'))
@@ -96,13 +98,17 @@ gulp.task('styles', [
         .pipe(replace('../images/c-4.webp', '%%c-4%%'))
         .pipe(replace('../images/c-4-2x.webp', '%%c-4-2x%%'))
 
+        /* Release Map Special Images
         .pipe(replace('../images/sl-map.jpg', '%%sl-map%%'))
         .pipe(replace('../images/sl-map-2x.jpg', '%%sl-map-2x%%'))
+        */
 
+        /* 2M Sub Special Images
         .pipe(replace('../images/2m-subs-2x.png', '%%2m-subs-2x%%'))
         .pipe(replace('../images/2m-subs.png', '%%2m-subs%%'))
         .pipe(replace('../images/2m-subs-reverse-2x.png', '%%2m-subs-reverse-2x%%'))
         .pipe(replace('../images/2m-subs-reverse.png', '%%2m-subs-reverse%%'))
+        */
 
         .pipe(replace('../images/x-vusys.png', '%%x-vusys%%'))
         .pipe(replace('../images/x-vusys-2x.png', '%%x-vusys-2x%%'))
@@ -128,7 +134,7 @@ gulp.task('styles', [
 
         .pipe(insert.prepend(herenow))
         .pipe(insert.prepend(credits))
-        // .pipe(insert.append("\n\n/* Bollocks to Nathanos */"))
+        // .pipe(insert.append("\n\n/* Praise the Harbinger! */"))
         .pipe(size({
             showFiles: true
         }))

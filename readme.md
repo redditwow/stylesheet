@@ -27,6 +27,17 @@ When the stylesheet is compiled, gulp can optionally upload the CSS to a staging
 
 # Notes
 
+## Midnight (12.0) Changelog
+Updated:
+* Archived some images and css that's no longer in use 
+* Updated WoW logo
+* Updated hero image and banner, including old Reddit, new Reddit/Mobile versions
+* Updated backgrounds using Blizz assets for Midnight (darker look + stars)
+
+To-Do:
+* Update spritesheet for new r/wow mods
+* Update snoo for Midnight (still using TWW Xal'atath)
+
 ## Images and Sprites
 
 Most individual sprite images are Fireworks PNGs. This includes: 
@@ -36,16 +47,13 @@ Most individual sprite images are Fireworks PNGs. This includes:
 
 ## Sprites 
 
-| Directory           	   | Uses                                                                                                  	 | Compiled Filename   |
-|-------------------------|---------------------------------------------------------------------------------------------------------|---------------------|
+| Directory                	   | Uses                                                                                                  	 | Compiled Filename   |
+|----------------------------|-----------------------------------------------------------------------------------------------------------|---------------------|
 | `flair_user`          	 | flair for classes,  faction, BfA covenants, rainbow flag faction icons                                	 | `f`                 |
 | `flair_user_beskpoke` 	 | flairs for mods, fansites, guilds, VIPs, events                                                       	 | `fb`                |
 | `kitchen_sink`        	 | expandos, game icons, thread flair images, voting arrows, RES buttons, sidebar assets, etc            	 | `sr`                |
-| `logo`                	 | WoW logo                                                                                              	 | `spritesheet-logo`	 |
-| `logo_minimal`        	 | An alternate WoW logo that is less visable unless hovered over, currently not updated to Dragonflight 	 | `spritesheet-logo`  |
-| `logo_sl`             	 | WoW logo from Shadowlands                                                                             	 | `spritesheet-logo`	 |
-| `snoo`                	 | Alexstrasza Snoo                                                                                      	 | `spritesheet-snoo`	 |
-| `snoo-xmas`           	 | Christmas themed Snoo from Shadowlands                                                                	 | `spritesheet-snoo`	 |
+| `logo`                	 | WoW logo, including a onHover highlighted version                                                       	 | `spritesheet-logo`	 |
+| `snoo`                	 | WoW-themed Snoo                                                                                      	 | `spritesheet-snoo`	 |
 
 ## Images
 
