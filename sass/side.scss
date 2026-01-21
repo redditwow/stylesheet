@@ -571,3 +571,37 @@ button {
         @include retina-sprite($g-mystery-group);
     }
 }
+
+ .side a[href*="#newbtn"] {
+     content: "";
+     display: inline-block;
+     margin-right: 4px;
+     margin-bottom: 10px;
+     width: 288px;
+     height: 32px;
+     font-size: 0;
+ }
+
+ .side a[href*="#new-modmail"]:hover {
+     background-image: url("%%button-modmail-hover%%");
+ }
+
+ .side a[href*="#new-modmail"] {
+     background-image: url("%%button-modmail%%");
+ }
+
+ .side a[href*="#new-discord"]:hover {
+     background-image: url("%%button-discord-hover%%");
+ }
+
+ .side a[href*="#new-discord"] {
+     background-image: url("%%button-discord%%");
+ }
+
+ .side a[href*="#new-rules"]:hover {
+     background-image: url("%%button-rules-hover%%");
+ }
+
+ .side a[href*="#new-rules"] {
+     background-image: url("%%button-rules%%");
+ }
